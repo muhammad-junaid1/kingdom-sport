@@ -1,0 +1,106 @@
+
+/* Background colors */
+:root {
+    --primary: linear-gradient(90deg, #743EE8 0%, #BF5AF2 100%);
+    --secondary: #3A256A;
+    --secondary-green: #20622B;
+    --green: #32D74B;
+    --grey: #2C2C2E;
+    --red: #FF453A;
+    --violet: #743EE8;
+}
+
+.btn {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+button:disabled, button[disabled]{
+    background: #48484A;
+    cursor: not-allowed;
+    color: #8E8E93;
+}
+button:disabled:hover, button[disabled]:hover{
+    background: #48484A;
+    border: 0;
+    box-shadow: none;
+}
+
+/* Button types */
+.btn-secondary {
+    border: 1px solid var(--violet);
+}
+
+/* Button colors */
+.btn--primary-color {
+    background: var(--primary);
+}
+.btn--secondary-color {
+    background: var(--secondary);
+}
+.btn--small-size.btn--red-color {
+    background: var(--red);
+}
+.btn--small-size.btn--green-color {
+    background: var(--green);
+}
+.btn--small-size.btn--grey-color{
+    background: var(--grey);
+}
+.btn--small-size.btn--violet-color {
+    background: var(--violet);
+}
+.btn-secondary.btn--green-color {
+    background: var(--secondary-green);
+    border: 1px solid var(--green);
+}
+.btn-secondary.btn--grey-color {
+    background: var(--grey);
+    border: 1px solid var(--grey);
+}
+
+/* Button styles */
+.btn--normal-size {
+    padding: 10px;
+}
+.btn--small-size {
+    padding: 6px;
+    font-weight: normal;
+}
+
+/* Hover and active colors */
+.btn--primary-color:hover {
+    background: linear-gradient(90deg, #BF5AF2 0%, #743EE8 100%);
+    box-shadow: 0px 0px 10px rgba(116, 62, 232, 0.5);
+}
+.btn--primary-color:active {
+    background: linear-gradient(90deg, #BF5AF2 0%, #743EE8 100%);
+}
+.btn--secondary-color:hover {
+    background: var(--violet);
+    border: 1px solid var(--violet);
+}
+.btn--secondary-color:active {
+    background: #4E2D93;
+}
+.btn-secondary.btn--green-color:hover {
+    background: #32D74B;
+    border: 1px solid #32D74B;
+}
+.btn-secondary.btn--green-color:active {
+    background: #268935;
+}
+.btn-secondary.btn--grey-color:hover {
+    background: #48484A;
+    border: 1px solid #48484A;
+}
+.btn-secondary.btn--grey-color:active {
+    background: #2C2C2E;
+}
