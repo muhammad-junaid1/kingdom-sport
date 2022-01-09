@@ -21,6 +21,7 @@
     border-radius: 5px;
     display: inline-block;
     margin: 5px;
+    text-align: center;
 }
 button:disabled, button[disabled]{
     background: #48484A;
@@ -103,4 +104,18 @@ button:disabled:hover, button[disabled]:hover{
 }
 .btn-secondary.btn--grey-color:active {
     background: #2C2C2E;
+}
+
+/* Styles for bet button */
+.bet-button{
+    background: var(--grey);
+    padding: 12px 36px;
+}
+.bet-button:hover {
+    background: #1A3B20;
+    border: 1px solid #32D74B;
+}
+.bet-button:active {
+    background: var(--green);
+    border: 1px solid var(--green);
 }

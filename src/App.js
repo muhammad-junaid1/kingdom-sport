@@ -13,6 +13,10 @@ function App() {
         <Button type="primary" size="small" color="violet">Button</Button>
         <Button type="primary" size="small" color="grey">Button</Button>
         <Button isDisabled={true}>Disabled</Button>
+        <Button betButton={true}>
+            <p>1x</p>
+            <h4>1.91</h4>
+        </Button>
       </div>
     </>
   );
