@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/Button.css";
 
 const TYPES = ["primary", "secondary"];
-const COLORS = ["green", "voilet", "grey", "red"];
+const COLORS = ["green", "violet", "grey", "red"];
 const SIZES = ["small", "normal"];
 
 const Button = ({ children, type, color, size, isDisabled }) => {
