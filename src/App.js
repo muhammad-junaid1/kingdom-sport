@@ -1,11 +1,10 @@
-import Navbar from "./components/Navbar";
-import Button from "./components/Button";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
-      <div className="wrapper" style={{color: "white", marginTop: 20}}>
-      <Navbar/>
+      <div style={{color: "white"}}>
+        <Main/>
       </div>
     </>
   );

@@ -1,0 +1,21 @@
+
+
+.main-wrapper {
+    display: flex;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar {
+    flex-basis: 18%;
+}
+
+.section{
+    flex-basis: 82%;
+}

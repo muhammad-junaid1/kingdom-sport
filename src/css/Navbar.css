@@ -1,4 +1,20 @@
 
+/* Navbar */
+.navbar {
+    padding-right: 15px;
+}
+.navbar__header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar__header .search-input-container {
+    align-self: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
 /* Navbar list */
 .navbar__main-items-container ul {
     border-radius: 0px 16px 16px 0px;
@@ -7,10 +23,6 @@
 
 .navbar__item{
     margin: 1px 0;
-}
-
-.navbar {
-    width: 18%;
 }
 
 /* Navbar item */
@@ -104,4 +116,12 @@
     left: 0;
     top: 0;
     bottom: 0;
+}
+
+.navbar__item-live .left{
+    color: var(--red);
+}
+
+.navbar__item-live .navbar__item-number {
+    background-color: var(--red);
 }
