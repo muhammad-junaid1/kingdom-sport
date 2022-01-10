@@ -6,7 +6,28 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 62.5%;
+}
+
 body {
   background: #141415;
   font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary: linear-gradient(90deg, #743EE8 0%, #BF5AF2 100%);
+  --secondary: #3A256A;
+  --secondary-green: #20622B;
+  --green: #32D74B;
+  --grey: #2C2C2E;
+  --red: #FF453A;
+  --violet: #743EE8;
+}
+
+p, button {
+  font-size: 1.4rem;
+}
+li {
+  list-style-type: none;
 }
