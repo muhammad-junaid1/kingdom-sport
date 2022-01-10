@@ -36,10 +36,11 @@
 .header__right {
     display: flex;
     align-items: center;
+    margin-right: 40px;
 }
 
 .header__right button {
-    margin-right: 18px;
+    margin-left: 18px;
 }
 
 .nav-link-active{

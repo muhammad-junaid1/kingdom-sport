@@ -21,6 +21,7 @@
     transform: translateY(-50%);
 }
 
+/* Styles for input focus */
 .input--focused .typing-text {
     position: absolute;
     top: 50%;
@@ -48,4 +49,14 @@
 
 .input--focused input::placeholder{
     color: transparent;
+}
+
+.input--collapsed {
+    width: 36px;
+}
+.input--collapsed svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

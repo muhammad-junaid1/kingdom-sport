@@ -6,7 +6,7 @@ const TYPES = ["primary", "secondary"];
 const COLORS = ["green", "violet", "grey", "red"];
 const SIZES = ["small", "normal"];
 
-const Button = ({ children, type, color, size, isDisabled, betButton }) => {
+const Button = ({ children, type, color, size, isDisabled, betButton, onClick }) => {
   // Create dynamic classes for button
   let getType = "btn-primary";
   let getColor = `btn--${type ? type : "primary"}-color`;
@@ -29,7 +29,7 @@ const Button = ({ children, type, color, size, isDisabled, betButton }) => {
       ) : (
         <button
           className={`btn ${getType} ${getColor} ${getSize}`}
-          disabled={isDisabled ? true : false}
+          disabled={isDisabled ? true : false} onClick={onClick}
         >
           {children}
         </button>

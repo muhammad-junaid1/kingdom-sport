@@ -8,14 +8,10 @@
     display: flex;
 }
 
-.content {
+.section {
     flex: 1;
 }
 
-.navbar {
-    flex-basis: 18%;
-}
-
-.section{
-    flex-basis: 82%;
+.content {
+    flex: 1;
 }

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
 
-const DropdownItem = ({ icon, text, number, dropdownItems }) => {
+const DropdownItem = ({ icon, text, number, dropdownItems, collapse }) => {
     const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>
@@ -14,6 +14,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems }) => {
           number={number}
           showDropdown={showDropdown}
           setShowDropdown={setShowDropdown}
+          collapse={collapse}
         />
         {showDropdown &&
         <div className="navbar__dropdown-items">
