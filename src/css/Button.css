@@ -53,7 +53,7 @@ button:disabled:hover, button[disabled]:hover{
 }
 .btn-secondary.btn--grey-color {
     background: var(--grey);
-    border: 1px solid var(--grey);
+    border: 1px solid #48484A;
 }
 
 /* Button styles */
