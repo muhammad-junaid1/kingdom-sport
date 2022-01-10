@@ -13,7 +13,7 @@ const NavbarItem = ({ Icon, text, number, isDropDown, showDropdown,setShowDropdo
         </div>
         <div className="right">
           {!isHome && <span className="navbar__item-number">{number}</span>}
-          {isDropDown ? showDropdown ? <SVGIcons.ArrowUp/> : <SVGIcons.ArrowDown/> : undefined}
+          <div style={{visibility: isDropDown ? "visible" : "hidden"}}>{showDropdown ? <SVGIcons.ArrowUp/> : <SVGIcons.ArrowDown/>}</div>
         </div>
 
         {/* Border left */}

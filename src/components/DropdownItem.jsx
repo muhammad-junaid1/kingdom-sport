@@ -6,7 +6,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems }) => {
     const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>
-      <div className="navbar__dropdown-item">
+      <div className="navbar__dropdown-item" style={{borderRadius: showDropdown && "0px 16px 16px 0px"}}>
         <NavbarItem
           isDropDown={true}
           Icon={SVGIcons[icon]}
