@@ -27,51 +27,68 @@ const Navbar = ({collapse}) => {
       ],
     },
     {
-      icon: "Soccer",
-      text: "Football",
+      icon: "Basketball",
+      text: "Basketball",
       number: 34,
       dropdownItems: [
         {
-          icon: "Soccer",
+          icon: "Basketball",
           text: "Item no 1",
           number: 20,
         },
         {
-          icon: "Soccer",
+          icon: "Basketball",
           text: "Item no 2",
           number: 14,
         },
       ],
     },
     {
-      icon: "Soccer",
-      text: "Football",
+      icon: "MMA",
+      text: "MMA",
       number: 34,
       dropdownItems: [
         {
-          icon: "Soccer",
+          icon: "MMA",
           text: "Item no 1",
           number: 20,
         },
         {
-          icon: "Soccer",
+          icon: "MMA",
           text: "Item no 2",
           number: 14,
         },
       ],
     },
     {
-      icon: "Soccer",
-      text: "Football",
+      icon: "Tennis",
+      text: "Tennis",
       number: 34,
       dropdownItems: [
         {
-          icon: "Soccer",
+          icon: "Tennis",
           text: "Item no 1",
           number: 20,
         },
         {
-          icon: "Soccer",
+          icon: "Tennis",
+          text: "Item no 2",
+          number: 14,
+        },
+      ],
+    },
+    {
+      icon: "Icehockey",
+      text: "Icehockey",
+      number: 34,
+      dropdownItems: [
+        {
+          icon: "Icehockey",
+          text: "Item no 1",
+          number: 20,
+        },
+        {
+          icon: "Icehockey",
           text: "Item no 2",
           number: 14,
         },
