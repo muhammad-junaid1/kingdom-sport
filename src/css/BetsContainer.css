@@ -1,10 +1,13 @@
 .bets {
-  height: 820px;
+  height: 800px;
   width: 350px;
   margin-right: 25px;
   background: #1C1C1E;
   padding: 18px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .bets__header {
@@ -25,10 +28,9 @@
 }
 
 .bets__body.not-connected-wrapper {
+    padding-top: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 75%;
 }
 
 .not-connected {
@@ -50,4 +52,26 @@
 
 .not-connected .btn-primary {
     margin-top: 15px;
+}
+
+.bets__footer {
+    justify-self: flex-end;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    background: var(--page-bg);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bets__footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.bets__footer span {
+    margin-left: 5px;
 }

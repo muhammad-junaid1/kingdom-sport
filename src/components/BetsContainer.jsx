@@ -36,6 +36,10 @@ const BetsContainer = ({ isConnected }) => {
             )}
           </div>
         </div>
+        <div className="bets__footer">
+            <p><SVGIcons.EmptyWallet/> <span>Settings</span></p>
+            <SVGIcons.ArrowUp/>
+        </div>
       </div>
     </>
   );
