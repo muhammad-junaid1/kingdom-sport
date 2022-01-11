@@ -17,7 +17,7 @@ const Main = () => {
             <div className="content">
               <h1>Content here</h1>
             </div>
-           {showBetsContainer && <BetsContainer />} 
+           {showBetsContainer && <BetsContainer isConnected={false}/>} 
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Header = ({ showBetsContainer, setShowBetsContainer, collapseNavbar, setCo
             </div>
           </div>
           <div className="header__right">
-            <Button>
+            <Button type="primary">
               <SVGIcons.EmptyWallet /> Connect Wallet
             </Button>
             {showBetsContainer ? (
@@ -44,7 +44,7 @@ const Header = ({ showBetsContainer, setShowBetsContainer, collapseNavbar, setCo
                 <SVGIcons.Close /> Close bets
               </Button>
             ) : (
-              <Button onClick={handleClick} type="secondary">
+              <Button  onClick={handleClick} type="secondary">
                 <SVGIcons.Bets /> Show bets
               </Button>
             )}

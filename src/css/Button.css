@@ -5,11 +5,9 @@
     cursor: pointer;
     color: white;
     font-family: inherit;
-    font-size: 1.4rem;
-    font-weight: 600;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .btn svg {
@@ -34,6 +32,7 @@ button:disabled:hover, button[disabled]:hover{
 /* Button colors */
 .btn--primary-color {
     background: var(--primary);
+    box-shadow: 0px 0px 10px rgba(116, 62, 232, 0.5);
 }
 .btn--secondary-color {
     background: var(--secondary);
@@ -110,4 +109,15 @@ button:disabled:hover, button[disabled]:hover{
 .bet-button:active {
     background: var(--green);
     border: 1px solid var(--green);
+}
+
+.btn-transparent {
+    background: transparent;
+    color: #48484A;
+    box-shadow: none;
+}
+.btn-transparent:hover {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
 }

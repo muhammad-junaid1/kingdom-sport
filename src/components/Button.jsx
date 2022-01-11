@@ -8,7 +8,7 @@ const SIZES = ["small", "normal"];
 
 const Button = ({ children, type, color, size, isDisabled, betButton, onClick }) => {
   // Create dynamic classes for button
-  let getType = "btn-primary";
+  let getType = "btn-transparent";
   let getColor = `btn--${type ? type : "primary"}-color`;
   let getSize = "btn--normal-size";
   if (type) {
