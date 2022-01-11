@@ -16,7 +16,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse }) => {
           setShowDropdown={setShowDropdown}
           collapse={collapse}
         />
-        {showDropdown &&
+        {(showDropdown && !collapse) &&
         <div className="navbar__dropdown-items">
           {dropdownItems.map((item) => {
             return (
