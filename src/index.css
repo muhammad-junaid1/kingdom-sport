@@ -54,6 +54,10 @@ a:hover {
   color: #4E2D93;
 }
 
+a:visited {
+  color: #4E2D93;
+}
+
 
 .text-muted {
   color: #3A3A3C;
