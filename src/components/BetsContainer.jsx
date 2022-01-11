@@ -26,8 +26,7 @@ const BetsContainer = ({ isConnected }) => {
                   This wallet is not connected. <br /> Please read the{" "}
                   <a className="fw-bold" href="/">
                     instructions
-                  </a>
-                  or
+                  </a> or
                 </p>
                 <Button type="primary">
                   <SVGIcons.EmptyWallet /> Connect wallet now
