@@ -1,0 +1,32 @@
+
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    font-weight: 600;
+    margin-right: 3.0rem;
+    padding: 3.0rem 0;
+    position: relative;
+}
+
+.nav-links ul li a {
+    font-size: 1.4rem;
+    color: var(--grey2);
+}
+
+.nav-link-active{
+    color: var(--violet6) !important;
+}
+
+.nav-link-active-border {
+    background: linear-gradient(90deg, #743EE8 0%, #BF5AF2 100%);
+    box-shadow: 0px 0px 4px #743EE8;
+    border-radius: 0px 0px 5px 5px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}

@@ -19,7 +19,7 @@
     font-size: 1.4rem;
 }
 .btn svg {
-    margin-right: 5px;
+    margin-right: .5rem;
 }
 button:disabled, button[disabled]{
     background: var(--grey3);
@@ -68,10 +68,10 @@ button:disabled:hover, button[disabled]:hover{
 
 /* Button styles */
 .btn--normal-size {
-    padding: 10px;
+    padding: 1.0rem;
 }
 .btn--small-size {
-    padding: 6px;
+    padding: .6rem;
     font-weight: normal;
 }
 
@@ -108,7 +108,7 @@ button:disabled:hover, button[disabled]:hover{
 /* Styles for bet button */
 .bet-button{
     background: var(--grey5);
-    padding: 12px 36px;
+    padding: 1.2rem 3.6rem;
 }
 .bet-button:hover {
     background: var(--green2);
@@ -124,6 +124,11 @@ button:disabled:hover, button[disabled]:hover{
     color: #48484A;
     box-shadow: none;
 }
+
+.btn-transparent svg {
+    margin-right: 0;
+}
+
 .btn-transparent:hover {
     background: transparent;
     border: 0;

@@ -274,6 +274,29 @@ const SaveAdd = ({ color }) => {
     </>
   );
 };
+const Hamburger = ({ color }) => {
+  return (
+    <>
+   <svg style={{ color: color ? color : "white" }} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.25 9.6875H3.75C3.2375 9.6875 2.8125 9.2625 2.8125 8.75C2.8125 8.2375 3.2375 7.8125 3.75 7.8125H26.25C26.7625 7.8125 27.1875 8.2375 27.1875 8.75C27.1875 9.2625 26.7625 9.6875 26.25 9.6875Z" fill="white"/>
+<path d="M26.25 15.9375H3.75C3.2375 15.9375 2.8125 15.5125 2.8125 15C2.8125 14.4875 3.2375 14.0625 3.75 14.0625H26.25C26.7625 14.0625 27.1875 14.4875 27.1875 15C27.1875 15.5125 26.7625 15.9375 26.25 15.9375Z" fill="white"/>
+<path d="M26.25 22.1875H3.75C3.2375 22.1875 2.8125 21.7625 2.8125 21.25C2.8125 20.7375 3.2375 20.3125 3.75 20.3125H26.25C26.7625 20.3125 27.1875 20.7375 27.1875 21.25C27.1875 21.7625 26.7625 22.1875 26.25 22.1875Z" fill="currentColor"/>
+</svg>
+    </>
+  );
+};
+const CloseMenu = ({ color }) => {
+  return (
+    <>
+ <svg style={{ color: color ? color : "#48484A" }} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.2375 2.5H9.7625C5.2125 2.5 2.5 5.2125 2.5 9.7625V20.225C2.5 24.7875 5.2125 27.5 9.7625 27.5H20.225C24.775 27.5 27.4875 24.7875 27.4875 20.2375V9.7625C27.5 5.2125 24.7875 2.5 20.2375 2.5ZM19.2 17.875C19.5625 18.2375 19.5625 18.8375 19.2 19.2C19.0125 19.3875 18.775 19.475 18.5375 19.475C18.3 19.475 18.0625 19.3875 17.875 19.2L15 16.325L12.125 19.2C11.9375 19.3875 11.7 19.475 11.4625 19.475C11.225 19.475 10.9875 19.3875 10.8 19.2C10.4375 18.8375 10.4375 18.2375 10.8 17.875L13.675 15L10.8 12.125C10.4375 11.7625 10.4375 11.1625 10.8 10.8C11.1625 10.4375 11.7625 10.4375 12.125 10.8L15 13.675L17.875 10.8C18.2375 10.4375 18.8375 10.4375 19.2 10.8C19.5625 11.1625 19.5625 11.7625 19.2 12.125L16.325 15L19.2 17.875Z" fill="currentColor"/>
+</svg>
 
-const icons = { Home, Soccer, Basketball, Tennis, MMA, Icehockey, ArrowDown, ArrowUp, ArrowLeft, ArrowRight, Live, Favourite, Search, EmptyWallet , Bets, Close, SaveAdd};
+    </>
+  );
+};
+
+
+
+const icons = { Home, Soccer, Basketball, Tennis, MMA, Icehockey, ArrowDown, ArrowUp, ArrowLeft, ArrowRight, Live, Favourite, Search, EmptyWallet , Bets, Close, SaveAdd, Hamburger, CloseMenu};
 export default icons;

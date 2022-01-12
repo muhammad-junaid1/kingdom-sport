@@ -5,10 +5,10 @@
 
 /* Navbar */
 .navbar {
-    padding-right: 15px;
+    padding-right: 1.5rem;
 }
 .navbar__header {
-    padding: 20px;
+    padding: 2.0rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -16,7 +16,7 @@
 .navbar__header .search-input-container {
     align-self: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 /* Navbar list */
@@ -32,7 +32,7 @@
 /* Navbar item */
 .navbar__item {
     color: white;
-    padding: 16px 10px 16px 20px;
+    padding: 1.6rem 1.0rem 1.0rem 2.0rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +57,7 @@
     background-color: var(--grey5);
     border-radius: 5px;
     padding: 4px 6px;
-    margin-right: 8px;
+    margin-right: .8rem;
 }
 
 /* Hover/Active effects */
@@ -73,11 +73,11 @@
 
 /* Dropdown menu */
 .navbar__dropdown-items-container{
-    margin-top: 20px;
+    margin-top: 2.0rem;
 }
 
 .navbar__dropdown-items .navbar__item {
-    padding: 10px 12px 10px 20px;
+    padding: 1.0rem 1.2rem 1.0rem 2.0rem;
 }
 
 .navbar__dropdown-items .navbar__item:hover svg{
@@ -85,7 +85,7 @@
 }
 
 .navbar__dropdown-items {
-    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
     overflow: hidden;
     transition: all .1s ease-in-out;
 }
@@ -129,4 +129,11 @@
 
 .navbar__item-live .navbar__item-number {
     background-color: var(--red6);
+}
+
+
+@media all and (max-width: 500px) {
+    .navbar__header{
+        padding-top:0;
+    }
 }

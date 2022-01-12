@@ -1,12 +1,12 @@
 @import url("./colors/grey.css");
 
 .bets {
-  height: 800px;
-  width: 350px;
-  margin-right: 25px;
+  height: 80.0rem;
+  width: 35.0rem;
+  margin-right: 2.5rem;
   background: var(--grey6);
-  padding: 18px;
-  border-radius: 20px;
+  padding: 1.8rem;
+  border-radius: 2.0rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 1.0rem;
     background: var(--page-bg);
     border-radius: 10px;
 }
@@ -30,7 +30,7 @@
 }
 
 .bets__body.not-connected-wrapper {
-    padding-top: 150px;
+    padding-top: 15.0rem;
     display: flex;
     justify-content: center;
 }
@@ -49,11 +49,11 @@
 .not-connected hr {
     width: 100%;
     border:1px solid var(--grey5);
-    margin: 30px 0;
+    margin: 3.0rem 0;
 }
 
 .not-connected .btn-primary {
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 .bets__footer {
@@ -62,8 +62,8 @@
     align-items: center;
     justify-content: space-between;
     background: var(--page-bg);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 1.0rem;
+    border-radius: 1.0rem;
     cursor: pointer;
 }
 

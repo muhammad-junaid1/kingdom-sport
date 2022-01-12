@@ -1,11 +1,12 @@
 
 @import url("./colors/grey");
+@import url("./colors/violet");
 
 .search-input {
     border: 1px solid var(--grey5);
     background: var(--grey6);
     border-radius: 5px;
-    padding: 10px;
+    padding: 1.0rem;
     color: white;
     font-family: inherit;
     max-width: 100%;
@@ -46,15 +47,15 @@
 }
 
 .input--focused svg {
-    color: var(--violet6);
+    color: var(--violet6) !important;
 }
 
 .input--focused input::placeholder{
-    color: transparent;
+    color: var(--grey3)
 }
 
 .input--collapsed {
-    width: 36px;
+    width: 3.6rem;
 }
 .input--collapsed svg{
     position: absolute;

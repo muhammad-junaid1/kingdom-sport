@@ -51,3 +51,9 @@ a:hover {
 .fw-bold {
   font-weight: 600;
 }
+
+@media all and (max-width: 500px){
+  html {
+    font-size: 9px;
+  }
+}
