@@ -5,21 +5,17 @@ const NavbarItem = ({
   text,
   number,
   isDropDown,
-  showDropdown,
-  setShowDropdown,
   isHome,
   isActive,
-  isLive, collapse
+  isLive, collapse, active, onToggle
 }) => {
-  const handleClick = () => {
-    setShowDropdown(!showDropdown);
-  };
+
   return (
     <>
       <div
         className={`navbar__item${isDropDown ? " navbar__item--dropdown" : ""}${
-          showDropdown ? " active-navbar-item" : ""}${isActive ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
-        onClick={isDropDown ? handleClick : undefined}
+          active ? " active-navbar-item" : ""}${isActive ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
+        onClick={isDropDown ? onToggle : undefined}
       >
         {collapse ? (
           <Icon />
@@ -32,7 +28,7 @@ const NavbarItem = ({
             <div className="right">
               {!isHome && <span className="navbar__item-number">{number}</span>}
               <div style={{ visibility: isDropDown ? "visible" : "hidden" }}>
-                {showDropdown ? <SVGIcons.ArrowUp /> : <SVGIcons.ArrowDown />}
+                {active ? <SVGIcons.ArrowUp /> : <SVGIcons.ArrowDown />}
               </div>
             </div>
           </>

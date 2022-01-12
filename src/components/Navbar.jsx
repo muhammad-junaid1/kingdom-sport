@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../css/Navbar.css";
 import SVGIcons from "./SvgIcons";
 import NavbarItem from "./NavbarItem";
@@ -95,6 +95,7 @@ const Navbar = ({collapse}) => {
       ],
     },
   ];
+  const [toggled, setToggled] = useState(null);
   return (
     <>
       <div className="navbar">
@@ -152,6 +153,8 @@ const Navbar = ({collapse}) => {
                     number={item.number}
                     dropdownItems={item.dropdownItems}
                     collapse={collapse}
+                    active={toggled === index}
+                    onToggle={() => toggled === index ? setToggled(null) : setToggled(index)}
                   />
                 </li>
               );

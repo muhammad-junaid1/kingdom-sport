@@ -1,23 +1,25 @@
-import React, {useState} from "react";
+import React, {useRef} from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
 
-const DropdownItem = ({ icon, text, number, dropdownItems, collapse }) => {
-    const [showDropdown, setShowDropdown] = useState(false);
+const DropdownItem = ({ icon, text, number, dropdownItems, collapse, setToggled, onToggle , active }) => {
+  const dropDownsContainer = useRef();
   return (
     <>
-      <div className="navbar__dropdown-item" style={{borderRadius: showDropdown && "0px 16px 16px 0px"}}>
+      <div className="navbar__dropdown-item" style={{borderRadius: active && "0px 16px 16px 0px"}}>
         <NavbarItem
           isDropDown={true}
           Icon={SVGIcons[icon]}
           text={text}
           number={number}
-          showDropdown={showDropdown}
-          setShowDropdown={setShowDropdown}
+          setToggled={setToggled}
           collapse={collapse}
+          onToggle={onToggle}
+          active={active}
         />
-        {(showDropdown && !collapse) &&
-        <div className="navbar__dropdown-items">
+        {!collapse &&
+        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: active ? dropDownsContainer.current.scrollHeight : 0}}
+>
           {dropdownItems.map((item) => {
             return (
               <NavbarItem
