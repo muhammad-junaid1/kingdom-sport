@@ -2,7 +2,11 @@ import React from "react";
 import SVGIcons from "./SvgIcons";
 import "../css/NavLinks.css";
 
-const NavLinks = ({ isFixed, showBets, setShowBets }) => {
+const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
+  const handleClick = () => {
+    setShowBets(!showBets);
+    setShowNavbar(false);
+  }
   return (
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>
       <ul>
@@ -26,7 +30,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets }) => {
           <a href="/">LEADERBOARD</a>
         </li>
         {isFixed &&
-        <li onClick={() => setShowBets(!showBets)}>
+        <li onClick={handleClick}>
           <SVGIcons.Bets2 />
           <span>MY BETS</span>
         </li>

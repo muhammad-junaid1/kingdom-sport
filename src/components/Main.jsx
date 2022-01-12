@@ -32,18 +32,17 @@ const Main = () => {
           {showNavbar && <Navbar isMobile={isMobile}/>}
           {/* ************* */}
 
-          {showBets ? <BetsContainer isMobile={isMobile} showBets={showBets} setShowBets={setShowBets}/> :
             <div className="content">
+          {showBets ? <BetsContainer isMobile={isMobile} showBets={showBets} setShowBets={setShowBets}/> :
               <h1>Content here</h1>
-            </div>
-
           }
+            </div>
             {/* ********** */}
            {(showBetsContainer && !isMobile) && <BetsContainer isConnected={false}/>} 
           </div>
         </div>
         {(isMobile && !showBets) &&
-        <NavLinks isFixed={true} showBets={showBets} setShowBets={setShowBets}/>
+        <NavLinks isFixed={true} setShowNavbar={setShowNavbar} showBets={showBets} setShowBets={setShowBets}/>
         }
       </div>
     </>

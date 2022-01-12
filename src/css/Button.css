@@ -126,7 +126,7 @@ button:disabled:hover, button[disabled]:hover{
 }
 
 .btn-transparent svg {
-    margin-right: 0;
+    margin-right: .5rem;
 }
 
 .btn-transparent:hover {
