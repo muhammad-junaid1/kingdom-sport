@@ -1,7 +1,9 @@
 
+@import url("./colors/grey");
+
 .search-input {
-    border: 1px solid var(--grey);
-    background: #1C1C1E;
+    border: 1px solid var(--grey5);
+    background: var(--grey6);
     border-radius: 5px;
     padding: 10px;
     color: white;
@@ -32,7 +34,7 @@
 }
 
 .input--focused{
-    border: 1px solid var(--violet);
+    border: 1px solid var(--violet6);
     border-radius: 5px;
 }
 .input--focused input {
@@ -40,11 +42,11 @@
 }
 
 .input--focused .typing-text span{
-    color: var(--violet);
+    color: var(--violet6);
 }
 
 .input--focused svg {
-    color: var(--violet);
+    color: var(--violet6);
 }
 
 .input--focused input::placeholder{

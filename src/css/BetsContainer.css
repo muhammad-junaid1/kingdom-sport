@@ -1,8 +1,10 @@
+@import url("./colors/grey.css");
+
 .bets {
   height: 800px;
   width: 350px;
   margin-right: 25px;
-  background: #1C1C1E;
+  background: var(--grey6);
   padding: 18px;
   border-radius: 20px;
   display: flex;
@@ -46,7 +48,7 @@
 
 .not-connected hr {
     width: 100%;
-    border:1px solid var(--grey);
+    border:1px solid var(--grey5);
     margin: 30px 0;
 }
 

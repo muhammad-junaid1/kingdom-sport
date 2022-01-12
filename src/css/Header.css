@@ -1,3 +1,5 @@
+@import url("./colors/grey.css");
+
 
 /* Header content */
 .header__content{
@@ -19,7 +21,7 @@
 
 .header__content .nav-links ul li a {
     font-size: 1.4rem;
-    color: #636366;
+    color: var(--grey2);
 }
 
 
@@ -44,7 +46,7 @@
 }
 
 .nav-link-active{
-    color: var(--violet) !important;
+    color: var(--violet6) !important;
 }
 
 .nav-link-active-border {

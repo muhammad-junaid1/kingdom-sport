@@ -1,4 +1,10 @@
 
+@import url("./colors/green.css");
+@import url("./colors/grey.css");
+@import url("./colors/violet.css");
+@import url("./colors/red.css");
+
+
 .btn {
     border: 0;
     outline: none;
@@ -9,53 +15,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 1.4rem;
 }
 .btn svg {
     margin-right: 5px;
 }
 button:disabled, button[disabled]{
-    background: #48484A;
+    background: var(--grey3);
     cursor: not-allowed;
-    color: #8E8E93;
+    color: var(--grey1);
 }
 button:disabled:hover, button[disabled]:hover{
-    background: #48484A;
+    background: var(--grey3);
     border: 0;
     box-shadow: none;
 }
 
 /* Button types */
 .btn-secondary {
-    border: 1px solid var(--violet);
+    border: 1px solid var(--violet6);
 }
 
 /* Button colors */
 .btn--primary-color {
-    background: var(--primary);
+    background: var(--primary-btn);
     box-shadow: 0px 0px 10px rgba(116, 62, 232, 0.5);
 }
 .btn--secondary-color {
-    background: var(--secondary);
+    background: var(--violet3);
 }
 .btn--small-size.btn--red-color {
-    background: var(--red);
+    background: var(--red6);
 }
 .btn--small-size.btn--green-color {
-    background: var(--green);
+    background: var(--green6);
 }
 .btn--small-size.btn--grey-color{
-    background: var(--grey);
+    background: var(--grey5);
 }
 .btn--small-size.btn--violet-color {
-    background: var(--violet);
+    background: var(--violet6);
 }
 .btn-secondary.btn--green-color {
-    background: var(--secondary-green);
-    border: 1px solid var(--green);
+    background: var(--green3);
+    border: 1px solid var(--green6);
 }
 .btn-secondary.btn--grey-color {
-    background: var(--grey);
-    border: 1px solid #48484A;
+    background: var(--grey5);
+    border: 1px solid var(--grey3);
 }
 
 /* Button styles */
@@ -76,39 +84,39 @@ button:disabled:hover, button[disabled]:hover{
     background: linear-gradient(90deg, #BF5AF2 0%, #743EE8 100%);
 }
 .btn--secondary-color:hover {
-    background: var(--violet);
-    border: 1px solid var(--violet);
+    background: var(--violet6);
+    border: 1px solid var(--violet6);
 }
 .btn--secondary-color:active {
-    background: #4E2D93;
+    background: var(--violet4);
 }
 .btn-secondary.btn--green-color:hover {
-    background: #32D74B;
-    border: 1px solid #32D74B;
+    background: var(--green6);
+    border: 1px solid var(--green6);
 }
 .btn-secondary.btn--green-color:active {
-    background: #268935;
+    background: var(--green4);
 }
 .btn-secondary.btn--grey-color:hover {
-    background: #48484A;
-    border: 1px solid #48484A;
+    background: var(--grey3);
+    border: 1px solid var(--grey3);
 }
 .btn-secondary.btn--grey-color:active {
-    background: #2C2C2E;
+    background: var(--grey5s);
 }
 
 /* Styles for bet button */
 .bet-button{
-    background: var(--grey);
+    background: var(--grey5);
     padding: 12px 36px;
 }
 .bet-button:hover {
-    background: #1A3B20;
-    border: 1px solid #32D74B;
+    background: var(--green2);
+    border: 1px solid var(--green6);
 }
 .bet-button:active {
-    background: var(--green);
-    border: 1px solid var(--green);
+    background: var(--green1);
+    border: 1px solid var(--green1);
 }
 
 .btn-transparent {
