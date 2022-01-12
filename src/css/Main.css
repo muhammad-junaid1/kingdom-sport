@@ -11,12 +11,13 @@
     flex: 1;
 }
 
-.content {
-    min-width: 100%;
-}
-
 @media all and (max-width: 500px) {
     .section{
         overflow: hidden;
     }
+    
+    .content {
+        min-width: 100%;
+    }
+
 }
