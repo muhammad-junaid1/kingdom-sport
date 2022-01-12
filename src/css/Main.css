@@ -5,6 +5,7 @@
 
 .content-wrapper {
     display: flex;
+    padding-bottom: 70px;
 }
 
 .section, .content {

@@ -33,7 +33,7 @@
 /* Navbar item */
 .navbar__item {
     color: white;
-    padding: 1.6rem 1.0rem 1.0rem 2.0rem;
+    padding: 1.6rem 1.0rem 1.6rem 2.0rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +78,8 @@
 }
 
 .navbar__dropdown-items .navbar__item {
-    padding: 1.0rem 1.2rem 1.0rem 2.0rem;
+    padding: 1.1rem 1.2rem 1.1rem 2.0rem;
+    margin: 2px 0;
 }
 
 .navbar__dropdown-items .navbar__item:hover svg{
@@ -93,6 +94,10 @@
 
 .navbar__item--dropdown{
     background: transparent;
+}
+
+.navbar__dropdown-item .navbar__item {
+    margin-bottom: 0;
 }
 
 
