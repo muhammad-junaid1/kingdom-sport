@@ -1,59 +1,59 @@
 @import url("./colors/grey.css");
 
 .bets {
-  height: 80.0rem;
-  width: 35.0rem;
+  height: 80rem;
+  width: 35rem;
   margin-right: 2.5rem;
   background: var(--grey6);
   padding: 1.8rem;
-  border-radius: 2.0rem;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .bets__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.0rem;
-    background: var(--page-bg);
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--page-bg);
+  border-radius: 10px;
 }
 
-.bets__header button{
-    flex: 1;
+.bets__header button {
+  flex: 1;
 }
 
-.bets__body{
-    height: 100%;
+.bets__body {
+  height: 100%;
 }
 
 .bets__body.not-connected-wrapper {
-    padding-top: 15.0rem;
-    display: flex;
-    justify-content: center;
+  padding-top: 15rem;
+  display: flex;
+  justify-content: center;
 }
 
 .not-connected {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .not-connected .text-muted {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .not-connected hr {
-    width: 100%;
-    border:1px solid var(--grey5);
-    margin: 3.0rem 0;
+  width: 100%;
+  border: 1px solid var(--grey5);
+  margin: 3rem 0;
 }
 
 .not-connected .btn-primary {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .bets__footer {
@@ -68,12 +68,46 @@
 }
 
 .bets__footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .bets__footer span {
-    margin-left: 5px;
+  margin-left: 5px;
+}
+
+@media all and (max-width: 500px) {
+  .bets {
+    width: 100%;
+    margin-right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .bets__footer button svg {
+    margin-right: 0;
+  }
+
+  .bets__footer {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    cursor: none;
+  }
+
+  .bets__footer .left {
+    background: var(--page-bg);
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
 }

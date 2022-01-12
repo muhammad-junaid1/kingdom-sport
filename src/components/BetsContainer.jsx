@@ -3,7 +3,7 @@ import Button from "./Button";
 import SVGIcons from "./SvgIcons";
 import "../css/BetsContainer.css";
 
-const BetsContainer = ({ isConnected }) => {
+const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
@@ -55,12 +55,26 @@ const BetsContainer = ({ isConnected }) => {
             )}
           </div>
         </div>
+        {isMobile ? 
+          <div className="bets__footer">
+          <div className="left">
+            <p>
+              <SVGIcons.EmptyWallet /> <span>Settings</span>
+            </p>
+            <SVGIcons.ArrowUp />
+          </div>
+          <div className="right">
+                <Button onClick={() => setShowBets(!showBets)} type="secondary" color="grey"><SVGIcons.CloseMenuCircle/></Button>
+          </div>
+        </div>
+        :
         <div className="bets__footer">
           <p>
             <SVGIcons.EmptyWallet /> <span>Settings</span>
           </p>
           <SVGIcons.ArrowUp />
         </div>
+        }
       </div>
     </>
   );
