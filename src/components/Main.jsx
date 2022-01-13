@@ -33,7 +33,7 @@ const Main = () => {
       <div className="main-wrapper">
         {!isMobile &&  <NavbarContext.Provider
                 value={{ setCollapseNavbar }}
-              ><Navbar collapse={collapseNavbar && true} /></NavbarContext.Provider>}
+              ><Navbar collapse={collapseNavbar && true}/></NavbarContext.Provider>}
         <div className="section">
           <Header
             isMobile={isMobile}
@@ -45,13 +45,12 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
           />
           <div className="content-wrapper">
-            {showNavbar && (
               <NavbarContext.Provider
                 value={{ setCollapseNavbar, isMobile, setShowNavbar }}
               >
-                <Navbar isMobile={isMobile} />
+                <Navbar isMobile={isMobile} forMobile={true} showNavbar={showNavbar}/>
               </NavbarContext.Provider>
-            )}
+
             {/* ************* */}
 
             <div className="content">
