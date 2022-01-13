@@ -65,8 +65,8 @@ const Main = () => {
               ) : (
                 <Routes>
                   <Route path="/" element={<Homepage />} />
-                  <Route path="/live" element={<Live />} />
-                  <Route path="/favourites" element={<Favourites />} />
+                  <Route path="/sport/live" element={<Live />} />
+                  <Route path="/sport/favourites" element={<Favourites />} />
                 </Routes>
               )}
             </div>

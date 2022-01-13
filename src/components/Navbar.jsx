@@ -98,7 +98,7 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
   const [toggled, setToggled] = useState(null);
   return (
     <>
-      <div className="navbar" style={{paddingRight: !showNavbar ? 0 : ""}}>
+      <div className="navbar" style={{paddingRight: (isMobile && !showNavbar) ? 0 : ""}}>
       <div className="navbar__header" style={{padding: collapse ? "20px 10px" : ""}}>
       {!isMobile &&
         <div className="navbar__logo">
@@ -130,7 +130,7 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
                 number={23}
                 isLive={true}
                 collapse={collapse}
-                target="/live"
+                target="/sport/live"
               />
             </li>
             <li>
@@ -140,7 +140,7 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
                 text="Favourite"
                 number={23}
                 collapse={collapse}
-                target="/favourites"
+                target="/sport/favourites"
               />
             </li>
           </ul>

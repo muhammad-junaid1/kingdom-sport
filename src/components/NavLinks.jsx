@@ -1,5 +1,6 @@
 import React from "react";
 import SVGIcons from "./SvgIcons";
+import {NavLink, useLocation} from "react-router-dom";
 import "../css/NavLinks.css";
 
 const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
@@ -7,27 +8,38 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
     setShowBets(!showBets);
     setShowNavbar(false);
   }
+
+  const location = useLocation();
+  
   return (
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>
       <ul>
-        <li className="nav-link-active">
+        <li>
+        <NavLink to="/" className={`${location.pathname.startsWith("/sport") ? "active" : ""}`}>
         {isFixed &&
           <SVGIcons.Soccer />
         }
-          <a href="/">SPORT</a>
+          <p>SPORT</p>
           <div className="nav-link-active-border"></div>
+          </NavLink>
         </li>
         <li>
+        <NavLink to="/crypto">
         {isFixed &&
           <SVGIcons.Crypto />
         }
-          <a href="/">CRYPTO</a>
+          <p>CRYPTO</p>
+          <div className="nav-link-active-border"></div>
+          </NavLink>
         </li>
         <li>
+        <NavLink to="/leaderboard">
         {isFixed &&
           <SVGIcons.LeaderBoard />
         }
-          <a href="/">LEADERBOARD</a>
+          <p>LEADERBOARD</p>
+          <div className="nav-link-active-border"></div>
+          </NavLink>
         </li>
         {isFixed &&
         <li onClick={handleClick}>
