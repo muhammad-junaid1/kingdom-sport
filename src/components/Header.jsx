@@ -24,7 +24,7 @@ const Header = ({
     <>
       <div className="header">
         <div className="header__content" >
-          <div className="header__left" style={{marginLeft: isLeaderboard ? 110: ""}}>
+          <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "8.2%": ""}}>
             {(!isMobile && !isLeaderboard ) ? (
               [!removeCollapseToggle &&
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
@@ -51,7 +51,7 @@ const Header = ({
                   <SVGIcons.Bets /> Show bets
                 </Button>
               ),
-            ] : <Button onClick={() => setShowNavbar(!showNavbar)} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
+            ] : [!isLeaderboard && <Button onClick={() => setShowNavbar(!showNavbar)} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>]}
           </div>
         </div>
       </div>
