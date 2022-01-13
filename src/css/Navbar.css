@@ -95,7 +95,7 @@
 }
 
 .navbar__dropdown-items .navbar__item {
-    padding: 1.1rem 2.0rem 1.1rem 2.0rem;
+    padding: 12px 10px 12px 20px;
     margin-bottom: 1px;
 }
 
@@ -154,7 +154,7 @@
     .navbar__header{
         padding-top:0;
     }
-    .navbar {
+    .navbar--mobile {
         margin-bottom: 80px;
         transition: width .2s ease-in;
     }

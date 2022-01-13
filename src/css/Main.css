@@ -5,6 +5,7 @@
 
 .content-wrapper {
     display: flex;
+    color: white;
 }
 
 .section, .content {

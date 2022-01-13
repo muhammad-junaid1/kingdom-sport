@@ -7,7 +7,7 @@ import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import SearchInput from "./SearchInput";
 
-const Navbar = ({collapse, isMobile, showNavbar, forMobile}) => {
+const Navbar = ({collapse, isMobile, showNavbar}) => {
   const dropDowns = [
     {
       icon: "Soccer",
@@ -98,7 +98,7 @@ const Navbar = ({collapse, isMobile, showNavbar, forMobile}) => {
   const [toggled, setToggled] = useState(null);
   return (
     <>
-      <div className="navbar" style={forMobile && {width: (isMobile && showNavbar) ? "100%" : 0, overflow: showNavbar ? "visible" : "hidden", paddingRight: !showNavbar && 0}}>
+      <div className="navbar" style={{paddingRight: !showNavbar ? 0 : ""}}>
       <div className="navbar__header" style={{padding: collapse ? "20px 10px" : ""}}>
       {!isMobile &&
         <div className="navbar__logo">

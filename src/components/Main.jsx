@@ -45,15 +45,17 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
           />
           <div className="content-wrapper">
+          <div className="navbar--mobile" style={{width: (isMobile && showNavbar) ? "100%" : 0, overflow: showNavbar ? "visible" : "hidden"}}>
               <NavbarContext.Provider
                 value={{ setCollapseNavbar, isMobile, setShowNavbar }}
               >
                 <Navbar isMobile={isMobile} forMobile={true} showNavbar={showNavbar}/>
               </NavbarContext.Provider>
+              </div>
 
             {/* ************* */}
 
-            <div className="content">
+            <div className="content" style={{pointerEvents: showNavbar ? "none" : ""}}>
               {showBets ? (
                 <BetsContainer
                   isMobile={isMobile}
