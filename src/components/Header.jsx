@@ -4,6 +4,7 @@ import FullLogo from "../assets/full-logo.png";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
 import "../css/Header.css";
+import Balance from "./Balance";
 
 const Header = ({
   showBetsContainer,
@@ -11,7 +12,7 @@ const Header = ({
   collapseNavbar,
   setCollapseNavbar,
   isMobile,
-  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard
+  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected
 }) => {
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
@@ -24,7 +25,7 @@ const Header = ({
     <>
       <div className="header">
         <div className="header__content" >
-          <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "8.2%": ""}}>
+          <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "4%": ""}}>
             {(!isMobile && !isLeaderboard ) ? (
               [!removeCollapseToggle &&
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
@@ -38,9 +39,15 @@ const Header = ({
             {!isMobile && <NavLinks/>}
           </div>
           <div className="header__right">
-            <Button type="primary">
+          {!isConnected ? 
+            <Button type="primary" onClick={() => setConnected(true)}>
               <SVGIcons.EmptyWallet /> Connect Wallet
             </Button>
+           : <>
+
+           <Balance/>
+           <Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></>
+          }
             {!isMobile ? [
               showBetsContainer ? (
                 <Button onClick={handleClick} type="secondary" color="grey">

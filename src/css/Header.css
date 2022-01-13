@@ -1,55 +1,57 @@
 @import url("./colors/grey.css");
 
-
 /* Header content */
-.header__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 /* Header left and right */
 .header__left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .header__left svg {
-    margin-right: 1.8rem;
-    cursor: pointer;
+  margin-right: 1.8rem;
+  cursor: pointer;
 }
 
 .header__right {
-    display: flex;
-    align-items: center;
-    margin-right: 4.0rem;
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
 }
 
-.header__left img {
-    width: 15.0rem;
+.header__right .btn--green-color svg{
+    width: 2.0rem;
+    height: 2.0rem;
 }
 
 .header__right button {
-    margin-left: 1.8rem;
+  margin-left: 1.8rem;
 }
 
+@media all and (max-width: 500px) {
+  .header__content {
+    padding: 2rem 1.5rem;
+    justify-content: space-around;
+  }
+  .header__right button {
+    margin-left: 0;
+  }
+  .header__right button svg {
+    margin-right: 0;
+  }
+  .header__right {
+    margin-right: 0;
+  }
+  .header__right .hamburger-btn {
+    padding: 0;
+    margin-left: 1.5rem;
+  }
 
-@media all and (max-width: 500px){
-    .header__content{
-        padding: 2.0rem 1.5rem;
-        justify-content: space-around;
-    }
-    .header__right button {
-        margin-left: 0;
-    }
-    .header__right button svg {
-        margin-right: 0;
-    }
-    .header__right{
-        margin-right: 0;
-    }
-    .header__right .hamburger-btn{
-        padding: 0;
-        margin-left: 1.5rem;
-    }
+  .header__left img {
+    width: 15rem;
+  }
 }

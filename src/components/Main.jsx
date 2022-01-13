@@ -23,6 +23,7 @@ const Main = () => {
   const [showBets, setShowBets] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [screenSize, setScreenSize] = useState(window.innerWidth);
+  const [connected, setConnected] = useState(false);
 
   window.addEventListener("resize", () => {
     setScreenSize(window.innerWidth);
@@ -72,6 +73,7 @@ const Main = () => {
             setShowBetsContainer={setShowBetsContainer}
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
+            isConnected={connected} setConnected={setConnected}
           />}/>
                 <Route path="/sport/:page" element={ <Header
             isMobile={isMobile}
@@ -81,6 +83,7 @@ const Main = () => {
             setShowBetsContainer={setShowBetsContainer}
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
+            isConnected={connected} setConnected={setConnected}
           />}/>
           <Route path="/crypto/all" element={ <Header
             isMobile={isMobile}
@@ -91,6 +94,7 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
+            isConnected={connected} setConnected={setConnected}
           />}/>
           <Route path="/crypto/:index" element={ <Header
             isMobile={isMobile}
@@ -101,6 +105,7 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
+            isConnected={connected} setConnected={setConnected}
           />}/>
       <Route path="/leaderboard" element={ <Header
             isMobile={isMobile}
@@ -112,6 +117,7 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
             isLeaderboard={true}
+            isConnected={connected} setConnected={setConnected}
           />}/>
         </Routes>
           <div className="content-wrapper">
@@ -182,6 +188,7 @@ const Main = () => {
                   isMobile={isMobile}
                   showBets={showBets}
                   setShowBets={setShowBets}
+                  isConnected={connected}
                 />
               ) : (
                 <Routes>
@@ -196,7 +203,7 @@ const Main = () => {
             </div>
             {/* ********** */}
             {showBetsContainer && !isMobile && (
-              <BetsContainer isConnected={false} />
+              <BetsContainer isConnected={connected} />
             )}
           </div>
         </div>

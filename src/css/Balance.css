@@ -1,0 +1,36 @@
+@import "./colors/grey";
+
+.balance-container {
+        display: flex;
+        background: var(--grey5);
+        align-items: stretch;
+        border-radius: 5px;
+}
+
+.balance-container .right {
+    display: flex; 
+    align-items: center;
+}
+
+.balance-container .left {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 10px;
+    text-align: right;
+}
+
+.balance-container .left span {
+    color: var(--grey2);
+    font-size: 1.2rem;
+}
+
+.balance-container .left p {
+    font-size: 1.6rem;
+    color: white;
+    padding-top: 3px;
+}
+
+.balance-container .left svg {
+    width: 14px;
+    height: 14px;
+}

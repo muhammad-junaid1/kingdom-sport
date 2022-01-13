@@ -148,6 +148,26 @@ const data = {
       ],
     },
   ],
+  matchWinners: [
+    {
+      team1: "First",
+      team2: "Second",
+      winner: "First",
+      activity: 5.2
+    },
+    {
+      team1: "First",
+      team2: "Second",
+      winner: "First",
+      activity: 5.2
+    },
+    {
+      team1: "First",
+      team2: "Second",
+      winner: "First",
+      activity: 5.2
+    },
+  ]
 };
 
 export default data;
