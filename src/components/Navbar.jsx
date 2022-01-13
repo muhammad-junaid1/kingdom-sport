@@ -119,6 +119,7 @@ const Navbar = ({collapse, isMobile}) => {
                 number={23}
                 isHome={true}
                 collapse={collapse}
+                target="/"
               />
             </li>
             <li>
@@ -129,6 +130,7 @@ const Navbar = ({collapse, isMobile}) => {
                 number={23}
                 isLive={true}
                 collapse={collapse}
+                target="/live"
               />
             </li>
             <li>
@@ -138,6 +140,7 @@ const Navbar = ({collapse, isMobile}) => {
                 text="Favourite"
                 number={23}
                 collapse={collapse}
+                target="/favourites"
               />
             </li>
           </ul>

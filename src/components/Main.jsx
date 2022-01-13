@@ -1,11 +1,17 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
+import { Routes, Route } from "react-router-dom";
 import "../css/Main.css";
 
-export const NavbarContext = React.createContext();
+// Pages
+import Homepage from "./pages/Homepage";
+import Live from "./pages/Live";
+import Favourites from "./pages/Favourites";
+
+export const NavbarContext = React.createContext({});
 
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
@@ -17,37 +23,64 @@ const Main = () => {
 
   window.addEventListener("resize", () => {
     setScreenSize(window.innerWidth);
-  })
-  useEffect(() =>{
-    if(screenSize < 500) setIsMobile(true);
+  });
+  useEffect(() => {
+    if (screenSize < 500) setIsMobile(true);
   }, [screenSize]);
 
   return (
     <>
       <div className="main-wrapper">
-      {(!isMobile) &&
-      <NavbarContext.Provider value={setCollapseNavbar}>
-        <Navbar collapse={collapseNavbar && true}/>
-        </NavbarContext.Provider>
-      }
+        {!isMobile && <Navbar collapse={collapseNavbar && true} />}
         <div className="section">
-          <Header isMobile={isMobile} showNavbar={showNavbar} setShowNavbar={setShowNavbar} showBetsContainer={showBetsContainer} setShowBetsContainer={setShowBetsContainer} collapseNavbar={collapseNavbar} setCollapseNavbar={setCollapseNavbar}/>
+          <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+          />
           <div className="content-wrapper">
-          {showNavbar && <Navbar isMobile={isMobile}/>}
-          {/* ************* */}
+            {showNavbar && (
+              <NavbarContext.Provider
+                value={{ setCollapseNavbar, isMobile, setShowNavbar }}
+              >
+                <Navbar isMobile={isMobile} />
+              </NavbarContext.Provider>
+            )}
+            {/* ************* */}
 
             <div className="content">
-          {showBets ? <BetsContainer isMobile={isMobile} showBets={showBets} setShowBets={setShowBets}/> :
-              <h1>Content here</h1>
-          }
+              {showBets ? (
+                <BetsContainer
+                  isMobile={isMobile}
+                  showBets={showBets}
+                  setShowBets={setShowBets}
+                />
+              ) : (
+                <Routes>
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/live" element={<Live />} />
+                  <Route path="/favourites" element={<Favourites />} />
+                </Routes>
+              )}
             </div>
             {/* ********** */}
-           {(showBetsContainer && !isMobile) && <BetsContainer isConnected={false}/>} 
+            {showBetsContainer && !isMobile && (
+              <BetsContainer isConnected={false} />
+            )}
           </div>
         </div>
-        {(isMobile && !showBets) &&
-        <NavLinks isFixed={true} setShowNavbar={setShowNavbar} showBets={showBets} setShowBets={setShowBets}/>
-        }
+        {isMobile && !showBets && (
+          <NavLinks
+            isFixed={true}
+            setShowNavbar={setShowNavbar}
+            showBets={showBets}
+            setShowBets={setShowBets}
+          />
+        )}
       </div>
     </>
   );
