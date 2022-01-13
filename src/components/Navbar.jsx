@@ -7,7 +7,7 @@ import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import SearchInput from "./SearchInput";
 
-const Navbar = ({collapse, isMobile, showNavbar}) => {
+const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, isLeaderboard}) => {
   const dropDowns = [
     {
       icon: "Soccer",
@@ -100,7 +100,7 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
     <>
       <div className="navbar" style={{paddingRight: (isMobile && !showNavbar) ? 0 : ""}}>
       <div className="navbar__header" style={{padding: collapse ? "20px 10px" : ""}}>
-      {!isMobile &&
+      {(!isMobile) && 
         <div className="navbar__logo">
         {collapse ? <img src={HalfLogo} alt=""/> : <img src={FullLogo} alt="" />}
         </div>
@@ -111,6 +111,8 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
       </div>
         <div className="navbar__main-items-container">
           <ul>
+          {!isCrypto ?
+          <>
             <li>
               <NavbarItem
                 isDropDown={false}
@@ -143,8 +145,22 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
                 target="/sport/favourites"
               />
             </li>
+            </>
+          : 
+          <>
+          <NavbarItem isDropDown={false} text="All items" noIcon={true} number={123} collapse={collapse} target="/crypto/all">
+          <input type="radio" name="crypto" />
+          </NavbarItem>
+          {cryptoData.map((item) => {
+            return <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} target={item.target}>
+              <input type="radio" name="crypto" />
+            </NavbarItem>
+          })}
+          </>
+          }
           </ul>
         </div>
+        {!isCrypto &&
         <div className="navbar__dropdown-items-container">
           <ul>
             {dropDowns.map((item, index) => {
@@ -165,6 +181,7 @@ const Navbar = ({collapse, isMobile, showNavbar}) => {
             })}
           </ul>
         </div>
+        }
       </div>
     </>
   );

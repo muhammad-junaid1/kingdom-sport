@@ -11,7 +11,7 @@ const Header = ({
   collapseNavbar,
   setCollapseNavbar,
   isMobile,
-  showNavbar, setShowNavbar
+  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard
 }) => {
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
@@ -23,12 +23,14 @@ const Header = ({
   return (
     <>
       <div className="header">
-        <div className="header__content">
-          <div className="header__left">
-            {!isMobile ? (
-                [collapseNavbar ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
+        <div className="header__content" >
+          <div className="header__left" style={{marginLeft: isLeaderboard ? 110: ""}}>
+            {(!isMobile && !isLeaderboard ) ? (
+              [!removeCollapseToggle &&
+                [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
                 <SVGIcons.ArrowLeft onClick={handleClick2} />
                 ]
+              ]
             ) : 
             <div className="logo">
               <img src={FullLogo} alt="" />

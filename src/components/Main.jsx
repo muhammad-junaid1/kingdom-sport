@@ -10,6 +10,9 @@ import "../css/Main.css";
 import Homepage from "./pages/Homepage";
 import Live from "./pages/Live";
 import Favourites from "./pages/Favourites";
+import Crypto from "./pages/Crypto";
+import LeaderBoard from "./pages/LeaderBoard";
+import CryptoNavbar from "./CryptoNavbar";
 
 export const NavbarContext = React.createContext({});
 
@@ -31,11 +34,27 @@ const Main = () => {
   return (
     <>
       <div className="main-wrapper">
-        {!isMobile &&  <NavbarContext.Provider
-                value={{ setCollapseNavbar }}
-              ><Navbar collapse={collapseNavbar && true}/></NavbarContext.Provider>}
+        {!isMobile && (
+          <NavbarContext.Provider value={{ setCollapseNavbar }}>
+            <Routes>
+            <Route path="/" element={<Navbar collapse={collapseNavbar && true}/>}/>
+            <Route path="/sport/:page" element={<Navbar collapse={collapseNavbar && true}/>}/>
+              <Route
+                path="/crypto"
+                element={
+                  <CryptoNavbar
+                    isMobile={isMobile}
+                    forMobile={true}
+                    showNavbar={showNavbar}
+                  />
+                }
+              />
+            </Routes>
+          </NavbarContext.Provider>
+        )}
         <div className="section">
-          <Header
+        <Routes>
+                <Route path="/" element={ <Header
             isMobile={isMobile}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
@@ -43,19 +62,91 @@ const Main = () => {
             setShowBetsContainer={setShowBetsContainer}
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
-          />
+          />}/>
+                <Route path="/sport/:page" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+          />}/>
+          <Route path="/crypto" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+            removeCollapseToggle={true}
+          />}/>
+      <Route path="/leaderboard" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+            removeCollapseToggle={true}
+            isLeaderboard={true}
+          />}/>
+        </Routes>
           <div className="content-wrapper">
-          <div className="navbar--mobile" style={{width: (isMobile && showNavbar) ? "100%" : 0, overflow: showNavbar ? "visible" : "hidden"}}>
+            <div
+              className="navbar--mobile"
+              style={{
+                width: isMobile && showNavbar ? "100%" : 0,
+                overflow: showNavbar ? "visible" : "hidden",
+              }}
+            >
               <NavbarContext.Provider
                 value={{ setCollapseNavbar, isMobile, setShowNavbar }}
               >
-                <Navbar isMobile={isMobile} forMobile={true} showNavbar={showNavbar}/>
+                <Routes>
+                <Route
+                    path="/"
+                    element={
+                      <Navbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+                <Route
+                    path="/sport/:page"
+                    element={
+                      <Navbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+        
+                  <Route
+                    path="/crypto"
+                    element={
+                      <CryptoNavbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+                </Routes>
               </NavbarContext.Provider>
-              </div>
+            </div>
 
             {/* ************* */}
 
-            <div className="content" style={{pointerEvents: showNavbar ? "none" : ""}}>
+            <div
+              className="content"
+              style={{ pointerEvents: showNavbar ? "none" : "" }}
+            >
               {showBets ? (
                 <BetsContainer
                   isMobile={isMobile}
@@ -67,6 +158,8 @@ const Main = () => {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/sport/live" element={<Live />} />
                   <Route path="/sport/favourites" element={<Favourites />} />
+                  <Route path="/crypto" element={<Crypto />} />
+                  <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
               )}
             </div>

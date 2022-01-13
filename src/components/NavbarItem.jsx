@@ -9,7 +9,7 @@ const NavbarItem = ({
   number,
   isDropDown,
   isHome,
-  isLive, collapse, active, onToggle, target
+  isLive, collapse, active, onToggle, target, noIcon, children
 }) => {
 
   const {isMobile, setShowNavbar, setCollapseNavbar} = React.useContext(NavbarContext);
@@ -30,12 +30,13 @@ const NavbarItem = ({
           active ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
         onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : HideNavOnClickOnMobile)}
       >
-        {collapse ? (
-          <Icon />
+        {(collapse) ? (
+          [!noIcon && <Icon />]
         ) : (
           <>
             <div className="left">
-              <Icon />
+              {children}
+              {!noIcon && <Icon />}
               <p className="navbar__item-text">{text}</p>
             </div>
             <div className="right">
@@ -58,11 +59,11 @@ const NavbarItem = ({
         onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : null)}
       >
         {collapse ? (
-          <Icon />
+          [!noIcon &&<Icon />]
         ) : (
           <>
             <div className="left">
-              <Icon />
+              {!noIcon && <Icon />}
               <p className="navbar__item-text">{text}</p>
             </div>
             <div className="right">
