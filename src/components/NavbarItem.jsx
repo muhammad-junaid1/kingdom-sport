@@ -21,7 +21,6 @@ const NavbarItem = ({
     if(isMobile){
         setShowNavbar(false);
     }
-    console.log(isMobile)
   }
 
   return (
