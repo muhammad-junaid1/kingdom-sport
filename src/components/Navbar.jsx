@@ -6,95 +6,10 @@ import DropdownItem from "./DropdownItem";
 import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import SearchInput from "./SearchInput";
+import sampleData from "../sampleData";
 
-const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData}) => {
-  const dropDowns = [
-    {
-      icon: "Soccer",
-      text: "Football",
-      number: 34,
-      dropdownItems: [
-        {
-          icon: "Soccer",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "Soccer",
-          text: "Item no 2",
-          number: 14,
-        },
-      ],
-    },
-    {
-      icon: "Basketball",
-      text: "Basketball",
-      number: 34,
-      dropdownItems: [
-        {
-          icon: "Basketball",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "Basketball",
-          text: "Item no 2",
-          number: 14,
-        },
-      ],
-    },
-    {
-      icon: "MMA",
-      text: "MMA",
-      number: 34,
-      dropdownItems: [
-        {
-          icon: "MMA",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 2",
-          number: 14,
-        },
-      ],
-    },
-    {
-      icon: "Tennis",
-      text: "Tennis",
-      number: 34,
-      dropdownItems: [
-        {
-          icon: "Tennis",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "Tennis",
-          text: "Item no 2",
-          number: 14,
-        },
-      ],
-    },
-    {
-      icon: "Icehockey",
-      text: "Icehockey",
-      number: 34,
-      dropdownItems: [
-        {
-          icon: "Icehockey",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "Icehockey",
-          text: "Item no 2",
-          number: 14,
-        },
-      ],
-    },
-  ];
+const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollapse}) => {
+  const dropDowns = sampleData.dropDownsData;
   const [toggled, setToggled] = useState(null);
   const [checked, setChecked] = useState(null);
   return (
@@ -107,7 +22,7 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData}) => {
         </div>
       }
         <div className="search-input-container" style={{cursor: collapse ? "pointer" : ""}}>
-        <SearchInput collapse={collapse}/>
+        <SearchInput collapse={collapse} setCollapse={setCollapse}/>
         </div>
       </div>
         <div className="navbar__main-items-container">

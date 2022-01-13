@@ -37,8 +37,8 @@ const Main = () => {
         {!isMobile && (
           <NavbarContext.Provider value={{ setCollapseNavbar }}>
             <Routes>
-            <Route path="/" element={<Navbar collapse={collapseNavbar && true}/>}/>
-            <Route path="/sport/:page" element={<Navbar collapse={collapseNavbar && true}/>}/>
+            <Route path="/" element={<Navbar setCollapse={setCollapseNavbar} collapse={collapseNavbar && true}/>}/>
+            <Route path="/sport/:page" element={<Navbar setCollapse={setCollapseNavbar}  collapse={collapseNavbar && true}/>}/>
               <Route
                 path="/crypto/all"
                 element={
