@@ -7,7 +7,7 @@ import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import SearchInput from "./SearchInput";
 
-const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, isLeaderboard}) => {
+const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData}) => {
   const dropDowns = [
     {
       icon: "Soccer",
@@ -96,6 +96,7 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, isLeaderb
     },
   ];
   const [toggled, setToggled] = useState(null);
+  const [checked, setChecked] = useState(null);
   return (
     <>
       <div className="navbar" style={{paddingRight: (isMobile && !showNavbar) ? 0 : ""}}>
@@ -148,13 +149,9 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, isLeaderb
             </>
           : 
           <>
-          <NavbarItem isDropDown={false} text="All items" noIcon={true} number={123} collapse={collapse} target="/crypto/all">
-          <input type="radio" name="crypto" />
-          </NavbarItem>
-          {cryptoData.map((item) => {
-            return <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} target={item.target}>
-              <input type="radio" name="crypto" />
-            </NavbarItem>
+          <NavbarItem isDropDown={false} text="All items" noIcon={true} number={123} collapse={collapse} target="/crypto/all" isCryptoItem={true} forAll={true}/>
+          {cryptoData.map((item, index) => {
+            return <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} activeRadio={checked === index} onCheck={() => checked === index ? setChecked(index) : setChecked(index)} isCryptoItem={true} target={`/crypto/${index+1}`}/>
           })}
           </>
           }

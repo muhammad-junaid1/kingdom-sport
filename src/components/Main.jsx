@@ -40,7 +40,17 @@ const Main = () => {
             <Route path="/" element={<Navbar collapse={collapseNavbar && true}/>}/>
             <Route path="/sport/:page" element={<Navbar collapse={collapseNavbar && true}/>}/>
               <Route
-                path="/crypto"
+                path="/crypto/all"
+                element={
+                  <CryptoNavbar
+                    isMobile={isMobile}
+                    forMobile={true}
+                    showNavbar={showNavbar}
+                  />
+                }
+              />
+              <Route
+                path="/crypto/:index"
                 element={
                   <CryptoNavbar
                     isMobile={isMobile}
@@ -72,7 +82,17 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
           />}/>
-          <Route path="/crypto" element={ <Header
+          <Route path="/crypto/all" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+            removeCollapseToggle={true}
+          />}/>
+          <Route path="/crypto/:index" element={ <Header
             isMobile={isMobile}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
@@ -128,7 +148,17 @@ const Main = () => {
                   />
         
                   <Route
-                    path="/crypto"
+                    path="/crypto/all"
+                    element={
+                      <CryptoNavbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+                  <Route
+                    path="/crypto/:index"
                     element={
                       <CryptoNavbar
                         isMobile={isMobile}
@@ -158,7 +188,8 @@ const Main = () => {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/sport/live" element={<Live />} />
                   <Route path="/sport/favourites" element={<Favourites />} />
-                  <Route path="/crypto" element={<Crypto />} />
+                  <Route path="/crypto/all" element={<Crypto />} />
+                  <Route path="/crypto/:index" element={<Crypto/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
               )}

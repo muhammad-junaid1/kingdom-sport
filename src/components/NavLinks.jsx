@@ -24,7 +24,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
           </NavLink>
         </li>
         <li>
-        <NavLink to="/crypto">
+        <NavLink to="/crypto/all" className={`${location.pathname.startsWith("/crypto") ? "active" : ""}`}>
         {isFixed &&
           <SVGIcons.Crypto />
         }
