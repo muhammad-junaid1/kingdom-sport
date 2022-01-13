@@ -46,7 +46,7 @@ const Header = ({
            : <>
 
            <Balance/>
-           <Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></>
+           {!isMobile && <Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button>}</>
           }
             {!isMobile ? [
               showBetsContainer ? (

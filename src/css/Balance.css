@@ -34,3 +34,13 @@
     width: 14px;
     height: 14px;
 }
+
+
+@media all and (max-width: 500px) {
+    .balance-container .left {
+        padding: 5px;
+    }
+    .balance-container {
+        margin-right: -6px;
+    }
+}
