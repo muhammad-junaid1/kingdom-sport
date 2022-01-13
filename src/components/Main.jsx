@@ -5,6 +5,8 @@ import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
 import "../css/Main.css";
 
+export const NavbarContext = React.createContext();
+
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
   const [collapseNavbar, setCollapseNavbar] = useState(false);
@@ -24,10 +26,12 @@ const Main = () => {
     <>
       <div className="main-wrapper">
       {(!isMobile) &&
+      <NavbarContext.Provider value={setCollapseNavbar}>
         <Navbar collapse={collapseNavbar && true}/>
+        </NavbarContext.Provider>
       }
         <div className="section">
-          <Header isMobile={isMobile} showNavbar={showNavbar} setShowNavbar={setShowNavbar} showBetsContainer={showBetsContainer} setShowBetsContainer={setShowBetsContainer} collapseNavbar={collapseNavbar} setCollapseNavbar={setCollapseNavbar} collapse={collapseNavbar}/>
+          <Header isMobile={isMobile} showNavbar={showNavbar} setShowNavbar={setShowNavbar} showBetsContainer={showBetsContainer} setShowBetsContainer={setShowBetsContainer} collapseNavbar={collapseNavbar} setCollapseNavbar={setCollapseNavbar}/>
           <div className="content-wrapper">
           {showNavbar && <Navbar isMobile={isMobile}/>}
           {/* ************* */}

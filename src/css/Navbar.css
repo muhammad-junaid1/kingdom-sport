@@ -22,7 +22,7 @@
 
 /* Navbar list */
 .navbar__main-items-container ul {
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0px 14px 14px 0px;
     overflow: hidden;
 }
 
@@ -64,22 +64,15 @@
 /* Hover/Active effects */
 .navbar__item:hover {
     background: var(--violet2);
+    color: white;
 }
 .navbar__item:hover svg {
     color: var(--violet6) !important;
-}
-.navbar__item:active {
-    background: var(--violet1);
 }
 
 /* Dropdown menu */
 .navbar__dropdown-items-container{
     margin-top: 2.0rem;
-}
-
-.navbar__dropdown-items .navbar__item {
-    padding: 1.1rem 1.2rem 1.1rem 2.0rem;
-    margin: 2px 0;
 }
 
 .navbar__dropdown-items .navbar__item:hover svg{
@@ -97,20 +90,25 @@
 }
 
 .navbar__dropdown-item .navbar__item {
-    margin-bottom: 0;
+    margin: 0;
+}
+
+.navbar__dropdown-items .navbar__item {
+    padding: 1.1rem 2.0rem 1.1rem 2.0rem;
+    margin-bottom: 1px;
 }
 
 
 /* Active Navbar item */
-.active-navbar-item svg{
+.navbar__main-items-container .navbar__item.active svg, .active-navbar-item svg{
     color: var(--violet6) !important;
 }
 
-.active-navbar-item .navbar__item-number{
-    background-color: var(--violet6) !important;
+.navbar__item.active .navbar__item-number, .active-navbar-item .navbar__item-number{
+    background-color: var(--violet6);
 }
 
-.active-navbar-item {
+.navbar__item.active, .active-navbar-item {
     background-color: var(--violet2);
     position: relative;
 }
@@ -127,19 +125,35 @@
     left: 0;
     top: 0;
     bottom: 0;
+    display: none;
+}
+
+.navbar__main-items-container .navbar__item.active .active-border {
+    display: block;
 }
 
 .navbar__item-live .left{
-    color: var(--red6);
+    color: var(--red6) !important;
+}
+
+.navbar__item-live.active{
+    background-color: var(--red1) !important;
+}
+
+.navbar__item-live.active .active-border {
+    display: block;
+    background: var(--red6);
 }
 
 .navbar__item-live .navbar__item-number {
-    background-color: var(--red6);
+    background-color: var(--red6) !important;
 }
-
 
 @media all and (max-width: 500px) {
     .navbar__header{
         padding-top:0;
+    }
+    .navbar {
+        margin-bottom: 80px;
     }
 }

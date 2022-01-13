@@ -36,7 +36,7 @@
 
 @media all and (max-width: 500px){
     .header__content{
-        padding: 2.0rem 1.0rem;
+        padding: 2.0rem 1.5rem;
         justify-content: space-around;
     }
     .header__right button {

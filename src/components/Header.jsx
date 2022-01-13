@@ -10,7 +10,6 @@ const Header = ({
   setShowBetsContainer,
   collapseNavbar,
   setCollapseNavbar,
-  collapse,
   isMobile,
   showNavbar, setShowNavbar
 }) => {
@@ -20,13 +19,14 @@ const Header = ({
   const handleClick2 = () => {
     setCollapseNavbar(!collapseNavbar);
   };
+
   return (
     <>
       <div className="header">
         <div className="header__content">
           <div className="header__left">
             {!isMobile ? (
-                [collapse ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
+                [collapseNavbar ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
                 <SVGIcons.ArrowLeft onClick={handleClick2} />
                 ]
             ) : 

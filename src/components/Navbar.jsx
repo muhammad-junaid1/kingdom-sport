@@ -118,7 +118,6 @@ const Navbar = ({collapse, isMobile}) => {
                 text="Home"
                 number={23}
                 isHome={true}
-                isActive={true}
                 collapse={collapse}
               />
             </li>

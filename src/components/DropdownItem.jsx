@@ -17,8 +17,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, setToggled,
           onToggle={onToggle}
           active={active}
         />
-        {!collapse &&
-        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: active ? dropDownsContainer.current.scrollHeight : 0}}
+        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: (active && !collapse) ? dropDownsContainer.current.scrollHeight : 0}}
 >
           {dropdownItems.map((item) => {
             return (
@@ -27,11 +26,11 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, setToggled,
                 Icon={SVGIcons[item.icon]}
                 text={item.text}
                 number={item.number}
+                collapse={collapse}
               />
             );
           })}
         </div>
-        }
       </div>
     </>
   );

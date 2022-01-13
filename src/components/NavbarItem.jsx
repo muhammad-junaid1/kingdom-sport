@@ -1,4 +1,6 @@
+import React from "react";
 import SVGIcons from "./SvgIcons";
+import {NavbarContext} from "./Main";
 
 const NavbarItem = ({
   Icon,
@@ -6,16 +8,21 @@ const NavbarItem = ({
   number,
   isDropDown,
   isHome,
-  isActive,
   isLive, collapse, active, onToggle
 }) => {
+
+  const setCollapseNavbar = React.useContext(NavbarContext);
+  const onToggleAndCollapse = () => {
+    setCollapseNavbar(!collapse);
+    onToggle();
+  }
 
   return (
     <>
       <div
         className={`navbar__item${isDropDown ? " navbar__item--dropdown" : ""}${
-          active ? " active-navbar-item" : ""}${isActive ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
-        onClick={isDropDown ? onToggle : undefined}
+          active ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
+        onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : null)}
       >
         {collapse ? (
           <Icon />
@@ -37,7 +44,6 @@ const NavbarItem = ({
         {/* Border left */}
         <div
           className="active-border"
-          style={{ display: isHome ? "block" : "none" }}
         ></div>
       </div>
     </>
