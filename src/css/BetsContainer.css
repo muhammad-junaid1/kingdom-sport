@@ -31,8 +31,20 @@
   margin-top: 1.0rem;
 }
 
-.bets__body::-webkit-scrollbar{
-  display: none;
+.bets__body::-webkit-scrollbar {
+  width: 3px;
+}
+
+.bets__body::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.bets__body::-webkit-scrollbar-thumb {
+  background: var(--violet6);
+}
+
+.bets__body::-webkit-scrollbar-thumb:hover {
+  background: var(--violet6);
 }
 
 .bets__body.not-connected-wrapper {
@@ -171,7 +183,7 @@
   align-items: center;
 }
 
-.min-max .left p, .min-max button {
+.min-max .left p, .min-max .right button {
   margin-left: 8px;
 }
 

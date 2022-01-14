@@ -12,17 +12,17 @@ const NavbarItem = ({
   isLive, collapse, active, onToggle, target, noIcon, isCryptoItem, onCheck, activeRadio, forAll
 }) => {
 
-  const {isMobile, setShowNavbar, setCollapseNavbar} = React.useContext(NavbarContext);
+  const {isMobile, setShowNavbar, setCollapseNavbar, setShowBets} = React.useContext(NavbarContext);
   const onToggleAndCollapse = () => {
     setCollapseNavbar(!collapse);
     onToggle();
-  }
+  } 
   const HideNavOnClickOnMobile = () => {
-    if(isMobile){
+    if(isMobile){  
       setShowNavbar(false);
+          setShowBets(false);
     }
     if(isCryptoItem) onCheck();
-    
   }
 
   return (

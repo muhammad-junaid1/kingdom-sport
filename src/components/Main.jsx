@@ -129,7 +129,7 @@ const Main = () => {
               }}
             >
               <NavbarContext.Provider
-                value={{ setCollapseNavbar, isMobile, setShowNavbar }}
+                value={{ setCollapseNavbar, isMobile, setShowNavbar, setShowBets }}
               >
                 <Routes>
                 <Route
