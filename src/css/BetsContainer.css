@@ -31,6 +31,7 @@
   overflow-y: scroll;
   margin-top: 1.0rem;
   height: 100%;
+  margin-bottom: 4.0rem;
 }
 
 .bets__body-wrapper {
@@ -310,9 +311,6 @@
     padding-bottom: 60px;
   }
 
-  .bets__body {
-    margin-bottom: 40px;
-  }
   .bets__footer {
     display: flex;
     align-items: center;

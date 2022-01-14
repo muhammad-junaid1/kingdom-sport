@@ -118,8 +118,8 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
-            isLeaderboard={true}
             isConnected={connected} setConnected={setConnected}
+            isLeaderboard={true}
           />}/>
         </Routes>
           <div className="content-wrapper">
@@ -155,7 +155,7 @@ const Main = () => {
                     }
                   />
                 <Route
-                    path="/sport/:live"
+                    path="/sport/live"
                     element={
                       <LiveNavbar
                         isMobile={isMobile}
@@ -180,6 +180,16 @@ const Main = () => {
                     path="/crypto/:index"
                     element={
                       <CryptoNavbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+              <Route
+                    path="/leaderboard"
+                    element={
+                      <Navbar
                         isMobile={isMobile}
                         forMobile={true}
                         showNavbar={showNavbar}

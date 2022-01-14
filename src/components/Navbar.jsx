@@ -105,8 +105,8 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
         </div>
         }
         <div className="live-navbar-items">
-        {isLive && <>
-            {liveNavbarData.map((item) =>
+        {(isLive) && <>
+            {liveNavbarData.map((item, index) =>
               <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} isLiveItem={true} isActiveLiveItem={paramObj.hasOwnProperty(item.text)}/>
             )}
         </>}
