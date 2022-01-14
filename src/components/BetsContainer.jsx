@@ -3,7 +3,7 @@ import Button from "./Button";
 import SVGIcons from "./SvgIcons";
 import "../css/BetsContainer.css";
 import MatchWinnersList from "./MatchWinnersList";
-import MatchWinner from "./MatchWinner";
+import MyBets from "./MyBets";
 import sampleData from "../sampleData";
 
 const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
@@ -39,7 +39,7 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
         <div
           className={`bets__body${
             !isConnected ? " not-connected-wrapper" : ""
-          }`} style={{height: isConnected ? "70%" : "100%"}}
+          }`}
         >
           <div className={`bets__body-wrapper`}>
             {!isConnected ? (
@@ -129,35 +129,11 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
                   winnersData={sampleData.matchWinners}
                 />
                 </>
-                : <>
-                <div className="details">
-                <div className="left">
-                    <span>#6</span>
-                    <p>DEC 9 08:12AM</p>
-                </div>
-                <div className="right">
-                  <span>Copy Bet ID</span>
-                  <SVGIcons.CopyBetID/>
-                </div>
-                </div>
-                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
-                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
-                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
-                <div className="odds">
-                  <p>ODDS</p>
-                  <span><SVGIcons.Activity/>5.2</span>
-                </div>
-                <div className="amounts">
-                  <div className="bet-amount">
-                  <p>Bet amount</p>
-                  <p className="amount">$100.0</p>
-                  </div>
-                  <div className="possible-win">
-                  <p>Possible win</p>
-                  <p className="amount">$9000.00</p>
-                  </div>
-                </div>
-                </>
+                : <>{toggle2 ? <>
+                      <MyBets settled={true} id="#6" date="Dec 6 08:00AM" loseBet={false} activity={9} betAmount="$100.0" winAmount="$900.0"/>
+                      <MyBets settled={true} id="#6" date="Dec 6 08:00AM" loseBet={true} activity={9} betAmount="$100.0" winAmount="$900.0"/>
+                      </>
+                : <MyBets settled={false} id="#6" date="Dec 6 08:00AM" loseBet={false} activity={9} betAmount="$100.0" winAmount="$900.0"/>}</>
                 }
 
               </>

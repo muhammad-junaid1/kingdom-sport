@@ -1,7 +1,7 @@
 import React from 'react';
 import SVGIcons from "./SvgIcons";
 
-const MatchWinner = ({team1, team2, winner, activity, noDeleteIcon, footerRightAlign}) => {
+const MatchWinner = ({team1, team2, winner, activity, noDeleteIcon, footerRightAlign, loseBet, notBet}) => {
     return (
         <>
             <div className="match-winner">
@@ -19,7 +19,7 @@ const MatchWinner = ({team1, team2, winner, activity, noDeleteIcon, footerRightA
                         <p className="fw-bold">Match Winner - {winner}</p>
                 </div>
                 <div className="match-winner__footer">
-                    <p style={{justifyContent: footerRightAlign ? "flex-end" : ""}}><SVGIcons.Activity/>{activity}</p>
+                    <p style={{justifyContent: footerRightAlign ? "flex-end" : "", color: (!notBet &&loseBet) && "#FF453A"}}><SVGIcons.Activity color={(!notBet && loseBet) && "#FF453A"}/>{activity}</p>
                 </div>
             </div>
         </>
