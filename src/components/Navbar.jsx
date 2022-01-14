@@ -64,9 +64,9 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
             </>
           : 
           <>
-          <NavbarItem isDropDown={false} text="All items" noIcon={true} number={123} collapse={collapse} target="/crypto/all" isCryptoItem={true} forAll={true}/>
+          <NavbarItem isDropDown={false} text="All items" noIcon={true} number={123} collapse={collapse} target="/crypto/all" isCryptoItem={true} forAll={true} setChecked={setChecked} activeRadio={checked === "all"}/>
           {cryptoData.map((item, index) => {
-            return <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} activeRadio={checked === index} onCheck={() => checked === index ? setChecked(index) : setChecked(index)} isCryptoItem={true} target={`/crypto/${index+1}`}/>
+            return <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} activeRadio={checked === "all" ? false : (checked === index)} onCheck={() => checked === index ? setChecked(index) : setChecked(index)} isCryptoItem={true} target={`/crypto/${index+1}`}/>
           })}
           </>
           }

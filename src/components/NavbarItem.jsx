@@ -9,7 +9,7 @@ const NavbarItem = ({
   number,
   isDropDown,
   isHome,
-  isLive, collapse, active, onToggle, target, noIcon, isCryptoItem, onCheck, activeRadio, forAll
+  isLive, collapse, active, onToggle, target, noIcon, isCryptoItem, onCheck, activeRadio, forAll, setChecked
 }) => {
 
   const {isMobile, setShowNavbar, setCollapseNavbar, setShowBets} = React.useContext(NavbarContext);
@@ -22,7 +22,11 @@ const NavbarItem = ({
       setShowNavbar(false);
           setShowBets(false);
     }
-    if(isCryptoItem) onCheck();
+    if(isCryptoItem && !forAll){
+      onCheck();
+    } else {
+      setChecked("all");
+    }
   }
 
   return (
@@ -37,10 +41,10 @@ const NavbarItem = ({
         ) : (
           <>
             <div className="left">
-              {(isCryptoItem && !forAll) && <>
+              {(isCryptoItem) && <>
               <input style={{display: "none"}} type="radio" name="crypto" value={text}/>
-              <div className={`radio-icon${(activeRadio) ? " radio-active": ""}`}>
-                <div className="active-radio-circle" style={{display: activeRadio ? "block" : "none"}}></div>
+              <div className={`radio-icon${(activeRadio==="all" || activeRadio===true) ? " radio-active": ""}`}>
+                <div className="active-radio-circle" style={{display: (activeRadio==="all" || activeRadio===true) ? "block" : "none"}}></div>
               </div>
               </>
 }

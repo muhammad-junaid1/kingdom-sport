@@ -168,7 +168,7 @@
 }
 
 .my-bets {
-  margin: 3.0rem 0;
+  margin-top: 3.0rem;
 }
 
 .winners-container .about-container svg{
@@ -307,7 +307,7 @@
     margin-right: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 
   .bets__body {
