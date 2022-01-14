@@ -18,7 +18,9 @@ const Header = ({
     setShowBetsContainer(!showBetsContainer);
   };
   const handleClick2 = () => {
-    setCollapseNavbar(!collapseNavbar);
+    if(!removeCollapseToggle && !isLeaderboard) {
+      setCollapseNavbar(!collapseNavbar);
+    }
   };
 
   return (
@@ -26,16 +28,16 @@ const Header = ({
       <div className="header">
         <div className="header__content" >
           <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "4%": ""}}>
-            {(!isMobile && !isLeaderboard ) ? (
-              [!removeCollapseToggle &&
+          {isLeaderboard &&
+            <div className="logo">
+              <img src={FullLogo} alt="" />
+            </div>
+            }
+            {(!isMobile) && (
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
                 <SVGIcons.ArrowLeft onClick={handleClick2} />
                 ]
-              ]
-            ) : 
-            <div className="logo">
-              <img src={FullLogo} alt="" />
-            </div>}
+            )}
             {!isMobile && <NavLinks/>}
           </div>
           <div className="header__right">
