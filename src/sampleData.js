@@ -167,6 +167,26 @@ const data = {
       winner: "First",
       activity: 5.2
     },
+  ], 
+  liveNavItems: [
+    {
+      icon: "Soccer",
+      text: "Football",
+      number: 34,
+    }, {
+      icon: "Tennis",
+      text: "Tennis",
+      number: 2,
+    }, {
+      icon: "BasketBall",
+      text: "Basketball",
+      number: 2,
+    }
+    , {
+      icon: "MMA",
+      text: "MMA",
+      number: 2,
+    }
   ]
 };
 

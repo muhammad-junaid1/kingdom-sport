@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useRef, useEffect} from "react";
 import SVGIcons from "./SvgIcons";
 import {NavbarContext} from "./Main";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 const NavbarItem = ({
   Icon,
@@ -9,8 +9,23 @@ const NavbarItem = ({
   number,
   isDropDown,
   isHome,
-  isLive, collapse, active, onToggle, target, noIcon, isCryptoItem, onCheck, activeRadio, forAll, setChecked
+  isLive, collapse, active, onToggle, target, noIcon, isCryptoItem, onCheck, activeRadio, forAll, setChecked, isLiveItem, isActiveLiveItem
 }) => {
+  const [activeLiveCheckBox, setActiveLiveCheckBox] = useState(false);
+  const inputElement = useRef();
+
+  // Determine the query params 
+  const {search} = useLocation();
+  let query = search;
+  if(query.length === 0) {
+    query += `?${text}=true&`;
+  } else {
+    if(!query.includes(text)) {
+      query += `${text}=true&`;
+    } else {
+      query = query.replace(`${text}=true&`, "");
+    }
+  }
 
   const {isMobile, setShowNavbar, setCollapseNavbar, setShowBets} = React.useContext(NavbarContext);
   const onToggleAndCollapse = () => {
@@ -24,10 +39,24 @@ const NavbarItem = ({
     }
     if(isCryptoItem && !forAll){
       onCheck();
-    } else {
+    } if(forAll) {
       setChecked("all");
     }
   }
+
+   const handleLiveItem =() =>{
+    if(isLiveItem){
+      inputElement.current.checked = true;
+      setActiveLiveCheckBox(!activeLiveCheckBox);
+    }
+   }
+
+ useEffect(() => {
+  if(isActiveLiveItem) {
+    inputElement.current.checked = true;
+    setActiveLiveCheckBox(true);
+  }
+ }, [activeLiveCheckBox, isActiveLiveItem]);
 
   return (
     <>
@@ -42,12 +71,12 @@ const NavbarItem = ({
           <>
             <div className="left">
               {(isCryptoItem) && <>
-              <input style={{display: "none"}} type="radio" name="crypto" value={text}/>
+              <input style={{display: "none"}} type="radio" name="crypto" value={text} checked={activeRadio} onChange={HideNavOnClickOnMobile}/>
               <div className={`radio-icon${(activeRadio==="all" || activeRadio===true) ? " radio-active": ""}`}>
                 <div className="active-radio-circle" style={{display: (activeRadio==="all" || activeRadio===true) ? "block" : "none"}}></div>
               </div>
-              </>
-}
+              </>}
+
               {!noIcon && <Icon />}
               <p className="navbar__item-text">{text}</p>
             </div>
@@ -65,17 +94,25 @@ const NavbarItem = ({
           className="active-border"
         ></div>
       </NavLink> :
-      <div
+      (isLiveItem ? <Link to={query}>
+        <div
         className={`navbar__item${isDropDown ? " navbar__item--dropdown" : ""}${
-          active ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
-        onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : null)}
+          active ? " active-navbar-item" : ""}${(isLive || activeLiveCheckBox) ? " navbar__item-live" : ""}${activeLiveCheckBox ? " live-active" : ""}`}
+        onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : handleLiveItem)}
       >
         {collapse ? (
           [!noIcon &&<Icon />]
         ) : (
           <>
             <div className="left">
+              {(isLiveItem) && <>
+              <input style={{display: "none"}} type="checkbox" name="live" value={text} ref={inputElement} checked={activeLiveCheckBox}/>
+              <div className={`radio-icon${(activeLiveCheckBox) ? " live-checkbox-active": ""}`}>
+                <div className="live-checkbox-active-inner" style={{display: activeLiveCheckBox ? "block" : "none"}}><SVGIcons.TickSquare/></div>
+              </div>
+              </>}
               {!noIcon && <Icon />}
+
               <p className="navbar__item-text">{text}</p>
             </div>
             <div className="right">
@@ -91,7 +128,43 @@ const NavbarItem = ({
         <div
           className="active-border"
         ></div>
-      </div>}
+      </div>
+      </Link>
+      
+      : <div
+        className={`navbar__item${isDropDown ? " navbar__item--dropdown" : ""}${
+          active ? " active-navbar-item" : ""}${isLive ? " navbar__item-live" : ""}`}
+        onClick={(isDropDown && !collapse) ? onToggle : (isDropDown ? onToggleAndCollapse : handleLiveItem)}
+      >
+        {collapse ? (
+          [!noIcon &&<Icon />]
+        ) : (
+          <>
+            <div className="left">
+              {(isLiveItem) && <>
+              <input style={{display: "none"}} type="checkbox" name="live" value={text} ref={inputElement} checked={activeLiveCheckBox}/>
+              <div className={`radio-icon${(activeLiveCheckBox) ? " radio-active": ""}`}>
+                <div className="active-radio-circle" style={{display: activeLiveCheckBox ? "block" : "none"}}></div>
+              </div>
+              </>}
+              {!noIcon && <Icon />}
+
+              <p className="navbar__item-text">{text}</p>
+            </div>
+            <div className="right">
+              {!isHome && <span className="navbar__item-number">{number}</span>}
+              <div style={{ visibility: isDropDown ? "visible" : "hidden" }}>
+                {active ? <SVGIcons.ArrowUp /> : <SVGIcons.ArrowDown />}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Border left */}
+        <div
+          className="active-border"
+        ></div>
+      </div>)}
     </>
   );
 };

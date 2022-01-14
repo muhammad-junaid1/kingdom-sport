@@ -572,6 +572,15 @@ const Activity = ({ color }) => {
     </>
   );
 };
+const TickSquare = ({ color }) => {
+  return (
+    <>
+<svg style={{ color: color ? color : "#FF453A" }} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.7933 1.33325H5.20659C2.77992 1.33325 1.33325 2.77992 1.33325 5.20659V10.7866C1.33325 13.2199 2.77992 14.6666 5.20659 14.6666H10.7866C13.2133 14.6666 14.6599 13.2199 14.6599 10.7933V5.20659C14.6666 2.77992 13.2199 1.33325 10.7933 1.33325ZM11.1866 6.46659L7.40659 10.2466C7.31325 10.3399 7.18659 10.3933 7.05325 10.3933C6.91992 10.3933 6.79325 10.3399 6.69992 10.2466L4.81325 8.35992C4.61992 8.16659 4.61992 7.84659 4.81325 7.65325C5.00659 7.45992 5.32659 7.45992 5.51992 7.65325L7.05325 9.18659L10.4799 5.75992C10.6733 5.56659 10.9933 5.56659 11.1866 5.75992C11.3799 5.95325 11.3799 6.26659 11.1866 6.46659Z" fill="currentColor"/>
+</svg>
+    </>
+  );
+};
 
 const icons = {
   Home,
@@ -595,6 +604,6 @@ const icons = {
   CloseMenu,
   Crypto,
   LeaderBoard,
-  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID
+  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare
 };
 export default icons;

@@ -7,11 +7,19 @@ import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import SearchInput from "./SearchInput";
 import sampleData from "../sampleData";
+import {useLocation} from "react-router-dom";
 
-const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollapse}) => {
+const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollapse, isLive, liveNavbarData}) => {
   const dropDowns = sampleData.dropDownsData;
   const [toggled, setToggled] = useState(null);
-  const [checked, setChecked] = useState(null);
+  const [checked, setChecked] = useState("all");
+  const {search} = useLocation();
+
+    const params = new URLSearchParams(search);
+    let paramObj = {};
+    for(var value of params.keys()) {
+         paramObj[value] = params.get(value);
+     }
   return (
     <>
       <div className="navbar" style={{paddingRight: (isMobile && !showNavbar) ? 0 : ""}}>
@@ -27,7 +35,7 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
       </div>
         <div className="navbar__main-items-container">
           <ul>
-          {!isCrypto ?
+          {(!isCrypto) ?
           <>
             <li>
               <NavbarItem
@@ -70,9 +78,11 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
           })}
           </>
           }
+
+
           </ul>
         </div>
-        {!isCrypto &&
+        {(!isCrypto && !isLive) &&
         <div className="navbar__dropdown-items-container">
           <ul>
             {dropDowns.map((item, index) => {
@@ -94,6 +104,13 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
           </ul>
         </div>
         }
+        <div className="live-navbar-items">
+        {isLive && <>
+            {liveNavbarData.map((item) =>
+              <NavbarItem isDropDown={false} Icon={SVGIcons[item.icon]} text={item.text} number={item.number} collapse={collapse} isLiveItem={true} isActiveLiveItem={paramObj.hasOwnProperty(item.text)}/>
+            )}
+        </>}
+        </div>
       </div>
     </>
   );

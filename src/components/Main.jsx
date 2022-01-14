@@ -13,6 +13,7 @@ import Favourites from "./pages/Favourites";
 import Crypto from "./pages/Crypto";
 import LeaderBoard from "./pages/LeaderBoard";
 import CryptoNavbar from "./CryptoNavbar";
+import LiveNavbar from "./LiveNavbar";
 
 export const NavbarContext = React.createContext({});
 
@@ -40,6 +41,7 @@ const Main = () => {
             <Routes>
             <Route path="/" element={<Navbar setCollapse={setCollapseNavbar} collapse={collapseNavbar && true}/>}/>
             <Route path="/sport/:page" element={<Navbar setCollapse={setCollapseNavbar}  collapse={collapseNavbar && true}/>}/>
+            <Route path="/sport/live" element={<LiveNavbar setCollapse={setCollapseNavbar}  collapse={collapseNavbar && true}/>}/>
               <Route
                 path="/crypto/all"
                 element={
@@ -152,7 +154,18 @@ const Main = () => {
                       />
                     }
                   />
-        
+                <Route
+                    path="/sport/:live"
+                    element={
+                      <LiveNavbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
+
+                  
                   <Route
                     path="/crypto/all"
                     element={
