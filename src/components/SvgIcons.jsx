@@ -530,6 +530,17 @@ const Save2 = ({ color }) => {
     </>
   );
 };
+const CopyBetID = ({ color }) => {
+  return (
+    <>
+ <svg style={{ color: color ? color : "#48484A" }} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.6666 8.60016V11.4002C10.6666 13.7335 9.73331 14.6668 7.39998 14.6668H4.59998C2.26665 14.6668 1.33331 13.7335 1.33331 11.4002V8.60016C1.33331 6.26683 2.26665 5.3335 4.59998 5.3335H7.39998C9.73331 5.3335 10.6666 6.26683 10.6666 8.60016Z" fill="currentColor"/>
+<path d="M11.4 1.3335H8.60003C6.67933 1.3335 5.7117 1.97043 5.42926 3.49277C5.32767 4.04033 5.79502 4.50016 6.35193 4.50016H7.40003C10.2 4.50016 11.5 5.80016 11.5 8.60016V9.64826C11.5 10.2052 11.9599 10.6725 12.5074 10.5709C14.0298 10.2885 14.6667 9.32086 14.6667 7.40016V4.60016C14.6667 2.26683 13.7334 1.3335 11.4 1.3335Z" fill="currentColor"/>
+</svg>
+
+    </>
+  );
+};
 const SingleBet = ({ color }) => {
   return (
     <>
@@ -584,6 +595,6 @@ const icons = {
   CloseMenu,
   Crypto,
   LeaderBoard,
-  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity
+  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID
 };
 export default icons;

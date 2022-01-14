@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
 import "../css/BetsContainer.css";
 import MatchWinnersList from "./MatchWinnersList";
+import MatchWinner from "./MatchWinner";
 import sampleData from "../sampleData";
 
 const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
   const [toggle, setToggle] = useState(false);
-  const [toggle2, setToggle2] = useState(true);
+  const [toggle2, setToggle2] = useState(false);
+  
+  useEffect(() => {
+      setToggle2(!toggle);
+  }, [toggle]);
   return (
     <>
       <div className={`bets`}>
@@ -57,7 +62,34 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
               </div>
             ) : (
               <>
-                <div className="bets__header" style={{ marginTop: "1.0rem" }}>
+              {toggle ? <div className="bets__header" style={{ marginTop: "1.0rem" }}>
+                  {toggle2 ? (
+                    <Button onClick={() => setToggle2(false)}>
+                      <SVGIcons.SingleBet color="#48484A" /> Unsettled
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={() => setToggle2(false)}
+                      type="secondary"
+                      color="grey"
+                    >
+                      <SVGIcons.SingleBet /> Unsettled
+                    </Button>
+                  )}
+                  {toggle2 ? (
+                    <Button
+                      type="secondary"
+                      color="grey"
+                      onClick={() => setToggle2(true)}
+                    >
+                      <SVGIcons.Save2 /> Settled
+                    </Button>
+                  ) : (
+                    <Button onClick={() => setToggle2(true)}>
+                      <SVGIcons.Save2 color="#48484A" /> Settled
+                    </Button>
+                  )}
+                </div> :  <div className="bets__header" style={{ marginTop: "1.0rem" }}>
                   {toggle2 ? (
                     <Button onClick={() => setToggle2(false)}>
                       <SVGIcons.SingleBet color="#48484A" /> Single bet
@@ -84,7 +116,8 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
                       <SVGIcons.Save2 color="#48484A" /> Parlay
                     </Button>
                   )}
-                </div>
+                </div>}
+                {!toggle ? <>
                 <MatchWinnersList
                   Icon={SVGIcons["Soccer"]}
                   sport="FOOTBALL"
@@ -95,13 +128,45 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
                   sport="BASKETBALL"
                   winnersData={sampleData.matchWinners}
                 />
+                </>
+                : <>
+                <div className="details">
+                <div className="left">
+                    <span>#6</span>
+                    <p>DEC 9 08:12AM</p>
+                </div>
+                <div className="right">
+                  <span>Copy Bet ID</span>
+                  <SVGIcons.CopyBetID/>
+                </div>
+                </div>
+                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
+                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
+                  <MatchWinner {...sampleData.matchWinners[0]} noDeleteIcon={true} footerRightAlign={true}/>
+                <div className="odds">
+                  <p>ODDS</p>
+                  <span><SVGIcons.Activity/>5.2</span>
+                </div>
+                <div className="amounts">
+                  <div className="bet-amount">
+                  <p>Bet amount</p>
+                  <p className="amount">$100.0</p>
+                  </div>
+                  <div className="possible-win">
+                  <p>Possible win</p>
+                  <p className="amount">$9000.00</p>
+                  </div>
+                </div>
+                </>
+                }
+
               </>
             )}
           </div>
         </div>
 
           <div className="bets__footer-wrapper">
-          {isConnected &&
+          {(isConnected && !toggle) &&
           <>
           <div className="min-max">
               <div className="left">
