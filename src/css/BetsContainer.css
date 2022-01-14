@@ -307,11 +307,12 @@
     margin-right: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-  }
-  .bets__footer button svg {
-    margin-right: 0;
+    padding-bottom: 40px;
   }
 
+  .bets__body {
+    margin-bottom: 40px;
+  }
   .bets__footer {
     display: flex;
     align-items: center;
@@ -321,6 +322,12 @@
     border-radius: 0;
     cursor: none;
     margin-top: 1.0rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: var(--page-bg);
+    padding: 10px; 
   }
 
   .bets__footer .left {
@@ -333,4 +340,7 @@
     cursor: pointer;
     margin-right: 1rem;
   }
+  .bets__footer button svg{
+    margin-right: 0;
+   }
 }
