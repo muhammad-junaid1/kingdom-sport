@@ -15,11 +15,11 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
   const [checked, setChecked] = useState("all");
   const {search} = useLocation();
 
-    const params = new URLSearchParams(search);
-    let paramObj = {};
-    for(var value of params.keys()) {
-         paramObj[value] = params.get(value);
-     }
+      const params = new URLSearchParams(search);
+      let paramObj = {};
+      for(var value of params.keys()) {
+           paramObj[value] = params.get(value);
+       }
   return (
     <>
       <div className="navbar" style={{paddingRight: (isMobile && !showNavbar) ? 0 : ""}}>
@@ -56,7 +56,7 @@ const Navbar = ({collapse, isMobile, showNavbar, isCrypto, cryptoData, setCollap
                 number={23}
                 isLive={true}
                 collapse={collapse}
-                target="/sport/live"
+                target={`/sport/live${search}`}
               />
             </li>
             <li>
