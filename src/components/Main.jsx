@@ -212,6 +212,7 @@ const Main = () => {
                   showBets={showBets}
                   setShowBets={setShowBets}
                   isConnected={connected}
+                  showNavbar={showNavbar}
                 />
               ) : (
                 <Routes>
@@ -226,7 +227,7 @@ const Main = () => {
             </div>
             {/* ********** */}
             {showBetsContainer && !isMobile && (
-              <BetsContainer isConnected={connected} />
+              <BetsContainer isConnected={connected} showNavbar={showNavbar} />
             )}
           </div>
         </div>

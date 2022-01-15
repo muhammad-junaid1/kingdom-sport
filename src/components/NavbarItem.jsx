@@ -48,6 +48,8 @@ const NavbarItem = ({
     if(isLiveItem){
       inputElement.current.checked = true;
       setActiveLiveCheckBox(!activeLiveCheckBox);
+      setShowNavbar(false);
+      setShowBets(false);
     }
    }
 

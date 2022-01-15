@@ -6,7 +6,7 @@ import MatchWinnersList from "./MatchWinnersList";
 import MyBets from "./MyBets";
 import sampleData from "../sampleData";
 
-const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
+const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets, showNavbar }) => {
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   
@@ -168,7 +168,7 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets }) => {
             </>
           }
 
-            {isMobile ? <div className="bets__footer">
+            {isMobile ? <div className={`bets__footer${!showNavbar ? " fixed" : ""}`}>
               <div className="left">
                 <p>
                   <SVGIcons.EmptyWallet /> <span>Settings</span>

@@ -209,6 +209,6 @@ input[type="radio"] {
     }
     .navbar--mobile {
         margin-bottom: 80px;
-        transition: width .2s ease-in;
+        transition: width .1s ease-in;
     }
 }
