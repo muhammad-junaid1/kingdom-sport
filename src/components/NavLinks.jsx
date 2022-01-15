@@ -5,6 +5,14 @@ import "../css/NavLinks.css";
 
 const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
   const handleClick = () => {
+    if(isFixed) {
+      setShowBets(false);
+      setShowNavbar(false);
+    }
+    return;
+  }
+
+  const toggleBetsContainer = () => {
     setShowBets(!showBets);
     setShowNavbar(false);
   }
@@ -14,7 +22,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
   return (
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>
       <ul>
-        <li>
+        <li onClick={handleClick}>
         <NavLink to="/" className={`${location.pathname.startsWith("/sport") ? "active" : ""}`}>
         {isFixed &&
           <SVGIcons.Soccer />
@@ -23,7 +31,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
           <div className="nav-link-active-border"></div>
           </NavLink>
         </li>
-        <li>
+        <li onClick={handleClick}>
         <NavLink to="/crypto/all" className={`${location.pathname.startsWith("/crypto") ? "active" : ""}`}>
         {isFixed &&
           <SVGIcons.Crypto />
@@ -32,7 +40,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
           <div className="nav-link-active-border"></div>
           </NavLink>
         </li>
-        <li>
+        <li onClick={handleClick}>
         <NavLink to="/leaderboard">
         {isFixed &&
           <SVGIcons.LeaderBoard />
@@ -42,7 +50,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
           </NavLink>
         </li>
         {isFixed &&
-        <li onClick={handleClick}>
+        <li onClick={toggleBetsContainer}>
           <SVGIcons.Bets2 />
           <span>MY BETS</span>
         </li>
