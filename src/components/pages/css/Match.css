@@ -3,6 +3,11 @@
 
 .match {
     margin-bottom: 3.0rem;
+    overflow: scroll;
+}
+
+.match::-webkit-scrollbar{
+    display: none;
 }
 
 .match__header {

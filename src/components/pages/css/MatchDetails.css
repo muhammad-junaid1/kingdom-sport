@@ -233,6 +233,7 @@
     }
     .match__body .ratios {
         width: 100%;
+        justify-content: center;
     }
     .match__body .ratios .ratio {
         width: 7.4rem;

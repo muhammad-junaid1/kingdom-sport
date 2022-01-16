@@ -34,7 +34,7 @@
 
 @media all and (max-width: 500px) {
   .header__content {
-    padding: 2rem 1.5rem;
+    padding: 2rem;
   }
   .header__right button {
     margin-left: 0;
