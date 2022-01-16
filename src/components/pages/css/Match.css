@@ -31,5 +31,5 @@
     padding: 5px;
 }
 .match__body tbody tr:nth-child(even) {
-    background: var(--grey6) !important;
+    background: var(--grey6);
 }

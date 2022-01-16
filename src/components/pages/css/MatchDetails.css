@@ -195,3 +195,47 @@
 .winner-container .ratio p:nth-child(1) {
     color: var(--grey2);
 }
+
+@media all and (max-width: 500px) {
+    .match__body tbody {
+        display: flex;
+        overflow: scroll;
+    }
+    .match__body tbody tr {
+        display: flex;
+        margin-right: 10px;
+        border: 1px solid var(--grey5);
+        flex-direction: column;
+        width: 92vw;
+        padding: 0 5px;
+        align-items: center;
+        background: transparent !important;
+    }
+    .match__body thead {
+        display: none;
+    }
+    .team-left p, .team-right p {
+        max-width: 60px !important;
+        word-wrap: break-word;
+    }
+    .match__body td {
+        width: 100%;
+    }
+    .match__body .scores{
+        width: 100%;
+        justify-content: center;
+    }
+    .match__body .time__content {
+        flex-direction: row;
+    }
+    .time__content p {
+        margin: 0 3px;
+    }
+    .match__body .ratios {
+        width: 100%;
+    }
+    .match__body .ratios .ratio {
+        width: 7.4rem;
+        height: 6.2rem;
+    }
+}

@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../css/MatchDetails.css";
+import { LivePageContext } from "../../Main";
 
-const MatchDetails = ({data, isLive, highlightScores, showBetsContainer}) => {
+const MatchDetails = ({data, isLive, highlightScores}) => {
+    const {showBetsContainer} = useContext(LivePageContext);
   return (
     <tr>
       <td>

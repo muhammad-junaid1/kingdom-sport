@@ -16,6 +16,7 @@ import CryptoNavbar from "./CryptoNavbar";
 import LiveNavbar from "./LiveNavbar";
 
 export const NavbarContext = React.createContext({});
+export const LivePageContext = React.createContext({});
 
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
@@ -228,7 +229,12 @@ const Main = () => {
               ) : (
                 <Routes>
                   <Route path="/" element={<Homepage />} />
-                  <Route path="/sport/live" element={<Live showBetsContainer={showBetsContainer}/>} />
+                  <Route path="/sport/live" element={
+                    <LivePageContext.Provider value={{showBetsContainer}}>
+                      <Live/>
+                    </LivePageContext.Provider>
+                  
+                  } />
                   <Route path="/sport/favourites" element={<Favourites />} />
                   <Route path="/crypto/all" element={<Crypto />} />
                   <Route path="/crypto/:index" element={<Crypto/>} />
