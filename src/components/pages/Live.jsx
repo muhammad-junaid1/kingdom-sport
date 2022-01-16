@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
 import Match from './components/Match';
 import SVGIcons from "../SvgIcons";
+import sampleData from "../../sampleData";
 
 const Live = () => {
     const {search} = useLocation();
@@ -17,11 +18,17 @@ const Live = () => {
      }, [search]);
     return (
         <>
-            <h1>Live</h1>
-            {/* {Object.keys(allParams).map((i) => {
-                return <p>{i}</p>
-            })} */}
-            <Match sport="Football" Icon={SVGIcons["Soccer"]}/>
+        {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
+           return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]}/>
+        })}
+
+            {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
+                return sampleData.liveNavItems.filter((item) => item.text === i).map((i) =>{
+                    return <Match isLive={true} sport={i.text} data={i.matchData} icon={i.icon}/>
+                })
+
+            })}
+
         </>
     );
 };

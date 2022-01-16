@@ -172,21 +172,127 @@ const data = {
     {
       icon: "Soccer",
       text: "Football",
-      number: 34,
+      number: 2,
+      matchData: [
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 2 },
+          right: { name: "Leicester City", icon: "logo1", score: 2 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 83],
+          ratios: []
+        },
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 3 },
+          right: { name: "Leicester City", icon: "logo1", score: 2 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 81],
+          ratios: [["1x", 1.91], ["1x", 1.91], ["1x", 1.91]],
+          moreRatios: 384
+        },
+    ]
     }, {
       icon: "Tennis",
       text: "Tennis",
       number: 2,
+      matchData: [
+        {
+          team: {
+          left: { name: "Chulalongkorn University", icon: "logo", score: 61 },
+          right: { name: "University Bangkok", icon: "logo1", score: 30 },
+          },
+          tour: {icon: "logo-1", name: "CHAMPIONSHIP OF THAILAND WOMEN"},
+          time: [4, 83],
+          ratios: []
+        },
+        {
+          team: {
+            left: { name: "Chulalongkorn University", icon: "logo", score: 61 },
+            right: { name: "University Bangkok", icon: "logo1", score: 30 },
+            },
+            tour: {icon: "logo-1", name: "CHAMPIONSHIP OF THAILAND WOMEN"},
+            time: [4, 83],
+          ratios: [["1x", 1.91], ["1x", 1.91], ["1x", 1.91]],
+          moreRatios: 543
+        },
+    ]
     }, {
       icon: "BasketBall",
       text: "Basketball",
       number: 2,
+      matchData: [
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 1 },
+          right: { name: "Leicester City", icon: "logo1", score: 4 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 83],
+          ratios: []
+        },
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 3 },
+          right: { name: "Leicester City", icon: "logo1", score: 2 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 81],
+          ratios: [["1x", 1.91], ["1x", 1.91], ["1x", 1.91]],
+          moreRatios: 384
+        },
+    ]
     }
     , {
       icon: "MMA",
       text: "MMA",
       number: 2,
+      matchData: [
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 1 },
+          right: { name: "Leicester City", icon: "logo1", score: 4 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 83],
+          ratios: []
+        },
+        {
+          team: {
+          left: { name: "Napoli", icon: "logo", score: 3 },
+          right: { name: "Leicester City", icon: "logo1", score: 2 },
+          },
+          tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+          time: [4, 81],
+          ratios: [["1x", 1.91], ["1x", 1.91], ["1x", 1.91]],
+          moreRatios: 384
+        },
+    ]
     }
+  ],
+
+  matchData: [
+      {
+        team: {
+        left: { name: "Napoli", icon: "logo", score: 1 },
+        right: { name: "Leicester City", icon: "logo1", score: 4 },
+        },
+        tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+        time: [4, 83],
+        ratios: []
+      },
+      {
+        team: {
+        left: { name: "Napoli", icon: "logo", score: 3 },
+        right: { name: "Leicester City", icon: "logo1", score: 2 },
+        },
+        tour: {icon: "logo", name: "UEFA EUORUPA LEAGUE"},
+        time: [4, 81],
+        ratios: [["1x", 1.91], ["1x", 1.91], ["1x", 1.91]],
+        moreRatios: 384
+      },
   ]
 };
 

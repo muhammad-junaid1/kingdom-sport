@@ -11,8 +11,12 @@
     font-size: 1.2rem;
 }
 
-.match__body th, .match__body td {
+.match__body th {
     padding: 10px;
+}
+
+.match__body .winner-container, .match__body .info{
+    padding: 10px 0px;
 }
 
 .match__body .info, .match__body .time, .match__body .winner-container {
@@ -41,6 +45,7 @@
     color: var(--grey3);
     font-size: 1.4rem;
     text-transform: capitalize;
+    margin-bottom: .5rem;
 }
 
 .match__body .tournament-icon {
@@ -51,6 +56,18 @@
     display: flex;
     align-items: center;
     font-size: 1.4rem;
+}
+
+.match__body .team-left p, .match__body .team-right p {
+    max-width: 120px;
+}
+
+.team-left p {
+    text-align: right;
+}
+
+.team-right p {
+    text-align: left;
 }
 
 .match__body .team-left img {
@@ -153,9 +170,14 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    height: 6.6rem;
+    height: 7.0rem;
     width: 6.4rem;
     margin: 0 5px;
+}
+
+.winner-container .ratio.no-bg {
+    background: transparent !important;
+    color: var(--grey3);
 }
 
 .winner-container .ratio p:nth-child(1) {
