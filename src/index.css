@@ -20,7 +20,12 @@ html{
 body {
   background: var(--page-bg);
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 li {

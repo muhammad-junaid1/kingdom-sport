@@ -87,6 +87,17 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
             isConnected={connected} setConnected={setConnected}
           />}/>
+                <Route path="/sport/live" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+            isConnected={connected} setConnected={setConnected}
+            removeCollapseToggle={true}
+          />}/>
           <Route path="/crypto/all" element={ <Header
             isMobile={isMobile}
             showNavbar={showNavbar}

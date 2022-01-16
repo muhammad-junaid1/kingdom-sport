@@ -57,7 +57,7 @@ const Header = ({
                 </Button>
               ) : (
                 <Button onClick={handleClick} type="secondary">
-                  <SVGIcons.Bets /> Show bets
+                  <SVGIcons.Bets /> Open bets
                 </Button>
               ),
             ] : <Button onClick={() => setShowNavbar(!showNavbar)} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}

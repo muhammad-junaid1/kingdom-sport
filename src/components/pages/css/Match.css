@@ -1,0 +1,28 @@
+
+@import "../../../css/colors/grey";
+
+.match__header {
+    margin-bottom: 1.0rem;
+}
+.match__header p{
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+.match__header svg {
+    margin-right: 10px;
+    color: white !important;
+    width: 18px;
+    height: 18px;
+}
+
+.match__body table{
+    width: 100%;
+}
+
+.match__body thead tr{
+    background: var(--grey6);
+    color: var(--grey1);
+    padding: 5px;
+}

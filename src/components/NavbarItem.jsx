@@ -42,6 +42,9 @@ const NavbarItem = ({
     } if(forAll) {
       setChecked("all");
     }
+    if(isLive) {
+      setCollapseNavbar(false);
+    }
   }
 
    const handleLiveItem =() =>{

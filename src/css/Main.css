@@ -12,6 +12,10 @@
     flex: 1;
 }
 
+.content {
+    padding: 10px;
+}
+
 @media all and (max-width: 500px) {
     .section{
         overflow: hidden;
