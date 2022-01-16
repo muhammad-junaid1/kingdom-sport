@@ -4,10 +4,10 @@
 
 .bets {
   height: 80rem;
-  width: 36rem;
+  width: 35rem;
   margin-right: 2.5rem;
   background: var(--grey6);
-  padding: 1.8rem;
+  padding: 1.0rem;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -118,6 +118,10 @@
 .match-winner .match-winner__header {
   display: flex;
   justify-content: space-between;
+}
+
+.match-winner .match-winner__header p {
+  font-size: 1.4rem;
 }
 
 .match-winner .match-winner__header .left {

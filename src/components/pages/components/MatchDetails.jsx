@@ -1,11 +1,11 @@
 import React from "react";
 import "../css/MatchDetails.css";
 
-const MatchDetails = ({data, isLive, highlightScores}) => {
+const MatchDetails = ({data, isLive, highlightScores, showBetsContainer}) => {
   return (
     <tr>
       <td>
-        <div className="info">
+        <div className="info" style={{paddingLeft: showBetsContainer ? "15px" : ""}}>
         <div className="tournament">
         <img className="tournament-icon" src={require(`../../../assets/tournament-logos/${data.tour.icon}.png`)} alt="" />
           <p className="tournament-name fw-bold">{data.tour.name}</p>
@@ -16,7 +16,7 @@ const MatchDetails = ({data, isLive, highlightScores}) => {
               <img className="team-icon" src={require(`../../../assets/team-logos/${data.team.left.icon}.png`)} alt="" />
             </div>
             <div className="score">
-                <div className={`score-numbers${highlightScores ? " highlight-scores" : ""}`}>
+                <div className={`score-numbers${highlightScores ? " highlight-scores" : ""}${showBetsContainer ? " on-bets-show" : ""}`}>
                     <p className="team-left-score">{data.team.left.score}</p>
                     <span style={{margin: "0 8px"}}>:</span>
                     <p className="team-right-score">{data.team.right.score}</p>
@@ -46,7 +46,7 @@ const MatchDetails = ({data, isLive, highlightScores}) => {
         </div>
       </td>
       <td>
-        <div className="winner-container">
+        <div className={`winner-container${showBetsContainer ? " on-bets-show" : ""}`}>
             <div className="ratios">
             {data.ratios.length === 0 && <>
             <div className="ratio"><span>-</span></div>

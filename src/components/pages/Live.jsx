@@ -4,7 +4,7 @@ import Match from './components/Match';
 import SVGIcons from "../SvgIcons";
 import sampleData from "../../sampleData";
 
-const Live = () => {
+const Live = ({showBetsContainer}) => {
     const {search} = useLocation();
     const [allParams, setAllParams] = useState({});
 
@@ -19,12 +19,12 @@ const Live = () => {
     return (
         <>
         {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
-           return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]}/>
+           return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} showBetsContainer={showBetsContainer}/>
         })}
 
             {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
                 return sampleData.liveNavItems.filter((item) => item.text === i).map((i) =>{
-                    return <Match isLive={true} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
+                    return <Match isLive={true} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]} showBetsContainer={showBetsContainer}/>
                 })
 
             })}

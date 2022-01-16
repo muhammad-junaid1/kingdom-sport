@@ -228,7 +228,7 @@ const Main = () => {
               ) : (
                 <Routes>
                   <Route path="/" element={<Homepage />} />
-                  <Route path="/sport/live" element={<Live />} />
+                  <Route path="/sport/live" element={<Live showBetsContainer={showBetsContainer}/>} />
                   <Route path="/sport/favourites" element={<Favourites />} />
                   <Route path="/crypto/all" element={<Crypto />} />
                   <Route path="/crypto/:index" element={<Crypto/>} />

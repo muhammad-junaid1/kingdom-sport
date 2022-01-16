@@ -62,7 +62,7 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets, showNavba
               </div>
             ) : (
               <>
-              {toggle ? <div className="bets__header" style={{ marginTop: "1.0rem" }}>
+              {toggle ? <div className="bets__header">
                   {toggle2 ? (
                     <Button onClick={() => setToggle2(false)}>
                       <SVGIcons.SingleBet color="#48484A" /> Unsettled
@@ -89,7 +89,7 @@ const BetsContainer = ({ isConnected, isMobile, showBets, setShowBets, showNavba
                       <SVGIcons.Save2 color="#48484A" /> Settled
                     </Button>
                   )}
-                </div> :  <div className="bets__header" style={{ marginTop: "1.0rem" }}>
+                </div> :  <div className="bets__header">
                   {toggle2 ? (
                     <Button onClick={() => setToggle2(false)}>
                       <SVGIcons.SingleBet color="#48484A" /> Single bet

@@ -36,7 +36,7 @@ const Header = ({
           }
           {isMobile &&
               <div className="logo">
-              <img src={HalfLogo} width="50px" alt="" />
+              <img src={HalfLogo} width="40px" alt="" />
             </div>}
             {(!isMobile) && (
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :

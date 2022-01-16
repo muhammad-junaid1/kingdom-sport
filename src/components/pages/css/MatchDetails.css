@@ -88,11 +88,15 @@
 .match__body .score-numbers{
     display: flex;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     font-weight: 300;
     margin: 0 1.4rem;
     padding: 8px;
     position: relative;
+}
+
+.match__body .score-numbers.on-bets-show {
+    margin: 0;
 }
 
 .match__body .highlight-scores {
@@ -115,6 +119,10 @@
 }
 .match__body .score-numbers::after {
     right: -2.4rem;
+}
+
+.score-numbers.on-bets-show::before, .score-numbers.on-bets-show::after {
+    display: none;
 }
 
 .match__body .scores-border-conainer{
@@ -173,6 +181,10 @@
     height: 7.0rem;
     width: 6.4rem;
     margin: 0 5px;
+}
+
+.winner-container.on-bets-show .ratio{
+    margin: 0 3px;
 }
 
 .winner-container .ratio.no-bg {

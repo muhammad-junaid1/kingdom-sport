@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Match.css";
 import MatchDetails from "./MatchDetails";
 
-const Match = ({ sport, Icon, data, isLive}) => {
+const Match = ({ sport, Icon, data, isLive, showBetsContainer}) => {
   return (
     <>
       <div className="match">
@@ -22,7 +22,7 @@ const Match = ({ sport, Icon, data, isLive}) => {
             </thead>
             <tbody>
               {data.map((d, index) => {
-                  return <MatchDetails data={d} isLive={isLive} highlightScores={index === 0 ? true : false}/>
+                  return <MatchDetails data={d} isLive={isLive} highlightScores={index === 0 ? true : false} showBetsContainer={showBetsContainer}/>
               })}
             </tbody>
           </table>
