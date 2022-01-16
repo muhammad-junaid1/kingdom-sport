@@ -220,7 +220,7 @@ const data = {
         },
     ]
     }, {
-      icon: "BasketBall",
+      icon: "Basketball",
       text: "Basketball",
       number: 2,
       matchData: [

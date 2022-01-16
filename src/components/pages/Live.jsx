@@ -24,7 +24,7 @@ const Live = () => {
 
             {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
                 return sampleData.liveNavItems.filter((item) => item.text === i).map((i) =>{
-                    return <Match isLive={true} sport={i.text} data={i.matchData} icon={i.icon}/>
+                    return <Match isLive={true} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
                 })
 
             })}

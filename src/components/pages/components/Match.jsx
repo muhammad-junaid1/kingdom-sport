@@ -1,16 +1,14 @@
 import React from "react";
 import "../css/Match.css";
 import MatchDetails from "./MatchDetails";
-import SVGIcons from "../../SvgIcons";
 
 const Match = ({ sport, Icon, data, isLive}) => {
-
   return (
     <>
       <div className="match">
         <div className="match__header">
           <p>
-            {sport}
+           <Icon/> {sport}
           </p>
         </div>
         <div className="match__body">

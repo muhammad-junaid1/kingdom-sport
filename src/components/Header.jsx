@@ -1,6 +1,7 @@
 import React from "react";
 import SVGIcons from "./SvgIcons";
 import FullLogo from "../assets/full-logo.png";
+import HalfLogo from "../assets/half-logo.png";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
 import "../css/Header.css";
@@ -28,11 +29,15 @@ const Header = ({
       <div className="header">
         <div className="header__content" >
           <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "4%": ""}}>
-          {(isLeaderboard || isMobile) &&
+          {(isLeaderboard && !isMobile) &&
             <div className="logo">
               <img src={FullLogo} alt="" />
             </div>
-            }
+          }
+          {isMobile &&
+              <div className="logo">
+              <img src={HalfLogo} width="50px" alt="" />
+            </div>}
             {(!isMobile) && (
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :
                 <SVGIcons.ArrowLeft onClick={handleClick2} />

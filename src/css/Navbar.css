@@ -43,6 +43,7 @@
     position: relative;
     user-select: none;
     background-color: var(--grey6);
+    font-size: 1.4rem;
 }
 
 /* Navbar item content */
