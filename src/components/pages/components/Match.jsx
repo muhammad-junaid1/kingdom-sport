@@ -1,15 +1,23 @@
 import React from "react";
 import "../css/Match.css";
+import Button from "../../Button";
 import MatchDetails from "./MatchDetails";
 
-const Match = ({ sport, Icon, data, isLive}) => {
+const Match = ({ sport, Icon, data, isLive, FavIcon, tourIcon, tourName, isFav}) => {
   return (
     <>
       <div className="match">
         <div className="match__header">
           <p>
-           <Icon/> {sport}
+        {isFav && <FavIcon/>}
+       {isFav ? <><img style={{marginRight: 5}} src={require(`../../../assets/tournament-logos/${tourIcon}.png`)} alt="" />{tourName}</> :
+       <>
+        <Icon color="white"/> {sport}
+        </>
+       }
           </p>
+          {isFav && <Button type="primary" color="grey" noBorderRad={true} size="small">see more</Button>
+}
         </div>
         <div className="match__body">
           <table cellSpacing={0}>
@@ -22,7 +30,7 @@ const Match = ({ sport, Icon, data, isLive}) => {
             </thead>
             <tbody>
               {data.map((d, index) => {
-                  return <MatchDetails data={d} isLive={isLive} highlightScores={index === 0 ? true : false}/>
+                  return <MatchDetails isFav={isFav} data={d} isLive={isLive} highlightScores={isLive ? (index === 0 ? true : false) : false}/>
               })}
             </tbody>
           </table>

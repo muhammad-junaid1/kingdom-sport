@@ -12,6 +12,9 @@
 
 .match__header {
     margin-bottom: 1.0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .match__header p{
     display: flex;
@@ -21,7 +24,6 @@
 
 .match__header svg {
     margin-right: 10px;
-    color: white !important;
     width: 18px;
     height: 18px;
 }

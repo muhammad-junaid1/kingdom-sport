@@ -16,10 +16,10 @@
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .btn svg {
-    margin-right: .5rem;
+    margin-right: 4px;
 }
 button:disabled, button[disabled]{
     background: var(--grey3);

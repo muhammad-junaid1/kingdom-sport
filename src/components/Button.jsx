@@ -6,7 +6,7 @@ const TYPES = ["primary", "secondary"];
 const COLORS = ["green", "violet", "grey", "red"];
 const SIZES = ["small", "normal"];
 
-const Button = ({ children, type, color, size, isDisabled, betButton, onClick, addClass }) => {
+const Button = ({ children, type, color, size, isDisabled, betButton, onClick, addClass, noBorderRad }) => {
   // Create dynamic classes for button
   let getType = "btn-transparent";
   let getColor = `btn--${type ? type : "primary"}-color`;
@@ -29,7 +29,7 @@ const Button = ({ children, type, color, size, isDisabled, betButton, onClick, a
       ) : (
         <button
           className={`btn ${getType} ${getColor} ${getSize}${addClass ? ` ${addClass}` : ""}`}
-          disabled={isDisabled ? true : false} onClick={onClick}
+          disabled={isDisabled ? true : false} onClick={onClick} style={{borderRadius: noBorderRad ? "0" : ""}}
         >
           {children}
         </button>

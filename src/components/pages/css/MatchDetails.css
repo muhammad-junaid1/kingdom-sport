@@ -204,9 +204,9 @@
     .match__body tbody tr {
         display: flex;
         margin-right: 10px;
-        border: 1px solid var(--grey5);
+        border: 1px solid var(--grey6);
         flex-direction: column;
-        width: 92vw;
+        width: 90vw;
         padding: 0 5px;
         align-items: center;
         background: transparent !important;
