@@ -1,0 +1,41 @@
+@import "../../../css/colors/grey.css";
+
+
+.leaderboard {
+    max-width: 80%;
+    margin: 30px auto;
+}
+
+.leaderboard__header {
+    display: flex;
+}
+
+.leaderboard__header .left, .leaderboard__header .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.leaderboard__header {
+    height: 230px;
+    justify-content: space-between;
+}
+.leaderboard__header .left {
+    width: 37%;
+}
+
+.leaderboard__text h1 {
+    display: flex;
+    align-items: center;
+} 
+
+.leaderboard__text svg {
+    margin-right: 15px;
+}
+
+.leaderboard__text p {
+    color: var(--grey1);
+    font-size: 1.4rem;
+    margin-top: 10px;
+};
