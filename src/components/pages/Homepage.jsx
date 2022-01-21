@@ -1,5 +1,4 @@
 import React from "react";
-import Slide from "./components/Slider";
 import "./css/Homepage.css";
 
 const Homepage = () => {

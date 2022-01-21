@@ -1,10 +1,34 @@
-import React from "react";
+import React, {useEffect, useRef } from "react";
 import "./css/Leaderboard.css";
 import SVGIcons from "../SvgIcons";
-import SearchInput from "../SearchInput";
 import Totals from "./components/Totals";
+import Leader from "./components/Leader";
+import { Grid } from "gridjs";
 
 const LeaderBoard = () => {
+    const tableRef = useRef(null);
+  const wrapperRef = useRef(null);
+
+
+  useEffect(() => {
+    const grid = new Grid({
+      from: tableRef.current,
+       pagination: {
+           enabled: true,
+           buttonsCount: true,
+       },
+       search: true,
+       className: {
+        tr: 'table-row',
+        search: "table-search-input",
+        thead: "table-header",
+        th: "table-headings",
+        table: "data-table"
+      }
+    }).render(wrapperRef.current);
+    const tableInput = document.querySelector(".table-search-input input");
+    tableInput.setAttribute("placeholder", "Search a wallet");
+  }, []);
   return (
     <>
       <div className="leaderboard">
@@ -20,12 +44,59 @@ const LeaderBoard = () => {
                 them
               </p>
             </div>
-                <SearchInput/>
+            <div className="input-container">
+
+            </div>
           </div>
           <div className="right">
-            <Totals/>
-            <Totals/>
+            <Totals Icon={SVGIcons["DollarSquare"]} headline="Total pool" numbersText="8,633,384.00 BCR" increase="0.19%"/>
+            <Totals Icon={SVGIcons["Bets"]} headline="Bets placed" numbersText="38907 Bets" increase="52 bets"/>
           </div>
+        </div>
+        <div className="leaderboard__body">
+            <table ref={tableRef} cellPadding={0}>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                    <Leader/>
+                </tbody>
+            </table>
+            <div ref={wrapperRef}></div>
         </div>
       </div>
     </>

@@ -40,6 +40,7 @@
     align-items: center;
     margin-left: 4.0rem;
     align-self: flex-start;
+    margin-left: auto;
     padding: 6px 8px;
     border-radius: 4px;
 }
@@ -48,9 +49,11 @@
     font-size: 1.4rem;
 }
 
+.totals .totals__icon svg{
+    width: 30px;
+    height: 30px;
+}
 
-.input-wrapper {
-    justify-self: flex-end;
-    align-items: flex-start;
-    width: 60%;
+.totals__numbers {
+    padding-right: 6.0rem;
 }
