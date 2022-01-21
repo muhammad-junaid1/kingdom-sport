@@ -23,7 +23,9 @@ const LeaderBoard = () => {
         search: "table-search-input",
         thead: "table-header",
         th: "table-headings",
-        table: "data-table"
+        table: "data-table",
+        td: "table-data",
+        tbody: "table-body"
       }
     }).render(wrapperRef.current);
     const tableInput = document.querySelector(".table-search-input input");
@@ -57,8 +59,12 @@ const LeaderBoard = () => {
             <table ref={tableRef} cellPadding={0}>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Marks</th>
+                    <th>No</th>
+                    <th>USER ADDRESS</th>
+                    <th>BEST BET</th>
+                    <th>WON</th>
+                    <th>LOSE</th>
+                    <th>RESULT</th>
                 </tr>
                 </thead>
                 <tbody>

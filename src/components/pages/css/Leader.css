@@ -1,0 +1,109 @@
+@import url("../../../css/colors/grey.css");
+@import url("../../../css/colors/green.css");
+@import url("../../../css/colors/red.css");
+
+
+
+.table-headings[data-column-id="no"]{
+    text-align: center;
+}
+.table-headings[data-column-id="result"]{
+    text-align: right;
+}
+
+.table-headings[data-column-id="won"], .table-data[data-column-id="won"]  {
+    color: var(--green6);
+    text-align: center;
+}
+.table-headings[data-column-id="lose"], .table-data[data-column-id="lose"] {
+    color: var(--red6);
+    text-align: center;
+}
+
+.table-headings[data-column-id="bestBet"] {
+    padding-left: 20px;
+}
+
+.table-body .table-row:nth-child(even) {
+    background: var(--grey6);
+}
+
+.table-body .table-row:nth-child(odd) {
+    background: var(--page-bg);
+}
+
+
+.table-data[data-column-id="no"] .number{
+    width: 3.4rem;
+    height: 3.4rem;
+    background: var(--grey5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+
+.table-data[data-column-id="no"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+}
+
+.table-data{
+    padding: 12px 0;
+}
+
+.table-data[data-column-id="userAddress"]  {
+    width: 20%;
+}
+
+.table-data[data-column-id="userAddress"] .your-bet-label {
+    display: flex;
+    align-items: center;
+    background-color: var(--grey5);
+    border-radius: 5px;
+}
+
+.table-data[data-column-id="userAddress"] .your-bet-label span {
+    padding: 0 6px;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.table-data[data-column-id="bestBet"] .best-bet {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 2rem;
+}
+
+.table-data[data-column-id="result"] .result {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}  
+.table-data[data-column-id="result"] .result p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 2.0rem;
+}
+.table-data[data-column-id="result"] .result .percentage {
+    background: var(--green2);
+    color: var(--green6);
+    padding: 6px 0;
+    border-radius: 4px;
+    text-align: center;
+    width: 6.5rem;
+}
+
+.table-data[data-column-id="result"] .result .percentage p {
+    word-break: break-word;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.table-data[data-column-id="won"], .table-data[data-column-id="lose"]{
+    padding: 0 3rem;
+}  
