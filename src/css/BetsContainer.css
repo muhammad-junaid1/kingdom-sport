@@ -7,7 +7,7 @@
   width: 35rem;
   margin-right: 2.5rem;
   background: var(--grey6);
-  padding: 1.0rem;
+  padding: 1.2rem;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,10 @@
   border-radius: 10px;
 }
 
+.bets > .bets__header {
+  margin-right: 5px;
+}
+
 .bets__header button {
   flex: 1;
 }
@@ -35,7 +39,7 @@
 }
 
 .bets__body-wrapper {
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 .bets__body::-webkit-scrollbar {
