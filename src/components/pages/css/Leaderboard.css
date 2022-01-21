@@ -2,7 +2,7 @@
 @import "../../../css/colors/violet.css";
 
 .leaderboard {
-  max-width: 80%;
+  max-width: 82%;
   margin: 30px auto;
 }
 
@@ -49,11 +49,19 @@
   max-width: 100%;
   width: 250px;
   color: white;
+  padding-left: 35px;
 }
 
 .table-search-input {
     position: relative;
     top: -35px;
+}
+
+.table-search-input img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
 }
 
 .data-table {
@@ -71,6 +79,7 @@
     text-transform: uppercase;
     color: var(--grey1);
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .gridjs-pagination {

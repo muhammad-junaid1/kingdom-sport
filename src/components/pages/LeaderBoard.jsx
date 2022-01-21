@@ -33,6 +33,10 @@ const LeaderBoard = () => {
     }).render(wrapperRef.current);
     const tableInput = document.querySelector(".table-search-input input");
     tableInput.setAttribute("placeholder", "Search a wallet");
+    const img = document.createElement("img");
+    img.src=require("../../assets/search.png");
+    img.alt="";
+    document.querySelector(".table-search-input").append(img);
   }, []);
   return (
     <>
@@ -48,9 +52,6 @@ const LeaderBoard = () => {
                 are already playing, earning and enjoying! Feel free to join
                 them
               </p>
-            </div>
-            <div className="input-container">
-
             </div>
           </div>
           <div className="right">
