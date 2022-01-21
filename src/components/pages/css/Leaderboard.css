@@ -1,4 +1,5 @@
 @import "../../../css/colors/grey.css";
+@import "../../../css/colors/violet.css";
 
 .leaderboard {
   max-width: 80%;
@@ -57,6 +58,7 @@
 
 .data-table {
     border-spacing: 0;
+    margin-bottom: 2.5rem;
 }
 
 .table-header .table-row{
@@ -70,3 +72,34 @@
     color: var(--grey1);
     font-size: 1.1rem;
 }
+
+.gridjs-pagination {
+    display: flex;
+    align-items: center;
+}
+
+.gridjs-pages button{
+    border-radius: 3px;
+    padding: 1.0rem 1.6rem;
+    background: var(--grey6);
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin: 0 4px;
+    font-family: inherit;
+}
+
+.gridjs-currentPage {
+    background-color: var(--violet6) !important;
+}
+
+.gridjs-pages button:first-child span, .gridjs-pages button:last-child span{
+    font-size: 1.8rem;
+}
+
+.gridjs-summary {
+    font-weight: 200;
+    width: 36%;
+}
+

@@ -3,6 +3,7 @@ import "./css/Leaderboard.css";
 import SVGIcons from "../SvgIcons";
 import Totals from "./components/Totals";
 import Leader from "./components/Leader";
+import sampleData from "../../sampleData";
 import { Grid } from "gridjs";
 
 const LeaderBoard = () => {
@@ -16,7 +17,9 @@ const LeaderBoard = () => {
        pagination: {
            enabled: true,
            buttonsCount: true,
+           limit: 10
        },
+       autoWidth: true,
        search: true,
        className: {
         tr: 'table-row',
@@ -68,38 +71,9 @@ const LeaderBoard = () => {
                 </tr>
                 </thead>
                 <tbody>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
-                    <Leader/>
+                  {sampleData.leaderBoard.map((item, index) => {
+                      return <Leader id={index + 1} {...item}/>
+                  })}
                 </tbody>
             </table>
             <div ref={wrapperRef}></div>

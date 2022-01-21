@@ -42,21 +42,20 @@
     justify-content: center;
     align-items: center;
     font-weight: 300;
+    margin-left: 3.0rem;
 }
 
-.table-data[data-column-id="no"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 1.5rem;
+.table-data[data-column-id="no"] .number.icon {
+    background: transparent;
 }
+
 
 .table-data{
-    padding: 12px 0;
+    padding: 11px 0;
 }
 
 .table-data[data-column-id="userAddress"]  {
-    width: 20%;
+    width: 18%;
 }
 
 .table-data[data-column-id="userAddress"] .your-bet-label {
