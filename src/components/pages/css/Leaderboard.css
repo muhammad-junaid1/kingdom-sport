@@ -112,3 +112,51 @@
     width: 36%;
 }
 
+
+@media all and (max-width: 500px) {
+    .leaderboard {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    .leaderboard__header {
+        display: block;
+        height: auto;
+    }
+    .leaderboard__header .left, .leaderboard__header .right {
+        display: block;
+        width: 100%;
+    }
+
+    .gridjs-pagination {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .gridjs-summary{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    .gridjs-wrapper {
+        overflow-x: scroll;
+    }
+    .gridjs-wrapper::-webkit-scrollbar{
+        height: 3px;
+        border-radius: 3px;
+    }
+    .gridjs-wrapper::-webkit-scrollbar-track {
+        background: var(--grey6);
+        border-radius: 3px;
+    }
+    .gridjs-wrapper::-webkit-scrollbar-thumb{
+        background: var(--violet6);
+    }
+    .table-search-input{
+        top:0;
+        margin: 12px 0;
+    }
+    .table-search-input input {
+        width: 100%;
+    }
+}

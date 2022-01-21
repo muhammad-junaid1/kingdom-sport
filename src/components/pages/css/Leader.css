@@ -55,7 +55,7 @@
 
 
 .table-data{
-    padding: 11px 0;
+    padding: 1.1rem 0;
 }
 
 .table-data[data-column-id="userAddress"]  {
@@ -110,3 +110,19 @@
 .table-data[data-column-id="won"], .table-data[data-column-id="lose"]{
     padding: 0 3rem;
 }  
+
+@media all and (max-width: 500px) {
+    .table-data[data-column-id="no"] .number {
+        margin: 0 13px;
+    }
+    .table-data[data-column-id="userAddress"] .your-bet-label{
+        margin-right: 40px;
+        width: 100%;
+    }
+    .result p {
+        text-align: right;
+    }
+    .table-data[data-column-id="result"] .result .percentage {
+        width: 70px;
+    }
+}

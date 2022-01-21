@@ -19,7 +19,7 @@ const LeaderBoard = () => {
            buttonsCount: true,
            limit: 10
        },
-       autoWidth: true,
+    //    autoWidth: true,
        search: true,
        className: {
         tr: 'table-row',
