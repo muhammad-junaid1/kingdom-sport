@@ -32,7 +32,12 @@ const Main = () => {
   });
   useEffect(() => {
     if (screenSize < 500) setIsMobile(true);
-  }, [screenSize]);
+    if(isMobile && showNavbar) {
+      document.body.style.overflow="hidden";
+    } else {
+      document.body.style.overflow="";
+    }
+  }, [screenSize, isMobile, showNavbar]);
 
   return (
     <>
@@ -216,7 +221,7 @@ const Main = () => {
 
             <div
               className="content"
-              style={{ pointerEvents: showNavbar ? "none" : "" }}
+              style={{ pointerEvents: showNavbar ? "none" : "", paddingBottom: showNavbar ? "0" : "" }}
             >
               {showBets ? (
                 <BetsContainer

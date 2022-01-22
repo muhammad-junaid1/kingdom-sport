@@ -212,4 +212,12 @@ input[type="radio"] {
         margin-bottom: 80px;
         transition: width .1s ease-in;
     }
+    .navbar__dropdown-items-container {
+        overflow-y: scroll;
+        height: 280px;
+        padding-bottom: 10px;
+    }
+    .navbar__dropdown-items-container::-webkit-scrollbar{
+        display: none;
+    }
 }

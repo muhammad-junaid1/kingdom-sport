@@ -18,6 +18,7 @@ const Live = () => {
      }, [search]);
     return (
         <>
+        <div className="live-matches">
         {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
            return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
         })}
@@ -28,7 +29,7 @@ const Live = () => {
                 })
 
             })}
-
+</div>
         </>
     );
 };

@@ -16,6 +16,10 @@
     padding: 10px 20px 10px 5px;
 }
 
+.home, .favourites, .live-matches, .crypto, .leaderboard {
+    padding-bottom: 10.0rem;
+}
+
 @media all and (max-width: 500px) {
     .section{
         overflow: hidden;
@@ -24,7 +28,6 @@
     .content {
         min-width: 100%;
         padding: 15px;
-        padding-bottom: 120px;
     }
 
 }

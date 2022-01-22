@@ -333,6 +333,10 @@
     padding-bottom: 60px;
   }
 
+  .bets__body{
+    padding-bottom: 10px;
+  }
+
   .bets__footer {
     display: flex;
     align-items: center;

@@ -3,7 +3,7 @@ import "./css/Homepage.css";
 
 const Homepage = () => {
   return (
-      <div className="home-wrapper">
+      <div className="home">
       <div className="slider-wrapper">
         {/* <Slide /> */}
         <h1>Homepage</h1>
