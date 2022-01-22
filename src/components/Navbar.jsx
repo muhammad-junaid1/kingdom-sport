@@ -34,7 +34,7 @@ const Navbar = ({
     if(coin) {
       setChecked(coin.toUpperCase());
     }
-  }, []);
+  }, [coin]);
   return (
     <>
       <div
