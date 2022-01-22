@@ -103,13 +103,13 @@
     background-color: var(--violet6) !important;
 }
 
-.gridjs-pages button:first-child span, .gridjs-pages button:last-child span{
+.gridjs-pages button:first-child, .gridjs-pages button:last-child{
     font-size: 1.8rem;
 }
 
 .gridjs-summary {
     font-weight: 200;
-    width: 36%;
+    width: 40%;
 }
 
 
@@ -154,7 +154,7 @@
     }
     .table-search-input{
         top:0;
-        margin: 12px 0;
+        margin: 15px 0;
     }
     .table-search-input input {
         width: 100%;

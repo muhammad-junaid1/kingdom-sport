@@ -19,7 +19,7 @@ const LeaderBoard = () => {
            buttonsCount: true,
            limit: 10
        },
-    //    autoWidth: true,
+       autoWidth: true,
        search: true,
        className: {
         tr: 'table-row',
@@ -29,8 +29,16 @@ const LeaderBoard = () => {
         table: "data-table",
         td: "table-data",
         tbody: "table-body"
+      },
+      language: {
+          "pagination": {
+              "next": "›",
+              "previous": "‹"
+          }
       }
     }).render(wrapperRef.current);
+
+    // Modify the search input
     const tableInput = document.querySelector(".table-search-input input");
     tableInput.setAttribute("placeholder", "Search a wallet");
     const img = document.createElement("img");
