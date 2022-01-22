@@ -2,32 +2,32 @@ const data = {
   cryptoItems: [
     {
       text: "BTC",
-      icon: "Soccer",
+      icon: "BTC",
       number: 3,
     },
     {
       text: "BUSD",
-      icon: "Soccer",
+      icon: "BUSD",
       number: 3,
     },
     {
-      text: "ETCH",
-      icon: "Soccer",
+      text: "ETH",
+      icon: "ETH",
       number: 3,
     },
     {
-      text: "BNM",
-      icon: "Soccer",
+      text: "BNB",
+      icon: "BNB",
       number: 3,
     },
     {
       text: "MATIC",
-      icon: "Soccer",
+      icon: "MATIC",
       number: 3,
     },
     {
       text: "REP",
-      icon: "Soccer",
+      icon: "REP",
       number: 3,
     },
   ],
