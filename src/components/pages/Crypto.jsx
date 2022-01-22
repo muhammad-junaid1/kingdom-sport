@@ -25,9 +25,14 @@ const  Crypto = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                            {sampleData.cryptoTable.map((item) => {
+                            {coin && sampleData.cryptoTable.filter((item) => item.coin.icon === coin.toUpperCase()).map((item) => {
                                 return <CryptoRow {...item}/>
                             })}
+                            {!coin &&
+                            [sampleData.cryptoTable.map((item) => {
+                                return <CryptoRow {...item}/>
+                            })]
+                            }
                             </tbody>
                         </table>
                     </div>
