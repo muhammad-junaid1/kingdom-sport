@@ -1,0 +1,133 @@
+@import "../../../css/colors/grey.css";
+
+.crypto__content thead tr {
+    background: var(--grey6);
+}
+
+.crypto__content thead th {
+    color: var(--grey1);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .8rem;
+}
+
+.crypto__content th:nth-child(1) {
+    text-align: left;
+}
+
+.crypto__content tr td:first-child {
+    border-left: 1px solid var(--grey6);
+}
+.crypto__content tr td:last-child {
+    border-right: 1px solid var(--grey6);
+}
+
+.crypto__content tbody td:not(.crypto__content tbody td:first-child) > div {
+    display: flex;
+    justify-content: center;
+}
+
+.crypto__content tbody tr:nth-child(even) {
+    background: var(--grey6);
+}
+.crypto__content tbody tr:nth-child(odd) {
+    background: var(--page-bg);
+}
+
+.crypto__content tbody tr td {
+    padding: .8rem 0;
+}
+.crypto__content tbody tr td:first-child{
+    padding-left: 8px;
+}
+
+.crypto__content .coin {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.crypto__content .coin svg {
+    margin-right: 0.8rem;
+}
+
+.crypto__content .endtime {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.crypto__content .endtime p:first-child {
+    margin-bottom: 6px;
+}
+
+.crypto-bets {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.crypto-bet {
+    background-color: var(--grey5);
+    border-radius: 5px;
+    margin: 0 .8rem;
+    width: 40%;
+}
+
+.crypto-bet .crypto-bet__header, .crypto-bet .crypto-bet__footer {
+    padding: 8px;
+}
+
+.crypto-bet .crypto-bet__header{
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.crypto-bet__header p:first-child {
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crypto-bet__header p:first-child svg {
+    margin-right: 3px;
+}
+
+.crypto-bet hr {
+    height: 1px;
+    border: 1px solid var(--page-bg);
+}
+
+.crypto-bet__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crypto-bet__footer span {
+    color: var(--grey2);
+    font-size: 1.2rem;
+}
+
+.crypto-bet__footer p {
+    font-size: 1.3rem;
+}
+
+.crypto__content .prices {
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto__content .prices p {
+    display: flex;
+    font-size: 1.2rem;
+    margin: 4px 0;
+}
+
+.crypto__content .prices span{
+    color: var(--grey2);
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+}

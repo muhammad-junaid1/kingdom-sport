@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import "../css/MatchDetails.css";
-import { MatchDetailsContext } from "../../Main";
+import { AllRoutesContext } from "../../Main";
 
 const MatchDetails = ({data, isLive, highlightScores, isFav}) => {
-    const {showBetsContainer} = useContext(MatchDetailsContext);
+    const {showBetsContainer} = useContext(AllRoutesContext);
   return (
     <tr>
       <td>

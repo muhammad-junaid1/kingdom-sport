@@ -678,6 +678,108 @@ const data = {
     },
     
   ],
+  cryptoTable: [
+    {
+      coin: {
+        icon: "BTC",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+    {
+      coin: {
+        icon: "BUSD",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+    {
+      coin: {
+        icon: "ETH",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+    {
+      coin: {
+        icon: "BNB",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+    {
+      coin: {
+        icon: "MATIC",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+    {
+      coin: {
+        icon: "REP",
+        price: "$100, 000",
+        date: "Sep 24"
+      },
+      endTime: ["08:00 AM", "JUNE 24, 2021"],
+      bet: {
+        value: 1.91,
+        pool: "1,035.35"
+      },
+      
+      prices: {
+        locked: "$35,937.62",
+        closed: "$35,937.62"
+      }
+    },
+  ]
 };
 
 export default data;

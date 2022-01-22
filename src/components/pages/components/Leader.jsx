@@ -33,7 +33,6 @@ const Leader = ({
         </td>
         <td>
           <div className="best-bet">
-            {" "}
             <p>{bestBet}</p>
           </div>
         </td>

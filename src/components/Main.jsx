@@ -16,7 +16,7 @@ import CryptoNavbar from "./CryptoNavbar";
 import LiveNavbar from "./LiveNavbar";
 
 export const NavbarContext = React.createContext({});
-export const MatchDetailsContext = React.createContext({});
+export const AllRoutesContext = React.createContext({});
 
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
@@ -54,7 +54,7 @@ const Main = () => {
                 }
               />
               <Route
-                path="/crypto/:index"
+                path="/crypto/:coin"
                 element={
                   <CryptoNavbar
                     isMobile={isMobile}
@@ -110,7 +110,7 @@ const Main = () => {
             removeCollapseToggle={true}
             isConnected={connected} setConnected={setConnected}
           />}/>
-          <Route path="/crypto/:index" element={ <Header
+          <Route path="/crypto/:coin" element={ <Header
             isMobile={isMobile}
             showNavbar={showNavbar}
             setShowNavbar={setShowNavbar}
@@ -189,7 +189,7 @@ const Main = () => {
                     }
                   />
                   <Route
-                    path="/crypto/:index"
+                    path="/crypto/:coin"
                     element={
                       <CryptoNavbar
                         isMobile={isMobile}
@@ -227,7 +227,7 @@ const Main = () => {
                   showNavbar={showNavbar}
                 />
               ) : (
-                <MatchDetailsContext.Provider value={{showBetsContainer}}>
+                <AllRoutesContext.Provider value={{showBetsContainer, isMobile}}>
                 <Routes>
                   <Route path="/" element={<Homepage />} />
                   <Route path="/sport/live" element={
@@ -236,10 +236,10 @@ const Main = () => {
                   } />
                   <Route path="/sport/favourites" element={<Favourites />} />
                   <Route path="/crypto/all" element={<Crypto />} />
-                  <Route path="/crypto/:index" element={<Crypto/>} />
+                  <Route path="/crypto/:coin" element={<Crypto/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
-                </MatchDetailsContext.Provider>
+                </AllRoutesContext.Provider>
               )}
             </div>
             {/* ********** */}

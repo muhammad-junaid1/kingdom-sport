@@ -714,6 +714,27 @@ const REP = ({ color }) => {
   );
 };
 
+const Moon = ({ color }) => {
+  return (
+    <>
+<svg style={{ color: color ? color : "#32D74B" }} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.99984 1.6665C3.77984 1.6665 1.1665 4.27984 1.1665 7.49984C1.1665 10.7198 3.77984 13.3332 6.99984 13.3332C10.2198 13.3332 12.8332 10.7198 12.8332 7.49984C12.8332 4.27984 10.2198 1.6665 6.99984 1.6665ZM9.059 7.51734C8.9715 7.60484 8.86067 7.64567 8.74984 7.64567C8.639 7.64567 8.52817 7.60484 8.44067 7.51734L7.43734 6.514V9.5415C7.43734 9.78067 7.239 9.979 6.99984 9.979C6.76067 9.979 6.56234 9.78067 6.56234 9.5415V6.514L5.559 7.51734C5.38984 7.6865 5.10984 7.6865 4.94067 7.51734C4.7715 7.34817 4.7715 7.06817 4.94067 6.899L6.69067 5.149C6.85984 4.97984 7.13984 4.97984 7.309 5.149L9.059 6.899C9.22817 7.06817 9.22817 7.34817 9.059 7.51734Z" fill="currentColor"/>
+</svg>
+    </>
+  );
+};
+
+const Rekt = ({ color }) => {
+  return (
+    <>
+<svg style={{ color: color ? color : "#FF453A" }} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.99984 1.6665C3.77984 1.6665 1.1665 4.27984 1.1665 7.49984C1.1665 10.7198 3.77984 13.3332 6.99984 13.3332C10.2198 13.3332 12.8332 10.7198 12.8332 7.49984C12.8332 4.27984 10.2198 1.6665 6.99984 1.6665ZM9.059 8.10067L7.309 9.85067C7.2215 9.93817 7.11067 9.979 6.99984 9.979C6.889 9.979 6.77817 9.93817 6.69067 9.85067L4.94067 8.10067C4.7715 7.9315 4.7715 7.6515 4.94067 7.48234C5.10984 7.31317 5.38984 7.31317 5.559 7.48234L6.56234 8.48567V5.45817C6.56234 5.219 6.76067 5.02067 6.99984 5.02067C7.239 5.02067 7.43734 5.219 7.43734 5.45817V8.48567L8.44067 7.48234C8.60984 7.31317 8.88984 7.31317 9.059 7.48234C9.22817 7.6515 9.22817 7.9315 9.059 8.10067Z" fill="currentColor"/>
+</svg>
+
+    </>
+  );
+};
+
 const icons = {
   Home,
   Soccer,
@@ -736,6 +757,7 @@ const icons = {
   CloseMenu,
   Crypto,
   LeaderBoard,
-  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare, Heart, MedalStar, DollarSquare, IncreaseArrowUp, cryptoIcons: {BTC, BUSD, ETH, BNB, MATIC, REP}
+  Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare, Heart, MedalStar, DollarSquare, IncreaseArrowUp, CryptoIcons: {BTC, BUSD, ETH, BNB, MATIC, REP},
+  Moon, Rekt
 };
 export default icons;

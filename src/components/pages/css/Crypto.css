@@ -1,0 +1,34 @@
+@import "../../../css//colors/grey.css";
+
+.crypto__header h1{
+    font-weight: normal;
+    font-size: 2.6rem;
+    margin-bottom: 1.0rem;
+}
+
+.crypto__header p {
+    line-height: 17px;
+    color: var(--grey1);
+    font-size: 1.4rem;
+}
+
+.crypto__body {
+    margin-top: 2.5rem;
+}
+
+@media all and (max-width: 500px) {
+    .crypto__body thead {
+        display: none;
+    }
+    .crypto__body tbody tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--page-bg) !important;
+        border: 1px solid var(--grey6);
+    }
+
+    .crypto__body tr td {
+        width: 100%;
+    }
+}

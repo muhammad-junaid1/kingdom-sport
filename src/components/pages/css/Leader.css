@@ -22,7 +22,7 @@
 
 .table-data[data-column-id="won"], .table-data[data-column-id="lose"]{
     font-size: 1.4rem;
-} 
+}
 
 .table-headings[data-column-id="bestBet"] {
     padding-left: 20px;
@@ -36,6 +36,13 @@
     background: var(--page-bg);
 }
 
+
+.table-row .table-data:first-child {
+    border-left: 1px solid var(--grey6);
+}
+.table-row .table-data:last-child {
+    border-right: 1px solid var(--grey6);
+}
 
 .table-data[data-column-id="no"] .number{
     width: 3.4rem;
