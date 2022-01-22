@@ -82,6 +82,7 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
             isConnected={connected} setConnected={setConnected}
+            setShowBets={setShowBets}
           />}/>
                 <Route path="/sport/:page" element={ <Header
             isMobile={isMobile}
@@ -92,6 +93,7 @@ const Main = () => {
             collapseNavbar={collapseNavbar}
             setCollapseNavbar={setCollapseNavbar}
             isConnected={connected} setConnected={setConnected}
+            setShowBets={setShowBets}
           />}/>
                 <Route path="/sport/live" element={ <Header
             isMobile={isMobile}
@@ -103,6 +105,7 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
             isConnected={connected} setConnected={setConnected}
             removeCollapseToggle={true}
+            setShowBets={setShowBets}
           />}/>
           <Route path="/crypto/all" element={ <Header
             isMobile={isMobile}
@@ -114,6 +117,7 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
             isConnected={connected} setConnected={setConnected}
+            setShowBets={setShowBets}
           />}/>
           <Route path="/crypto/:coin" element={ <Header
             isMobile={isMobile}
@@ -125,6 +129,7 @@ const Main = () => {
             setCollapseNavbar={setCollapseNavbar}
             removeCollapseToggle={true}
             isConnected={connected} setConnected={setConnected}
+            setShowBets={setShowBets}
           />}/>
       <Route path="/leaderboard" element={ <Header
             isMobile={isMobile}
@@ -137,6 +142,7 @@ const Main = () => {
             removeCollapseToggle={true}
             isConnected={connected} setConnected={setConnected}
             isLeaderboard={true}
+            setShowBets={setShowBets}
           />}/>
         </Routes>
           <div className="content-wrapper">

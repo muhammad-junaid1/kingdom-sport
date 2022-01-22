@@ -13,7 +13,7 @@ const Header = ({
   collapseNavbar,
   setCollapseNavbar,
   isMobile,
-  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected
+  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected, setShowBets
 }) => {
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
@@ -65,7 +65,7 @@ const Header = ({
                   <SVGIcons.Bets /> Open bets
                 </Button>
               ),
-            ] : <Button onClick={() => setShowNavbar(!showNavbar)} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
+            ] : <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
           </div>
         </div>
       </div>
