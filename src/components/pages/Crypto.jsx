@@ -5,7 +5,7 @@ import CryptoRow from "./components/CryptoRow";
 import CoinSection from "./components/CoinSection";
 import sampleData from "../../sampleData";
 
-const Crypto = ({cryptoActiveOrExpired}) => {
+const Crypto = ({cryptoActiveOrExpired, showBetsContainer}) => {
   const { coin } = useParams();
   if(cryptoActiveOrExpired === "active"){
   return (
@@ -17,7 +17,7 @@ const Crypto = ({cryptoActiveOrExpired}) => {
             return <CoinSection {...item} />;
           })}
      {!coin &&
-      <div className="crypto">
+      <div className="crypto" style={{width: showBetsContainer ? "100%" : "80%"}}>
         <div className="crypto__header">
           <h1>Crypto</h1>
           <p>

@@ -3,12 +3,15 @@ import SVGIcons from "./SvgIcons";
 import {NavLink, useLocation} from "react-router-dom";
 import "../css/NavLinks.css";
 
-const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
+const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNavbar }) => {
+  const location = useLocation();
+
   const handleClick = () => {
     if(isFixed) {
       setShowBets(false);
       setShowNavbar(false);
     }
+      setCollapseNavbar(false);
     return;
   }
 
@@ -16,8 +19,6 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar }) => {
     setShowBets(!showBets);
     setShowNavbar(false);
   }
-
-  const location = useLocation();
   
   return (
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>

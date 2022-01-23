@@ -43,7 +43,8 @@ const Header = ({
                 <SVGIcons.ArrowLeft onClick={handleClick2} />
                 ]
             )}
-            {!isMobile && <NavLinks/>}
+            {!isMobile && <NavLinks setCollapseNavbar={setCollapseNavbar}
+/>}
           </div>
           <div className="header__right">
           {!isConnected ? 

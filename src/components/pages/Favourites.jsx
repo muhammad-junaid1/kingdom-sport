@@ -3,10 +3,10 @@ import sampleData from "../../sampleData";
 import Match from './components/Match';
 import SVGIcons from "../SvgIcons";
 
-const Favourites = () => {
+const Favourites = ({showBetsContainer}) => {
     return (
         <>
-           <div className="favourites">
+           <div className="favourites" style={{width: showBetsContainer ? "100%" : "80%"}}>
                 {sampleData.favItemsData.map((item) => {
                     const Icon = SVGIcons[item.icon];
                     return (<>

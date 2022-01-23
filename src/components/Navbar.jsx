@@ -129,7 +129,7 @@ const Navbar = ({
               <>
                 <NavbarItem
                   isDropDown={false}
-                  text="All items"
+                  text="All coins"
                   noIcon={true}
                   number={123}
                   collapse={collapse}

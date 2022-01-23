@@ -4,7 +4,7 @@ import Match from './components/Match';
 import SVGIcons from "../SvgIcons";
 import sampleData from "../../sampleData";
 
-const Live = () => {
+const Live = ({showBetsContainer}) => {
     const {search} = useLocation();
     const [allParams, setAllParams] = useState({});
 
@@ -18,7 +18,7 @@ const Live = () => {
      }, [search]);
     return (
         <>
-        <div className="live-matches">
+        <div className="live-matches" style={{width: showBetsContainer ? "100%": "80%"}}>
         {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
            return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
         })}

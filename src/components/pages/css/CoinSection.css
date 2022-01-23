@@ -59,7 +59,7 @@
     display: flex;
 }
 .coin-content__crypto-bets .crypto-bet {
-    margin: 0 .8rem;
+    margin: 0 .6rem;
     width: 14.0rem !important;
 }
 
@@ -69,6 +69,9 @@
 }
 
 @media all and (max-width: 500px) {
+    .coin-section {
+        width: 100%;
+    }
     .coin-content__container {
         display: block;
     }

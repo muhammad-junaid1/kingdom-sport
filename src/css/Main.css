@@ -30,4 +30,12 @@
         padding: 10px 15px 15px 15px;
     }
 
+    .live-matches {
+        width: 100%;
+    }
+
+    .favourites {
+        width: 100%;
+    }
+
 }

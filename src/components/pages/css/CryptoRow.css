@@ -73,16 +73,19 @@
 .crypto-bet {
   background-color: var(--grey5);
   border-radius: 5px;
-  margin: 0 0.8rem;
+  margin: 0 0.6rem;
 }
 
 .crypto-bets .crypto-bet{
-  width: 35%;
+  width: 42%;
 }
 
-.crypto-bet .crypto-bet__header,
-.crypto-bet .crypto-bet__footer {
+.crypto-bet .crypto-bet__header {
   padding: 10px;
+}
+
+.crypto-bet .crypto-bet__footer {
+  padding: 7px;
 }
 
 .crypto-bet .crypto-bet__header {

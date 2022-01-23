@@ -247,12 +247,12 @@ const Main = () => {
                 <Routes>
                   <Route path="/" element={<Homepage />} />
                   <Route path="/sport/live" element={
-                      <Live/>
+                      <Live showBetsContainer={showBetsContainer}/>
                   
                   } />
-                  <Route path="/sport/favourites" element={<Favourites />} />
-                  <Route path="/crypto/all" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired}/>} />
-                  <Route path="/crypto/:coin" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired}/>} />
+                  <Route path="/sport/favourites" element={<Favourites showBetsContainer={showBetsContainer}/>} />
+                  <Route path="/crypto/all" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired} showBetsContainer={showBetsContainer}/>} />
+                  <Route path="/crypto/:coin" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired} showBetsContainer={showBetsContainer}/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
                 </AllRoutesContext.Provider>
@@ -270,6 +270,7 @@ const Main = () => {
             setShowNavbar={setShowNavbar}
             showBets={showBets}
             setShowBets={setShowBets}
+            setCollapseNavbar={setCollapseNavbar}
           />
         )}
       </div>
