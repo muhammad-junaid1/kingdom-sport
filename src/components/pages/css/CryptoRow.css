@@ -7,8 +7,9 @@
 .crypto__content thead th {
   color: var(--grey1);
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.8rem;
+  font-weight: 500;
 }
 
 .crypto__content th:nth-child(1) {
@@ -141,7 +142,7 @@
 
 .crypto__content .prices span {
   color: var(--grey2);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-right: 1.2rem;
 }
 

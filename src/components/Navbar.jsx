@@ -24,7 +24,7 @@ const Navbar = ({
   const dropDowns = sampleData.dropDownsData;
   const [toggled, setToggled] = useState(null);
   const [checked, setChecked] = useState("all");
-  const [radioForActive, setRadioForActive] = useState(true);
+  const [radioForActive, setRadioForActive] = useState(false);
   const [radioForExpired, setRadioForExpired] = useState(false);
   const { search } = useLocation();
   const { coin } = useParams();
@@ -39,7 +39,10 @@ const Navbar = ({
     if(coin) {
       setChecked(coin.toUpperCase());
     }
-  }, [coin]);
+    if(cryptoActiveOrExpired === "active") setRadioForActive(true);
+    if(cryptoActiveOrExpired === "expired") setRadioForExpired(true);
+    
+  }, [coin, cryptoActiveOrExpired]);
   return (
     <>
       <div
