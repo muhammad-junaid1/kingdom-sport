@@ -14,6 +14,7 @@ import Crypto from "./pages/Crypto";
 import LeaderBoard from "./pages/LeaderBoard";
 import CryptoNavbar from "./CryptoNavbar";
 import LiveNavbar from "./LiveNavbar";
+import useMediaQuery from "../useMediaQuery";
 
 export const NavbarContext = React.createContext({});
 export const AllRoutesContext = React.createContext({});
@@ -21,23 +22,18 @@ export const AllRoutesContext = React.createContext({});
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
   const [collapseNavbar, setCollapseNavbar] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [showBets, setShowBets] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
   const [connected, setConnected] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 500px)');
 
-  window.addEventListener("resize", () => {
-    setScreenSize(window.innerWidth);
-  });
   useEffect(() => {
-    if (screenSize < 500) setIsMobile(true);
     if(isMobile && showNavbar) {
       document.body.style.overflow="hidden";
     } else {
       document.body.style.overflow="";
     }
-  }, [screenSize, isMobile, showNavbar]);
+  }, [showNavbar, isMobile]);
 
   return (
     <>
