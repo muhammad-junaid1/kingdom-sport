@@ -25,7 +25,6 @@
 }
 
 .totals__numbers p {
-    font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
@@ -44,10 +43,6 @@
     margin-left: auto;
     padding: 6px 8px;
     border-radius: 4px;
-}
-
-.totals__increase p {
-    font-size: 1.4rem;
 }
 
 .totals .totals__icon svg{

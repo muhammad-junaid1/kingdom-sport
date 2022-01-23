@@ -106,7 +106,6 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-size: 1.4rem;
 }
 
 .bets__footer span {
@@ -122,10 +121,6 @@
 .match-winner .match-winner__header {
   display: flex;
   justify-content: space-between;
-}
-
-.match-winner .match-winner__header p {
-  font-size: 1.4rem;
 }
 
 .match-winner .match-winner__header .left {
@@ -149,7 +144,6 @@
 .match-winner .match-winner__body p{
   color: white;
   margin: 8px 0;
-  font-size: 1.4rem;
 }
 
 .match-winner .match-winner__footer p {
@@ -212,6 +206,9 @@
 
 .bets__body .details .left, .bets__body .right {
   display: flex;
+}
+
+.bets__body .details p, .bets__body .details span {
   font-size: 1.2rem;
 }
 
@@ -265,10 +262,6 @@
   padding: 10px;
 }
 
-.amounts .bet-amount p {
-  font-size: 1.4rem;
-}
-
 .amounts .amount {
   margin-top: 6px;
   font-weight: bold;
@@ -284,10 +277,6 @@
   border-radius: 10px;
   margin: 0 .5rem;
   padding: 10px;
-}
-
-.amounts .win p {
-  font-size: 1.4rem;
 }
 
 .amounts .bet-won {
