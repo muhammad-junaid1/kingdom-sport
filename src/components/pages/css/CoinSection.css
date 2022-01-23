@@ -67,3 +67,38 @@
     padding: 200px 0;
     text-align: center;
 }
+
+@media all and (max-width: 500px) {
+    .coin-content__container {
+        display: block;
+    }
+    .coin-section__content {
+        background: var(--page-bg);
+        border-radius: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+    .coin-content__header{
+        font-weight: 500;
+        margin-top: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    .coin-content__header svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .coin-content__prices p {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .coin-content__crypto-bets {
+        justify-content: space-between;
+    }
+
+    .coin-content__crypto-bets .crypto-bet {
+        width: 48% !important;
+        margin: 0 !important;
+    }
+}

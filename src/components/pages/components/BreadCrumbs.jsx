@@ -18,7 +18,7 @@ const BreadCrumbs = ({ items }) => {
         {items.map((item, index) => {
           return (
             <>
-              <li className="fw-bold" style={{color: items.length-1 === index ? "#743EE8" : ""}}>{item}</li> {index < items.length-1 && <span style={styles.span}>/</span>}
+              <li style={{color: items.length-1 === index ? "#743EE8" : ""}}>{item}</li> {index < items.length-1 && <span style={styles.span}>/</span>}
             </>
           );
         })}
