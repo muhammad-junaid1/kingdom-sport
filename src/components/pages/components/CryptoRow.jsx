@@ -55,7 +55,7 @@ const CryptoRow = ({ coin, endTime, prices, bet }) => {
         }
         <td>
           <div>
-            <div className="crypto-bets" style={{marginRight: showBetsContainer ? "4px" : ""}}>
+            <div className="crypto-bets" style={{marginRight: showBetsContainer ? "4px" : "", width: showBetsContainer ? "260px": ""}}>
               <CryptoBet type="moon" {...bet.moon} />
               <CryptoBet type="rekt" {...bet.rekt} />
             </div>

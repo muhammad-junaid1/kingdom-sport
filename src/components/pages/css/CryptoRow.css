@@ -53,8 +53,12 @@
 
 .crypto__content .endtime {
   text-align: center;
+}
+
+.crypto__content .endtime p{
   font-size: 1.2rem;
 }
+
 .crypto__content .endtime p:first-child {
   margin-bottom: 6px;
 }
@@ -66,11 +70,11 @@
   justify-content: center;
 }
 
-.crypto-bet {
+.crypto-bets .crypto-bet {
   background-color: var(--grey5);
   border-radius: 5px;
   margin: 0 0.8rem;
-  width: 40%;
+  width: 35%;
 }
 
 .crypto-bet .crypto-bet__header,
@@ -125,7 +129,8 @@
 .crypto__content .prices p {
   display: flex;
   font-size: 1.2rem;
-  margin: 4px 0;
+  margin: 4px;
+  align-items: center;
 }
 
 .crypto__content .prices span {
