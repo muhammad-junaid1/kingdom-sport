@@ -15,7 +15,7 @@ const CryptoRow = ({ coin, endTime, prices, bet }) => {
             <div className="coin">
               <Icon />
               <p>
-                {coin.icon} touch {coin.price} {!isMobile && <br />} by {coin.date}
+                {coin.text} touch {coin.price} {!isMobile && <br />} by {coin.date}
               </p>
             </div>
           </div>

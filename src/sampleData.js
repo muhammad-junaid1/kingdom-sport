@@ -682,8 +682,10 @@ const data = {
     {
       coin: {
         icon: "BTC",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "BTC",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
@@ -698,8 +700,10 @@ const data = {
     {
       coin: {
         icon: "BUSD",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "BUSD",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
@@ -714,8 +718,10 @@ const data = {
     {
       coin: {
         icon: "ETH",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "ETH",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
@@ -731,8 +737,10 @@ const data = {
     {
       coin: {
         icon: "BNB",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "BNB",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
@@ -748,8 +756,10 @@ const data = {
     {
       coin: {
         icon: "MATIC",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "MATIC",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
@@ -765,8 +775,10 @@ const data = {
     {
       coin: {
         icon: "REP",
-        price: "$100, 000",
-        date: "Sep 24"
+        price: "$100,000",
+        date: "Sep 24",
+        text: "REP",
+        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {

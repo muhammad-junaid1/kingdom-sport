@@ -75,7 +75,7 @@
 
 .crypto-bet .crypto-bet__header,
 .crypto-bet .crypto-bet__footer {
-  padding: 8px;
+  padding: 10px;
 }
 
 .crypto-bet .crypto-bet__header {
@@ -83,6 +83,7 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 500;
+  border-radius: 5px 5px 0 0;
 }
 
 .crypto-bet__header p:first-child {

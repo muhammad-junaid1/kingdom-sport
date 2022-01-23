@@ -61,9 +61,11 @@ const Header = ({
                   <SVGIcons.Close /> Close bets
                 </Button>
               ) : (
+                [!isLeaderboard &&
                 <Button onClick={handleClick} type="secondary">
                   <SVGIcons.Bets /> Open bets
                 </Button>
+                ]
               ),
             ] : <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
           </div>

@@ -210,7 +210,6 @@ input[type="radio"] {
     }
     .navbar--mobile {
         margin-bottom: 80px;
-        transition: width .1s ease-in;
     }
     .navbar {
         overflow-y: scroll;

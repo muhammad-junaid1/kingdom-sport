@@ -1,0 +1,69 @@
+@import "../../../css/colors/grey.css";
+
+.coin-section__content {
+    background: var(--grey6);
+    border-radius: 20px;
+    margin-top: 3.0rem;
+    padding: 2.0rem;
+}
+
+.coin-content__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coin-content__container .right {
+    align-self: flex-end;
+}
+
+.coin-content__header{
+    display: flex;
+    align-items: center;
+}
+
+.coin-content__header svg {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.coin-content__details {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-top: 1.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.coin-content__endtime {
+    font-size: 1.2rem;
+}
+
+.coin-content__endtime span{
+    color: var(--grey1);
+}
+
+.coin-content__prices{
+    font-size: 1.1rem;
+    margin-top: 2.2rem;
+}
+
+.coin-content__prices p {
+    margin: 1rem 0;
+}
+
+.coin-content__prices span{
+    color: var(--grey2);
+    margin-right: 8px;
+}
+.coin-content__crypto-bets {
+    display: flex;
+}
+.coin-content__crypto-bets .crypto-bet {
+    margin: 0 .8rem;
+    width: 14.0rem !important;
+}
+
+.coin-content__graph{
+    padding: 200px 0;
+    text-align: center;
+}
