@@ -46,8 +46,8 @@ const CoinSection = ({ coin, endTime, bet, prices }) => {
             </div>
             <div className="right">
               <div className="coin-content__crypto-bets">
-                <CryptoBet type="moon" {...bet} />
-                <CryptoBet type="rekt" {...bet} />
+                <CryptoBet type="moon" {...bet.moon} />
+                <CryptoBet type="rekt" {...bet.rekt} />
               </div>
             </div>
           </div>

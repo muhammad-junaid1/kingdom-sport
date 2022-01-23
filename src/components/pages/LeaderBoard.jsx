@@ -12,7 +12,7 @@ const LeaderBoard = () => {
 
 
   useEffect(() => {
-    const grid = new Grid({
+    new Grid({
       from: tableRef.current,
        pagination: {
            enabled: true,

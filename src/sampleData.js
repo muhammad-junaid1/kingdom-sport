@@ -689,8 +689,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       prices: {
         locked: "$35,937.62",
@@ -707,8 +713,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       prices: {
         locked: "$35,937.62",
@@ -725,8 +737,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       
       prices: {
@@ -744,8 +762,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       
       prices: {
@@ -763,8 +787,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       
       prices: {
@@ -782,8 +812,14 @@ const data = {
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
-        value: 1.91,
-        pool: "1,035.35"
+        moon: {
+          value: 1.91,
+          pool: "1,035.35"
+        }, 
+        rekt: {
+          value: 1.91,
+          pool: "1,035.35"
+        }
       },
       
       prices: {
