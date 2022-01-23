@@ -24,6 +24,7 @@ const Main = () => {
   const [collapseNavbar, setCollapseNavbar] = useState(false);
   const [showBets, setShowBets] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
   const [connected, setConnected] = useState(false);
   const isMobile = useMediaQuery('(max-width: 500px)');
 
@@ -39,7 +40,7 @@ const Main = () => {
     <>
       <div className="main-wrapper">
         {!isMobile && (
-          <NavbarContext.Provider value={{ setCollapseNavbar }}>
+          <NavbarContext.Provider value={{ setCollapseNavbar}}>
             <Routes>
             <Route path="/" element={<Navbar setCollapse={setCollapseNavbar} collapse={collapseNavbar && true}/>}/>
             <Route path="/sport/:page" element={<Navbar setCollapse={setCollapseNavbar}  collapse={collapseNavbar && true}/>}/>
@@ -51,6 +52,8 @@ const Main = () => {
                     isMobile={isMobile}
                     forMobile={true}
                     showNavbar={showNavbar}
+                    setCryptoActiveOrExpired={setCryptoActiveOrExpired}
+                    cryptoActiveOrExpired={cryptoActiveOrExpired} 
                   />
                 }
               />
@@ -61,6 +64,8 @@ const Main = () => {
                     isMobile={isMobile}
                     forMobile={true}
                     showNavbar={showNavbar}
+                    setCryptoActiveOrExpired={setCryptoActiveOrExpired}
+                    cryptoActiveOrExpired={cryptoActiveOrExpired} 
                   />
                 }
               />
@@ -242,8 +247,8 @@ const Main = () => {
                   
                   } />
                   <Route path="/sport/favourites" element={<Favourites />} />
-                  <Route path="/crypto/all" element={<Crypto />} />
-                  <Route path="/crypto/:coin" element={<Crypto/>} />
+                  <Route path="/crypto/all" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired}/>} />
+                  <Route path="/crypto/:coin" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired}/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
                 </AllRoutesContext.Provider>

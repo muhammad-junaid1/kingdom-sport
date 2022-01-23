@@ -5,8 +5,9 @@ import CryptoRow from "./components/CryptoRow";
 import CoinSection from "./components/CoinSection";
 import sampleData from "../../sampleData";
 
-const Crypto = () => {
+const Crypto = ({cryptoActiveOrExpired}) => {
   const { coin } = useParams();
+  if(cryptoActiveOrExpired === "active"){
   return (
     <>
       {coin &&
@@ -15,7 +16,7 @@ const Crypto = () => {
           .map((item) => {
             return <CoinSection {...item} />;
           })}
-          {!coin &&
+     {!coin &&
       <div className="crypto">
         <div className="crypto__header">
           <h1>Crypto</h1>
@@ -37,7 +38,7 @@ const Crypto = () => {
                 </tr>
               </thead>
               <tbody>
-                 { sampleData.cryptoTable.map((item) => {
+                 {sampleData.cryptoTable.map((item) => {
                     return <CryptoRow {...item} />;
                   })}
               </tbody>
@@ -45,9 +46,12 @@ const Crypto = () => {
           </div>
         </div>
       </div>
-          }
+     }
     </>
   );
+    } else {
+      return  <h1><u><i>Expired crypto items here</i></u></h1>
+    }
 };
 
 export default Crypto;

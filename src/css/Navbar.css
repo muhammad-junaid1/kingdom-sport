@@ -204,6 +204,21 @@ input[type="radio"] {
     margin-top: 2.0rem;
 }
 
+.crypto-coins-type {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.crypto-coins-type p {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.crypto-coins-type .radio-input{
+    display: flex;
+}
+
 @media all and (max-width: 500px) {
     .navbar__header{
         padding-top:0;

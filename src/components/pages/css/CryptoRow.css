@@ -70,10 +70,13 @@
   justify-content: center;
 }
 
-.crypto-bets .crypto-bet {
+.crypto-bet {
   background-color: var(--grey5);
   border-radius: 5px;
   margin: 0 0.8rem;
+}
+
+.crypto-bets .crypto-bet{
   width: 35%;
 }
 

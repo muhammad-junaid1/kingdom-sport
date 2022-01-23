@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useContext} from "react";
 import "../css/Navbar.css";
 import SVGIcons from "./SvgIcons";
 import NavbarItem from "./NavbarItem";
@@ -18,10 +18,14 @@ const Navbar = ({
   setCollapse,
   isLive,
   liveNavbarData,
+  cryptoActiveOrExpired,
+  setCryptoActiveOrExpired
 }) => {
   const dropDowns = sampleData.dropDownsData;
   const [toggled, setToggled] = useState(null);
   const [checked, setChecked] = useState("all");
+  const [radioForActive, setRadioForActive] = useState(true);
+  const [radioForExpired, setRadioForExpired] = useState(false);
   const { search } = useLocation();
   const { coin } = useParams();
 
@@ -30,6 +34,7 @@ const Navbar = ({
   for (var value of params.keys()) {
     paramObj[value] = params.get(value);
   }
+
   useEffect(() => {
     if(coin) {
       setChecked(coin.toUpperCase());
@@ -61,6 +66,27 @@ const Navbar = ({
             <SearchInput collapse={collapse} setCollapse={setCollapse} />
           </div>
         </div>
+        {isCrypto && 
+        <>
+        <div className="crypto-coins-type">
+        <div className="radio-input">
+          <input type="radio" style={{display: "none"}} name="coins-type" value="active" checked={radioForActive}/>
+              <div className={`radio-icon${(radioForActive) ? " radio-active": ""}`}>
+                <div className="active-radio-circle" style={{display: radioForActive ? "block" : "none"}}></div>
+              </div>
+              <p onClick={() => {setRadioForActive(true); setRadioForExpired(false); setCryptoActiveOrExpired("active")}}>Active</p>
+              </div>
+
+              <div className="radio-input">
+          <input type="radio" style={{display: "none"}} name="coins-type" value="expired" checked={radioForExpired}/>
+              <div className={`radio-icon${(radioForExpired) ? " radio-active": ""}`}>
+                <div className="active-radio-circle" style={{display: radioForExpired ? "block" : "none"}}></div>
+              </div>
+              <p onClick={() => {setRadioForExpired(true); setRadioForActive(false); setCryptoActiveOrExpired("expired")}}>Expired</p>
+              </div>
+              </div>
+              </>
+          }
         <div className="navbar__main-items-container">
           <ul>
             {!isCrypto ? (
@@ -99,6 +125,7 @@ const Navbar = ({
                 </li>
               </>
             ) : (
+              [cryptoActiveOrExpired==="active" ?
               <>
                 <NavbarItem
                   isDropDown={false}
@@ -136,6 +163,7 @@ const Navbar = ({
                   );
                 })}
               </>
+              : <h4 style={{textAlign: "center"}}><u>Expired items here</u></h4>]
             )}
           </ul>
         </div>
