@@ -197,6 +197,8 @@ const Main = () => {
                         isMobile={isMobile}
                         forMobile={true}
                         showNavbar={showNavbar}
+                        cryptoActiveOrExpired={cryptoActiveOrExpired}
+                        setCryptoActiveOrExpired={setCryptoActiveOrExpired}
                       />
                     }
                   />
@@ -207,6 +209,8 @@ const Main = () => {
                         isMobile={isMobile}
                         forMobile={true}
                         showNavbar={showNavbar}
+                        cryptoActiveOrExpired={cryptoActiveOrExpired}
+                        setCryptoActiveOrExpired={setCryptoActiveOrExpired}
                       />
                     }
                   />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect , useContext} from "react";
+import React, { useState, useEffect} from "react";
 import "../css/Navbar.css";
 import SVGIcons from "./SvgIcons";
 import NavbarItem from "./NavbarItem";
