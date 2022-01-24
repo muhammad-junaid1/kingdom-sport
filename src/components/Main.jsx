@@ -25,6 +25,8 @@ const Main = () => {
   const [showBets, setShowBets] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
+  const [liveBetChose, setLiveBetChose] = useState(false);
+  const [cryptoBetChose, setCryptoBetChose] = useState(false);
   const [connected, setConnected] = useState(false);
   const isMobile = useMediaQuery('(max-width: 500px)');
 
@@ -241,6 +243,7 @@ const Main = () => {
                   setShowBets={setShowBets}
                   isConnected={connected}
                   showNavbar={showNavbar}
+                  liveBetChose={liveBetChose} cryptoBetChose={cryptoBetChose}
                 />
               ) : (
                 <AllRoutesContext.Provider value={{showBetsContainer, isMobile}}>
@@ -260,7 +263,7 @@ const Main = () => {
             </div>
             {/* ********** */}
             {showBetsContainer && !isMobile && (
-              <BetsContainer isConnected={connected} showNavbar={showNavbar} />
+              <BetsContainer isConnected={connected} showNavbar={showNavbar} liveBetChose={liveBetChose} cryptoBetChose={cryptoBetChose}/>
             )}
           </div>
         </div>
