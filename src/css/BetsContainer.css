@@ -39,8 +39,8 @@
   overflow-y: scroll;
   margin-bottom: 1.0rem;
   height: 100%;
-  padding-right: 7px;
   padding-bottom: 10px;
+  padding-right: 2px;
 }
 
 .bets__content::-webkit-scrollbar {
@@ -240,6 +240,7 @@
 
 .bets__body .details .left, .bets__body .right {
   display: flex;
+  align-items: center;
 }
 
 .bets__body .details p, .bets__body .details span {
