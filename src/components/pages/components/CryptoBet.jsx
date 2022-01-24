@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import "../css/CryptoRow.css";
-import { AllRoutesContext } from "../../Main";
+import { ContentRoutesContext } from "../../Main";
 import SVGIcons from "../../SvgIcons";
 
 const CryptoBet = ({type, value, pool}) => {
-    const {showBetsContainer} = useContext(AllRoutesContext);
+    const {showBetsContainer} = useContext(ContentRoutesContext);
     const Icon = SVGIcons[type.charAt(0).toUpperCase() + type.slice(1)];
     return (
         <>

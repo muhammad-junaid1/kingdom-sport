@@ -14,10 +14,9 @@ import Crypto from "./pages/Crypto";
 import LeaderBoard from "./pages/LeaderBoard";
 import CryptoNavbar from "./CryptoNavbar";
 import LiveNavbar from "./LiveNavbar";
-import useMediaQuery from "../useMediaQuery";
 
 export const NavbarContext = React.createContext({});
-export const AllRoutesContext = React.createContext({});
+export const ContentRoutesContext = React.createContext({});
 export const HeaderContext = React.createContext({});
 
 const Main = ({checkMediaQuery}) => {
@@ -249,7 +248,7 @@ const Main = ({checkMediaQuery}) => {
                   noSportsBets={noSportsBets} noCryptoBets={noCryptoBets}
                 />
               ) : (
-                <AllRoutesContext.Provider value={{showBetsContainer, isMobile}}>
+                <ContentRoutesContext.Provider value={{showBetsContainer, isMobile}}>
                 <Routes>
                   <Route path="/" element={<Homepage />} />
                   <Route path="/sport/live" element={
@@ -261,7 +260,7 @@ const Main = ({checkMediaQuery}) => {
                   <Route path="/crypto/:coin" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired} showBetsContainer={showBetsContainer}/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
                 </Routes>
-                </AllRoutesContext.Provider>
+                </ContentRoutesContext.Provider>
               )}
             </div>
             {/* ********** */}
