@@ -18,8 +18,9 @@ import useMediaQuery from "../useMediaQuery";
 
 export const NavbarContext = React.createContext({});
 export const AllRoutesContext = React.createContext({});
+export const HeaderContext = React.createContext({});
 
-const Main = () => {
+const Main = ({checkMediaQuery}) => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
   const [collapseNavbar, setCollapseNavbar] = useState(false);
   const [showBets, setShowBets] = useState(false);
@@ -28,7 +29,7 @@ const Main = () => {
   const [noSportsBets, setNoSportsBets] = useState(false);
   const [noCryptoBets, setNoCryptoBets] = useState(false);
   const [connected, setConnected] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 500px)');
+  const isMobile = checkMediaQuery;
 
   useEffect(() => {
     if(isMobile && showNavbar) {
@@ -75,6 +76,7 @@ const Main = () => {
           </NavbarContext.Provider>
         )}
         <div className="section">
+        <HeaderContext.Provider value={{setNoCryptoBets, setNoSportsBets}}>
         <Routes>
                 <Route path="/" element={ <Header
             isMobile={isMobile}
@@ -148,6 +150,7 @@ const Main = () => {
             setShowBets={setShowBets}
           />}/>
         </Routes>
+        </HeaderContext.Provider>
           <div className="content-wrapper">
             <div
               className="navbar--mobile"

@@ -21,7 +21,7 @@
   padding: .8rem;
   background: var(--page-bg);
   border-radius: 10px;
-  margin-bottom: 1.2rem;
+  margin-bottom: .8rem;
 }
 
 .bets__header button {
@@ -40,6 +40,7 @@
   margin-bottom: 1.0rem;
   height: 100%;
   padding-right: 7px;
+  padding-bottom: 10px;
 }
 
 .bets__content::-webkit-scrollbar {
@@ -353,10 +354,6 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding-bottom: 60px;
-  }
-
-  .bets__body{
-    padding-bottom: 10px;
   }
 
   .bets__footer {
