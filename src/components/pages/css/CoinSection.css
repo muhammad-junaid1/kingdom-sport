@@ -70,7 +70,7 @@
 
 @media all and (max-width: 500px) {
     .coin-section {
-        width: 100%;
+        width: 100% !important;
     }
     .coin-content__container {
         display: block;

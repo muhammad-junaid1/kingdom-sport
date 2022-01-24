@@ -26,7 +26,7 @@ const Navbar = ({
   const [checked, setChecked] = useState("all");
   const [radioForActive, setRadioForActive] = useState(false);
   const [radioForExpired, setRadioForExpired] = useState(false);
-  const { search } = useLocation();
+  const { search, pathname } = useLocation();
   const { coin } = useParams();
 
   const params = new URLSearchParams(search);
@@ -41,8 +41,10 @@ const Navbar = ({
     }
     if(cryptoActiveOrExpired === "active") setRadioForActive(true);
     if(cryptoActiveOrExpired === "expired") setRadioForExpired(true);
+
+    if(pathname === "/crypto/all") setChecked("all");
     
-  }, [coin, cryptoActiveOrExpired]);
+  }, [coin, cryptoActiveOrExpired, pathname]);
   return (
     <>
       <div
