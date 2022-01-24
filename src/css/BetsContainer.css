@@ -21,10 +21,7 @@
   padding: .8rem;
   background: var(--page-bg);
   border-radius: 10px;
-}
-
-.bets > .bets__header {
-  margin-right: 5px;
+  margin-bottom: 1.2rem;
 }
 
 .bets__header button {
@@ -32,29 +29,32 @@
 }
 
 .bets__body {
-  overflow-y: scroll;
-  margin-top: 1.0rem;
+  overflow-y: hidden;
   height: 100%;
+  padding-bottom: 80px;
+}
+
+.bets__content {
+  margin-top: 1.0rem;
+  overflow-y: scroll;
   margin-bottom: 1.0rem;
+  height: 100%;
+  padding-right: 7px;
 }
 
-.bets__body-wrapper {
-  margin-right: 5px;
-}
-
-.bets__body::-webkit-scrollbar {
+.bets__content::-webkit-scrollbar {
   width: 3px;
 }
 
-.bets__body::-webkit-scrollbar-track{
+.bets__content::-webkit-scrollbar-track{
   background: transparent;
 }
 
-.bets__body::-webkit-scrollbar-thumb {
+.bets__content::-webkit-scrollbar-thumb {
   background: var(--violet6);
 }
 
-.bets__body::-webkit-scrollbar-thumb:hover {
+.bets__content::-webkit-scrollbar-thumb:hover {
   background: var(--violet6);
 }
 
@@ -63,6 +63,7 @@
   display: flex;
   justify-content: center;
 }
+
 
 .not-connected {
   display: flex;
@@ -76,6 +77,7 @@
   margin-bottom: 4px;
 }
 
+
 .not-connected hr {
   width: 100%;
   border: 1px solid var(--grey5);
@@ -86,6 +88,25 @@
   margin-top: 1.5rem;
 }
 
+
+.bets__body.no-bets-container {
+  padding-top: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.no-bets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.no-bets .text-muted {
+  margin-bottom: 4px;
+}
 
 .bets__footer-wrapper{
   justify-self: flex-end;
@@ -112,7 +133,7 @@
   margin-left: 5px;
 }
 
-.match-winner {
+.match-winner , .cryptobet-in-bets{
   background: var(--grey5);
   border-radius: 10px;
   padding: 10px;
@@ -141,24 +162,36 @@
   cursor: pointer;
 }
 
-.match-winner .match-winner__body p{
+.match-winner .match-winner__body p, .cryptobet-in-bets .cryptobet-in-bets__body{
   color: white;
   margin: 8px 0;
 }
 
-.match-winner .match-winner__footer p {
+.cryptobet-in-bets__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-winner .match-winner__footer p, .cryptobet-in-bets .cryptobet-in-bets__footer {
   color: var(--green6);
   display: flex;
   align-items: center;
   font-size: 1.3rem;
 }
 
-.match-winner__footer svg {
+.match-winner__footer svg{
   margin-right: 4px;
 }
 
+.cryptobet-in-bets__footer svg  {
+  margin-right: 4px;
+  width: 18px;
+  height: 18px;
+}
 
-.bets__body .match-winner {
+
+.bets__body .match-winner, .bets__body .cryptobet-in-bets {
   margin: 10px 0;
 }
 
