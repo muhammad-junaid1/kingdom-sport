@@ -31,6 +31,7 @@ const MyBets = ({
            {crypto.map((item) => {
              return <MatchWinner crypto={{...item}}/>
            })}
+           <hr style={{border: "1px solid #2C2C2E", height: 1}}/>
           </>
         ) : (
           <>
