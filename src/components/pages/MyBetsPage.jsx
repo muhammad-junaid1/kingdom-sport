@@ -161,26 +161,20 @@ const MyBetsPage = ({isMobile}) => {
             <thead>
             <tr>
                     <th>ID</th>
-                    <th>RESULT</th>
+                    <th>STATUS</th>
+                    <th>AMOUNT</th>
+                    <th>CURRENCY</th>
+                    <th>DATE/TIME</th>
+                    <th>LINK</th>
                 </tr>
             
                 </thead>
                 <tbody>
-               <tr>
-                   <td>hi</td>
-                   <td>hi</td>
-               </tr>
-                
-               <tr>
-                   <td>hi</td>
-                   <td>hi</td>
-               </tr>
-                
-               <tr>
-                   <td>hi</td>
-                   <td>hi</td>
-               </tr>
-                
+                     <MyBetsRow topup={true} id={36141} status="completed" amount={["100.00 DBSC", "247.00 DBSC"]} currency={["100.00 USDT", "$1000.00 DBSC"]} dateTime={ ["08:00:04", "DEC 08, 2021"]} link="0cx68747077673434854875887684...6374637647364736923"/>
+                     <MyBetsRow topup={true} id={36141} status="failed" amount={["100.00 DBSC", "247.00 DBSC"]} currency={["100.00 USDT", "$1000.00 DBSC"]} dateTime={ ["08:00:04", "DEC 08, 2021"]} link="0cx68747077673434854875887684...6374637647364736923"/>
+                     <MyBetsRow topup={true} id={36141} status="transferring" amount={["100.00 DBSC", "247.00 DBSC"]} currency={["100.00 USDT", "$1000.00 DBSC"]} dateTime={ ["08:00:04", "DEC 08, 2021"]} link="0cx68747077673434854875887684...6374637647364736923"/>
+                     <MyBetsRow topup={true} id={36141} status="pending" amount={["100.00 DBSC", "247.00 DBSC"]} currency={["100.00 USDT", "$1000.00 DBSC"]} dateTime={ ["08:00:04", "DEC 08, 2021"]} link="0cx68747077673434854875887684...6374637647364736923"/>
+                     <MyBetsRow topup={true} id={36141} status="failed" amount={["100.00 DBSC", "247.00 DBSC"]} currency={["100.00 USDT", "$1000.00 DBSC"]} dateTime={ ["08:00:04", "DEC 08, 2021"]} link="0cx68747077673434854875887684...6374637647364736923"/>
                 </tbody>
             </table>
             <div ref={wrapperRef2}></div>

@@ -1,4 +1,5 @@
 import React from "react";
+import SVGIcons from "../../SvgIcons";
 
 const YourBetsRow = ({
   id,
@@ -9,7 +10,10 @@ const YourBetsRow = ({
   coef,
   dateTime,
   withdrawl,
+  topup,
+  status, currency, link
 }) => {
+  if(!topup) {
   return (
     <>
       <tr>
@@ -72,6 +76,61 @@ const YourBetsRow = ({
       </tr>
     </>
   );
+          }
+          if(topup){
+            return (
+              <>
+                <tr>
+                  <td>
+                  <div className="id">
+                      <p>{id}</p>
+                  </div>
+                  </td>
+                  <td>
+                  <div className="status-wrapper">
+                      <div className={`status ${status}`}>
+                        <p>{status.charAt(0).toUpperCase() + status.slice(1)}</p>
+                      </div>
+                      </div>
+                  </td>
+                  <td>
+                    <div className="amount-wrapper">
+                    <div className="amount">
+                      <p>{amount[0]}</p>
+                      <p className="amount--pool">
+                        Pool: <span>{amount[1]}</span>
+                      </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="currency-wrapper">
+                    <div className="amount">
+                      <p>{amount[0]}</p>
+                      <p className="amount--pool">
+                        <span>{amount[1]}</span>
+                      </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                      <div className="date-time">
+                      <div>
+                          <p>{dateTime[0]}</p>
+                          <p>{dateTime[1]}</p>
+                          </div>
+                          </div>
+                  </td>
+                  <td>
+                    <div className="link">
+                      <p>{link}</p>
+                      <SVGIcons.Export/>
+                    </div>
+                  </td>
+                </tr>
+              </>
+            );
+          }
 };
 
 export default YourBetsRow;

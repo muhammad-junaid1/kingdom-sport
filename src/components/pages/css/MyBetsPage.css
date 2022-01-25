@@ -90,7 +90,11 @@
 }
 
 .mybets-table-headings[data-column-id="id"] {
-    padding-left: 1.8rem;
+    padding-left: 2.6rem;
+}
+
+.mybets-table-headings[data-column-id="currency"] {
+    text-align: left;
 }
 
 .mybets-table-headings[data-column-id="amount"] {
@@ -107,7 +111,8 @@
 
 .mybets-table-row .mybets-table-data:first-child {
     border-left: 1px solid var(--grey6);
-    padding-left: 2.8rem;
+    text-align: center;
+    padding-left: 1.8rem;
 }
 .mybets-table-row .mybets-table-data:last-child {
     border-right: 1px solid var(--grey6);
@@ -134,14 +139,18 @@
     padding: 1rem 0;
 }
 
-.mybets-table-data .result {
-    padding: .5rem 1.2rem;
+.mybets-table-data .result, .mybets-table-data .status {
+    padding: .5rem 1rem;
     border-radius: 4px;
     text-align: center;
     width: 6rem;
 }
 
-.mybets-table-data .result-wrapper {
+.mybets-table-data .status {
+    width: auto;
+}
+
+.mybets-table-data .result-wrapper, .mybets-table-data .status-wrapper {
     display: flex;
     justify-content: center;
 }
@@ -159,6 +168,23 @@
     background: var(--violet2);
 }
 
+.mybets-table-data .status.completed {
+    background: var(--green2);
+    color: var(--green6);
+}
+.mybets-table-data .status.pending {
+    background: var(--grey5);
+    color: white;
+}
+.mybets-table-data .status.failed {
+    background: var(--red2);
+    color: var(--red6);
+}
+.mybets-table-data .status.transferring {
+    background: var(--violet2);
+    color: var(--violet6);
+}
+
 .mybets-table-data[data-column-id="amount"] {
     width: 13%;
 }
@@ -169,7 +195,7 @@
 
 .mybets-table-data .amount--pool {
     margin-top: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
@@ -213,6 +239,10 @@
     width:7.5rem;
 }
 
+.mybets-table-data .coef p {
+    text-align: center;
+}
+
 .mybets-table-data .coef-wrapper{
     display: flex;
     justify-content: center;
@@ -239,7 +269,7 @@
 
 .toggle-btns {
     position: absolute;
-    top: -44px;
+    top: -4.4rem;
     left: 0;
     padding: 8px 8px 6px 8px;
     background: var(--grey6);
@@ -258,7 +288,20 @@
 }
 
 .table-search-input {
-    top: -55px;
+    top: -5.5rem;
+}
+
+.mybets-table-data .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.topups__table .mybets-table-data {
+    padding: 1.5rem 0;
 }
 
 
@@ -294,5 +337,31 @@
     }
    .mybets-table-data[data-column-id="date/time"]{
        padding: 0;
+   }
+   .mybets-table-headings[data-column-id="id"]{
+       padding-left: 8px;
+   }
+   .mybets-page .bets-money{
+       flex-direction: column;
+   }
+   .bets-money__item{
+       width: 100%;
+       margin-bottom: 12px;
+   }
+
+   .toggle-btns {
+       top: 10px;
+   }
+   .gridjs-wrapper {
+       padding-top: 52px;
+   }
+
+   .table-search-input {
+       top: 15px;
+   }
+
+   .mybets-table-data[data-column-id="status"] {
+       padding-right: 20px;
+       padding-left: 20px;
    }
 }
