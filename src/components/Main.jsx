@@ -5,7 +5,7 @@ import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "../css/Main.css";
 
 // Pages
@@ -32,6 +32,7 @@ const Main = ({checkMediaQuery}) => {
   const [noCryptoBets, setNoCryptoBets] = useState(false);
   const [connected, setConnected] = useState(false);
   const isMobile = checkMediaQuery;
+  const {pathname} = useLocation();
 
   useEffect(() => {
     if(isMobile && showNavbar) {
@@ -307,7 +308,7 @@ const Main = ({checkMediaQuery}) => {
         )}
 
          {/* Button on mobile for showing bets container */}
-         {(isMobile && !showBets) && 
+         {((isMobile && !showBets) && (pathname==="/" || pathname.startsWith("/sport") || pathname.startsWith("/crypto"))) && 
           <div className="show-hide-bets-container">
               <Button type="secondary" onClick={() => {setShowBets(!showBets); setShowNavbar(false);}}><SVGIcons.Bets/></Button>
               <div className="bets-notifs"><p>3</p></div>
