@@ -213,6 +213,34 @@
     color: var(--grey1);
 }
 
+.gridjs-wrapper {
+    position: relative;
+}
+
+.toggle-btns {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    padding: 8px 8px 6px 8px;
+    background: var(--grey6);
+    border-radius: 10px 10px 0 0;
+}
+
+.toggle-btns__content{
+    display: flex;
+}
+
+.toggle-btns button{
+    padding: 7px;
+    font-weight: 400;
+    margin-right: 3px;
+    border-radius: 3px;
+}
+
+.table-search-input {
+    top: -55px;
+}
+
 
 @media all and (max-width: 500px) {
     .mybets-page__header .user-wins {
