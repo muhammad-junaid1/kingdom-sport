@@ -1,6 +1,11 @@
+@import url("../../../css/colors/grey.css");
+@import url("../../../css/colors/green.css");
+@import url("../../../css/colors/red.css");
+@import url("../../../css/colors/violet.css");
+
 .mybets-page{
     width: 82%;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
 }
 
 .mybets-page img.mybets-bg {
@@ -80,10 +85,140 @@
     align-items: center;
 }
 
+.mybets-table-headings{
+    font-size: 1.2rem;
+}
+
+.mybets-table-headings[data-column-id="id"] {
+    padding-left: 1.8rem;
+}
+
+.mybets-table-body .mybets-table-row:nth-child(even) {
+    background: var(--grey6);
+}
+
+.mybets-table-body .mybets-table-row:nth-child(odd) {
+    background: var(--page-bg);
+}
+
+.mybets-table-row .mybets-table-data:first-child {
+    border-left: 1px solid var(--grey6);
+    padding-left: 1.8rem;
+}
+.mybets-table-row .mybets-table-data:last-child {
+    border-right: 1px solid var(--grey6);
+}
+
+.mybets-page .gridjs-wrapper .gridjs-table {
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.mybets-table-header .mybets-table-row{
+    background: var(--grey6);
+}
+
+.mybets-table-headings{
+    padding: .8rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--grey1);
+}
+
+.mybets-table-data {
+    padding: 1rem 0;
+}
+
+.mybets-table-data[data-column-id="match"] {
+    padding-left: 1.0rem;
+}
+
+.mybets-table-data[data-column-id="result"] {
+    width: 9%;
+}
+
+.mybets-table-data span > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mybets-table-data .result {
+    padding: .5rem 1.2rem;
+    border-radius: 4px;
+}
+
+.mybets-table-data .result.win {
+    color: var(--green6);
+    background: var(--green2);
+}
+.mybets-table-data .result.lose {
+    color: var(--red6);
+    background: var(--red2);
+}
+.mybets-table-data .result.active {
+    color: var(--violet6);
+    background: var(--violet2);
+}
+
+.mybets-table-data .amount--pool {
+    margin-top: 5px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+.mybets-table-data .amount--win{
+    color: var(--green6);
+    font-weight: 500;
+}
+.mybets-table-data .amount--lose{
+    color: var(--red6);
+    font-weight: 500;
+}
+.mybets-table-data .amount--active{
+    color: var(--violet6);
+    font-weight: 500;
+}
+
+.mybets-table-data .match-teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mybets-table-data .match-teams p{
+    font-weight: 400;
+}
+
+.mybets-table-data .match-teams span {
+    margin: 6px 0;
+    font-size: 1.0rem;
+    font-weight: 300;
+}
+
+.mybets-table-data .coef {
+    background: var(--grey5);
+    padding: 4px 2rem;
+    border-radius: 3px;
+}
+
+.mybets-table-data .dateTime p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.mybets-table-data .withdrawl{
+    color: var(--grey1);
+}
+
 
 @media all and (max-width: 500px) {
     .mybets-page__header .user-wins {
         display: none;
     }
-    
+    .mybets-page {
+        width: 100% !important;
+    }
 }

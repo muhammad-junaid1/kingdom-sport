@@ -827,6 +827,207 @@ const data = {
         closed: "$35,937.62"
       }
     },
+  ],
+  yourBetsTable: [
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "active",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "active",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+      {
+        id: 36141,
+        result: "lose",
+        amount: ["100.00 DBSC", "247.00 DBSC"],
+        winloseAmount: "100.00 DBSC",
+        match: {
+          teamA: "Philadelphia 76ers",
+          teamB: "Utah Jazz",
+        },
+          coef: 2.47,
+          dateTime: ["08:00:04", "DEC 08, 2021"],
+        },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+      
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "active",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+      },
+      {
+        id: 36141,
+        result: "lose",
+        amount: ["100.00 DBSC", "247.00 DBSC"],
+        winloseAmount: "100.00 DBSC",
+        match: {
+          teamA: "Philadelphia 76ers",
+          teamB: "Utah Jazz",
+        },
+          coef: 2.47,
+          dateTime: ["08:00:04", "DEC 08, 2021"],
+        },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+        coef: 2.47,
+        dateTime: ["08:00:04", "DEC 08, 2021"],
+        withdrawl: "Transferred to pool"
+      },
   ]
 };
 

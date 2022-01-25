@@ -2,7 +2,7 @@ import React, {useEffect, useRef } from "react";
 import BgImg from "../../assets/my-bets-page-bg.png";
 import BetsPageMoney from './components/BetsPageMoney';
 import Button from "../Button";
-import Leader from "./components/Leader";
+import MyBetsRow from "./components/MyBetsRow";
 import SVGIcons from "../SvgIcons";
 import sampleData from "../../sampleData";
 import { Grid } from "gridjs";
@@ -71,7 +71,7 @@ const MyBetsPage = ({isMobile}) => {
                 </div>
                 </div>
                 <div className="mybets--page__body">
-                <table ref={tableRef} cellPadding={0}>
+                <table ref={tableRef} cellSpacing={0} cellPadding={0}>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -85,8 +85,8 @@ const MyBetsPage = ({isMobile}) => {
                 </tr>
                 </thead>
                 <tbody>
-                  {sampleData.leaderBoard.map((item, index) => {
-                      return <Leader id={index + 1} {...item}/>
+                  {sampleData.yourBetsTable.map((item) => {
+                      return <MyBetsRow {...item}/>
                   })}
                 </tbody>
             </table>
