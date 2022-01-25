@@ -18,7 +18,6 @@ const MyBetsPage = ({isMobile}) => {
     const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
-        if(!toggle) {
 
         new Grid({
             from: tableRef.current,
@@ -44,6 +43,8 @@ const MyBetsPage = ({isMobile}) => {
                 }
             }
           }).render(wrapperRef.current);
+          if(!toggle) {
+              
           // Modify the search input
             const tableInput = document.querySelector(".mybets__table .table-search-input input");
             tableInput.setAttribute("placeholder", "Search a wallet");
@@ -54,8 +55,6 @@ const MyBetsPage = ({isMobile}) => {
             document.querySelector(".mybets__table .gridjs-container .gridjs-wrapper").append(document.querySelector(".toggle-btns"));
 
         }
-
-        if(toggle) {
 
             new Grid({
                 from: tableRef2.current,
@@ -81,6 +80,10 @@ const MyBetsPage = ({isMobile}) => {
                     }
                 }
             }).render(wrapperRef2.current);
+
+            // Modify the search input 
+            
+            if(toggle) {
             const tableInput2 = document.querySelector(".topups__table .table-search-input input");
             tableInput2.setAttribute("placeholder", "Search a wallet");
             const img2 = document.createElement("img");

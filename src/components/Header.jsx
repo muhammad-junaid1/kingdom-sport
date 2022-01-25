@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import SVGIcons from "./SvgIcons";
 import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
@@ -7,15 +7,14 @@ import NavLinks from "./NavLinks";
 import "../css/Header.css";
 import Balance from "./Balance";
 import {NavLink} from "react-router-dom";  
+import { HeaderContext } from "./Main";
 
 const Header = ({
-  showBetsContainer,
-  setShowBetsContainer,
-  collapseNavbar,
-  setCollapseNavbar,
-  isMobile,
-  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected, setShowBets, isMyBets
+removeCollapseToggle, isLeaderboard, isMyBets
 }) => {
+
+  const {isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected, setShowBets, setConnected} = useContext(HeaderContext);
+
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
   };
