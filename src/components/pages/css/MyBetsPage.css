@@ -93,6 +93,10 @@
     padding-left: 1.8rem;
 }
 
+.mybets-table-headings[data-column-id="amount"] {
+    text-align: left;
+}
+
 .mybets-table-body .mybets-table-row:nth-child(even) {
     background: var(--grey6);
 }
@@ -103,7 +107,7 @@
 
 .mybets-table-row .mybets-table-data:first-child {
     border-left: 1px solid var(--grey6);
-    padding-left: 1.8rem;
+    padding-left: 2.8rem;
 }
 .mybets-table-row .mybets-table-data:last-child {
     border-right: 1px solid var(--grey6);
@@ -130,23 +134,16 @@
     padding: 1rem 0;
 }
 
-.mybets-table-data[data-column-id="match"] {
-    padding-left: 1.0rem;
-}
-
-.mybets-table-data[data-column-id="result"] {
-    width: 9%;
-}
-
-.mybets-table-data span > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .mybets-table-data .result {
     padding: .5rem 1.2rem;
     border-radius: 4px;
+    text-align: center;
+    width: 6rem;
+}
+
+.mybets-table-data .result-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .mybets-table-data .result.win {
@@ -162,12 +159,23 @@
     background: var(--violet2);
 }
 
+.mybets-table-data[data-column-id="amount"] {
+    width: 13%;
+}
+
+.mybets-table-data .amount {
+    margin-left: .8rem;
+}
+
 .mybets-table-data .amount--pool {
     margin-top: 5px;
     font-size: 1.3rem;
     font-weight: 300;
 }
 
+.mybets-table-data[data-column-id="win-loseAmount"] p {
+        text-align: center;
+}   
 
 .mybets-table-data .amount--win{
     color: var(--green6);
@@ -202,15 +210,27 @@
     background: var(--grey5);
     padding: 4px 2rem;
     border-radius: 3px;
+    width:7.5rem;
 }
 
-.mybets-table-data .dateTime p{
+.mybets-table-data .coef-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.mybets-table-data .date-time p{
     text-align: center;
     font-size: 1.2rem;
 }
 
+.mybets-table-data[data-column-id="withdrawl"]{
+    width: 14%;
+}
+
 .mybets-table-data .withdrawl{
     color: var(--grey1);
+    padding-right: 10px;
+    text-align: center;
 }
 
 .gridjs-wrapper {
@@ -249,4 +269,30 @@
     .mybets-page {
         width: 100% !important;
     }
+    .mybets-table-data{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .mybets-table-data[data-column-id="amount"]{
+        width: 100%;
+    }
+
+    .mybets-table-data .amount-wrapper {
+        width: 120px;
+        margin-left: -4px;
+    }
+
+    .mybets-table-data .amount{
+        margin-left: 0;
+    }
+
+    .mybets-table-data .match-teams{
+        width: 140px;
+    }
+    .mybets-table-data[data-column-id="date/time"] .date-time {
+        width: 115px;
+    }
+   .mybets-table-data[data-column-id="date/time"]{
+       padding: 0;
+   }
 }

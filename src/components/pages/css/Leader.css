@@ -125,7 +125,7 @@
         margin-right: 40px;
         width: 100%;
     }
-    .result p {
+    .table-data[data-column-id="result"] .result p {
         text-align: right;
     }
     .table-data[data-column-id="result"] .result .percentage {
