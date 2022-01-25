@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
+import Button from "./Button";
+import SVGIcons from "./SvgIcons";
 import { Routes, Route } from "react-router-dom";
 import "../css/Main.css";
 
@@ -14,6 +16,7 @@ import Crypto from "./pages/Crypto";
 import LeaderBoard from "./pages/LeaderBoard";
 import CryptoNavbar from "./CryptoNavbar";
 import LiveNavbar from "./LiveNavbar";
+import MyBetsPage from "./pages/MyBetsPage";
 
 export const NavbarContext = React.createContext({});
 export const ContentRoutesContext = React.createContext({});
@@ -148,6 +151,19 @@ const Main = ({checkMediaQuery}) => {
             isLeaderboard={true}
             setShowBets={setShowBets}
           />}/>
+      <Route path="/my-bets" element={ <Header
+            isMobile={isMobile}
+            showNavbar={showNavbar}
+            setShowNavbar={setShowNavbar}
+            showBetsContainer={showBetsContainer}
+            setShowBetsContainer={setShowBetsContainer}
+            collapseNavbar={collapseNavbar}
+            setCollapseNavbar={setCollapseNavbar}
+            removeCollapseToggle={true}
+            isConnected={connected} setConnected={setConnected}
+            setShowBets={setShowBets}
+            isMyBets={true}
+          />}/>
         </Routes>
         </HeaderContext.Provider>
           <div className="content-wrapper">
@@ -228,6 +244,16 @@ const Main = ({checkMediaQuery}) => {
                       />
                     }
                   />
+              <Route
+                    path="/my-bets"
+                    element={
+                      <Navbar
+                        isMobile={isMobile}
+                        forMobile={true}
+                        showNavbar={showNavbar}
+                      />
+                    }
+                  />
                 </Routes>
               </NavbarContext.Provider>
             </div>
@@ -259,6 +285,7 @@ const Main = ({checkMediaQuery}) => {
                   <Route path="/crypto/all" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired} showBetsContainer={showBetsContainer}/>} />
                   <Route path="/crypto/:coin" element={<Crypto cryptoActiveOrExpired={cryptoActiveOrExpired} showBetsContainer={showBetsContainer}/>} />
                   <Route path="/leaderboard" element={<LeaderBoard />} />
+                  <Route path="/my-bets" element={<MyBetsPage isMobile={isMobile}/>} />
                 </Routes>
                 </ContentRoutesContext.Provider>
               )}
@@ -278,6 +305,14 @@ const Main = ({checkMediaQuery}) => {
             setCollapseNavbar={setCollapseNavbar}
           />
         )}
+
+         {/* Button on mobile for showing bets container */}
+         {(isMobile && !showBets) && 
+          <div className="show-hide-bets-container">
+              <Button type="secondary" onClick={() => {setShowBets(!showBets); setShowNavbar(false);}}><SVGIcons.Bets/></Button>
+              <div className="bets-notifs"><p>3</p></div>
+          </div>
+        }
       </div>
     </>
   );

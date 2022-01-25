@@ -1,0 +1,44 @@
+
+.bets-money__item {
+    padding: 2.0rem;
+    background: var(--violet1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 32%;
+}
+
+.bets-money__item .left .bets-money__icon {
+    padding: 1.8rem;
+    background: var(--violet2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.bets-money__item .right p {
+    color: var(--violet6);
+    margin-bottom: 5px;
+}
+
+.bets-money__item .right h1 {
+    font-weight: 400;
+}
+
+.bets-money__item.color--green {
+    background: var(--green1);
+}
+
+.bets-money__item.color--green .right p {
+    color: var(--green6);
+}
+
+.bets-money__item.color--green .left .bets-money__icon{
+    background: var(--green2);
+}
+
+.bets-money__item.color--green .left svg {
+    color: var(--green6);
+}

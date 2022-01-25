@@ -14,11 +14,6 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNav
       setCollapseNavbar(false);
     return;
   }
-
-  const toggleBetsContainer = () => {
-    setShowBets(!showBets);
-    setShowNavbar(false);
-  }
   
   return (
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>
@@ -51,10 +46,19 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNav
           </NavLink>
         </li>
         {isFixed &&
-        <li onClick={toggleBetsContainer}>
+        <>
+        {/* <li onClick={toggleBetsContainer}>
           <SVGIcons.Bets2 />
           <span>MY BETS</span>
+        </li> */}
+          <li onClick={handleClick}>
+        <NavLink to="/my-bets">
+          <SVGIcons.Bets2 />
+          <span>MY BETS</span>
+          <div className="nav-link-active-border"></div>
+        </NavLink>
         </li>
+        </>
         }
       </ul>
     </div>

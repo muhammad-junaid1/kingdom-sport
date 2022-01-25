@@ -6,6 +6,7 @@ import Button from "./Button";
 import NavLinks from "./NavLinks";
 import "../css/Header.css";
 import Balance from "./Balance";
+import {NavLink} from "react-router-dom";  
 
 const Header = ({
   showBetsContainer,
@@ -13,7 +14,7 @@ const Header = ({
   collapseNavbar,
   setCollapseNavbar,
   isMobile,
-  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected, setShowBets
+  showNavbar, setShowNavbar, removeCollapseToggle, isLeaderboard, isConnected, setConnected, setShowBets, isMyBets
 }) => {
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
@@ -28,8 +29,8 @@ const Header = ({
     <>
       <div className="header">
         <div className="header__content" >
-          <div className="header__left" style={{marginLeft: (isLeaderboard && !isMobile) ? "4%": ""}}>
-          {(isLeaderboard && !isMobile) &&
+          <div className="header__left" style={{marginLeft: ((isLeaderboard || isMyBets) && !isMobile) ? "4%": ""}}>
+          {((isLeaderboard || isMyBets) && !isMobile) &&
             <div className="logo">
               <img src={FullLogo} alt="" />
             </div>
@@ -54,21 +55,24 @@ const Header = ({
            : <>
 
            <Balance/>
-           {!isMobile && <Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button>}</>
+           {!isMobile && <NavLink to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
           }
+  
             {!isMobile ? [
               showBetsContainer ? (
+                [(!isLeaderboard && !isMyBets) &&
                 <Button onClick={handleClick} type="secondary" color="grey">
                   <SVGIcons.Close /> Close bets
                 </Button>
+                ]
               ) : (
-                [!isLeaderboard &&
+                [(!isLeaderboard && !isMyBets) &&
                 <Button onClick={handleClick} type="secondary">
                   <SVGIcons.Bets /> Open bets
                 </Button>
                 ]
               ),
-            ] : <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
+               ] : <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
           </div>
         </div>
       </div>

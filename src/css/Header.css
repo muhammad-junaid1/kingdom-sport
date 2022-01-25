@@ -28,6 +28,12 @@
     height: 2.0rem;
 }
 
+.header__right .active button {
+  background: var(--green4) !important;
+  border: 0 !important;
+  padding: 8px !important;
+}
+
 .header__right button {
   margin-left: 1.8rem;
 }

@@ -68,7 +68,7 @@ button:disabled:hover, button[disabled]:hover{
 
 /* Button styles */
 .btn--normal-size {
-    padding: 10px;
+    padding: 1rem;
 }
 .btn--small-size {
     padding: 6px;

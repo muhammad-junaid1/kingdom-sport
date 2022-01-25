@@ -1,46 +1,48 @@
 @import "./colors/grey";
 
 .balance-container {
-        display: flex;
-        background: var(--grey5);
-        align-items: stretch;
-        border-radius: 5px;
+  display: flex;
+  background: var(--grey5);
+  align-items: stretch;
+  border-radius: 5px;
 }
 
 .balance-container .right {
-    display: flex; 
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .balance-container .left {
-    display: flex;
-    flex-direction: column;
-    padding: 3px 10px;
-    text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 10px;
+  text-align: right;
 }
 
 .balance-container .left span {
-    color: var(--grey2);
-    font-size: 1.2rem;
+  color: var(--grey2);
+  font-size: 1.1rem;
 }
 
 .balance-container .left p {
-    font-size: 1.6rem;
-    color: white;
-    padding-top: 3px;
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
 }
 
 .balance-container .left svg {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
 }
 
-
 @media all and (max-width: 500px) {
-    .balance-container .left {
-        padding: 5px;
-    }
-    .balance-container {
-        margin-right: -6px;
-    }
+  .balance-container .left {
+    padding: 5px;
+  }
+  .balance-container {
+    margin-right: -6px;
+  }
 }

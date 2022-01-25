@@ -20,6 +20,44 @@
     padding-bottom: 10.0rem;
 }
 
+.show-hide-bets-container {
+    display: inline-block;
+    position: fixed;
+    right: 2.5rem;
+    bottom: 12.5rem;
+  }
+  
+.show-hide-bets-container button {
+    border-radius: 10px;
+    padding: 12px 13px;
+  }
+  
+  .show-hide-bets-container button svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+  }
+  
+  .show-hide-bets-container .bets-notifs {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--green6);
+    color: black;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .show-hide-bets-container .bets-notifs p {
+    font-size: 1.7rem;
+  }
+
 @media all and (max-width: 500px) {
     .section{
         overflow: hidden;
