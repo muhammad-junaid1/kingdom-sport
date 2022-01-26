@@ -10,7 +10,7 @@ const CryptoRow = ({ coin, endTime, prices, bet }) => {
   return (
     <>
       <tr>
-        <td>
+        <td className="coin-container">
           <div>
             <div className="coin">
               <Icon />

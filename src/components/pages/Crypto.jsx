@@ -17,7 +17,7 @@ const Crypto = ({cryptoActiveOrExpired, showBetsContainer}) => {
             return <CoinSection {...item} />;
           })}
      {!coin &&
-      <div className="crypto" style={{width: showBetsContainer ? "100%" : "80%"}}>
+      <div className="crypto">
         <div className="crypto__header">
           <h1>Crypto</h1>
           <p>

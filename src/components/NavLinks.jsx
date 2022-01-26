@@ -3,7 +3,7 @@ import SVGIcons from "./SvgIcons";
 import {NavLink, useLocation} from "react-router-dom";
 import "../css/NavLinks.css";
 
-const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNavbar }) => {
+const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNavbar, connected }) => {
   const location = useLocation();
 
   const handleClick = () => {
@@ -45,7 +45,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets, setShowNavbar,setCollapseNav
           <div className="nav-link-active-border"></div>
           </NavLink>
         </li>
-        {isFixed &&
+        {isFixed && connected &&
         <>
           <li onClick={handleClick}>
         <NavLink to="/my-bets">

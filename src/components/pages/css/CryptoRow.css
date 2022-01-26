@@ -42,6 +42,10 @@
   padding-left: 8px;
 }
 
+.crypto__content .coin-container {
+  width: 25%;
+}
+
 .crypto__content .coin {
   display: flex;
   align-items: center;
@@ -75,10 +79,6 @@
   background-color: var(--grey5);
   border-radius: 5px;
   margin: 0 0.6rem;
-}
-
-.crypto-bets .crypto-bet{
-  width: 42%;
 }
 
 .crypto-bet .crypto-bet__header {
@@ -160,7 +160,7 @@
     justify-content: space-between;
   }
   .crypto__content .crypto-bets .crypto-bet {
-    width: 48%;
+    width: 48% !important;
     margin: 0;
   }
 
@@ -177,5 +177,8 @@
   }
   .crypto__content .prices p {
       justify-content: space-between;
+  }
+  .crypto__content .coin-container {
+    width: 100%;
   }
 }

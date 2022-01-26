@@ -7,10 +7,10 @@ import { ContentRoutesContext } from "../../Main";
 
 const CoinSection = ({ coin, endTime, bet, prices }) => {
   const Icon = SVGIcons.CryptoIcons[coin.icon];
-  const { isMobile, showBetsContainer } = useContext(ContentRoutesContext);
+  const { isMobile } = useContext(ContentRoutesContext);
   return (
     <>
-      <div className="coin-section" style={{width: showBetsContainer ? "100%" : "80%"}}>
+      <div className="coin-section">
         <div className="coin-section__header">
           <BreadCrumbs items={["CRYPTO", coin.details()]} />
         </div>

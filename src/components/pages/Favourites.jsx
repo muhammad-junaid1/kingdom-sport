@@ -6,7 +6,7 @@ import SVGIcons from "../SvgIcons";
 const Favourites = ({showBetsContainer}) => {
     return (
         <>
-           <div className="favourites" style={{width: showBetsContainer ? "100%" : "80%"}}>
+           <div className="favourites">
                 {sampleData.favItemsData.map((item) => {
                     const Icon = SVGIcons[item.icon];
                     return (<>
