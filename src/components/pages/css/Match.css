@@ -15,14 +15,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 1.5rem;
 }
 .match__header p{
     display: flex;
     align-items: center;
 }
 
+.match__header button{
+    border-radius: 3px;
+}
+
 .match__header svg {
-    margin-right: 10px;
+    margin-right:8px;
     width: 18px;
     height: 18px;
 }

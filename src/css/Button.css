@@ -102,7 +102,14 @@ button:disabled:hover, button[disabled]:hover{
     border: 1px solid var(--grey3);
 }
 .btn-secondary.btn--grey-color:active {
-    background: var(--grey5s);
+    background: var(--grey5);
+}
+
+.btn--primary-color.btn--small-size{
+    box-shadow: transparent;
+}
+.btn--primary-color.btn--small-size:hover {
+    box-shadow: transparent;
 }
 
 /* Styles for bet button */

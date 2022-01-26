@@ -7,7 +7,7 @@
 }
 
 .match__body th {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.1rem;
 }
 
@@ -199,15 +199,11 @@
 }
 
 td.info-container {
-    width: 45%;
+    width: 60%;
 }
 
 td.time-container {
-    width: 10%;
-}
-
-td.winner-wrapper {
-    width: 45%;
+    width: 20%;
 }
 
 @media all and (max-width: 500px) {
@@ -248,9 +244,11 @@ td.winner-wrapper {
     }
     .match__body .time__content {
         margin: 4px 0;
-    }
-    .match__body .time__content {
         flex-direction: row;
+        justify-content: center;
+    }
+    .match__body .time-container{
+        width: 100% !important;
     }
     .time__content p {
         margin: 0 3px;
@@ -261,8 +259,9 @@ td.winner-wrapper {
     }
 
     .match__body .ratios .ratio{
-        width: 65px;
-        height: 65px;
+        width: 100%;
+        height: 55px;
+        margin: 0 3px;
     }
     .match__body .ratios .ratio button{
         width: 100%;
