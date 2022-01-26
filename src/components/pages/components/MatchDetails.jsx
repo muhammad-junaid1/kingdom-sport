@@ -1,12 +1,13 @@
 import React, {useContext} from "react";
 import "../css/MatchDetails.css";
 import { ContentRoutesContext } from "../../Main";
+import Button from "../../Button";
 
 const MatchDetails = ({data, isLive, highlightScores, isFav}) => {
     const {showBetsContainer} = useContext(ContentRoutesContext);
   return (
     <tr>
-      <td>
+      <td className="info-container">
         <div className="info" style={{paddingLeft: showBetsContainer ? "15px" : ""}}>
        {!isFav && <div className="tournament">
         <img className="tournament-icon" src={require(`../../../assets/tournament-logos/${data.tour.icon}.png`)} alt="" />
@@ -15,11 +16,11 @@ const MatchDetails = ({data, isLive, highlightScores, isFav}) => {
        }
           <div className="scores">
             <div className="team-left">
-              <p className="team-name">{data.team.left.name}</p>
+              <p style={{maxWidth: showBetsContainer ? "100px" : "120px"}} className="team-name">{data.team.left.name}</p>
               <img className="team-icon" src={require(`../../../assets/team-logos/${data.team.left.icon}.png`)} alt="" />
             </div>
             <div className="score">
-                <div className={`score-numbers${highlightScores ? " highlight-scores" : ""}${(showBetsContainer && !isFav) ? " on-bets-show" : ""}`}>
+                <div className={`score-numbers${highlightScores ? " highlight-scores" : ""}`}>
                    {(!isFav || isLive) ? <><p className="team-left-score">{data.team.left.score}</p>
                     <span style={{margin: "0 8px"}}>:</span>
                     <p className="team-right-score">{data.team.right.score}</p>
@@ -31,12 +32,12 @@ const MatchDetails = ({data, isLive, highlightScores, isFav}) => {
             </div>
             <div className="team-right">
               <img className="team-icon" src={require(`../../../assets/team-logos/${data.team.right.icon}.png`)} alt="" />
-            <p className="team-name">{data.team.right.name}</p>
+            <p style={{maxWidth: showBetsContainer ? "100px" : "120px"}} className="team-name">{data.team.right.name}</p>
             </div>
           </div>
         </div>
       </td>
-      <td>
+      <td className="time-container">
         <div className="time">
             <div className={`time__content${isLive ? " live" : ""}`}>
                 {isLive ? <><p>Quarter {data.time[0]}</p>
@@ -48,22 +49,30 @@ const MatchDetails = ({data, isLive, highlightScores, isFav}) => {
             </div>
         </div>
       </td>
-      <td>
-        <div className={`winner-container${showBetsContainer ? " on-bets-show" : ""}`}>
-            <div className="ratios">
+      <td className="winner-wrapper">
+        <div className={`winner-container`} style={{margin: showBetsContainer ? "0 3px" : ""}}>
+            <div className={`ratios${showBetsContainer ? " bets-container-opened" : ""}`}>
             {data.ratios.length === 0 && <>
-            <div className="ratio"><span>-</span></div>
-            <div className="ratio"><span>-</span></div>
-            <div className="ratio"><span>-</span></div>
+            <div className="ratio not-btn">
+                  <p>-</p> 
+                </div>
+                <div className="ratio not-btn">
+                  <p>-</p>
+                </div>
+                <div className="ratio not-btn">
+                  <p>-</p>
+                </div>
             </>
             }
-            {(data.ratios.length !== 0 ) && data.ratios.map(ratio =>{
+            {(data.ratios.length !== 0 ) && data.ratios.slice(0, 3).map(ratio =>{
                     return<div className="ratio">
-                    <p>{ratio[0]}</p>
+                      <Button betButton={true}>
+                      <p>{ratio[0]}</p>
                     <p>{ratio[1]}</p>
+                      </Button>
                     </div>
                 })}
-                <div className="ratio no-bg"><span>{data.ratios.length === 0 ? "-" : `${data.moreRatios}+`}</span></div>
+                <div className="ratio no-bg not-btn">{data.ratios.length === 0 ? "-" : `${data.moreRatios}+`}</div>
                 </div>
         </div>
       </td>

@@ -8,7 +8,7 @@
 
 .match__body th {
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .match__body th {
@@ -43,9 +43,12 @@
     display: flex;
     align-items: center;
     color: var(--grey3);
-    font-size: 1.4rem;
     text-transform: capitalize;
     margin-bottom: .5rem;
+}
+
+.match__body .tournament p {
+    font-size: 1.2rem;
 }
 
 .match__body .tournament-icon {
@@ -55,19 +58,17 @@
 .match__body .team-left, .match__body .team-right {
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
-}
-
-.match__body .team-left p, .match__body .team-right p {
-    max-width: 120px;
+    font-size: 1.3rem;
 }
 
 .team-left p {
     text-align: right;
+    word-break: break-word;
 }
 
 .team-right p {
     text-align: left;
+    word-break: break-word;
 }
 
 .match__body .team-left img {
@@ -157,42 +158,56 @@
 
 .match__body .time__content p {
     margin-bottom: 5px;
+    font-size: 1.2rem;
 }
 
 .match__body .time__content.live {
     color: var(--red6);
+}
 
+.match__body .time__content.live p {
+    font-size: 1.4rem;
 }
 
 .winner-container .ratios {
     display: flex;
+    align-items: center;
 }
 
 .winner-container .ratio {
-    background: var(--grey5);
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    height: 7.0rem;
-    width: 6.4rem;
     margin: 0 5px;
 }
 
-.winner-container.on-bets-show .ratio{
+.bets-container-opened .ratio {
     margin: 0 3px;
 }
 
-.winner-container .ratio.no-bg {
+.winner-container .ratio.not-btn{
+    background: var(--grey5);
+    color: white;
+    width: 6.5rem;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.winner-container .ratio.not-btn.no-bg {
     background: transparent !important;
     color: var(--grey3);
 }
 
-.winner-container .ratio p:nth-child(1) {
-    color: var(--grey2);
+td.info-container {
+    width: 45%;
+}
+
+td.time-container {
+    width: 10%;
+}
+
+td.winner-wrapper {
+    width: 45%;
 }
 
 @media all and (max-width: 500px) {
@@ -225,6 +240,9 @@
         justify-content: center;
     }
     .match__body .time__content {
+        margin: 4px 0;
+    }
+    .match__body .time__content {
         flex-direction: row;
     }
     .time__content p {
@@ -234,8 +252,13 @@
         width: 100%;
         justify-content: center;
     }
-    .match__body .ratios .ratio {
-        width: 7.4rem;
-        height: 6.2rem;
+
+    .match__body .ratios .ratio{
+        width: 65px;
+        height: 65px;
+    }
+    .match__body .ratios .ratio button{
+        width: 100%;
+        height: 100%;
     }
 }
