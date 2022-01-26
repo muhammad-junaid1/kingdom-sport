@@ -49,11 +49,13 @@
 
 .coin-content__prices p {
     margin: 1rem 0;
+    font-size: 1.2rem;
 }
 
 .coin-content__prices span{
     color: var(--grey2);
     margin-right: 8px;
+    font-size: 1.2rem;
 }
 .coin-content__crypto-bets {
     display: flex;
