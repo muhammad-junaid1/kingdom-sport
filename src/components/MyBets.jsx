@@ -74,7 +74,7 @@ const MyBets = ({
             <p className="amount">{betAmount}</p>
           </div>
           <div
-            className={`win ${loseBet && settled ? " bet-lose" : " bet-won"}${
+            className={`win${loseBet && settled ? " bet-lose" : " bet-won"}${
               !settled ? " possible-win" : ""
             }`}
           >

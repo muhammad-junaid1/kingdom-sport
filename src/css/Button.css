@@ -114,6 +114,7 @@ button:disabled:hover, button[disabled]:hover{
     align-items: center;
     width: 6.5rem;
     height: 6.5rem;
+    font-weight: 600;
 }
 .bet-button:hover {
     background: var(--green2);
@@ -122,6 +123,19 @@ button:disabled:hover, button[disabled]:hover{
 .bet-button:active {
     background: var(--green1);
     border: 1px solid var(--green1);
+}
+
+.bet-button:focus{
+    background: var(--green6);
+    border: 1px solid var(--green6);
+}
+
+.bet-button:focus p:nth-child(1) {
+    color: white;
+}
+
+.bet-button:focus p:nth-child(2) {
+    color: black;
 }
 
 .bet-button p:nth-child(1) {

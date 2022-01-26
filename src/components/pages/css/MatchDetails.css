@@ -213,14 +213,21 @@ td.winner-wrapper {
 @media all and (max-width: 500px) {
     .match__body tbody {
         display: flex;
+    }
+    .match__body {
         overflow: scroll;
     }
+
+    .match__body::-webkit-scrollbar {
+        display: none;
+    }
+
     .match__body tbody tr {
         display: flex;
         margin-right: 10px;
         border: 1px solid var(--grey6);
         flex-direction: column;
-        width: 90vw;
+        width: 82vw;
         padding: 0 5px;
         align-items: center;
         background: transparent !important;

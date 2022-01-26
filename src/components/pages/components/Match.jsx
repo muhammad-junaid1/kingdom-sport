@@ -16,7 +16,7 @@ const Match = ({ sport, Icon, data, isLive, FavIcon, tourIcon, tourName, isFav})
         </>
        }
           </p>
-          {isFav && <Button type="primary" color="grey" noBorderRad={true} size="small">see more</Button>
+          {isFav && <Button type="primary" color="grey" noBorderRad={true} size="small">See more</Button>
 }
         </div>
         <div className="match__body">

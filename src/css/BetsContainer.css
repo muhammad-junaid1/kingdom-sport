@@ -152,11 +152,32 @@
 
 .match-winner__header .left p {
   color: var(--grey2);
+  font-size: 1.2rem;
 }
 
 .match-winner__header .left span{
   color: var(--grey3);
-  margin: 0 11px;
+  margin: 0 18px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.match-winner__header .left span::before, .match-winner__header .left span::after {
+  content: "";
+  height: 1px;
+  background: var(--grey3);
+  width: 12px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.match-winner__header .left span::before {
+  top: 50%;
+  left: -16px;
+}
+.match-winner__header .left span::after {
+  top: 50%;
+  right: -16px;
 }
 
 .match-winner__header svg {
@@ -297,9 +318,15 @@
   padding: 10px;
 }
 
+
+.amounts .bet-amount p, .amounts .possible-win p {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
 .amounts .amount {
   margin-top: 6px;
   font-weight: bold;
+  font-size: 1.5rem !important;
 }
 
 .amounts .bet-amount {
@@ -326,6 +353,7 @@
 .amounts .possible-win {
   background: var(--green2) !important;
   color: var(--green6) !important;
+
 }
 
 .place-bet__header {

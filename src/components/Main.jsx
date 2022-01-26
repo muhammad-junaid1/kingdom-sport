@@ -103,7 +103,7 @@ const Main = ({ checkMediaQuery }) => {
           </NavbarContext.Provider>
         )}
         <div className="section">
-          <HeaderContext.Provider value={{ setNoCryptoBets, setNoSportsBets, isMobile, showNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected: connected, setConnected, setShowBets}}>
+          <HeaderContext.Provider value={{ setNoCryptoBets, setNoSportsBets, isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected: connected, setConnected, setShowBets}}>
             <Routes>
               <Route path="/" element={<Header />} />
               <Route path="/sport/:page" element={<Header />} />
