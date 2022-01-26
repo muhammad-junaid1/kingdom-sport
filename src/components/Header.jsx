@@ -54,7 +54,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
            : <>
 
            <Balance/>
-           {!isMobile && <NavLink to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
+           {!isMobile && <NavLink className="mybets-page-link" to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
           }
   
             {!isMobile ? [

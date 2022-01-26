@@ -38,6 +38,10 @@
   margin-left: 1.8rem;
 }
 
+.mybets-page-link button{
+  padding: 8px;
+}
+
 @media all and (max-width: 500px) {
   .header__content {
     padding: 2rem;
