@@ -1,5 +1,9 @@
 @import "../../../css/colors/grey.css";
 
+.coin-section{
+    width: 80%;
+}
+
 .coin-section__content {
     background: var(--grey6);
     border-radius: 20px;

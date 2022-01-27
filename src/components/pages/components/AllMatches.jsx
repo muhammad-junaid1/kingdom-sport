@@ -76,7 +76,7 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
               <tr>
                 <th>MATCH</th>
                 <th>TIME</th>
-                <th>MATCH-WINNER</th>
+                <th>MATCH WINNER</th>
               </tr>
             </thead>
             <tbody>

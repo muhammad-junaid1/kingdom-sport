@@ -25,7 +25,7 @@ const Match = ({ sport, Icon, data, isLive, FavIcon, tourIcon, tourName, isFav})
               <tr>
                 <th>MATCH</th>
                 <th>TIME</th>
-                <th>MATCH-WINNER</th>
+                <th>MATCH WINNER</th>
               </tr>
             </thead>
             <tbody>

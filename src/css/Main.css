@@ -29,7 +29,7 @@
   
 .show-hide-bets-container button {
     border-radius: 10px;
-    padding: 12px 13px;
+    padding: 11px 12px;
   }
   
   .show-hide-bets-container button svg {
@@ -55,7 +55,7 @@
   }
   
   .show-hide-bets-container .bets-notifs p {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
 @media all and (max-width: 500px) {

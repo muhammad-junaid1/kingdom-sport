@@ -74,7 +74,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isFav }) => {
           </div>
         </div>
       </td>
-      <td className="time-container" style={{width: !showBetsContainer ? "15%" : ""}}>
+      <td className="time-container" style={{width: !showBetsContainer ? "20%" : ""}}>
         <div className="time">
           <div className={`time__content${isLive ? " live" : ""}`}>
             {isLive ? (

@@ -209,6 +209,7 @@ td.time-container {
 @media all and (max-width: 500px) {
     .match__body tbody {
         display: flex;
+        margin-top: 5px;
     }
     .match__body {
         overflow: scroll;
@@ -223,7 +224,7 @@ td.time-container {
         margin-right: 10px;
         border: 1px solid var(--grey6);
         flex-direction: column;
-        width: 82vw;
+        width: 90vw;
         padding: 0 5px;
         align-items: center;
         background: transparent !important;
