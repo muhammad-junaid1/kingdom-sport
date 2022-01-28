@@ -290,7 +290,7 @@ const Main = ({ checkMediaQuery }) => {
               )}
             </div>
             {/* ********** */}
-            {showBetsContainer && !isMobile && (
+            {(showBetsContainer && !isMobile) && (
               <BetsContainer
                 isConnected={connected}
                 showNavbar={showNavbar}
@@ -308,12 +308,13 @@ const Main = ({ checkMediaQuery }) => {
             setShowBets={setShowBets}
             setCollapseNavbar={setCollapseNavbar}
             connected={connected}
+            setShowBetsContainer={setShowBetsContainer}
           />
         )}
 
         {/* Button on mobile for showing bets container */}
-        {isMobile &&
-          !showBets &&
+        {(isMobile &&
+          !showBets) &&
           (pathname === "/" ||
             pathname.startsWith("/sport") ||
             pathname.startsWith("/crypto")) && (

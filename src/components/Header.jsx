@@ -43,7 +43,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
                 <SVGIcons.ArrowLeft onClick={handleClick2} />
                 ]
             )}
-            {!isMobile && <NavLinks setCollapseNavbar={setCollapseNavbar}
+            {!isMobile && <NavLinks setCollapseNavbar={setCollapseNavbar} setShowBetsContainer={setShowBetsContainer}
 />}
           </div>
           <div className="header__right">
