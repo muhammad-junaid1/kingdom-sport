@@ -9,7 +9,7 @@
     border: 0;
     outline: none;
     cursor: pointer;
-    color: white;
+    color: white !important;
     font-family: inherit;
     border-radius: 5px;
     display: flex;

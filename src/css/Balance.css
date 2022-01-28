@@ -1,10 +1,75 @@
 @import "./colors/grey";
 
+.balance {
+  position: relative;
+}
+
 .balance-container {
   display: flex;
   background: var(--grey5);
   align-items: stretch;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.account-popup {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 14px);
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--grey6);
+  border: 1px solid var(--grey5);
+  color: white;
+  width: 30rem;
+}
+
+.account-popup p {
+  font-size: 1.2rem;
+}
+
+.account__header .user {
+  display: flex;
+  align-items: center;
+  background: var(--grey5);
+  border-radius: 5px;
+  margin: 1.2rem 0;
+}
+
+.account__header .user span {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: .5rem;
+  margin-right: 3.5rem;
+}
+
+.account__header .user svg:first-of-type {
+  margin-right: 2rem;
+}
+
+.account__body {
+  border-top: 1px solid var(--grey5);
+  border-bottom: 1px solid var(--grey5);
+  padding: 10px;
+}
+
+.account__body .btns {
+  margin: 1.0rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.account__body .btns button {
+  width: 48%;
+  padding: 8px;
+}
+
+.account__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
 }
 
 .balance-container .right {

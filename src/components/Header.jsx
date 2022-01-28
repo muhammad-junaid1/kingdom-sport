@@ -4,7 +4,7 @@ import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
-import "../css/Header.css";
+import "../css/Header.css"; 
 import Balance from "./Balance";
 import {NavLink} from "react-router-dom";  
 import { HeaderContext } from "./Main";
@@ -53,7 +53,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
             </Button>
            : <>
 
-           <Balance/>
+           <Balance id="0xe1B233535...5c00" numbers="676.00 BCR" avatarImg="avatar"/>
            {!isMobile && <NavLink className="mybets-page-link" to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
           }
   

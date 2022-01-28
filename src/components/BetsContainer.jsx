@@ -16,6 +16,8 @@ const BetsContainer = ({
   showNavbar,
   noSportsBets,
   noCryptoBets,
+  setNoSportsBets,
+  setNoCryptoBets,
 }) => {
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
@@ -143,6 +145,22 @@ const BetsContainer = ({
                     <a href="/" className="fw-bold">
                       Make your bank account great again
                     </a>
+
+                    {/* For demonstration purpose only */}
+
+                    <br />
+                    <p
+                      onClick={() => {
+                        setNoCryptoBets(false);
+                        setNoSportsBets(false);
+                      }}
+                    >
+                      <u>
+                        <big>Click me to add bets</big>
+                      </u>
+                    </p>
+
+                    {/* For demonstration purpose only */}
                   </div>
                 </div>
               </div>
@@ -374,6 +392,22 @@ const BetsContainer = ({
                       <a href="/" className="fw-bold">
                         Make your bank account great again
                       </a>
+
+                      {/* For demonstration purpose only */}
+
+                      <br />
+                      <p
+                        onClick={() => {
+                          setNoCryptoBets(false);
+                          setNoSportsBets(false);
+                        }}
+                      >
+                        <u>
+                          <big>Click me to add bets</big>
+                        </u>
+                      </p>
+
+                      {/* For demonstration purpose only */}
                     </div>
                   </div>
                 </div>
@@ -474,13 +508,13 @@ const BetsContainer = ({
                           <>
                             {/* For settled tab */}
                             <MyBets
-                               settled={true}
+                              settled={true}
                               crypto={[
                                 {
                                   details: "BTC touch $100,000 by Sep 24",
                                   betType: "moon",
                                   betValue: "1.9",
-                                }
+                                },
                               ]}
                               id="#6"
                               date="Dec 6 08:00AM"
@@ -489,7 +523,7 @@ const BetsContainer = ({
                               loseBet={false}
                             />
                             <MyBets
-                               settled={true}
+                              settled={true}
                               crypto={[
                                 {
                                   details: "BUSD touch $100,000 by Sep 24",

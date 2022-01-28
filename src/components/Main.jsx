@@ -28,8 +28,8 @@ const Main = ({ checkMediaQuery }) => {
   const [showBets, setShowBets] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
-  const [noSportsBets, setNoSportsBets] = useState(false);
-  const [noCryptoBets, setNoCryptoBets] = useState(false);
+  const [noSportsBets, setNoSportsBets] = useState(true);
+  const [noCryptoBets, setNoCryptoBets] = useState(true);
   const [connected, setConnected] = useState(false);
   const isMobile = checkMediaQuery;
   const { pathname } = useLocation();
@@ -245,6 +245,8 @@ const Main = ({ checkMediaQuery }) => {
                   showNavbar={showNavbar}
                   noSportsBets={noSportsBets}
                   noCryptoBets={noCryptoBets}
+                  setNoSportsBets={setNoSportsBets}
+                  setNoCryptoBets={setNoCryptoBets}
                 />
               ) : (
                 <ContentRoutesContext.Provider
@@ -296,6 +298,8 @@ const Main = ({ checkMediaQuery }) => {
                 showNavbar={showNavbar}
                 noSportsBets={noSportsBets}
                 noCryptoBets={noCryptoBets}
+                setNoSportsBets={setNoSportsBets}
+                  setNoCryptoBets={setNoCryptoBets}
               />
             )}
           </div>

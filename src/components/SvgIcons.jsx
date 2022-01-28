@@ -795,6 +795,18 @@ const Export = ({ color }) => {
   );
 };
 
+const ToggleOffCircle = ({ color }) => {
+  return (
+    <>
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M10.395 2.89502H7.605C4.2375 2.89502 1.5 5.63252 1.5 9.00002C1.5 12.3675 4.2375 15.105 7.605 15.105H10.395C13.7625 15.105 16.5 12.3675 16.5 9.00002C16.5 5.63252 13.7625 2.89502 10.395 2.89502Z" fill="white"/>
+<path d="M7.60501 12.3151C9.43583 12.3151 10.92 10.8309 10.92 9.00006C10.92 7.16923 9.43583 5.68506 7.60501 5.68506C5.77418 5.68506 4.29001 7.16923 4.29001 9.00006C4.29001 10.8309 5.77418 12.3151 7.60501 12.3151Z" fill="white"/>
+</svg>
+
+    </>
+  );
+};
+
 
 
 
@@ -821,6 +833,6 @@ const icons = {
   Crypto,
   LeaderBoard,
   Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare, Heart, MedalStar, DollarSquare, IncreaseArrowUp, CryptoIcons: {BTC, BUSD, ETH, BNB, MATIC, REP},
-  Moon, Rekt, MoneyInPool,MoneyOnBets, MoneyOnWinnings, SaveSquare, Export
+  Moon, Rekt, MoneyInPool,MoneyOnBets, MoneyOnWinnings, SaveSquare, Export, ToggleOffCircle
 };
 export default icons;

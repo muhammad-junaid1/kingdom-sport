@@ -11,11 +11,13 @@
   padding: 3rem 0;
   position: relative;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .nav-links ul li a {
   font-size: 1.4rem;
   color: var(--grey2);
+  user-select: none;
 }
 
 .nav-links a.active{

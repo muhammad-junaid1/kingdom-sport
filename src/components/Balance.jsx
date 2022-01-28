@@ -1,27 +1,52 @@
-import React, { useContext } from 'react';
-import Avatar from "../assets/avatar.png";
+import React, {useState} from 'react';
 import SVGIcons from "./SvgIcons";
-import { HeaderContext } from './Main';
+import Button from './Button';
 
 import "../css/Balance.css";
 
-const Balance = () => {
-    const {setNoCryptoBets, setNoSportsBets} = useContext(HeaderContext);
+const Balance = ({id, numbers, avatarImg}) => {
+    const [toggle, setToggle] = useState(false);
 
     // For demonstrating empty bets container (example)
     const handleClick = () => {
-        setNoCryptoBets(true);
-        setNoSportsBets(true);
+       setToggle(!toggle);
     }
     return (
+        <div className="balance">
         <div className="balance-container" onClick={handleClick}>
                 <div className="left">
-                    <span>0xe1B2...5c00</span>
-                    <p><SVGIcons.EmptyWallet/> 676.00 BCR</p>
+                    <span>{id}</span>
+                    <p><SVGIcons.EmptyWallet/> {numbers}</p>
                 </div>
                 <div className="right">
-                    <img src={Avatar} alt="" />
+                    <img src={require(`../assets/${avatarImg}.png`)} alt="" />
                 </div>
+                </div>
+
+                {/* Account information popup */}
+                {toggle &&
+                <div className="account-popup" style={{cursor: toggle ? "default" : ""}}>
+                <div className="account__header">
+                        <p>CONNECT WITH METAMASK</p>
+                        <div className="user">
+                            <img src={require(`../assets/${avatarImg}.png`)} alt="" />
+                            <span>{id}</span>
+                            <SVGIcons.Export/>
+                            <SVGIcons.CopyBetID/>
+                        </div>
+                </div>
+                <div className="account__body">
+                    <p>YOUR BALANCE</p>
+                    <div className="btns">
+                            <Button type="primary" size="small" color="grey"><SVGIcons.EmptyWallet/> 676.00 BCR</Button>
+                            <Button type="primary" size="small"><SVGIcons.SaveAdd/> Add money</Button>
+                    </div>
+                </div>
+                <div className="account__footer">
+                    <Button type="secondary" color="grey"><SVGIcons.ToggleOffCircle/> Disconnect</Button>
+                </div>
+                </div>
+                }
         </div>
     );
 };

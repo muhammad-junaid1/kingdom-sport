@@ -34,7 +34,7 @@
   padding: 8px !important;
 }
 
-.header__right button {
+.header__right a > button {
   margin-left: 1.8rem;
 }
 
