@@ -308,7 +308,6 @@ const Main = ({ checkMediaQuery }) => {
             setShowBets={setShowBets}
             setCollapseNavbar={setCollapseNavbar}
             connected={connected}
-            setShowBetsContainer={setShowBetsContainer}
           />
         )}
 

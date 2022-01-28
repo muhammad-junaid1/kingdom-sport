@@ -199,11 +199,11 @@
 }
 
 td.info-container {
-    width: 80%;
+    width: 85%;
 }
 
-td.time-container {
-    width: 20%;
+.info-container .info {
+    padding-left: 10px;
 }
 
 @media all and (max-width: 500px) {

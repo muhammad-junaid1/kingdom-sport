@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import AllMatches from "./components/AllMatches";
 import sampleData from "../../sampleData";
 import "./css/Homepage.css";
@@ -8,35 +8,53 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Homepage = () => {
   const renderSlides = () =>
-  [1, 2, 3, 4, 5].map(num => (
-    <div>
-      <h3>Slide {num}</h3>
-    </div>
-  ));
+    [1, 2, 3, 4].map((num) => (
+      <div className={`slide${num}`}>
+        <div className="slide__container">
+          <h3>Slide Slide Slide Slide Slide Slide Slide{num}</h3>
+        </div>
+      </div>
+    ));
 
+//  document.addEventListener("DOMContentLoaded", () => {
+//   if (document.querySelector(".home__slider")) {
+//       const slider = document.querySelector(".home__slider");
+//       const homeBody = document.querySelector(".home__body");
+//       const sliderHeight = getComputedStyle(slider).getPropertyValue("height");
+//       homeBody.style.marginTop = sliderHeight;
+//   }
+// });
 
-  useEffect(() =>{
-    
-    document.querySelector(".home__slider").style.width = document.querySelector(".section").scrollWidth - 50 + "px";
-  }, []);
   return (
-      <div className="home">
-      <div className="home__slider">
-      <Slider
-        dots={false}
-        slidesToShow={2}
-        slidesToScroll={2}
-        autoplay={true}
-        autoplaySpeed={3000}
-      >
-        {renderSlides()}
-      </Slider>
+    <div className="home">
+      <div className="slider__wrapper">
+        <Slider
+          dots={false}
+          infinite={true}
+          slidesToShow={1}
+          centerMode={true}
+          variableWidth={true}
+        >
+          {renderSlides()}
+        </Slider>
       </div>
-          <div className="home__body">
-            <AllMatches icon="Soccer" sport="FOOTBALL" liveData={sampleData.matchData} upcomingData={sampleData.matchData2} topBetsData={sampleData.matchData3}/>
-            <AllMatches icon="Basketball" sport="BASKETBALL" liveData={sampleData.matchData} upcomingData={sampleData.matchData2} topBetsData={sampleData.matchData3}/>
-          </div>
+      <div className="home__body">
+        <AllMatches
+          icon="Soccer"
+          sport="FOOTBALL"
+          liveData={sampleData.matchData}
+          upcomingData={sampleData.matchData2}
+          topBetsData={sampleData.matchData3}
+        />
+        <AllMatches
+          icon="Basketball"
+          sport="BASKETBALL"
+          liveData={sampleData.matchData}
+          upcomingData={sampleData.matchData2}
+          topBetsData={sampleData.matchData3}
+        />
       </div>
+    </div>
   );
 };
 
