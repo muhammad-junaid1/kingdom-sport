@@ -1,3 +1,5 @@
+@import "../../../css/colors/violet.css";
+
 .home {
     overflow:hidden;
     position: relative;
@@ -64,12 +66,16 @@
 
 .slide__container {
     margin: 0 5px;
-    height: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     border-radius: 20px;
+    height: 37rem;
+}
+
+.slick-slider {
+    height: 37rem;
 }
 
 .slider__wrapper {
@@ -130,6 +136,16 @@
         height: 0;
     }
     .home__body {
-        margin-top: 45rem;
+        margin-top: 47rem;
+    }
+    ul.slick-dots {
+        bottom: -70px !important;
+    }
+    ul.slick-dots button::before {
+        color: white !important;
+    }
+
+    ul.slick-dots li.slick-active button:before{
+        color: var(--violet6) !important;
     }
 }
