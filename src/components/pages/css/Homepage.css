@@ -119,3 +119,17 @@
 .slide4 .slide__container {
     background: rgb(236, 37, 130);
 }
+
+@media all and (max-width: 500px) {
+    .home {
+        padding-bottom: 16rem;
+    }
+    .slider__wrapper::before, .slider__wrapper::after {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .home__body {
+        margin-top: 45rem;
+    }
+}

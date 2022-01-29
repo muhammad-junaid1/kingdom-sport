@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.balance button{
+  margin-left: 0;
+}
+
 .balance-container {
   display: flex;
   background: var(--grey5);
@@ -22,7 +26,8 @@
   background: var(--grey6);
   border: 1px solid var(--grey5);
   color: white;
-  width: 30rem;
+  width: 32rem;
+  z-index: 100;
 }
 
 .account-popup p {
@@ -31,21 +36,31 @@
 
 .account__header .user {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   background: var(--grey5);
   border-radius: 5px;
   margin: 1.2rem 0;
 }
 
+.account__header .user__info {
+  display: flex;
+  align-items: center;
+  flex-basis: 80%;
+}
+
 .account__header .user span {
   font-size: 1.2rem;
   font-weight: normal;
-  margin-left: .5rem;
+  margin-left: .6rem;
   margin-right: 3.5rem;
 }
 
-.account__header .user svg:first-of-type {
-  margin-right: 2rem;
+.account__header .user__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 20%;
+  margin-right: .8rem;
 }
 
 .account__body {
@@ -109,5 +124,12 @@
   }
   .balance-container {
     margin-right: -6px;
+  }
+  .account-popup {
+    position: fixed;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    width: 92%;
   }
 }

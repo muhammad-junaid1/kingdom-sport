@@ -34,8 +34,8 @@
   padding: 8px !important;
 }
 
-.header__right a > button {
-  margin-left: 1.8rem;
+.header__right button {
+  margin-left: 1.4rem;
 }
 
 .mybets-page-link button{
@@ -48,9 +48,6 @@
   }
   .header__right button {
     margin-left: 0;
-  }
-  .header__right button svg {
-    margin-right: 0;
   }
   .header__right {
     margin-right: 0;

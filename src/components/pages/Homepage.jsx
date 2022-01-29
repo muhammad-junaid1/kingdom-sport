@@ -7,8 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Homepage = () => {
+  const items = [1, 2, 3, 4];
   const renderSlides = () =>
-    [1, 2, 3, 4].map((num) => (
+    items.map((num) => (
       <div className={`slide${num}`}>
         <div className="slide__container">
           <h3>Slide Slide Slide Slide Slide Slide Slide{num}</h3>
@@ -31,9 +32,14 @@ const Homepage = () => {
         <Slider
           dots={false}
           infinite={true}
-          slidesToShow={1}
           centerMode={true}
           variableWidth={true}
+          responsive={[    {
+      breakpoint: 500,
+      settings: {
+        dots: true,
+        arrows: false
+      }}]}
         >
           {renderSlides()}
         </Slider>

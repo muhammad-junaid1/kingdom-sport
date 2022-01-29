@@ -63,12 +63,12 @@
 
 .team-left p {
     text-align: right;
-    word-break: break-word;
+    word-wrap: break-word;
 }
 
 .team-right p {
     text-align: left;
-    word-break: break-word;
+    word-wrap: break-word;
 }
 
 .match__body .team-left img {
@@ -199,14 +199,19 @@
 }
 
 td.info-container {
-    width: 85%;
+    width: 70%;
 }
 
 .info-container .info {
     padding-left: 10px;
 }
 
+.time-container {
+    width: 20%;
+}
+
 @media all and (max-width: 500px) {
+
     .match__body tbody {
         display: flex;
         margin-top: 5px;
@@ -233,7 +238,7 @@ td.info-container {
         display: none;
     }
     .team-left p, .team-right p {
-        max-width: 60px !important;
+        max-width: 8rem !important;
         word-wrap: break-word;
     }
     .match__body td {
