@@ -148,6 +148,47 @@ const data = {
       ],
     },
   ],
+  favNavbarData: [
+    {
+      icon: "Soccer",
+      text: "Football",
+      number: 34,
+      dropdownItems: [
+        {
+          icon: "Soccer",
+          text: "Item no 1",
+          number: 20,
+        },
+        {
+          icon: "Soccer",
+          text: "Item no 3",
+          number: 14,
+        },
+        {
+          icon: "Soccer",
+          text: "Item no 4",
+          number: 14,
+        },
+      ],
+    },
+        {
+      icon: "Tennis",
+      text: "Tennis",
+      number: 34,
+      dropdownItems: [
+        {
+          icon: "Tennis",
+          text: "Item no 1",
+          number: 20,
+        },
+        {
+          icon: "Tennis",
+          text: "Item no 2",
+          number: 14,
+        },
+      ],
+    },
+  ],
   matchWinners: [
     {
       team1: "First",
@@ -440,6 +481,227 @@ const data = {
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
               time: ["23 Jan", "02:00"],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+
+  liveToursData: [
+    {
+      icon: "Soccer",
+      text: "Football",
+      tours: [
+        {
+          name: "UEFA PREMIER LEAGUE",
+          icon: "logo",
+          isLive: true,
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 83],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 81],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+        {
+          name: "Laliga",
+          icon: "logo-1",
+          isLive: false,
+          matchData: [
+            {
+              team: {
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 2,
+                },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [],
+            },
+            {
+              team: {
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 3,
+                },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+        {
+          name: "UEFA PREMIER LEAGUE",
+          icon: "logo",
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: ["June 8", "07:00"],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: ["June 8", "07:00"],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      icon: "Soccer",
+      text: "Football",
+      tours: [
+        {
+          name: "UEFA PREMIER LEAGUE",
+          icon: "logo",
+          isLive: true,
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 83],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 81],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+        {
+          name: "Laliga",
+          icon: "logo-1",
+          isLive: false,
+          matchData: [
+            {
+              team: {
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 2,
+                },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [],
+            },
+            {
+              team: {
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 3,
+                },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+        },
+        {
+          name: "UEFA PREMIER LEAGUE",
+          icon: "logo",
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: ["June 8", "07:00"],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: ["June 8", "07:00"],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],

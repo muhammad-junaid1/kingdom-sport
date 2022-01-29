@@ -18,8 +18,10 @@ const Navbar = ({
   setCollapse,
   isLive,
   liveNavbarData,
+  favNavbarData,
   cryptoActiveOrExpired,
-  setCryptoActiveOrExpired
+  setCryptoActiveOrExpired,
+  isFav
 }) => {
   const dropDowns = sampleData.dropDownsData;
   const [toggled, setToggled] = useState(null);
@@ -115,7 +117,7 @@ const Navbar = ({
                     number={23}
                     isLive={true}
                     collapse={collapse}
-                    target={`/sport/live${search}`}
+                    target={`/live${search}`}
                   />
                 </li>
                 <li>
@@ -125,7 +127,7 @@ const Navbar = ({
                     text="Favourite"
                     number={23}
                     collapse={collapse}
-                    target="/sport/favourites"
+                    target="/favourites"
                   />
                 </li>
               </>
@@ -175,7 +177,8 @@ const Navbar = ({
         {!isCrypto && !isLive && (
           <div className="navbar__dropdown-items-container">
             <ul>
-              {dropDowns.map((item, index) => {
+            {isFav ?
+              [favNavbarData.map((item, index) => {
                 return (
                   <li>
                     <DropdownItem
@@ -192,10 +195,31 @@ const Navbar = ({
                     />
                   </li>
                 );
-              })}
+              })]
+            : 
+            [dropDowns.map((item, index) => {
+                return (
+                  <li>
+                    <DropdownItem
+                      key={index}
+                      icon={item.icon}
+                      text={item.text}
+                      number={item.number}
+                      dropdownItems={item.dropdownItems}
+                      collapse={collapse}
+                      active={toggled === index}
+                      onToggle={() =>
+                        toggled === index ? setToggled(null) : setToggled(index)
+                      }
+                    />
+                  </li>
+                );
+              })]
+              }
             </ul>
           </div>
         )}
+
         <div className="live-navbar-items">
           {isLive && (
             <>

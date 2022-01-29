@@ -106,10 +106,10 @@ button:disabled:hover, button[disabled]:hover{
 }
 
 .btn--primary-color.btn--small-size{
-    box-shadow: transparent;
+    box-shadow: none;
 }
 .btn--primary-color.btn--small-size:hover {
-    box-shadow: transparent;
+    box-shadow: none;
 }
 
 /* Styles for bet button */
@@ -151,7 +151,7 @@ button:disabled:hover, button[disabled]:hover{
 
 .btn-transparent {
     background: transparent;
-    color: #48484A;
+    color: #48484A !important;
     box-shadow: none;
 }
 

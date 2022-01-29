@@ -15,6 +15,7 @@ import Favourites from "./pages/Favourites";
 import Crypto from "./pages/Crypto";
 import LeaderBoard from "./pages/LeaderBoard";
 import CryptoNavbar from "./CryptoNavbar";
+import FavNavbar from "./FavNavbar";
 import LiveNavbar from "./LiveNavbar";
 import MyBetsPage from "./pages/MyBetsPage";
 
@@ -58,18 +59,21 @@ const Main = ({ checkMediaQuery }) => {
                 }
               />
               <Route
-                path="/sport/:page"
+                path="/live"
                 element={
-                  <Navbar
+                  <LiveNavbar
                     setCollapse={setCollapseNavbar}
                     collapse={collapseNavbar && true}
                   />
                 }
               />
               <Route
-                path="/sport/live"
+                path="/favourites"
                 element={
-                  <LiveNavbar
+                  <FavNavbar
+                    isMobile={isMobile}
+                    forMobile={true}
+                    showNavbar={showNavbar}
                     setCollapse={setCollapseNavbar}
                     collapse={collapseNavbar && true}
                   />
@@ -103,12 +107,27 @@ const Main = ({ checkMediaQuery }) => {
           </NavbarContext.Provider>
         )}
         <div className="section">
-          <HeaderContext.Provider value={{ setNoCryptoBets, setNoSportsBets, isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected: connected, setConnected, setShowBets}}>
+          <HeaderContext.Provider
+            value={{
+              setNoCryptoBets,
+              setNoSportsBets,
+              isMobile,
+              showNavbar,
+              setShowNavbar,
+              showBetsContainer,
+              setShowBetsContainer,
+              collapseNavbar,
+              setCollapseNavbar,
+              isConnected: connected,
+              setConnected,
+              setShowBets,
+            }}
+          >
             <Routes>
               <Route path="/" element={<Header />} />
-              <Route path="/sport/:page" element={<Header />} />
+              <Route path="/favourites" element={<Header/>} />
               <Route
-                path="/sport/live"
+                path="/live"
                 element={<Header removeCollapseToggle={true} />}
               />
               <Route
@@ -158,10 +177,11 @@ const Main = ({ checkMediaQuery }) => {
                       />
                     }
                   />
+
                   <Route
-                    path="/sport/:page"
+                    path="/live"
                     element={
-                      <Navbar
+                      <LiveNavbar
                         isMobile={isMobile}
                         forMobile={true}
                         showNavbar={showNavbar}
@@ -169,9 +189,9 @@ const Main = ({ checkMediaQuery }) => {
                     }
                   />
                   <Route
-                    path="/sport/live"
+                    path="/favourites"
                     element={
-                      <LiveNavbar
+                      <FavNavbar
                         isMobile={isMobile}
                         forMobile={true}
                         showNavbar={showNavbar}
@@ -255,11 +275,11 @@ const Main = ({ checkMediaQuery }) => {
                   <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route
-                      path="/sport/live"
+                      path="/live"
                       element={<Live showBetsContainer={showBetsContainer} />}
                     />
                     <Route
-                      path="/sport/favourites"
+                      path="/favourites"
                       element={
                         <Favourites showBetsContainer={showBetsContainer} />
                       }
@@ -292,14 +312,14 @@ const Main = ({ checkMediaQuery }) => {
               )}
             </div>
             {/* ********** */}
-            {(showBetsContainer && !isMobile) && (
+            {showBetsContainer && !isMobile && (
               <BetsContainer
                 isConnected={connected}
                 showNavbar={showNavbar}
                 noSportsBets={noSportsBets}
                 noCryptoBets={noCryptoBets}
                 setNoSportsBets={setNoSportsBets}
-                  setNoCryptoBets={setNoCryptoBets}
+                setNoCryptoBets={setNoCryptoBets}
               />
             )}
           </div>
@@ -316,10 +336,11 @@ const Main = ({ checkMediaQuery }) => {
         )}
 
         {/* Button on mobile for showing bets container */}
-        {(isMobile &&
-          !showBets) &&
+        {isMobile &&
+          !showBets &&
           (pathname === "/" ||
-            pathname.startsWith("/sport") ||
+            pathname === "/live" ||
+            pathname === "/favourites" ||
             pathname.startsWith("/crypto")) && (
             <div className="show-hide-bets-container">
               <Button

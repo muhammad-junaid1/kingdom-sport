@@ -11,7 +11,7 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
   const handleClick = (e, tab) => {
     matchBody.current.scrollLeft = 0;
     setCurrTab(tab);
-  }
+  };
   return (
     <>
       <div className="allmatches">
@@ -23,53 +23,36 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
             See more
           </Button>
         </div>
-          <div className="match-tabs-wrapper">
+        <div className="match-tabs-wrapper">
           <div className="match-tabs">
-            {currTab === "live" ? (
-              <Button
-                onClick={(e) => handleClick(e, "live")}
-                type="primary"
-                color="red"
-                size="small"
-              >
-                Live (4)
-              </Button>
-            ) : (
-              <Button onClick={(e) => handleClick(e,"live")} size="small">
-                Live (4)
-              </Button>
-            )}
+            <Button
+              onClick={(e) => handleClick(e, "live")}
+              {...(currTab === "live" && { type: "primary", color: "red" })}
+              size="small"
+            >
+              Live (4)
+            </Button>
 
-            {currTab === "upcoming" ? (
-              <Button
-                onClick={(e) => handleClick(e,"upcoming")}
-                type="primary"
-                size="small"
-              >
-                Upcoming (5)
-              </Button>
-            ) : (
-              <Button onClick={(e) => handleClick(e,"upcoming")} size="small">
-                Upcoming (5)
-              </Button> 
-            )}
+            <Button
+              onClick={(e) => handleClick(e, "upcoming")}
+              {...(currTab === "upcoming" && { type: "primary" })}
+              size="small"
+            >
+              Upcoming (5)
+            </Button>
 
-            {currTab === "topBets" ? (
-              <Button
-                onClick={(e) => handleClick(e,"topBets")}
-                type="primary"
-                color="violet"
-                size="small"
-              >
-                Top bets (2)
-              </Button>
-            ) : (
-              <Button onClick={(e) => handleClick(e,"topBets")} size="small">
-                Top bets (2)
-              </Button>
-            )}
-            </div>
+            <Button
+              onClick={(e) => handleClick(e, "topBets")}
+              {...(currTab === "topBets" && {
+                type: "primary",
+                color: "violet",
+              })}
+              size="small"
+            >
+              Top bets (2)
+            </Button>
           </div>
+        </div>
         <div className="match__body" ref={matchBody}>
           <table cellSpacing={0}>
             <thead>
@@ -97,14 +80,14 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
               {currTab === "upcoming" && [
                 upcomingData.map((data) => {
                   return <MatchDetails data={data} />;
-                })
+                }),
               ]}
 
               {/* For top bets */}
               {currTab === "topBets" && [
                 topBetsData.map((data) => {
                   return <MatchDetails data={data} />;
-                })
+                }),
               ]}
             </tbody>
           </table>

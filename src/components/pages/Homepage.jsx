@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import AllMatches from "./components/AllMatches";
 import sampleData from "../../sampleData";
 import "./css/Homepage.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {useLocation} from "react-router-dom";
+import Sport from "../Sport";
 
 const Homepage = () => {
   const items = [1, 2, 3, 4];
@@ -17,15 +19,17 @@ const Homepage = () => {
       </div>
     ));
 
-//  document.addEventListener("DOMContentLoaded", () => {
-//   if (document.querySelector(".home__slider")) {
-//       const slider = document.querySelector(".home__slider");
-//       const homeBody = document.querySelector(".home__body");
-//       const sliderHeight = getComputedStyle(slider).getPropertyValue("height");
-//       homeBody.style.marginTop = sliderHeight;
-//   }
-// });
+    const {search} = useLocation();
+    const [allParams, setAllParams] = useState({});
 
+     useEffect(() => {
+        const params = new URLSearchParams(search);
+        let paramObj = {};
+        for(var value of params.keys()) {
+             paramObj[value] = params.get(value);
+         }
+         setAllParams(paramObj);
+     }, [search]);
   return (
     <div className="home">
       <div className="slider__wrapper">
@@ -47,6 +51,8 @@ const Homepage = () => {
         </Slider>
       </div>
       <div className="home__body">
+      {Object.keys(allParams).length === 0 ?
+      <>
         <AllMatches
           icon="Soccer"
           sport="FOOTBALL"
@@ -61,6 +67,8 @@ const Homepage = () => {
           upcomingData={sampleData.matchData2}
           topBetsData={sampleData.matchData3}
         />
+        </>
+      : <Sport sportName={allParams.sport}/>}
       </div>
     </div>
   );

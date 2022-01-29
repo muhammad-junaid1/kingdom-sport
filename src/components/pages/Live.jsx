@@ -16,6 +16,7 @@ const Live = ({showBetsContainer}) => {
          }
          setAllParams(paramObj);
      }, [search]);
+     console.log(allParams);
     return (
         <>
         <div className="live-matches">

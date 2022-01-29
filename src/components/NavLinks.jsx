@@ -19,7 +19,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets,setShowBetsContainer, setShow
     <div className={`nav-links${isFixed ? " nav-fixed" : ""}`}>
       <ul>
         <li onClick={handleClick}>
-        <NavLink to="/" className={`${location.pathname.startsWith("/sport") ? "active" : ""}`}>
+        <NavLink to="/" className={`${(location.pathname === "/" || location.pathname === "/live" || location.pathname==="/favourites") ? "active" : ""}`}>
         {isFixed &&
           <SVGIcons.Soccer />
         }

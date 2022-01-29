@@ -20,6 +20,7 @@
 .match__header p{
     display: flex;
     align-items: center;
+    font-size: 1.4rem;
 }
 
 .match__header button{

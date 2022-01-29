@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
 
-const DropdownItem = ({ icon, text, number, dropdownItems, collapse, setToggled, onToggle , active }) => {
+const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, setToggled, active }) => {
   const dropDownsContainer = useRef();
   return (
     <>
@@ -12,7 +12,6 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, setToggled,
           Icon={SVGIcons[icon]}
           text={text}
           number={number}
-          setToggled={setToggled}
           collapse={collapse}
           onToggle={onToggle}
           active={active}
