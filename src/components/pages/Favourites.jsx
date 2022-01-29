@@ -20,15 +20,22 @@ const Favourites = () => {
     <>
       <div className="favourites">
         <div className="slider__wrapper">
-          <Slider
-            dots={false}
-            infinite={true}
-            slidesToShow={1}
-            centerMode={true}
-            variableWidth={true}
-          >
-            {renderSlides()}
-          </Slider>
+        <Slider
+          dots={false}
+          infinite={true}
+          centerMode={true}
+          slidesToShow={1}
+          slidesToScroll={1}
+          variableWidth={true}
+          responsive={[{
+      breakpoint: 500,
+      settings: {
+        dots: true,
+        arrows: false
+      }}]}
+        >
+          {renderSlides()}
+        </Slider>
         </div>
               <div className="matches-container">
         {sampleData.favItemsData.map((item) => {

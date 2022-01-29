@@ -33,8 +33,10 @@ const Homepage = () => {
           dots={false}
           infinite={true}
           centerMode={true}
+          slidesToShow={1}
+          slidesToScroll={1}
           variableWidth={true}
-          responsive={[    {
+          responsive={[{
       breakpoint: 500,
       settings: {
         dots: true,

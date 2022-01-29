@@ -78,6 +78,10 @@
     height: 37rem;
 }
 
+.slick-list, .slick-track {
+    height: 100%;   
+}
+
 .slider__wrapper {
     position: absolute;
     top: 0;
@@ -148,4 +152,4 @@
     ul.slick-dots li.slick-active button:before{
         color: var(--violet6) !important;
     }
-}
+}     
