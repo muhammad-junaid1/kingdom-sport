@@ -214,7 +214,7 @@ td.info-container {
 
     .match__body tbody {
         display: flex;
-        margin-top: 5px;
+        margin-top: 3px;
     }
     .match__body {
         overflow: scroll;
@@ -226,13 +226,16 @@ td.info-container {
 
     .match__body tbody tr {
         display: flex;
-        margin-right: 10px;
         border: 1px solid var(--grey6);
         flex-direction: column;
         width: 90vw;
         padding: 0 5px;
         align-items: center;
         background: transparent !important;
+    }
+
+    .match__body tbody tr:not(.match__body tbody tr:first-child) {
+        margin-left: 10px;
     }
     .match__body thead {
         display: none;

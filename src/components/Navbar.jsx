@@ -128,7 +128,7 @@ const Navbar = ({
                   <NavbarItem
                     isDropDown={false}
                     Icon={SVGIcons["Favourite"]}
-                    text="Favourite"
+                    text="Favourites"
                     number={23}
                     collapse={collapse}
                     target={favTarget}
