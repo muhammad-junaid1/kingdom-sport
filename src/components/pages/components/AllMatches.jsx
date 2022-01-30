@@ -71,6 +71,7 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
                       data={data}
                       isLive={true}
                       highlightScores={index === 0 ? true : false}
+                      isTour={false}
                     />
                   );
                 }),
@@ -79,14 +80,15 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
               {/* For upcoming items */}
               {currTab === "upcoming" && [
                 upcomingData.map((data) => {
-                  return <MatchDetails data={data} />;
+                  return <MatchDetails data={data} isTour={false}/>;
+                  
                 }),
               ]}
 
               {/* For top bets */}
               {currTab === "topBets" && [
                 topBetsData.map((data) => {
-                  return <MatchDetails data={data} />;
+                  return <MatchDetails data={data} isTour={false} />;
                 }),
               ]}
             </tbody>

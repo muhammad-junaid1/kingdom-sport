@@ -3,7 +3,7 @@ import "../css/MatchDetails.css";
 import { ContentRoutesContext } from "../../Main";
 import Button from "../../Button";
 
-const MatchDetails = ({ data, isLive, highlightScores, isFav }) => {
+const MatchDetails = ({ data, isLive, highlightScores, isTour }) => {
   const { showBetsContainer, isMobile } = useContext(ContentRoutesContext);
   return (
     <tr>
@@ -11,7 +11,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isFav }) => {
         <div
           className="info"
         >
-          {!isFav && (
+          {!isTour && (
             <div className="tournament">
               <img
                 className="tournament-icon"

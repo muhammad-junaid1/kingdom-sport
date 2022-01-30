@@ -213,6 +213,7 @@ const data = {
     {
       icon: "Soccer",
       text: "Football",
+      isFav: false,
       number: 2,
       matchData: [
         {
@@ -248,6 +249,7 @@ const data = {
       icon: "Tennis",
       text: "Tennis",
       number: 2,
+      isFav: false,
       matchData: [
         {
           team: {
@@ -282,6 +284,7 @@ const data = {
       icon: "Basketball",
       text: "Basketball",
       number: 2,
+      isFav: false,
       matchData: [
         {
           team: {
@@ -315,6 +318,7 @@ const data = {
     {
       icon: "MMA",
       text: "MMA",
+      isFav: false,
       number: 2,
       matchData: [
         {
@@ -351,7 +355,7 @@ const data = {
   favItemsData: [
     {
       icon: "Soccer",
-      text: "Football",
+      text: "FOOTBALL",
       tours: [
         {
           name: "UEFA PREMIER LEAGUE",
@@ -460,7 +464,7 @@ const data = {
     },
     {
       icon: "Tennis",
-      text: "Tennis",
+      text: "TENNIS",
       tours: [
         {
           name: "UEFA PREMIER LEAGUE",
@@ -505,6 +509,7 @@ const data = {
       tours: [
         {
           name: "UEFA PREMIER LEAGUE",
+          isFav: true,
           icon: "logo",
           isLive: true,
           matchData: [
@@ -534,86 +539,6 @@ const data = {
               moreRatios: 384,
             },
           ],
-        },
-        {
-          name: "Laliga",
-          icon: "logo-1",
-          isLive: true,
-          matchData: [
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 2,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: [4, 83],
-              ratios: [],
-            },
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 3,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: [4, 83],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-        },
-        {
-        name: "UEFA PREMIER LEAGUE",
-        icon: "logo",
-        isLive: true,
-        matchData: [
-          {
-            team: {
-              left: {
-                name: "Chulalongkorn University",
-                icon: "logo",
-                score: 2,
-              },
-              right: { name: "University Bangkok", icon: "logo1", score: 2 },
-            },
-            time: [4, 83],
-            ratios: [],
-          },
-          {
-            team: {
-              left: {
-                name: "Chulalongkorn University",
-                icon: "logo",
-                score: 3,
-              },
-              right: { name: "University Bangkok", icon: "logo1", score: 2 },
-            },
-            time: [4, 83],
-            ratios: [
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-            ],
-            moreRatios: 384,
-          },
-        ],
       }
       ],
     },

@@ -37,6 +37,8 @@ const Navbar = ({
     paramObj[value] = params.get(value);
   }
 
+  let searchQueryForLive = paramObj.sport ? "" : search;
+
   useEffect(() => {
     if(coin) {
       setChecked(coin.toUpperCase());
@@ -117,7 +119,7 @@ const Navbar = ({
                     number={23}
                     isLive={true}
                     collapse={collapse}
-                    target={`/live${search}`}
+                    target={`/live${searchQueryForLive}`}
                   />
                 </li>
                 <li>
@@ -188,9 +190,9 @@ const Navbar = ({
                       number={item.number}
                       dropdownItems={item.dropdownItems}
                       collapse={collapse}
-                      active={toggled === index}
+                      active={toggled === index || item.text.toLowerCase() === paramObj.sport}
                       onToggle={() =>
-                        toggled === index ? setToggled(null) : setToggled(index)
+                        toggled === index ? setToggled(null) : (item.text.toLowerCase() === paramObj.sport ? setToggled(null) : setToggled(index))
                       }
                     />
                   </li>
@@ -207,9 +209,9 @@ const Navbar = ({
                       number={item.number}
                       dropdownItems={item.dropdownItems}
                       collapse={collapse}
-                      active={toggled === index}
+                      active={toggled === index || item.text.toLowerCase() === paramObj.sport}
                       onToggle={() =>
-                        toggled === index ? setToggled(null) : setToggled(index)
+                        toggled === index ? setToggled(null) : (item.text.toLowerCase() === paramObj.sport ? setToggled(null) : setToggled(index))
                       }
                     />
                   </li>

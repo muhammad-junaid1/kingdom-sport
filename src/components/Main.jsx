@@ -270,7 +270,7 @@ const Main = ({ checkMediaQuery }) => {
                 />
               ) : (
                 <ContentRoutesContext.Provider
-                  value={{ showBetsContainer, isMobile }}
+                  value={{ showBetsContainer, isMobile, showBets }}
                 >
                   <Routes>
                     <Route path="/" element={<Homepage />} />

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import sampleData from "../../sampleData";
 import Match from "./components/Match";
 import SVGIcons from "../SvgIcons";
@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "./css/Favourites.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useLocation } from "react-router-dom";
+import Sport from "../Sport";
 
 const Favourites = () => {
   const renderSlides = () =>
@@ -16,54 +18,76 @@ const Favourites = () => {
         </div>
       </div>
     ));
+
+  const { search } = useLocation();
+  const [allParams, setAllParams] = useState({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(search);
+    let paramObj = {};
+    for (var value of params.keys()) {
+      paramObj[value] = params.get(value);
+    }
+    setAllParams(paramObj);
+  }, [search]);
+
   return (
     <>
       <div className="favourites">
         <div className="slider__wrapper">
-        <Slider
-          dots={false}
-          infinite={true}
-          centerMode={true}
-          slidesToShow={1}
-          slidesToScroll={1}
-          variableWidth={true}
-          responsive={[{
-      breakpoint: 500,
-      settings: {
-        dots: true,
-        arrows: false,
-        centerPadding: "0"
-      }}]}
-        >
-          {renderSlides()}
-        </Slider>
+          <Slider
+            dots={false}
+            infinite={true}
+            centerMode={true}
+            slidesToShow={1}
+            slidesToScroll={1}
+            variableWidth={true}
+            responsive={[
+              {
+                breakpoint: 500,
+                settings: {
+                  dots: true,
+                  arrows: false,
+                  centerPadding: "0",
+                },
+              },
+            ]}
+          >
+            {renderSlides()}
+          </Slider>
         </div>
-              <div className="matches-container">
-        {sampleData.favItemsData.map((item) => {
-          const Icon = SVGIcons[item.icon];
-          return (
-            <>
-                <div className="match__header" style={{ marginBottom: 15 }}>
-                  <p>
-                    <Icon color="white" /> {item.text}
-                  </p>
-                </div>
-                {item.tours.map((tour) => {
-                  return (
-                    <Match
-                      isLive={tour.isLive}
-                      data={tour.matchData}
-                      FavIcon={SVGIcons["Heart"]}
-                      tourName={tour.name}
-                      tourIcon={tour.icon}
-                      isFav={true}
-                    />
-                  );
-                })}
-            </>
-          );
-        })}
-              </div>
+        <div className="favourites__body">
+        {Object.keys(allParams).length === 0 ? (
+          <div className="matches-container">
+            {sampleData.favItemsData.map((item) => {
+              const Icon = SVGIcons[item.icon];
+              return (
+                <>
+                  <div className="match__header" style={{ marginBottom: 15 }}>
+                    <p>
+                      <Icon color="white" /> {item.text}
+                    </p>
+                  </div>
+                  {item.tours.map((tour) => {
+                    return (
+                      <Match
+                        isLive={tour.isLive}
+                        data={tour.matchData}
+                        tourName={tour.name}
+                        tourIcon={tour.icon}
+                        isTour={true}
+                        isFav={true}
+                      />
+                    );
+                  })}
+                </>
+              );
+            })}
+          </div>
+        ) : (
+          <Sport sportName={allParams.sport} />
+        )}
+      </div>
       </div>
     </>
   );

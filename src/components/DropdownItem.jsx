@@ -16,7 +16,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, s
           onToggle={onToggle}
           active={active}
         />
-        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: (active && !collapse) ? dropDownsContainer.current.scrollHeight : 0}}
+        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: (active && !collapse) ? "100%" : 0}}
 >
           {dropdownItems.map((item) => {
             return (

@@ -7,6 +7,10 @@
     margin-top: 39rem;
 }
 
+.favourites__body {
+    margin-top: 39rem;
+}
+
 @media all and (max-width: 500px) {
     .matches-container {
         margin-top: 46rem;

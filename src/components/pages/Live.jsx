@@ -16,17 +16,16 @@ const Live = ({showBetsContainer}) => {
          }
          setAllParams(paramObj);
      }, [search]);
-     console.log(allParams);
     return (
         <>
         <div className="live-matches">
         {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
-           return <Match isLive={true} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
+           return <Match isLive={true} isFav={item.isFav} isTour={false} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
         })}
 
             {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
                 return sampleData.liveNavItems.filter((item) => item.text === i).map((i) =>{
-                    return <Match isLive={true} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
+                    return <Match isLive={true} isFav={i.isFav} isTour={false} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
                 })
 
             })}

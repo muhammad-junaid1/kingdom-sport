@@ -5,7 +5,7 @@ import SVGIcons from "../components/SvgIcons";
 import "../css/Sport.css";
 import Match from "./pages/components/Match";
 
-const Sport = ({ sportName }) => {
+const Sport = ({ sportName, page }) => {
   const [currTab, setCurrTab] = useState("live");
   const liveData = sampleData.liveToursData.filter((item) => item.text.toLowerCase() === sportName.toLowerCase());
   const handleClick = (e, tab) => {
@@ -61,7 +61,8 @@ const Sport = ({ sportName }) => {
                       FavIcon={SVGIcons["Heart"]}
                       tourName={tour.name}
                       tourIcon={tour.icon}
-                      isFav={true}
+                      isFav={tour.isFav}
+                      isTour={true}
                     />
                   );
                 })}
