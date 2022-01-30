@@ -31,6 +31,10 @@ const Main = ({ checkMediaQuery }) => {
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
   const [noSportsBets, setNoSportsBets] = useState(true);
   const [noCryptoBets, setNoCryptoBets] = useState(true);
+  const [favTours, setFavTours] = useState([{
+    id: 1,
+    text: "Premier League"
+  }]);
   const [connected, setConnected] = useState(false);
   const isMobile = checkMediaQuery;
   const { pathname } = useLocation();
@@ -270,7 +274,7 @@ const Main = ({ checkMediaQuery }) => {
                 />
               ) : (
                 <ContentRoutesContext.Provider
-                  value={{ showBetsContainer, isMobile, showBets }}
+                  value={{ showBetsContainer, isMobile, showBets, favTours, setFavTours }}
                 >
                   <Routes>
                     <Route path="/" element={<Homepage />} />

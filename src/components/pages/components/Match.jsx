@@ -1,11 +1,20 @@
-import React from "react";
+import React, {useContext, useState, useEffect} from "react";
 import "../css/Match.css";
 import Button from "../../Button";
 import SVGIcons from "../../SvgIcons";
 import MatchDetails from "./MatchDetails";
+import { ContentRoutesContext } from "../../Main";
 
-const Match = ({ sport, Icon, data, isLive, tourIcon, tourName, isFav, isTour}) => {
+const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage, isTour}) => {
   const FavIcon = SVGIcons["Heart"];
+  const {favTours} = useContext(ContentRoutesContext);
+  const [isFav, setIsFav] = useState(false);
+
+  useEffect(() => {
+    if(isFavPage || favTours.find((t) => t.id === tourId)) {
+      setIsFav(true);
+    }
+  }, [favTours]);
   return (
     <>
       <div className="match">

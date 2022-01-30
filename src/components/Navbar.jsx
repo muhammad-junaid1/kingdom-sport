@@ -38,6 +38,8 @@ const Navbar = ({
   }
 
   let searchQueryForLive = paramObj.sport ? "" : search;
+  const favTarget = pathname!=="/" ? (paramObj.sport ? `/favourites${search}` : "/favourites") : "/favourites";
+  const homeTarget = pathname!=="/favourites" ? paramObj.sport ? `/${search}`: "/" : "/";
 
   useEffect(() => {
     if(coin) {
@@ -108,7 +110,7 @@ const Navbar = ({
                     number={23}
                     isHome={true}
                     collapse={collapse}
-                    target="/"
+                    target={homeTarget}
                   />
                 </li>
                 <li>
@@ -129,7 +131,7 @@ const Navbar = ({
                     text="Favourite"
                     number={23}
                     collapse={collapse}
-                    target="/favourites"
+                    target={favTarget}
                   />
                 </li>
               </>
@@ -190,7 +192,7 @@ const Navbar = ({
                       number={item.number}
                       dropdownItems={item.dropdownItems}
                       collapse={collapse}
-                      active={toggled === index || item.text.toLowerCase() === paramObj.sport}
+                      active={(toggled === index || item.text.toLowerCase() === paramObj.sport)}
                       onToggle={() =>
                         toggled === index ? setToggled(null) : (item.text.toLowerCase() === paramObj.sport ? setToggled(null) : setToggled(index))
                       }

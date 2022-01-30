@@ -206,6 +206,7 @@ const data = {
       activity: 5.2,
     },
   ],
+  // Items showed on navbar of live page
   liveNavItems: [
     {
       icon: "Soccer",
@@ -349,6 +350,18 @@ const data = {
     },
   ],
 
+  // All tournaments
+  tours: [
+    {
+      id: 1,
+      text: "Premier League",
+    },
+    {
+      id: 2,
+      text: "Laliga"
+    }
+  ]
+,
   // Used for all favourite items
   favItemsData: [
     {
@@ -356,6 +369,7 @@ const data = {
       text: "FOOTBALL",
       tours: [
         {
+          id: 1,
           name: "Premier League",
           icon: "logo",
           isLive: true,
@@ -388,6 +402,7 @@ const data = {
           ],
         },
         {
+          id: 2,
           name: "Laliga",
           icon: "logo-1",
           isLive: false,
@@ -428,6 +443,7 @@ const data = {
           ],
         },
         {
+          id: 2,
           name: "Premier League",
           icon: "logo",
           matchData: [
@@ -465,6 +481,7 @@ const data = {
       text: "TENNIS",
       tours: [
         {
+          id: 1,
           name: "Premier League",
           icon: "logo",
           isLive: false,
@@ -507,6 +524,7 @@ const data = {
       text: "Football",
       tours: [
         {
+          id: 1,
           name: "Premier League",
           isFav: true,
           icon: "logo",
@@ -540,6 +558,7 @@ const data = {
           ],
       },
         {
+          id: 2,
           name: "Laliga",
           isFav: false,
           icon: "logo-1",
@@ -581,6 +600,7 @@ const data = {
       text: "Football",
       tours: [
         {
+          id: 1,
           name: "Premier League",
           isFav: true,
           icon: "logo",

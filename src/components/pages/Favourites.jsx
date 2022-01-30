@@ -73,10 +73,11 @@ const Favourites = () => {
                       <Match
                         isLive={tour.isLive}
                         data={tour.matchData}
-                        tourName={tour.name}
+                        tourId={tour.id}
+                         tourName={tour.name}
                         tourIcon={tour.icon}
                         isTour={true}
-                        isFav={true}
+                        isFavPage={true}
                       />
                     );
                   })}
