@@ -7,6 +7,7 @@ import Match from "./pages/components/Match";
 
 const Sport = ({ sportName }) => {
   const [currTab, setCurrTab] = useState("live");
+  const liveData = sampleData.liveToursData.filter((item) => item.text.toLowerCase() === sportName.toLowerCase());
   const handleClick = (e, tab) => {
     setCurrTab(tab);
   };
@@ -49,7 +50,7 @@ const Sport = ({ sportName }) => {
       <div className="sport__body-container">
       <div className="sport__body">
       {currTab === "live" &&
-        [sampleData.favItemsData.map((item) => {
+        [liveData.map((item) => {
           return (
             <>
                 {item.tours.map((tour) => {

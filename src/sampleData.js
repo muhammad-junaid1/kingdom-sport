@@ -538,7 +538,7 @@ const data = {
         {
           name: "Laliga",
           icon: "logo-1",
-          isLive: false,
+          isLive: true,
           matchData: [
             {
               team: {
@@ -548,121 +548,12 @@ const data = {
                   score: 2,
                 },
                 right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [],
-            },
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 3,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-        },
-        {
-          name: "UEFA PREMIER LEAGUE",
-          icon: "logo",
-          matchData: [
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 2 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
-              },
-              time: ["June 8", "07:00"],
-              ratios: [],
-            },
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 3 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
-              },
-              time: ["June 8", "07:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      icon: "Soccer",
-      text: "Football",
-      tours: [
-        {
-          name: "UEFA PREMIER LEAGUE",
-          icon: "logo",
-          isLive: true,
-          matchData: [
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 2 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
               time: [4, 83],
               ratios: [],
             },
             {
               team: {
-                left: { name: "Napoli", icon: "logo", score: 3 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
-              },
-              time: [4, 81],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-        },
-        {
-          name: "Laliga",
-          icon: "logo-1",
-          isLive: false,
-          matchData: [
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 2,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [],
-            },
-            {
-              team: {
                 left: {
                   name: "Chulalongkorn University",
                   icon: "logo",
@@ -670,7 +561,7 @@ const data = {
                 },
                 right: { name: "University Bangkok", icon: "logo1", score: 2 },
               },
-              time: ["DEC 12", "09:00"],
+              time: [4, 83],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -685,36 +576,45 @@ const data = {
           ],
         },
         {
-          name: "UEFA PREMIER LEAGUE",
-          icon: "logo",
-          matchData: [
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 2 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
+        name: "UEFA PREMIER LEAGUE",
+        icon: "logo",
+        isLive: true,
+        matchData: [
+          {
+            team: {
+              left: {
+                name: "Chulalongkorn University",
+                icon: "logo",
+                score: 2,
               },
-              time: ["June 8", "07:00"],
-              ratios: [],
+              right: { name: "University Bangkok", icon: "logo1", score: 2 },
             },
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 3 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
+            time: [4, 83],
+            ratios: [],
+          },
+          {
+            team: {
+              left: {
+                name: "Chulalongkorn University",
+                icon: "logo",
+                score: 3,
               },
-              time: ["June 8", "07:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
+              right: { name: "University Bangkok", icon: "logo1", score: 2 },
             },
-          ],
-        },
+            time: [4, 83],
+            ratios: [
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+            ],
+            moreRatios: 384,
+          },
+        ],
+      }
       ],
     },
   ],

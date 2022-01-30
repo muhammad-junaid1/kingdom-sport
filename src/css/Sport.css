@@ -16,3 +16,9 @@
 .sport__header button {
     margin: 0 .4rem;
 }
+
+@media all and (max-width: 500px) {
+    .sport__header button  {
+        margin: 0 .2rem;
+    }
+}
