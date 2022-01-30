@@ -22,6 +22,7 @@ const NavbarItem = ({
   setChecked,
   isLiveItem,
   isActiveLiveItem,
+  dropDownIcon
 }) => {
   const [activeLiveCheckBox, setActiveLiveCheckBox] = useState(false);
   const inputElement = useRef();
@@ -241,6 +242,7 @@ const NavbarItem = ({
         </Link>
           </>
       ) : (
+      [isDropDown ?
         <Link to={`${query2}`}
           className={`navbar__item${
             isDropDown ? " navbar__item--dropdown" : ""
@@ -260,30 +262,6 @@ const NavbarItem = ({
           ) : (
             <>
               <div className="left">
-                {isLiveItem && (
-                  <>
-                    <input
-                      style={{ display: "none" }}
-                      type="checkbox"
-                      name="live"
-                      value={text}
-                      ref={inputElement}
-                      checked={activeLiveCheckBox}
-                    />
-                    <div
-                      className={`radio-icon${
-                        activeLiveCheckBox ? " radio-active" : ""
-                      }`}
-                    >
-                      <div
-                        className="active-radio-circle"
-                        style={{
-                          display: activeLiveCheckBox ? "block" : "none",
-                        }}
-                      ></div>
-                    </div>
-                  </>
-                )}
                 {!noIcon && <Icon />}
 
                 <p className="navbar__item-text">{text}</p>
@@ -302,6 +280,37 @@ const NavbarItem = ({
           {/* Border left */}
           <div className="active-border"></div>
         </Link>
+
+      :      <Link to={`/tour`}
+          className={`navbar__item${
+            isDropDown ? " navbar__item--dropdown" : ""
+          }${active ? " active-navbar-item" : ""}${
+            isLive ? " navbar__item-live" : ""
+          }`}
+          onClick={
+            isDropDown && !collapse
+              ? (() => {onToggle(); hideNavbarOnToggleSportItems()})
+              : isDropDown
+              ? onToggleAndCollapse
+              : handleLiveItem
+          }
+        >
+            <>
+              <div className="left">
+                {!noIcon && <img src={require(`../assets/tournament-logos/${dropDownIcon}.png`)} alt=""/>}
+
+                <p className="navbar__item-text">{text}</p>
+              </div>
+              <div className="right">
+                {!isHome && (
+                  <span className="navbar__item-number">{number}</span>
+                )}
+                <div style={{ visibility: isDropDown ? "visible" : "hidden" }}>
+                  {active ? <SVGIcons.ArrowUp /> : <SVGIcons.ArrowDown />}
+                </div>
+              </div>
+            </>
+        </Link>]
       )}
     </>
   );

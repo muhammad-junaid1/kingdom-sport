@@ -53,7 +53,8 @@ const Sport = ({ sportName, page }) => {
         [liveData.map((item) => {
           return (
             <>
-                {item.tours.map((tour) => {
+            {page==="home" ?
+                [item.tours.map((tour) => {
                   return (
                     <Match
                       isLive={tour.isLive}
@@ -65,7 +66,20 @@ const Sport = ({ sportName, page }) => {
                       isTour={true}
                     />
                   );
-                })}
+                })]
+            : [item.tours.filter((t) => t.isFav === true).map((tour) => {
+                  return (
+                    <Match
+                      isLive={tour.isLive}
+                      data={tour.matchData}
+                      FavIcon={SVGIcons["Heart"]}
+                      tourName={tour.name}
+                      tourIcon={tour.icon}
+                      isFav={tour.isFav}
+                      isTour={true}
+                    />
+                  );
+                })]}
             </>
           );
         })

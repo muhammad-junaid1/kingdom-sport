@@ -59,17 +59,17 @@ const Homepage = () => {
           sport="FOOTBALL"
           liveData={sampleData.matchData}
           upcomingData={sampleData.matchData2}
-          topBetsData={sampleData.matchData3}
+          topBetsData={sampleData.matchData2.slice(0, 2)}
         />
         <AllMatches
           icon="Basketball"
           sport="BASKETBALL"
           liveData={sampleData.matchData}
           upcomingData={sampleData.matchData2}
-          topBetsData={sampleData.matchData3}
+          topBetsData={sampleData.matchData2.slice(0, 2)}
         />
         </>
-      : <Sport sportName={allParams.sport}/>}
+      : <Sport sportName={allParams.sport} page="home"/>}
       </div>
     </div>
   );

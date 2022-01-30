@@ -101,6 +101,11 @@
     margin-bottom: 1px;
 }
 
+.navbar__dropdown-items .navbar__item p {
+    color: #ffffffde;
+    font-weight: 400;
+}
+
 
 /* Active Navbar item */
 .navbar__main-items-container .navbar__item.active svg, .active-navbar-item svg{

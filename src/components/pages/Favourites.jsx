@@ -85,7 +85,7 @@ const Favourites = () => {
             })}
           </div>
         ) : (
-          <Sport sportName={allParams.sport} />
+          <Sport sportName={allParams.sport} page="fav" />
         )}
       </div>
       </div>

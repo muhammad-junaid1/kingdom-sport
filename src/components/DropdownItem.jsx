@@ -22,7 +22,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, s
             return (
               <NavbarItem
                 isDropDown={false}
-                Icon={SVGIcons[item.icon]}
+                dropDownIcon={item.icon}
                 text={item.text}
                 number={item.number}
                 collapse={collapse}

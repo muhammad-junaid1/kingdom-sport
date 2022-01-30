@@ -38,23 +38,23 @@ const data = {
       number: 34,
       dropdownItems: [
         {
-          icon: "Soccer",
-          text: "Item no 1",
+          icon: "logo",
+          text: "Premier League",
           number: 20,
         },
         {
-          icon: "Soccer",
-          text: "Item no 2",
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
         {
-          icon: "Soccer",
-          text: "Item no 3",
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
         {
-          icon: "Soccer",
-          text: "Item no 4",
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
       ],
@@ -65,9 +65,14 @@ const data = {
       number: 34,
       dropdownItems: [
         {
-          icon: "Basketball",
-          text: "Item no 1",
-          number: 20,
+          icon: "logo",
+          text: "Premier League",
+          number: 14,
+        },
+        {
+          icon: "logo",
+          text: "Premier League",
+          number: 14,
         },
       ],
     },
@@ -77,38 +82,8 @@ const data = {
       number: 34,
       dropdownItems: [
         {
-          icon: "MMA",
-          text: "Item no 1",
-          number: 20,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 2",
-          number: 14,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 3",
-          number: 14,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 4",
-          number: 14,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 5",
-          number: 14,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 6",
-          number: 14,
-        },
-        {
-          icon: "MMA",
-          text: "Item no 7",
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
       ],
@@ -119,13 +94,28 @@ const data = {
       number: 34,
       dropdownItems: [
         {
-          icon: "Tennis",
-          text: "Item no 1",
+          icon: "logo",
+          text: "Premier League",
           number: 20,
         },
         {
-          icon: "Tennis",
-          text: "Item no 2",
+          icon: "logo",
+          text: "Premier League",
+          number: 14,
+        },
+        {
+          icon: "logo",
+          text: "Premier League",
+          number: 14,
+        },
+        {
+          icon: "logo",
+          text: "Premier League",
+          number: 14,
+        },
+        {
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
       ],
@@ -136,18 +126,20 @@ const data = {
       number: 34,
       dropdownItems: [
         {
-          icon: "Icehockey",
-          text: "Item no 1",
+          icon: "logo",
+          text: "Premier League",
           number: 20,
         },
         {
-          icon: "Icehockey",
-          text: "Item no 2",
+          icon: "logo",
+          text: "Premier League",
           number: 14,
         },
       ],
     },
   ],
+
+  // Favourite items showing in navbar
   favNavbarData: [
     {
       icon: "Soccer",
@@ -352,13 +344,14 @@ const data = {
     },
   ],
 
+  // Used for all favourite items
   favItemsData: [
     {
       icon: "Soccer",
       text: "FOOTBALL",
       tours: [
         {
-          name: "UEFA PREMIER LEAGUE",
+          name: "Premier League",
           icon: "logo",
           isLive: true,
           matchData: [
@@ -430,7 +423,7 @@ const data = {
           ],
         },
         {
-          name: "UEFA PREMIER LEAGUE",
+          name: "Premier League",
           icon: "logo",
           matchData: [
             {
@@ -467,7 +460,7 @@ const data = {
       text: "TENNIS",
       tours: [
         {
-          name: "UEFA PREMIER LEAGUE",
+          name: "Premier League",
           icon: "logo",
           isLive: false,
           matchData: [
@@ -502,13 +495,14 @@ const data = {
     },
   ],
 
+  // Used when specific sport item is toggled on home and favs pages
   liveToursData: [
     {
       icon: "Soccer",
       text: "Football",
       tours: [
         {
-          name: "UEFA PREMIER LEAGUE",
+          name: "Premier League",
           isFav: true,
           icon: "logo",
           isLive: true,
@@ -539,11 +533,45 @@ const data = {
               moreRatios: 384,
             },
           ],
-      }
+      },
+        {
+          name: "Laliga",
+          isFav: false,
+          icon: "logo-1",
+          isLive: true,
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 83],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 81],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+      },
       ],
     },
   ],
 
+  // Matchdata template for live items
   matchData: [
     {
       team: {
@@ -574,6 +602,7 @@ const data = {
       moreRatios: 384,
     },
   ],
+  // Match data template for upcoming (not held yet) items
   matchData2: [
     {
       team: {
@@ -670,37 +699,6 @@ const data = {
         ["1x", 1.91],
       ],
       moreRatios: 384,
-    },
-  ],
-  matchData3: [
-    {
-      team: {
-        left: { name: "Chulalongkorn University", icon: "logo", score: 1 },
-        right: { name: "University Bangkok", icon: "logo1", score: 4 },
-      },
-      tour: { icon: "logo-1", name: "Laliga" },
-      time: ["DEC 12", "09:00"],
-      ratios: [
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-        ["1x", 1.91],
-      ],
-      moreRatios: 384,
-
-    },
-    {
-      team: {
-        left: { name: "Chulalongkorn University", icon: "logo", score: 1 },
-        right: { name: "University Bangkok", icon: "logo1", score: 4 },
-      },
-      tour: { icon: "logo-1", name: "Laliga" },
-      time: ["DEC 12", "09:00"],
-      ratios: [],
     },
   ],
   leaderBoard: [
