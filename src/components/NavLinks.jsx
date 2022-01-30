@@ -47,7 +47,7 @@ const NavLinks = ({ isFixed, showBets, setShowBets,setShowBetsContainer, setShow
         </li>
         {isFixed && connected &&
         <>
-          <li onClick={handleClick}>
+          <li onClick={() => {handleClick(); setShowBetsContainer(false);}}>
         <NavLink to="/my-bets">
           <SVGIcons.Bets2 />
           <span>MY BETS</span>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import Button from "./Button";
 import sampleData from "../sampleData";
-import SVGIcons from "../components/SvgIcons";
 import "../css/Sport.css";
 import Match from "./pages/components/Match";
 

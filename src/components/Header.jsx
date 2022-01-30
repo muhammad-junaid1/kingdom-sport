@@ -19,7 +19,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
     setShowBetsContainer(!showBetsContainer);
   };
   const handleClick2 = () => {
-    if(!removeCollapseToggle && !isLeaderboard) {
+    if(!removeCollapseToggle && !isLeaderboard && !isMyBets) {
       setCollapseNavbar(!collapseNavbar);
     }
   };
