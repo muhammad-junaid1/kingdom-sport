@@ -72,6 +72,13 @@ const NavbarItem = ({
       setCollapseNavbar(false);
     }
   };
+
+  const hideNavbarOnToggleSportItems=() => {
+    if(isMobile) {
+      setShowNavbar(false);
+    }
+  }
+
   const handleLiveItem = () => {
     if (isLiveItem) {
       inputElement.current.checked = true;
@@ -242,7 +249,7 @@ const NavbarItem = ({
           }`}
           onClick={
             isDropDown && !collapse
-              ? onToggle
+              ? (() => {onToggle(); hideNavbarOnToggleSportItems()})
               : isDropDown
               ? onToggleAndCollapse
               : handleLiveItem

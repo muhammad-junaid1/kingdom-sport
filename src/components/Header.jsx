@@ -71,7 +71,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
                 </Button>
                 ]
               ),
-               ] : <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
+               ] : (!isLeaderboard && !isMyBets) && <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
           </div>
         </div>
       </div>

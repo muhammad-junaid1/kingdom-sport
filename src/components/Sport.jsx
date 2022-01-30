@@ -21,7 +21,7 @@ const Sport = ({ sportName }) => {
             {...(currTab === "tours" && { type: "primary" })}
             size="small"
           >
-            Tournaments (123)
+            Tours (123)
           </Button>
           <Button
             onClick={(e) => handleClick(e, "live")}

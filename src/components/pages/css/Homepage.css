@@ -100,11 +100,11 @@
 
 .slider__wrapper::before{
     left: 0;
-    background-image: linear-gradient(90deg, #141415 4%, transparent);
+    background-image: linear-gradient(90deg, #141415fa 4.5%, transparent);
 }
 .slider__wrapper::after {
     right: 0;
-    background-image: linear-gradient(-90deg, #141415 4%, transparent);
+    background-image: linear-gradient(-90deg, #141415fa 4.5%, transparent);
 }
 
 .slick-arrow.slick-prev {
@@ -130,6 +130,18 @@
     background: rgb(236, 37, 130);
 }
 
+/* slide when not active/center*/
+.testimonials .slick-slide,
+.testimonials .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.7, 0.7);
+  transition: transform 0.3s;
+}
+/* slide when active/center */
+.testimonials .slick-center,
+.testimonials .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+  transform: scale(1, 1);
+}
+
 @media all and (max-width: 500px) {
     .home {
         padding-bottom: 16rem;
@@ -151,5 +163,8 @@
 
     ul.slick-dots li.slick-active button:before{
         color: var(--violet6) !important;
+    }
+    .slick-slide {
+        width: 95vw;
     }
 }     

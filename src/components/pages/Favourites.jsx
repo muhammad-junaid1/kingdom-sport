@@ -31,7 +31,8 @@ const Favourites = () => {
       breakpoint: 500,
       settings: {
         dots: true,
-        arrows: false
+        arrows: false,
+        centerPadding: "0"
       }}]}
         >
           {renderSlides()}
