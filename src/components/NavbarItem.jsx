@@ -295,6 +295,7 @@ const NavbarItem = ({
               : handleLiveItem
           }
         >
+            {!collapse &&
             <>
               <div className="left">
                 {!noIcon && <img src={require(`../assets/tournament-logos/${dropDownIcon}.png`)} alt=""/>}
@@ -310,6 +311,7 @@ const NavbarItem = ({
                 </div>
               </div>
             </>
+            }
         </Link>]
       )}
     </>

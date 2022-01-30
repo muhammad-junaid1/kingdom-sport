@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Button from "./Button";
 import sampleData from "../sampleData";
 import SVGIcons from "../components/SvgIcons";
@@ -7,7 +7,11 @@ import Match from "./pages/components/Match";
 
 const Sport = ({ sportName, page }) => {
   const [currTab, setCurrTab] = useState("live");
+
+  // Data
   const liveData = sampleData.liveToursData.filter((item) => item.text.toLowerCase() === sportName.toLowerCase());
+  const prematchData = sampleData.preMatches.filter((item) => item.text.toLowerCase() === sportName.toLowerCase());
+
   const handleClick = (e, tab) => {
     setCurrTab(tab);
   };
@@ -72,7 +76,6 @@ const Sport = ({ sportName, page }) => {
                     <Match
                       isLive={tour.isLive}
                       data={tour.matchData}
-                      FavIcon={SVGIcons["Heart"]}
                       tourName={tour.name}
                       tourIcon={tour.icon}
                       isFav={tour.isFav}
@@ -86,7 +89,32 @@ const Sport = ({ sportName, page }) => {
         ]}
 
         {currTab === "tours" && <p>Tours</p>}
-        {currTab === "prematch" && <p>Prematch</p>}
+        {currTab === "prematch" && 
+          [prematchData.map((item) =>{
+            return <>
+            {page === "home" ?
+              [item.tours.map((tour) => {
+                return <Match
+                      data={tour.matchData}
+                      tourName={tour.name}
+                      tourIcon={tour.icon}
+                      isFav={tour.isFav}
+                      isTour={true}
+                    />
+              })]
+            : [item.tours.filter((t) => t.isFav === true).map((tour) => {
+                return <Match
+                      data={tour.matchData}
+                      tourName={tour.name}
+                      tourIcon={tour.icon}
+                      isFav={tour.isFav}
+                      isTour={true}
+                    />
+              })]}
+
+            </>
+          })]
+        }
         {currTab === "calendar" && <p>Calendar</p>}
               </div>
       </div>
