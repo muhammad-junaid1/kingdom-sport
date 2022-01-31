@@ -38,8 +38,6 @@ const Navbar = ({
   }
 
   let searchQueryForLive = paramObj.sport ? "" : search;
-  const favTarget = pathname!=="/" ? (paramObj.sport ? `/favourites${search}` : "/favourites") : "/favourites";
-  const homeTarget = pathname!=="/favourites" ? paramObj.sport ? `/${search}`: "/" : "/";
 
   useEffect(() => {
     if(coin) {
@@ -64,9 +62,9 @@ const Navbar = ({
           {!isMobile && (
             <div className="navbar__logo">
               {collapse ? (
-                <img src={HalfLogo} alt="" />
+               <a href="/"> <img src={HalfLogo} alt="" /></a>
               ) : (
-                <img src={FullLogo} alt="" />
+                <a href="/"> <img src={FullLogo} alt="" /></a>
               )}
             </div>
           )}
@@ -110,7 +108,7 @@ const Navbar = ({
                     number={23}
                     isHome={true}
                     collapse={collapse}
-                    target={homeTarget}
+                    target="/"
                   />
                 </li>
                 <li>
@@ -131,7 +129,7 @@ const Navbar = ({
                     text="Favourites"
                     number={23}
                     collapse={collapse}
-                    target={favTarget}
+                    target="/favourites"
                   />
                 </li>
               </>
@@ -192,7 +190,7 @@ const Navbar = ({
                       number={item.number}
                       dropdownItems={item.dropdownItems}
                       collapse={collapse}
-                      active={(toggled === index || item.text.toLowerCase() === paramObj.sport)}
+                      active={(item.text.toLowerCase() === paramObj.sport)}
                       onToggle={() =>
                         toggled === index ? setToggled(null) : (item.text.toLowerCase() === paramObj.sport ? setToggled(null) : setToggled(index))
                       }
@@ -204,14 +202,14 @@ const Navbar = ({
             [dropDowns.map((item, index) => {
                 return (
                   <li>
-                    <DropdownItem
+                    <DropdownItem 
                       key={index}
-                      icon={item.icon}
+                      icon={item.icon}        
                       text={item.text}
                       number={item.number}
                       dropdownItems={item.dropdownItems}
                       collapse={collapse}
-                      active={toggled === index || item.text.toLowerCase() === paramObj.sport}
+                      active={item.text.toLowerCase() === paramObj.sport}
                       onToggle={() =>
                         toggled === index ? setToggled(null) : (item.text.toLowerCase() === paramObj.sport ? setToggled(null) : setToggled(index))
                       }

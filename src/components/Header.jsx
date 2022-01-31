@@ -31,12 +31,12 @@ removeCollapseToggle, isLeaderboard, isMyBets
           <div className="header__left" style={{marginLeft: ((isLeaderboard || isMyBets) && !isMobile) ? "4%": ""}}>
           {((isLeaderboard || isMyBets) && !isMobile) &&
             <div className="logo">
-              <img src={FullLogo} alt="" />
+              <a href="/"><img src={FullLogo} alt="" /></a>
             </div>
           }
           {isMobile &&
               <div className="logo">
-              <img src={HalfLogo} width="40px" alt="" />
+              <a href="/"><img src={HalfLogo} width="40px" alt="" /></a>
             </div>}
             {(!isMobile) && (
                 [(collapseNavbar) ? <SVGIcons.ArrowRight onClick={handleClick2} /> :

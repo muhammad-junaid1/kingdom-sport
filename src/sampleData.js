@@ -351,7 +351,7 @@ const data = {
   ],
 
   // All tournaments
-  tours: [
+  allTours: [
     {
       id: 1,
       text: "Premier League",
@@ -601,34 +601,34 @@ const data = {
       tours: [
         {
           id: 1,
-          name: "Premier League",
+          name: "Laliga",
           isFav: true,
-          icon: "logo",
+          icon: "logo-1",
           isLive: false,
           matchData: [
             {
               team: {
-                left: { name: "Napoli", icon: "logo", score: 2 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
+                left: { name: "Chulalongkorn University", icon: "logo", score: 2 },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
-              ratios: [],
+              ratios: [["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+            ],
+            moreRatios: 23
             },
             {
               team: {
-                left: { name: "Napoli", icon: "logo", score: 3 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
+                left: { name: "Chulalongkorn University", icon: "logo", score: 3 },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
+              ratios: [],
               moreRatios: 384,
             },
           ],

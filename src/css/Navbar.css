@@ -85,7 +85,6 @@
 .navbar__dropdown-items {
     margin-bottom: 1.0rem;
     overflow: hidden;
-    transition: all .1s ease-in-out;
 }
 
 .navbar__item--dropdown{

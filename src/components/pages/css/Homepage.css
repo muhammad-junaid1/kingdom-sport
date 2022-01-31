@@ -100,11 +100,11 @@
 
 .slider__wrapper::before{
     left: 0;
-    background-image: linear-gradient(90deg, #141415fa 4.5%, transparent);
+    background-image: linear-gradient(90deg, #141415 4.3%, transparent);
 }
 .slider__wrapper::after {
     right: 0;
-    background-image: linear-gradient(-90deg, #141415fa 4.5%, transparent);
+    background-image: linear-gradient(-90deg, #141415 4.3%, transparent);
 }
 
 .slick-arrow.slick-prev {
