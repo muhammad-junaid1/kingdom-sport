@@ -97,6 +97,20 @@
     margin-bottom: 2rem;
 }
 
+.react-datepicker__input-container {
+    display: flex;
+}
+
+.react-datepicker__close-icon{
+    background: transparent;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: 0;
+    outline: none;
+    color: white;
+    cursor: pointer;;
+}
+
 @media all and (max-width: 500px) {
 
     .sport__header-tabs , .sport__header{
@@ -105,7 +119,7 @@
     .sport__header-tabs{
         display: block;
     }
-    .sport__header::-webkit-scrollbar {
+    .sport__header::-webkit-scrollbar, .sport__header-tabs::-webkit-scrollbar {
         display: none;
     }
     .sport__header button  {

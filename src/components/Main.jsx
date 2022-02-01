@@ -18,12 +18,13 @@ import CryptoNavbar from "./CryptoNavbar";
 import FavNavbar from "./FavNavbar";
 import LiveNavbar from "./LiveNavbar";
 import MyBetsPage from "./pages/MyBetsPage";
+import useMediaQuery from "../useMediaQuery";
 
 export const NavbarContext = React.createContext({});
 export const ContentRoutesContext = React.createContext({});
 export const HeaderContext = React.createContext({});
 
-const Main = ({ checkMediaQuery }) => {
+const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
   const [collapseNavbar, setCollapseNavbar] = useState(false);
   const [showBets, setShowBets] = useState(false);
@@ -36,7 +37,7 @@ const Main = ({ checkMediaQuery }) => {
     text: "Premier League"
   }]);
   const [connected, setConnected] = useState(false);
-  const isMobile = checkMediaQuery;
+  const isMobile = useMediaQuery('(max-width: 500px)')
   const { pathname } = useLocation();
 
   useEffect(() => {

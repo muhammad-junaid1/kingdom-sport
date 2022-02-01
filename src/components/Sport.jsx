@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import Button from "./Button";
 import sampleData from "../sampleData";
 import SVGIcons from "./SvgIcons";
@@ -17,6 +17,12 @@ const Sport = ({ sportName, page }) => {
   const handleClick = (e, tab) => {
     setCurrTab(tab);
   };
+
+  useEffect(() => {
+    if(startDate) {
+      document.querySelector(".react-datepicker__close-icon").innerHTML="Clear &#10005;";
+    }
+  }, [startDate]);
 
   // Input for date picker
   const CalendarBtn = React.forwardRef(({ value, onClick }, ref) => (
@@ -59,6 +65,7 @@ const Sport = ({ sportName, page }) => {
           
           <DatePicker
       selected={startDate}
+      isClearable
       onChange={(date) => setStartDate(date)}
       customInput={<CalendarBtn />}
         renderCustomHeader={({
