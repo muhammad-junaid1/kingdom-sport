@@ -1,57 +1,96 @@
 @import "./colors/grey.css";
 
-
 .tournaments__header {
-    margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .filters__container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.filters__container .filters__select{
-    flex-basis: 35%;
+.filters__container .filters__select {
+  flex-basis: 35%;
 }
 
 .filters__container .filters__search {
-    flex-basis: 65%;
-    margin-left: 1rem;
+  flex-basis: 65%;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.filters__container .filters__search button{
+    margin-left: 8px;
 }
 
 .tour-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    color: white;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  color: white;
+  align-items: center;
 }
 
 .tour-item .left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .tour-item .left svg {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .tour-item .left img {
-    margin-right: .7rem;
+  margin-right: 0.7rem;
 }
 
 .tour-item .right div {
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 6px;
-    border-radius: 3px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 6px;
+  border-radius: 3px;
 }
 
 .tour-items {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .tour-items .tour-filter {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    margin: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.select-wrapper {
+  border: 1px solid var(--grey5);
+  background: var(--grey6);
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+  font-family: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-wrapper p {
+    font-weight: 300;
+    opacity: 92%;
+    user-select: none;
+}
+
+.select-wrapper .left, .select-wrapper .right {
+    display: flex;
+    align-items: center;
+}
+
+.select-wrapper .left svg {
+    margin-right: 1rem;
+}
+
+.select-wrapper .right svg {
+    width: 18px;
+    height: 18px;
 }

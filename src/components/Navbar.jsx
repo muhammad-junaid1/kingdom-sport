@@ -69,8 +69,8 @@ const Navbar = ({
             </div>
           )}
           <div
-            className="search-input-container"
-            style={{ cursor: collapse ? "pointer" : "" }}
+            className={`search-input-container${collapse ? " input--collapsed" : ""}`}
+            style={{ cursor: collapse ? "pointer" : "", width: collapse ? "4.3rem" : "" }}
           >
             <SearchInput collapse={collapse} setCollapse={setCollapse} />
           </div>

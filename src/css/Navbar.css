@@ -18,7 +18,7 @@
 }
 .navbar__header .search-input-container {
     align-self: center;
-    width: 100%;
+    width: 20.5rem;
     margin-top: 1.5rem;
 }
 
@@ -153,6 +153,10 @@
 
 .navbar__item-live.live-active {
     background-color: var(--red1) !important;
+}
+
+.navbar__item-live.live-active svg {
+    color: var(--red6) !important;
 }
 
 

@@ -24,7 +24,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour }) => {
           <div className="scores">
             <div className="team-left">
               <p
-                style={{ maxWidth: showBetsContainer ? "100px" : "120px" }}
+                style={{ maxWidth: showBetsContainer ? "7rem" : "12rem" }}
                 className="team-name"
               >
                 {data.team.left.name}
@@ -64,7 +64,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour }) => {
                 alt=""
               />
               <p
-                style={{ maxWidth: showBetsContainer ? "100px" : "120px" }}
+                style={{ maxWidth: showBetsContainer ? "7rem" : "12rem" }}
                 className="team-name"
               >
                 {data.team.right.name}

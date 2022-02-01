@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import TournamentsItem from "./TournamentsItem";
 import SearchInput from "./SearchInput";
+import SVGIcons from "./SvgIcons";
+import Button from "./Button";
 import "../css/Tournaments.css";
 
 const Tournaments = ({ allTours }) => {
@@ -12,10 +14,19 @@ const Tournaments = ({ allTours }) => {
         <div className="filters">
             <div className="filters__container">
                     <div className="filters__select">
-                            <p>Select</p>
+                            <div className="select-wrapper">
+                            <div className="left">
+                                <SVGIcons.Filter/>
+                                <p>International, Algeria</p>
+                                </div>
+                                <div className="right">
+                                    <SVGIcons.ArrowDown/>
+                                </div>
+                            </div>
                     </div>
                     <div className="filters__search">
                             <SearchInput/>
+                            <Button type="secondary">Apply</Button>
                     </div>
             </div>
         </div>

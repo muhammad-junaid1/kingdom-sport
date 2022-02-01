@@ -19,7 +19,7 @@ const SearchInput = ({collapse, setCollapse}) => {
     }
     return (
         <>
-        <div className={`input-wrapper${focus ? " input--focused" : ""}${collapse ? " input--collapsed" : ""}`} onClick={handleClick}>
+        <div className={`input-wrapper${focus ? " input--focused" : ""}`} onClick={handleClick}>
             <input disabled={collapse ? true : false} className="search-input" type="text" onInput={handleInput} placeholder={`${collapse ? "" : "Search"}`} onFocus={handleFocus} onBlur={handleBlur} value={collapse ? "" : value}/>
             <SVGIcons.Search/>
             {focus && <p className="typing-text">Typing <span>|</span></p>}

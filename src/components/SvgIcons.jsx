@@ -836,6 +836,17 @@ const Previous = ({ color }) => {
     </>
   );
 };
+const Filter = ({ color }) => {
+  return (
+    <>
+<svg style={{ color: color ? color : "#48484A" }} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.4499 3.07495V4.72495C15.4499 5.32495 15.0749 6.07495 14.6999 6.44995L11.4749 9.29995C11.0249 9.67495 10.7249 10.425 10.7249 11.025V14.25C10.7249 14.7 10.4249 15.3 10.0499 15.525L8.99991 16.2C8.02491 16.8 6.67491 16.125 6.67491 14.925V10.95C6.67491 10.425 6.37491 9.74995 6.07491 9.37495L5.72241 9.00745C5.48991 8.75995 5.44491 8.38495 5.63241 8.09245L9.47241 1.92745C9.60741 1.70995 9.84741 1.57495 10.1099 1.57495H13.9499C14.7749 1.57495 15.4499 2.24995 15.4499 3.07495Z" fill="currentColor"/>
+<path d="M7.76255 2.72245L5.10005 6.98995C4.84505 7.40245 4.26005 7.46245 3.92255 7.10995L3.22505 6.37495C2.85005 5.99995 2.55005 5.32495 2.55005 4.87495V3.14995C2.55005 2.24995 3.22505 1.57495 4.05005 1.57495H7.12505C7.71005 1.57495 8.07005 2.21995 7.76255 2.72245Z" fill="currentColor"/>
+</svg>
+
+    </>
+  );
+};
 
 
 
@@ -864,6 +875,6 @@ const icons = {
   Crypto,
   LeaderBoard,
   Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare, Heart, MedalStar, DollarSquare, IncreaseArrowUp, CryptoIcons: {BTC, BUSD, ETH, BNB, MATIC, REP},
-  Moon, Rekt, MoneyInPool,MoneyOnBets, MoneyOnWinnings, SaveSquare, Export, ToggleOffCircle, Calendar
+  Moon, Rekt, MoneyInPool,MoneyOnBets, MoneyOnWinnings, SaveSquare, Export,Filter, ToggleOffCircle, Calendar
 };
 export default icons;
