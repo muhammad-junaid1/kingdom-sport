@@ -139,6 +139,10 @@
     display: block;
 }
 
+.navbar__item-live:hover svg{
+    color: var(--red6) !important;
+}
+
 .navbar__item-live .left{
     color: var(--red6) !important;
 }
@@ -151,7 +155,8 @@
     background-color: var(--red1) !important;
 }
 
-.navbar__item-live.live-active svg {
+
+.navbar__main-items-container .navbar__item-live.active svg {
     color: var(--red6) !important;
 }
 

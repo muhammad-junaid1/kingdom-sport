@@ -36,6 +36,7 @@
     border: 1px solid var(--grey5);
     user-select: none;
     color: white;
+    font-size: 1.4rem;
 }
 
 .react-datepicker__day {

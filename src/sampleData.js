@@ -354,12 +354,69 @@ const data = {
   allTours: [
     {
       id: 1,
+      sport: "football",
       text: "Premier League",
+      icon: "logo",
+      isFav: true,
+      international: true
     },
     {
       id: 2,
-      text: "Laliga"
-    }
+      sport: "football",
+      text: "Laliga",
+      icon: "logo-1",
+      isFav: false,
+      international: true    
+    },
+    {
+      id: 3,
+      sport: "football",
+      text: "UEFA Europa",
+      icon: "logo",
+      isFav: false,
+      international: true    
+    },
+    {
+      id: 4,
+      sport: "football",
+      text: "Fourth Tour",
+      icon: "logo-1",
+      isFav: false,
+      international: true    
+    },
+    {
+      id: 5,
+      sport: "football",
+      text: "Fifth Tour",
+      icon: "logo",
+      isFav: false,
+      international: true    
+    },
+    {
+      id: 6,
+      sport: "football",
+      text: "Sixth Tour",
+      icon: "logo",
+      isFav: false,
+      international: true    
+    },
+  {
+      id: 7,
+      sport: "football",
+      text: "Championship of Algeria",
+      icon: "logo",
+      isFav: false,
+      international: false    
+
+    },
+    {
+      id: 8,
+      sport: "football",
+      text: "Championship of Algeria",
+      icon: "logo",
+      isFav: false,
+      international: false
+    },
   ]
 ,
   // Used for all favourite items
@@ -444,7 +501,7 @@ const data = {
         },
         {
           id: 2,
-          name: "Premier League",
+          name: "Laliga",
           icon: "logo",
           matchData: [
             {
@@ -601,7 +658,7 @@ const data = {
       tours: [
         {
           id: 1,
-          name: "Laliga",
+          name: "Premier League",
           isFav: true,
           icon: "logo-1",
           isLive: false,
@@ -634,6 +691,7 @@ const data = {
           ],
       },
         {
+          id: 1,
           name: "Premier League",
           isFav: false,
           icon: "logo",

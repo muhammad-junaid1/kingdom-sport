@@ -3,18 +3,19 @@ import "../css/Match.css";
 import Button from "../../Button";
 import SVGIcons from "../../SvgIcons";
 import MatchDetails from "./MatchDetails";
-import { ContentRoutesContext } from "../../Main";
+import sampleData from "../../../sampleData";
 
 const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage, isTour}) => {
   const FavIcon = SVGIcons["Heart"];
-  const {favTours} = useContext(ContentRoutesContext);
   const [isFav, setIsFav] = useState(false);
 
   useEffect(() => {
-    if(isFavPage || favTours.find((t) => t.id === tourId)) {
-      setIsFav(true);
+    if(isTour) {
+      if(isFavPage || sampleData.allTours.find((t) => t.id === tourId).isFav) {
+        setIsFav(true);
+      }
     }
-  }, [favTours]);
+  }, []);
   return (
     <>
       <div className="match">
