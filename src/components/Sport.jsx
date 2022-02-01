@@ -5,7 +5,6 @@ import SVGIcons from "./SvgIcons";
 import "../css/Sport.css";
 import Match from "./pages/components/Match";
 import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
 
 const Sport = ({ sportName, page }) => {
   const [currTab, setCurrTab] = useState("live");

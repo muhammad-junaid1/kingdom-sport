@@ -40,8 +40,8 @@
 
 .react-datepicker__day {
     display: inline-block;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 8px 5px;
+    margin: .6rem;
     width: 3.6rem;
     height: 3.6rem;
     text-align: center;
@@ -98,7 +98,25 @@
 }
 
 @media all and (max-width: 500px) {
+
+    .sport__header-tabs , .sport__header{
+        overflow-x: scroll;
+    }
+    .sport__header-tabs{
+        display: block;
+    }
+    .sport__header::-webkit-scrollbar {
+        display: none;
+    }
     .sport__header button  {
-        margin: 0 .2rem;
+        min-width: max-content;
+        margin: 0 1rem;
+    }
+
+    .react-datepicker{
+        padding: 15px 5px;
+    }
+    .react-datepicker__day{
+        margin: 4px;
     }
 }
