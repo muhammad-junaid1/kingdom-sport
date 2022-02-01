@@ -1,9 +1,13 @@
+@import "../css/colors/grey.css";
+@import "../css/colors/violet.css";
+
 .sport {
     margin-top: 1rem;
 }
 .sport__header {
     background: var(--grey6);
     display: flex;
+    align-items: center;
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -15,6 +19,82 @@
 
 .sport__header button {
     margin: 0 .4rem;
+}
+
+/* Calendar styles */
+
+.react-datepicker-popper {
+    z-index: 500;
+}
+
+.react-datepicker{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--grey6);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid var(--grey5);
+    user-select: none;
+    color: white;
+}
+
+.react-datepicker__day {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.react-datepicker__day--selected {
+    background: var(--violet6);
+    border-radius: 100px;
+}
+
+.react-datepicker__day--outside-month {
+    opacity: 30%;
+}
+
+.react-datepicker__header--custom .react-datepicker__header {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.react-datepicker__header--custom .react-datepicker__header .nextprev-btns {
+    display: flex;
+    align-items: center;
+}
+
+.react-datepicker__header--custom .react-datepicker__header .nextprev-btns div {
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.react-datepicker__header--custom .react-datepicker__header > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.react-datepicker__day-names{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+}
+
+.react-datepicker__day-name {
+    text-align: center;
+    width: 3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.react-datepicker__current-month {
+    margin-bottom: 2rem;
 }
 
 @media all and (max-width: 500px) {

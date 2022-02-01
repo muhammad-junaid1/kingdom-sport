@@ -1,11 +1,15 @@
 import React, { useState} from "react";
 import Button from "./Button";
 import sampleData from "../sampleData";
+import SVGIcons from "./SvgIcons";
 import "../css/Sport.css";
 import Match from "./pages/components/Match";
+import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
 const Sport = ({ sportName, page }) => {
   const [currTab, setCurrTab] = useState("live");
+  const [startDate, setStartDate] = useState(null);
 
   // Data
   const liveData = sampleData.liveToursData.filter((item) => item.text.toLowerCase() === sportName.toLowerCase());
@@ -14,6 +18,18 @@ const Sport = ({ sportName, page }) => {
   const handleClick = (e, tab) => {
     setCurrTab(tab);
   };
+
+  // Input for date picker
+  const CalendarBtn = React.forwardRef(({ value, onClick }, ref) => (
+    <Button
+    {...(value ? {type: "primary"} : null)}
+    onClick={onClick}
+    ref={ref}
+    size="small"
+  >
+    <span style={{color: value ? "white" : "#743EE8", marginRight: 4}}>{value ? new Date(value).toLocaleDateString("en-US", {year: 'numeric', month: 'long', day: 'numeric'}) : "Calendar"}</span> <SVGIcons.Calendar {...(value ? {color: "white"} : null)}/>
+  </Button>
+  ));
   return (
     <>
       <div className="sport-container">
@@ -32,7 +48,7 @@ const Sport = ({ sportName, page }) => {
             {...(currTab === "live" && { type: "primary", color: "red" })}
             size="small"
           >
-            Live (4)
+           <SVGIcons.Live {...(currTab==="live" ? {color: "white"} : null)}/> <span style={{color: currTab === "live" ? "white ": "#FF453A"}}> Live (4)</span>
           </Button>
           <Button
             onClick={(e) => handleClick(e, "prematch")}
@@ -41,12 +57,33 @@ const Sport = ({ sportName, page }) => {
           >
             Prematch (23)
           </Button>
-          <Button
-            onClick={(e) => handleClick(e, "calendar")}
-            size="small"
-          >
-            Calendar
-          </Button>
+          
+          <DatePicker
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
+      customInput={<CalendarBtn />}
+        renderCustomHeader={({
+        date,
+        decreaseMonth,
+        increaseMonth,
+        prevMonthButtonDisabled,
+        nextMonthButtonDisabled,
+      }) => (
+        <div
+          className="react-datepicker__header"
+        >
+        <p>{new Date(date).toLocaleDateString("en-US", {year: 'numeric', month: 'long'})}</p>
+        <div className="nextprev-btns">
+          <div className="prev-btn" onClick={decreaseMonth} disabled={prevMonthButtonDisabled}>
+          <SVGIcons.Previous/>
+          </div>
+          <div className="next-btn" onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
+            <SVGIcons.Next/>
+          </div>
+          </div>
+         </div>
+         )}
+        />
         </div>
       </div>
 
@@ -115,7 +152,6 @@ const Sport = ({ sportName, page }) => {
             </>
           })]
         }
-        {currTab === "calendar" && <p>Calendar</p>}
               </div>
       </div>
 

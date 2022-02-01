@@ -167,4 +167,7 @@
     .slick-slide {
         width: 95vw;
     }
+    .slick-dots li button:before{
+        font-size: 7px;
+    }
 }     
