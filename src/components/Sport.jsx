@@ -4,6 +4,7 @@ import sampleData from "../sampleData";
 import SVGIcons from "./SvgIcons";
 import "../css/Sport.css";
 import Match from "./pages/components/Match";
+import Tournaments from "./Tournaments";
 import DatePicker from "react-datepicker";
 
 const Sport = ({ sportName, page }) => {
@@ -17,6 +18,7 @@ const Sport = ({ sportName, page }) => {
   const prematchData = sampleData.preMatches.filter(
     (item) => item.text.toLowerCase() === sportName.toLowerCase()
   );
+  const allTours = sampleData.allTours.filter((item) => item.sport === sportName.toLowerCase());
 
   const handleClick = (e, tab) => {
     setCurrTab(tab);
@@ -168,7 +170,7 @@ const Sport = ({ sportName, page }) => {
               }),
             ]}
 
-            {currTab === "tours" && <p>Tournaments</p>}
+            {currTab === "tours" && <Tournaments allTours={allTours}/>}
             {currTab === "prematch" && [
               prematchData.map((item) => {
                 return (

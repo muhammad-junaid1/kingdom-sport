@@ -358,7 +358,8 @@ const data = {
       text: "Premier League",
       icon: "logo",
       isFav: true,
-      international: true
+      filter: "international",
+      numbers: 18
     },
     {
       id: 2,
@@ -366,7 +367,8 @@ const data = {
       text: "Laliga",
       icon: "logo-1",
       isFav: false,
-      international: true    
+      filter: "international",
+      numbers: 23
     },
     {
       id: 3,
@@ -374,7 +376,8 @@ const data = {
       text: "UEFA Europa",
       icon: "logo",
       isFav: false,
-      international: true    
+     filter: "international",
+      numbers: 1
     },
     {
       id: 4,
@@ -382,7 +385,8 @@ const data = {
       text: "Fourth Tour",
       icon: "logo-1",
       isFav: false,
-      international: true    
+      filter: "international" ,
+      numbers :50
     },
     {
       id: 5,
@@ -390,7 +394,8 @@ const data = {
       text: "Fifth Tour",
       icon: "logo",
       isFav: false,
-      international: true    
+      filter: "international",
+      numbers: 62
     },
     {
       id: 6,
@@ -398,24 +403,47 @@ const data = {
       text: "Sixth Tour",
       icon: "logo",
       isFav: false,
-      international: true    
+      filter: "international",
+      numbers: 98
     },
-  {
+    {
       id: 7,
       sport: "football",
-      text: "Championship of Algeria",
+      text: "Seventh Tour",
       icon: "logo",
       isFav: false,
-      international: false    
-
+      filter: "international",
+      numbers: 18
     },
     {
       id: 8,
       sport: "football",
+      text: "Eighth Tour",
+      icon: "logo",
+      isFav: false,
+      filter: "international",
+      numbers: 18
+    },
+  {
+      id: 9,
+      sport: "football",
       text: "Championship of Algeria",
       icon: "logo",
       isFav: false,
-      international: false
+      international: false,
+      filter: "Algeria",
+      numbers: 23
+
+    },
+    {
+      id: 10,
+      sport: "football",
+      text: "Championship of Algeria",
+      icon: "logo",
+      isFav: false,
+      international: false,
+      filter: "Algeria",
+      numbers: 51
     },
   ]
 ,
