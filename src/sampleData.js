@@ -350,6 +350,44 @@ const data = {
     },
   ],
 
+   toursFilters : [
+     {
+      filterId: 1,
+      filter: "international",
+      icon: "international"
+     },
+     {
+      filterId: 2,
+      filter: "algeria",
+      icon: "algeria"
+     },
+     {
+      filterId: 3,
+      filter: "australia",
+      icon: "australia"
+     },
+     {
+      filterId: 4,
+      filter: "belgium",
+      icon: "belgium"
+     },
+     {
+      filterId: 5,
+      filter: "brazil",
+      icon: "australia"
+     },
+     {
+      filterId: 6,
+      filter: "hongkong",
+      icon: "algeria"
+     },
+     {
+      filterId: 7,
+      filter: "italy",
+      icon: "belgium"
+     },
+   ],
+
   // All tournaments
   allTours: [
     {
@@ -358,6 +396,7 @@ const data = {
       text: "Premier League",
       icon: "logo",
       isFav: true,
+      filterId: 1,
       filter: "international",
       numbers: 18
     },
@@ -367,6 +406,7 @@ const data = {
       text: "Laliga",
       icon: "logo-1",
       isFav: false,
+      filterId: 1,
       filter: "international",
       numbers: 23
     },
@@ -376,7 +416,8 @@ const data = {
       text: "UEFA Europa",
       icon: "logo",
       isFav: false,
-     filter: "international",
+     filterId: 1,
+    filter: "International",
       numbers: 1
     },
     {
@@ -385,6 +426,7 @@ const data = {
       text: "Fourth Tour",
       icon: "logo-1",
       isFav: false,
+      filterId: 1,
       filter: "international" ,
       numbers :50
     },
@@ -394,6 +436,7 @@ const data = {
       text: "Fifth Tour",
       icon: "logo",
       isFav: false,
+      filterId: 1,
       filter: "international",
       numbers: 62
     },
@@ -403,6 +446,7 @@ const data = {
       text: "Sixth Tour",
       icon: "logo",
       isFav: false,
+      filterId: 1,
       filter: "international",
       numbers: 98
     },
@@ -412,6 +456,7 @@ const data = {
       text: "Seventh Tour",
       icon: "logo",
       isFav: false,
+      filterId: 1,
       filter: "international",
       numbers: 18
     },
@@ -421,6 +466,7 @@ const data = {
       text: "Eighth Tour",
       icon: "logo",
       isFav: false,
+      filterId: 1,
       filter: "international",
       numbers: 18
     },
@@ -431,7 +477,8 @@ const data = {
       icon: "logo",
       isFav: false,
       international: false,
-      filter: "Algeria",
+      filterId: 2,
+      filter: "algeria",
       numbers: 23
 
     },
@@ -442,7 +489,8 @@ const data = {
       icon: "logo",
       isFav: false,
       international: false,
-      filter: "Algeria",
+      filterId: 2,
+      filter: "algeria",
       numbers: 51
     },
   ]

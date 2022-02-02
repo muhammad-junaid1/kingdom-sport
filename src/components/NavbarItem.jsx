@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SVGIcons from "./SvgIcons";
 import { NavbarContext } from "./Main";
 import { NavLink, Link, useLocation } from "react-router-dom";
@@ -25,7 +25,6 @@ const NavbarItem = ({
   dropDownIcon
 }) => {
   const [activeLiveCheckBox, setActiveLiveCheckBox] = useState(false);
-  const inputElement = useRef();
 
   // Determine the query params for live navbar items
   const { search } = useLocation();
@@ -82,7 +81,6 @@ const NavbarItem = ({
 
   const handleLiveItem = () => {
     if (isLiveItem) {
-      inputElement.current.checked = true;
       setActiveLiveCheckBox(!activeLiveCheckBox);
       setShowNavbar(false);
       setShowBets(false);
@@ -91,7 +89,7 @@ const NavbarItem = ({
 
   useEffect(() => {
     if (isActiveLiveItem) {
-      inputElement.current.checked = true;
+      // inputElement.current.checked = true;
       setActiveLiveCheckBox(true);
     }
   }, [activeLiveCheckBox, isActiveLiveItem]);
@@ -200,7 +198,6 @@ const NavbarItem = ({
                         type="checkbox"
                         name="live"
                         value={text}
-                        ref={inputElement}
                         checked={activeLiveCheckBox}
                       />
                       <div
