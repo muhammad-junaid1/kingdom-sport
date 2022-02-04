@@ -1,8 +1,8 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import SVGIcons from "./SvgIcons";
 
 const ToursFilterOption = ({ filterDetails, isChecked, filters, setFilters }) => {
-    const [activeFilterOption, setActiveFilterOption] = useState(isChecked ? true : false);
+    const [activeFilterOption, setActiveFilterOption] = useState(isChecked);
     const handleToggle = () => {
         if(activeFilterOption) {
             setFilters((filtersArr) => filtersArr.filter((f) => f !== filterDetails.filterId));
@@ -18,7 +18,7 @@ const ToursFilterOption = ({ filterDetails, isChecked, filters, setFilters }) =>
         <input
           style={{ display: "none" }}
           type="checkbox"
-          name="live"
+          name={filterDetails.filter}
           value={filterDetails.filter}
           checked={activeFilterOption}
         />

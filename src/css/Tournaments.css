@@ -57,9 +57,16 @@
 }
 
 .tour-items .tour-filter {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.tour-items .tour-filter p {
   text-transform: uppercase;
   font-size: 1.3rem;
-  margin: 1rem 0;
+}
+.tour-items .tour-filter img {
+  margin-right: .5rem;
 }
 
 .select-wrapper {
@@ -169,4 +176,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media all and (max-width: 500px) {
+  .filters__container, .filters__search{
+    flex-direction: column;
+  }
+
+  .filters__search, .filters__search .input-wrapper, .filters__search button, .filters__select{
+    width: 100%;
+  }
+  .filters__search, .filters__search button{
+    margin: 0 !important;
+  }
+
+  .filters__search .input-wrapper {
+    margin: .8rem 0;
+  }
+  .filters__select .filters__options .filters-options__header{
+    margin: .7rem 0;
+  }
 }

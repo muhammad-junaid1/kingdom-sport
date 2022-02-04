@@ -204,7 +204,7 @@ const Navbar = ({
                   <li>
                     <DropdownItem 
                       key={index}
-                      icon={item.icon}        
+                      icon={item.icon}
                       text={item.text}
                       number={item.number}
                       dropdownItems={item.dropdownItems}
