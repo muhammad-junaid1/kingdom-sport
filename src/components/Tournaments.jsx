@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TournamentsItem from "./TournamentsItem";
 import SearchInput from "./SearchInput";
 import SVGIcons from "./SvgIcons";
@@ -12,7 +12,7 @@ const Tournaments = ({ allTours }) => {
   const [toggleOptions, setToggleOptions] = useState(false);
   const [filterSearchVal, setFilterSearchVal] = useState("");
   const [allSearchInput, setAllSearchInput] = useState("");
-  const [allToursData, setAllToursData] = useState(allTours);
+  const [allToursData, setAllToursData] = useState([]);
   const fetchFiltersData = sampleData.toursFilters.filter((filter) =>
     filtersToShow.includes(filter.filterId)
   );
@@ -55,6 +55,10 @@ const Tournaments = ({ allTours }) => {
       }
       setFilterSearchVal(e.target.value);
   }
+
+  useEffect(()=>{
+    setAllToursData(allTours);
+  }, [allTours])
   return (
     <>
       <div className="tournaments">

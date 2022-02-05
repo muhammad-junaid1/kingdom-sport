@@ -1,9 +1,17 @@
 import React, {useRef} from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
+import {useLocation} from "react-router-dom";
 
 const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, active }) => {
   const dropDownsContainer = useRef();
+  
+  const {search} = useLocation();
+  const toursParams = new URLSearchParams(search);
+  let toursParamsObj = {};
+  for (let value of toursParams.keys()) {
+    toursParamsObj[value] = toursParams.get(value);
+  }
   return (
     <>
       <div className="navbar__dropdown-item" style={{borderRadius: active && "0px 16px 16px 0px"}}>
@@ -27,6 +35,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
                 number={item.number}
                 tourId={item.tourId}
                 collapse={collapse}
+                activeTour={item.tourId === toursParamsObj.tour}
               />
             );
           })}

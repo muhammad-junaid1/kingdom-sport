@@ -18,7 +18,7 @@ const Sport = ({ sportName, page }) => {
   const prematchData = sampleData.preMatches.filter(
     (item) => item.text.toLowerCase() === sportName.toLowerCase()
   );
-  const allTours = sampleData.allTours.filter((item) => item.sport === sportName.toLowerCase());
+  const allTours = sampleData.allTours.filter((item) => item.sport.toLowerCase() === sportName.toLowerCase());
 
   const handleClick = (e, tab) => {
     setCurrTab(tab);
@@ -29,7 +29,7 @@ const Sport = ({ sportName, page }) => {
       document.querySelector(".react-datepicker__close-icon").innerHTML =
         "Clear &#10005;";
     }
-  }, [startDate]);
+  }, [startDate, sportName]);
 
   // Input for date picker
   const CalendarBtn = React.forwardRef(({ value, onClick }, ref) => (

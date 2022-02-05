@@ -23,7 +23,8 @@ const NavbarItem = ({
   isLiveItem,
   isActiveLiveItem,
   dropDownIcon,
-  tourId
+  tourId,
+  activeTour
 }) => {
   const [activeLiveCheckBox, setActiveLiveCheckBox] = useState(false);
 
@@ -33,7 +34,7 @@ const NavbarItem = ({
   let queryForLive;
   const paramsForLive = new URLSearchParams(search);
   let paramObjForLive = {};
-  for (var value of paramsForLive.keys()) {
+  for (let value of paramsForLive.keys()) {
     paramObjForLive[value] = paramsForLive.get(value);
   }
   if(paramObjForLive[text.toLowerCase()]) {
@@ -53,10 +54,12 @@ const NavbarItem = ({
   }
   if(paramObjForDropdowns.hasOwnProperty("tour")) {
     delete paramObjForDropdowns.tour;
+    paramObjForDropdowns.sport = text.toLowerCase();
   } else if(paramObjForDropdowns.sport === text.toLowerCase()) {
     delete paramObjForDropdowns.sport;
+  } else {
+    paramObjForDropdowns.sport = text.toLowerCase();
   }
-  paramObjForDropdowns.sport = text.toLowerCase();
     const paramStringForDropdowns = Object.keys(paramObjForDropdowns).map(key => `${key}=${paramObjForDropdowns[key]}`).join('&');
     queryForDropdowns = "?" + paramStringForDropdowns;
 
@@ -314,9 +317,7 @@ const NavbarItem = ({
               to={queryForTours}
               className={`navbar__item${
                 isDropDown ? " navbar__item--dropdown" : ""
-              }${active ? " active-navbar-item" : ""}${
-                isLive ? " navbar__item-live" : ""
-              }`}
+              }${activeTour ? " active-navbar-item" : ""}`}
               onClick={
                 isDropDown && !collapse
                   ? () => {
