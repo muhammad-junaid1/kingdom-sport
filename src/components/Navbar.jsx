@@ -28,8 +28,14 @@ const Navbar = ({
   const [checked, setChecked] = useState("all");
   const [radioForActive, setRadioForActive] = useState(false);
   const [radioForExpired, setRadioForExpired] = useState(false);
+  const [input, setInput] = useState("");
   const { search, pathname } = useLocation();
   const { coin } = useParams();
+
+  // Search input
+  const handleInput = (e) => {
+        setInput(e.target.value);
+}
 
   const params = new URLSearchParams(search);
   let paramObj = {};
@@ -72,7 +78,7 @@ const Navbar = ({
             className={`search-input-container${collapse ? " input--collapsed" : ""}`}
             style={{ cursor: collapse ? "pointer" : "", width: collapse ? "4.3rem" : "" }}
           >
-            <SearchInput collapse={collapse} setCollapse={setCollapse} />
+            <SearchInput collapse={collapse} onInput={handleInput} value={input} setCollapse={setCollapse} />
           </div>
         </div>
         {isCrypto && 

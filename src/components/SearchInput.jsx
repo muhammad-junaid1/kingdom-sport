@@ -4,7 +4,6 @@ import SVGIcons from "./SvgIcons";
 
 const SearchInput = ({collapse, setCollapse, onInput, value}) => {
     const [focus, setFocus] = useState(false);
-    // const [inputVal, setInputVal] = useState("");
     const handleFocus = () => {
         if(!collapse) {
             setFocus(true);
@@ -14,13 +13,6 @@ const SearchInput = ({collapse, setCollapse, onInput, value}) => {
     const handleClick = () => {
         if(collapse) setCollapse(false);
     }
-    // const handleInput = (e) => {
-    //     if(collapse) {
-    //         setInputVal(e.target.value);
-    //     } else {
-    //         onInput();
-    //     }
-    // }
     return (
         <>
         <div className={`input-wrapper${focus ? " input--focused" : ""}`} onClick={handleClick}>

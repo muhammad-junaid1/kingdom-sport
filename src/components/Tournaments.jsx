@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TournamentsItem from "./TournamentsItem";
 import SearchInput from "./SearchInput";
 import SVGIcons from "./SvgIcons";
@@ -11,11 +11,17 @@ const Tournaments = ({ allTours }) => {
   const [filtersToShow, setFiltersToShow] = useState([1]);
   const [toggleOptions, setToggleOptions] = useState(false);
   const [filterSearchVal, setFilterSearchVal] = useState("");
+  const [allSearchInput, setAllSearchInput] = useState("");
+  const [allToursData, setAllToursData] = useState(allTours);
   const fetchFiltersData = sampleData.toursFilters.filter((filter) =>
     filtersToShow.includes(filter.filterId)
   );
   const [allToursFilters, setAllToursFilters] = useState(sampleData.toursFilters);
   const handleToggle = () => {
+    if(!toggleOptions) {
+      setFilterSearchVal("");
+              setAllToursFilters(sampleData.toursFilters);
+    }
     setToggleOptions(!toggleOptions);
   };
   if (toggleOptions) {
@@ -28,6 +34,19 @@ const Tournaments = ({ allTours }) => {
     });
   }
 
+  const handleAllSearchInput = (e) =>{
+    setAllSearchInput(e.target.value);
+  }
+
+  const handleSearchSubmit = () => {
+    if(allSearchInput === "") {
+      setAllToursData(allTours);
+    } else {
+      const searchedData = allTours.filter((tour) => tour.text.toLowerCase().indexOf(allSearchInput.toLowerCase()) !== -1);
+      setAllToursData(searchedData);
+    }
+  }
+
   const handleInput = (e) => {
       if(e.target.value === "") {
         setAllToursFilters(sampleData.toursFilters);
@@ -36,10 +55,6 @@ const Tournaments = ({ allTours }) => {
       }
       setFilterSearchVal(e.target.value);
   }
-
-  // useEffect(() => {
-  //   setAllToursFilters(sampleData.toursFilters);
-  // }, []);
   return (
     <>
       <div className="tournaments">
@@ -99,8 +114,8 @@ const Tournaments = ({ allTours }) => {
                 )}
               </div>
               <div className="filters__search">
-                <SearchInput />
-                <Button type="secondary">Apply</Button>
+                <SearchInput onInput={handleAllSearchInput} value={allSearchInput}/>
+                <Button type="secondary" onClick={handleSearchSubmit}>Apply</Button>
               </div>
             </div>
           </div>
@@ -123,12 +138,12 @@ const Tournaments = ({ allTours }) => {
                         .filter.toUpperCase()}
                         </p>
                     </div>
-                    {allTours.filter((t) => t.filterId === currFilterId)
+                    {allToursData.filter((t) => t.filterId === currFilterId)
                       .length === 0 ? (
                       <p style={{ color: "red" }}>No data found</p>
                     ) : (
                       [
-                        allTours
+                        allToursData
                           .filter((t) => t.filterId === currFilterId)
                           .map((tour, index) => {
                             return (
