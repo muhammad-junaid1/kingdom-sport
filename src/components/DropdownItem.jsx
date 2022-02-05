@@ -25,6 +25,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
                 dropDownIcon={item.icon}
                 text={item.text}
                 number={item.number}
+                tourId={item.tourId}
                 collapse={collapse}
               />
             );

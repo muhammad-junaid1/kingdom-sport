@@ -38,21 +38,25 @@ const data = {
       number: 34,
       dropdownItems: [
         {
+          tourId: 1,
           icon: "logo",
           text: "Premier League",
           number: 20,
         },
         {
+          tourId: 2,
+          icon: "logo-1",
+          text: "Laliga",
+          number: 14,
+        },
+        {
+          tourId: 1,
           icon: "logo",
           text: "Premier League",
           number: 14,
         },
         {
-          icon: "logo",
-          text: "Premier League",
-          number: 14,
-        },
-        {
+          tourId: 1,
           icon: "logo",
           text: "Premier League",
           number: 14,
@@ -66,12 +70,14 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 5,
+          text: "Basketball For Women",
           number: 14,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 5,
+          text: "Basketball For Women",
           number: 14,
         },
       ],
@@ -83,7 +89,8 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 6,
+          text: "World MMA",
           number: 14,
         },
       ],
@@ -95,27 +102,32 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 20,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
       ],
@@ -127,12 +139,14 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 8,
+          text: "Premier Icehockey",
           number: 20,
         },
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 8,
+          text: "Premier Icehockey",
           number: 14,
         },
       ],

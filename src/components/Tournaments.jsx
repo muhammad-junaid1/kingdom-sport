@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TournamentsItem from "./TournamentsItem";
 import SearchInput from "./SearchInput";
 import SVGIcons from "./SvgIcons";
