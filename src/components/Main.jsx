@@ -32,10 +32,6 @@ const Main = () => {
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
   const [noSportsBets, setNoSportsBets] = useState(true);
   const [noCryptoBets, setNoCryptoBets] = useState(true);
-  const [favTours, setFavTours] = useState([{
-    id: 1,
-    text: "Premier League"
-  }]);
   const [connected, setConnected] = useState(false);
   const isMobile = useMediaQuery('(max-width: 500px)')
   const { pathname } = useLocation();
@@ -275,7 +271,7 @@ const Main = () => {
                 />
               ) : (
                 <ContentRoutesContext.Provider
-                  value={{ showBetsContainer, isMobile, showBetsOnMobile, favTours, setFavTours }}
+                  value={{ showBetsContainer, isMobile, showBetsOnMobile}}
                 >
                   <Routes>
                     <Route path="/" element={<Homepage />} />
