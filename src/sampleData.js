@@ -37,30 +37,7 @@ const data = {
       text: "Football",
       number: 34,
       dropdownItems: [
-        {
-          tourId: 1,
-          icon: "logo",
-          text: "Premier League",
-          number: 20,
-        },
-        {
-          tourId: 2,
-          icon: "logo-1",
-          text: "Laliga",
-          number: 14,
-        },
-        {
-          tourId: 1,
-          icon: "logo",
-          text: "Premier League",
-          number: 14,
-        },
-        {
-          tourId: 1,
-          icon: "logo",
-          text: "Premier League",
-          number: 14,
-        },
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
       ],
     },
     {
@@ -68,18 +45,7 @@ const data = {
       text: "Basketball",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 5,
-          text: "Basketball For Women",
-          number: 14,
-        },
-        {
-          icon: "logo",
-          tourId: 5,
-          text: "Basketball For Women",
-          number: 14,
-        },
+        11, 12
       ],
     },
     {
@@ -87,12 +53,7 @@ const data = {
       text: "MMA",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 6,
-          text: "World MMA",
-          number: 14,
-        },
+        13
       ],
     },
     {
@@ -100,36 +61,7 @@ const data = {
       text: "Tennis",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 20,
-        },
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
+        14, 15
       ],
     },
     {
@@ -137,18 +69,7 @@ const data = {
       text: "Icehockey",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 8,
-          text: "Premier Icehockey",
-          number: 20,
-        },
-        {
-          icon: "logo",
-          tourId: 8,
-          text: "Premier Icehockey",
-          number: 14,
-        },
+        16
       ],
     },
   ],
@@ -160,18 +81,7 @@ const data = {
       text: "Football",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 1,
-          text: "Premier League",
-          number: 20,
-        },
-        {
-          tourId: 1,
-          icon: "logo",
-          text: "Premier League",
-          number: 14,
-        },
+        1
       ],
     },
         {
@@ -179,30 +89,7 @@ const data = {
       text: "Tennis",
       number: 34,
       dropdownItems: [
-        {
-          icon: "logo",
-          tourId: 7,
-          text: "Tennis Championship",
-          number: 20,
-        },
-        {
-          icon: "logo",
-           tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
-        {
-          icon: "logo",
-           tourId: 7,
-          text: "Tennis Championship",
-          number: 20,
-        },
-        {
-          icon: "logo",
-           tourId: 7,
-          text: "Tennis Championship",
-          number: 14,
-        },
+        15
       ],
     },
   ],
@@ -441,19 +328,9 @@ const data = {
       numbers: 1
     },
     {
-      id: 4,
-      sport: "football",
-      text: "Fourth Tour",
-      icon: "logo-1",
-      isFav: false,
-      filterId: 1,
-      filter: "international" ,
-      numbers :50
-    },
-    {
       id: 5,
       sport: "football",
-      text: "Fifth Tour",
+      text: "Example Tour",
       icon: "logo",
       isFav: false,
       filterId: 1,
@@ -461,36 +338,6 @@ const data = {
       numbers: 62
     },
     {
-      id: 6,
-      sport: "football",
-      text: "Sixth Tour",
-      icon: "logo",
-      isFav: false,
-      filterId: 1,
-      filter: "international",
-      numbers: 98
-    },
-    {
-      id: 7,
-      sport: "football",
-      text: "Seventh Tour",
-      icon: "logo",
-      isFav: false,
-      filterId: 1,
-      filter: "international",
-      numbers: 18
-    },
-    {
-      id: 8,
-      sport: "football",
-      text: "Eighth Tour",
-      icon: "logo",
-      isFav: false,
-      filterId: 1,
-      filter: "international",
-      numbers: 18
-    },
-  {
       id: 9,
       sport: "football",
       text: "Championship of Algeria",
@@ -499,8 +346,7 @@ const data = {
       international: false,
       filterId: 2,
       filter: "algeria",
-      numbers: 23
-
+      numbers: 51
     },
     {
       id: 10,
@@ -513,6 +359,67 @@ const data = {
       filter: "algeria",
       numbers: 51
     },
+    {
+      id: 11,
+      sport: "basketball",
+      text: "World Basketball",
+      icon: "logo-1",
+      isFav: false,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    {
+      id: 12,
+      sport: "basketball",
+      text: "World Basketball",
+      icon: "logo-1",
+      isFav: false,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    {
+      id: 13,
+      sport: "mma",
+      text: "MMA Premier League",
+      icon: "logo",
+      isFav: false,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    {
+      id: 14,
+      sport: "tennis",
+      text: "Tennis Women Cup",
+      icon: "logo",
+      isFav: false,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    {
+      id: 15,
+      sport: "tennis",
+      text: "Tennis Men Cup",
+      icon: "logo",
+      isFav: true,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    {
+      id: 16,
+      sport: "icehockey",
+      text: "Icehockey Cup",
+      icon: "logo",
+      isFav: false,
+      filterId: 1,
+      filter: "international",
+      numbers: 51
+    },
+    
   ]
 ,
   // Used for all favourite items

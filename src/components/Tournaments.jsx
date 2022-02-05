@@ -58,6 +58,8 @@ const Tournaments = ({ allTours }) => {
 
   useEffect(()=>{
     setAllToursData(allTours);
+    setAllSearchInput("");
+    setFiltersToShow([1]);
   }, [allTours])
   return (
     <>

@@ -76,7 +76,6 @@ const NavbarItem = ({
     queryForTours = "?" + paramStringForTours;
 
 
-
   const { isMobile, setShowNavbar, setCollapseNavbar, setShowBets } =
     React.useContext(NavbarContext);
   const onToggleAndCollapse = () => {
