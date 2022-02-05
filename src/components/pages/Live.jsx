@@ -24,7 +24,7 @@ const Live = ({showBetsContainer}) => {
         })}
 
             {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
-                return sampleData.liveNavItems.filter((item) => item.text === i).map((i) =>{
+                return sampleData.liveNavItems.filter((item) => item.text.toLowerCase() === i).map((i) =>{
                     return <Match isLive={true} isFav={i.isFav} isTour={false} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
                 })
 

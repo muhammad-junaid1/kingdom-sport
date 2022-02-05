@@ -239,7 +239,7 @@ const Navbar = ({
                   number={item.number}
                   collapse={collapse}
                   isLiveItem={true}
-                  isActiveLiveItem={paramObj.hasOwnProperty(item.text)}
+                  isActiveLiveItem={paramObj.hasOwnProperty(item.text.toLowerCase())}
                 />
               ))}
             </>

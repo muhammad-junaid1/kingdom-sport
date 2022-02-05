@@ -27,43 +27,52 @@ const NavbarItem = ({
 }) => {
   const [activeLiveCheckBox, setActiveLiveCheckBox] = useState(false);
 
-  // Determine the query params for live navbar items
   const { search } = useLocation();
-  let query = search;
-  if (query.length === 0) {
-    query += `?${text}=true&`;
-  } else {
-    if (!query.includes(text)) {
-      query += `${text}=true&`;
-    } else {
-      query = query.replace(`${text}=true&`, "");
-    }
+  
+  // Determine the query params for live navbar items
+  let queryForLive;
+  const paramsForLive = new URLSearchParams(search);
+  let paramObjForLive = {};
+  for (var value of paramsForLive.keys()) {
+    paramObjForLive[value] = paramsForLive.get(value);
   }
+  if(paramObjForLive[text.toLowerCase()]) {
+    delete paramObjForLive[text.toLowerCase()];
+  } else {
+    paramObjForLive[text.toLowerCase()] = true;
+  }
+  const paramStringForLive = Object.keys(paramObjForLive).map(key => `${key}=${paramObjForLive[key]}`).join('&');
+  queryForLive = "?" + paramStringForLive;
 
-  // Determine the query params for sport navbar items
-  let query2 = search;
-  if (query2.length === 0) {
-    query2 = `?sport=${text.toLowerCase()}`;
-  } else {
-    if (!query2.includes(text.toLowerCase())) {
-      query2 = `?sport=${text.toLowerCase()}`;
-    } else {
-      query2 = "";
-    }
+    // Determine the query params for sport navbar dropdown items
+  let queryForDropdowns;
+  const paramsForDropdowns = new URLSearchParams(search);
+  let paramObjForDropdowns = {};
+  for (let value of paramsForDropdowns.keys()) {
+    paramObjForDropdowns[value] = paramsForDropdowns.get(value);
   }
+  if(paramObjForDropdowns.hasOwnProperty("tour")) {
+    delete paramObjForDropdowns.tour;
+  } else if(paramObjForDropdowns.sport === text.toLowerCase()) {
+    delete paramObjForDropdowns.sport;
+  }
+  paramObjForDropdowns.sport = text.toLowerCase();
+    const paramStringForDropdowns = Object.keys(paramObjForDropdowns).map(key => `${key}=${paramObjForDropdowns[key]}`).join('&');
+    queryForDropdowns = "?" + paramStringForDropdowns;
+
 
     // Determine the query params for tournament page
-  let query3;
-  const params = new URLSearchParams(search);
-  let paramObj = {};
-  for (var value of params.keys()) {
-    paramObj[value] = params.get(value);
+  let queryForTours;
+  const paramsForTours = new URLSearchParams(search);
+  let paramObjForTours = {};
+  for (let value of paramsForTours.keys()) {
+    paramObjForTours[value] = paramsForTours.get(value);
   }
-    paramObj.tour = tourId;
-    const paramString = Object.keys(paramObj).map(key => `${key}=${paramObj[key]}`).join('&');
-    query3 = "?" + paramString;
+    paramObjForTours.tour = tourId;
+    const paramStringForTours = Object.keys(paramObjForTours).map(key => `${key}=${paramObjForTours[key]}`).join('&');
+    queryForTours = "?" + paramStringForTours;
 
-    
+
 
   const { isMobile, setShowNavbar, setCollapseNavbar, setShowBets } =
     React.useContext(NavbarContext);
@@ -182,7 +191,7 @@ const NavbarItem = ({
       ) : isLiveItem ? (
         <>
           {/* Live navbar item */}
-          <Link to={query}>
+          <Link to={queryForLive}>
             <div
               className={`navbar__item${
                 isDropDown ? " navbar__item--dropdown" : ""
@@ -256,7 +265,7 @@ const NavbarItem = ({
             <>
             {/* Item for Dropdown menus */}
             <Link
-              to={`${query2}`}
+              to={`${queryForDropdowns}`}
               className={`navbar__item${
                 isDropDown ? " navbar__item--dropdown" : ""
               }${active ? " active-navbar-item" : ""}${
@@ -302,7 +311,7 @@ const NavbarItem = ({
           ) : (<>
             {/* Item for Tournament section */}
             <Link
-              to={query3}
+              to={queryForTours}
               className={`navbar__item${
                 isDropDown ? " navbar__item--dropdown" : ""
               }${active ? " active-navbar-item" : ""}${

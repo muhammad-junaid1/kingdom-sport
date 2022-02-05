@@ -162,10 +162,12 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
+          tourId: 1,
           text: "Premier League",
           number: 20,
         },
         {
+          tourId: 1,
           icon: "logo",
           text: "Premier League",
           number: 14,
@@ -179,22 +181,26 @@ const data = {
       dropdownItems: [
         {
           icon: "logo",
-          text: "Premier League",
+          tourId: 7,
+          text: "Tennis Championship",
           number: 20,
         },
         {
           icon: "logo",
-          text: "Premier League",
+           tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
         {
           icon: "logo",
-          text: "Premier League",
+           tourId: 7,
+          text: "Tennis Championship",
           number: 20,
         },
         {
           icon: "logo",
-          text: "Premier League",
+           tourId: 7,
+          text: "Tennis Championship",
           number: 14,
         },
       ],
