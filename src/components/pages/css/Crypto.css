@@ -19,6 +19,7 @@
 
     .crypto {
         width: 100% !important;
+        padding-bottom: 150px;
     }
     .crypto__body thead {
         display: none;

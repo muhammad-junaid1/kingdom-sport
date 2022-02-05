@@ -25,6 +25,7 @@
     position: fixed;
     right: 2.5rem;
     bottom: 12.5rem;
+    z-index: 700;
   }
   
 .show-hide-bets-container button {

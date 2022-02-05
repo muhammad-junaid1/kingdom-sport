@@ -124,6 +124,7 @@
     }
     .sport__header-tabs{
         display: block;
+        margin-bottom: 15px;
     }
 
     .sport__header-tabs::-webkit-scrollbar {
@@ -145,6 +146,7 @@
 
     .sport__header {
         padding: 1rem 0;
+        margin-bottom: 0;
     }
     .sport__header::-webkit-scrollbar {
         display: none;

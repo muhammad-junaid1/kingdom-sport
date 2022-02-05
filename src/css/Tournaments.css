@@ -184,6 +184,9 @@
 
 
 @media all and (max-width: 500px) {
+  .tournaments__header{
+    margin-bottom: 2.2rem;
+  }
   .filters__container, .filters__search{
     flex-direction: column;
   }
