@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import "../css/Match.css";
 import Button from "../../Button";
 import SVGIcons from "../../SvgIcons";

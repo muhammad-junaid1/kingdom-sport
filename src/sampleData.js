@@ -1,4 +1,5 @@
 const data = {
+  // used in crypto navbar
   cryptoItems: [
     {
       text: "BTC",
@@ -31,6 +32,7 @@ const data = {
       number: 3,
     },
   ],
+  // Data showed in dropdowns of navbar for each sport
   dropDownsData: [
     {
       icon: "Soccer",
@@ -93,6 +95,7 @@ const data = {
       ],
     },
   ],
+  // Used in bets container
   matchWinners: [
     {
       team1: "First",
@@ -257,6 +260,7 @@ const data = {
     },
   ],
 
+  // All filters/countries for tours
    toursFilters : [
      {
       filterId: 1,
@@ -422,7 +426,7 @@ const data = {
     
   ]
 ,
-  // Used for all favourite items
+  // Used for all favourite items on fav page
   favItemsData: [
     {
       icon: "Soccer",
@@ -462,49 +466,8 @@ const data = {
           ],
         },
         {
-          id: 2,
-          name: "Laliga",
-          icon: "logo-1",
-          isLive: false,
-          matchData: [
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 2,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [],
-            },
-            {
-              team: {
-                left: {
-                  name: "Chulalongkorn University",
-                  icon: "logo",
-                  score: 3,
-                },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-        },
-        {
-          id: 2,
-          name: "Laliga",
+          id: 1,
+          name: "Premier League",
           icon: "logo",
           matchData: [
             {
@@ -537,13 +500,13 @@ const data = {
       ],
     },
     {
-      icon: "Tennis",
-      text: "TENNIS",
+      icon: "Basketball",
+      text: "Basketball",
       tours: [
         {
-          id: 1,
-          name: "Premier League",
-          icon: "logo",
+          id: 15,
+          name: "World Basketball",
+          icon: "logo-1",
           isLive: false,
           matchData: [
             {
@@ -577,7 +540,7 @@ const data = {
     },
   ],
 
-  // Used when specific sport item is toggled on home and favs pages
+  // Live matches for each sport (on home/fav pages)
   liveToursData: [
     {
       icon: "Soccer",
@@ -653,7 +616,82 @@ const data = {
       },
       ],
     },
+    {
+      icon: "Basketball",
+      text: "Basketball",
+      tours: [
+        {
+          id: 11,
+          name: "World Basketball",
+          isFav: true,
+          icon: "logo-1",
+          isLive: true,
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 83],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 81],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+      },
+        {
+          id: 12,
+          name: "World Basketball",
+          isFav: true,
+          icon: "logo-1",
+          isLive: true,
+          matchData: [
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 83],
+              ratios: [],
+            },
+            {
+              team: {
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
+              },
+              time: [4, 81],
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 384,
+            },
+          ],
+      },
+      ],
+    },
   ],
+  // Prematches data for each sport (on home/fav pages)
   preMatches: [
     {
       icon: "Soccer",
@@ -663,6 +701,45 @@ const data = {
           id: 1,
           name: "Premier League",
           isFav: true,
+          icon: "logo",
+          isLive: false,
+          matchData: [
+            {
+              team: {
+                left: { name: "Chulalongkorn University", icon: "logo", score: 2 },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+              ["1x", 1.91],
+            ],
+            moreRatios: 23
+            },
+            {
+              team: {
+                left: { name: "Chulalongkorn University", icon: "logo", score: 3 },
+                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+              },
+              time: ["DEC 12", "09:00"],
+              ratios: [],
+              moreRatios: 384,
+            },
+          ],
+      }
+      ],
+    },
+    {
+      icon: "Basketball",
+      text: "Basketball",
+      tours: [
+        {
+          id: 11,
+          name: "World Basketball",
           icon: "logo-1",
           isLive: false,
           matchData: [
@@ -692,46 +769,12 @@ const data = {
               moreRatios: 384,
             },
           ],
-      },
-        {
-          id: 1,
-          name: "Premier League",
-          isFav: false,
-          icon: "logo",
-          isLive: false,
-          matchData: [
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 2 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [],
-            },
-            {
-              team: {
-                left: { name: "Napoli", icon: "logo", score: 3 },
-                right: { name: "Leicester City", icon: "logo1", score: 2 },
-              },
-              time: ["DEC 12", "09:00"],
-              ratios: [
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-                ["1x", 1.91],
-              ],
-              moreRatios: 384,
-            },
-          ],
-      },
+      }
       ],
     },
   ],
 
-  // Matchdata template for live items
+  // Match data template for live items (on home page)
   matchData: [
     {
       team: {
@@ -762,7 +805,7 @@ const data = {
       moreRatios: 384,
     },
   ],
-  // Match data template for upcoming (not held yet) items
+  // Match data template for upcoming (not held yet) items (on homepage)
   matchData2: [
     {
       team: {
@@ -840,6 +883,48 @@ const data = {
         ["1x", 1.91],
       ],
       moreRatios: 384,
+    },
+    {
+      team: {
+        left: { name: "Napoli", icon: "logo", score: 3 },
+        right: { name: "Leicester City", icon: "logo1", score: 2 },
+      },
+      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      time: ["DEC 12", "09:00"],
+      ratios: [
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+      ],
+      moreRatios: 384,
+    },
+  ],
+  // Match data template for top bets (on homepage)
+  matchData3: [
+    {
+      team: {
+        left: { name: "Napoli", icon: "logo", score: 1 },
+        right: { name: "Leicester City", icon: "logo1", score: 4 },
+      },
+      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      time: ["DEC 12", "09:00"],
+      ratios: [
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+        ["1x", 1.91],
+      ],
+      moreRatios: 384,
+
     },
     {
       team: {

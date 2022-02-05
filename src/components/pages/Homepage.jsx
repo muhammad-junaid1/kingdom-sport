@@ -66,7 +66,7 @@ const Homepage = () => {
           sport="BASKETBALL"
           liveData={sampleData.matchData}
           upcomingData={sampleData.matchData2}
-          topBetsData={sampleData.matchData2.slice(0, 2)}
+          topBetsData={sampleData.matchData3}
         />
         </>
       : <Sport sportName={allParams.sport} page="home"/>}
