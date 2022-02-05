@@ -27,7 +27,7 @@ export const HeaderContext = React.createContext({});
 const Main = () => {
   const [showBetsContainer, setShowBetsContainer] = useState(false);
   const [collapseNavbar, setCollapseNavbar] = useState(false);
-  const [showBets, setShowBets] = useState(false);
+  const [showBetsOnMobile, setShowBetsOnMobile] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
   const [noSportsBets, setNoSportsBets] = useState(true);
@@ -125,7 +125,7 @@ const Main = () => {
               setCollapseNavbar,
               isConnected: connected,
               setConnected,
-              setShowBets,
+              setShowBetsOnMobile,
             }}
           >
             <Routes>
@@ -168,7 +168,7 @@ const Main = () => {
                   setCollapseNavbar,
                   isMobile,
                   setShowNavbar,
-                  setShowBets,
+                  setShowBetsOnMobile,
                 }}
               >
                 <Routes>
@@ -261,11 +261,11 @@ const Main = () => {
                 paddingBottom: showNavbar ? "0" : "",
               }}
             >
-              {showBets ? (
+              {showBetsOnMobile ? (
                 <BetsContainer
                   isMobile={isMobile}
-                  showBets={showBets}
-                  setShowBets={setShowBets}
+                  showBetsOnMobile={showBetsOnMobile}
+                  setShowBetsOnMobile={setShowBetsOnMobile}
                   isConnected={connected}
                   showNavbar={showNavbar}
                   noSportsBets={noSportsBets}
@@ -275,7 +275,7 @@ const Main = () => {
                 />
               ) : (
                 <ContentRoutesContext.Provider
-                  value={{ showBetsContainer, isMobile, showBets, favTours, setFavTours }}
+                  value={{ showBetsContainer, isMobile, showBetsOnMobile, favTours, setFavTours }}
                 >
                   <Routes>
                     <Route path="/" element={<Homepage />} />
@@ -329,12 +329,12 @@ const Main = () => {
             )}
           </div>
         </div>
-        {isMobile && !showBets && (
+        {isMobile && !showBetsOnMobile && (
           <NavLinks
             isFixed={true}
             setShowNavbar={setShowNavbar}
-            showBets={showBets}
-            setShowBets={setShowBets}
+            showBetsOnMobile={showBetsOnMobile}
+            setShowBetsOnMobile={setShowBetsOnMobile}
             setCollapseNavbar={setCollapseNavbar}
             connected={connected}
           />
@@ -342,7 +342,7 @@ const Main = () => {
 
         {/* Button on mobile for showing bets container */}
         {isMobile &&
-          !showBets &&
+          !showBetsOnMobile &&
           (pathname === "/" ||
             pathname === "/live" ||
             pathname === "/favourites" ||
@@ -351,7 +351,7 @@ const Main = () => {
               <Button
                 type="secondary"
                 onClick={() => {
-                  setShowBets(!showBets);
+                  setShowBetsOnMobile(!showBetsOnMobile);
                   setShowNavbar(false);
                 }}
               >

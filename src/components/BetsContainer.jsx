@@ -11,8 +11,8 @@ import { useLocation } from "react-router-dom";
 const BetsContainer = ({
   isConnected,
   isMobile,
-  showBets,
-  setShowBets,
+  showBetsOnMobile,
+  setShowBetsOnMobile,
   showNavbar,
   noSportsBets,
   noCryptoBets,
@@ -84,7 +84,7 @@ const BetsContainer = ({
                 </div>
                 <div className="right">
                   <Button
-                    onClick={() => setShowBets(!showBets)}
+                    onClick={() => setShowBetsOnMobile(!showBetsOnMobile)}
                     type="secondary"
                     color="grey"
                   >
@@ -357,7 +357,7 @@ const BetsContainer = ({
                   </div>
                   <div className="right">
                     <Button
-                      onClick={() => setShowBets(!showBets)}
+                      onClick={() => setShowBetsOnMobile(!showBetsOnMobile)}
                       type="secondary"
                       color="grey"
                     >
@@ -606,7 +606,7 @@ const BetsContainer = ({
                 </div>
                 <div className="right">
                   <Button
-                    onClick={() => setShowBets(!showBets)}
+                    onClick={() => setShowBetsOnMobile(!showBetsOnMobile)}
                     type="secondary"
                     color="grey"
                   >

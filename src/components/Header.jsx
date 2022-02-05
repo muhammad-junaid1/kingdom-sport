@@ -13,7 +13,7 @@ const Header = ({
 removeCollapseToggle, isLeaderboard, isMyBets
 }) => {
 
-  const {isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected, setShowBets, setConnected} = useContext(HeaderContext);
+  const {isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected, setShowBetsOnMobile, setConnected} = useContext(HeaderContext);
 
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
@@ -71,7 +71,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
                 </Button>
                 ]
               ),
-               ] : (!isLeaderboard && !isMyBets) && <Button onClick={() => {setShowNavbar(!showNavbar); setShowBets(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
+               ] : (!isLeaderboard && !isMyBets) && <Button onClick={() => {setShowNavbar(!showNavbar); setShowBetsOnMobile(false)}} addClass="hamburger-btn">{showNavbar ? <SVGIcons.CloseMenu/> : <SVGIcons.Hamburger/>}</Button>}
           </div>
         </div>
       </div>

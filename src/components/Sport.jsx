@@ -25,11 +25,15 @@ const Sport = ({ sportName, page }) => {
   };
 
   useEffect(() => {
+    setStartDate(null);
+  }, [sportName]);
+
+  useEffect(() => {
     if (startDate) {
       document.querySelector(".react-datepicker__close-icon").innerHTML =
         "Clear &#10005;";
     }
-  }, [startDate, sportName]);
+  }, [startDate]);
 
   // Input for date picker
   const CalendarBtn = React.forwardRef(({ value, onClick }, ref) => (

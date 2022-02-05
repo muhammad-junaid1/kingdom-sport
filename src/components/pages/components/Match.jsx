@@ -15,7 +15,7 @@ const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage,
         setIsFav(true);
       }
     }
-  }, []);
+  }, [isTour, isFavPage, tourId]);
   return (
     <>
       <div className="match">

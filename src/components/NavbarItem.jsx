@@ -76,7 +76,7 @@ const NavbarItem = ({
     queryForTours = "?" + paramStringForTours;
 
 
-  const { isMobile, setShowNavbar, setCollapseNavbar, setShowBets } =
+  const { isMobile, setShowNavbar, setCollapseNavbar, setShowBetsOnMobile } =
     React.useContext(NavbarContext);
   const onToggleAndCollapse = () => {
     setCollapseNavbar(!collapse);
@@ -85,7 +85,7 @@ const NavbarItem = ({
   const HideNavOnClickOnMobile = () => {
     if (isMobile) {
       setShowNavbar(false);
-      setShowBets(false);
+      setShowBetsOnMobile(false);
     }
     if (isCryptoItem && !forAll) {
       onCheck();
@@ -108,7 +108,7 @@ const NavbarItem = ({
     if (isLiveItem) {
       setActiveLiveCheckBox(!activeLiveCheckBox);
       setShowNavbar(false);
-      setShowBets(false);
+      setShowBetsOnMobile(false);
     }
   };
 
