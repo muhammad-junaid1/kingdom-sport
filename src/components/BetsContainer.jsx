@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
+
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
-import "../css/BetsContainer.css";
-import MatchWinnersList from "./MatchWinnersList";
 import MatchWinner from "./MatchWinner.jsx";
 import MyBets from "./MyBets";
+import MatchWinnersList from "./MatchWinnersList";
+
+import "../css/BetsContainer.css";
 import sampleData from "../sampleData";
 import { useLocation } from "react-router-dom";
 
+/**
+ * 
+ * This component is rendered on the right side (as sidebar on desktop)
+ * Show/Close button in header controls its visibility
+ * It contains all information about bets
+ * Its content changes in different pages
+ * On sports pages, its data is about sports 
+ * And on crypto pages it shows data related to crypto items 
+ * 
+ */
 const BetsContainer = ({
   isConnected,
   isMobile,
@@ -19,7 +31,11 @@ const BetsContainer = ({
   setNoSportsBets,
   setNoCryptoBets,
 }) => {
+
+  // Controls toggles for *Bets slip* and *My bets* buttons
   const [toggle, setToggle] = useState(false);
+
+  // Controls toggles for *Single bet* and *Parlay* buttons
   const [toggle2, setToggle2] = useState(false);
   const location = useLocation();
 
@@ -104,7 +120,8 @@ const BetsContainer = ({
         </div>
       </>
     );
-  } // Bets container for sport pages
+  } 
+  // Bets container for crypto pages
   else if (isConnected && location.pathname.startsWith("/crypto")) {
     return (
       <>
@@ -144,7 +161,8 @@ const BetsContainer = ({
                         Make your bank account great again
                       </a>
 
-                      {/* For demonstration purpose only */}
+                      {/****** For demonstration purpose only *******/}
+
 
                       <br />
                       <p
@@ -158,8 +176,9 @@ const BetsContainer = ({
                         </u>
                       </p>
 
-                      {/* For demonstration purpose only */}
-                    </div>
+
+                      {/****** For demonstration purpose only *******/}
+                      </div>
                   </div>
                 </div>
               </>
@@ -378,7 +397,11 @@ const BetsContainer = ({
         </>
       </>
     );
-  } else if (
+
+                
+  } 
+  // Bets container for sport pages
+  else if (
     isConnected &&
     (location.pathname.startsWith("/"))
   ) {
@@ -419,7 +442,7 @@ const BetsContainer = ({
                       Make your bank account great again
                     </a>
 
-                    {/* For demonstration purpose only */}
+                      {/****** For demonstration purpose only *******/}
 
                     <br />
                     <p
@@ -433,8 +456,8 @@ const BetsContainer = ({
                       </u>
                     </p>
 
-                    {/* For demonstration purpose only */}
-                  </div>
+                      {/****** For demonstration purpose only *******/}
+                      </div>
                 </div>
               </div>
             </>
@@ -626,7 +649,7 @@ const BetsContainer = ({
         </div>
       </>
     );
-  } // Bets container for crypto pages
+  }
   else {
     return null;
   }

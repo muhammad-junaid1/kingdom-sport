@@ -3,7 +3,13 @@ import SVGIcons from "./SvgIcons";
 import {NavLink, useLocation} from "react-router-dom";
 import "../css/NavLinks.css";
 
-const NavLinks = ({ isFixed, showBetsOnMobile, setShowBetsOnMobile,setShowBetsContainer, setShowNavbar,setCollapseNavbar, connected }) => {
+/**
+ * 
+ * This component renders the links to different pages (home, leaderboard, crypto, mybets)
+ * It becomes fixed on mobile
+ * 
+ */
+const NavLinks = ({ isFixed, setShowBetsOnMobile,setShowBetsContainer, setShowNavbar,setCollapseNavbar, connected }) => {
   const location = useLocation();
 
   const handleClick = () => {

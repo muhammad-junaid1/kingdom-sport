@@ -4,10 +4,17 @@ import Button from "./Button";
 
 import "../css/Balance.css";
 
+
+/**
+ * 
+ * Renders the balance container in the header.
+ * It contains information about the user (avatar, current balance, id, etc)
+ * 
+ */
 const Balance = ({ id, numbers, avatarImg, setConnected }) => {
   const [toggle, setToggle] = useState(false);
 
-  // For demonstrating empty bets container (example)
+  // Just for demonstrating (example details & disconnect)
   const handleClick = () => {
     setToggle(!toggle);
   };

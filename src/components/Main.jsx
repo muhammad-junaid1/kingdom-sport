@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+
+// Components
 import Navbar from "./Navbar";
 import Header from "./Header";
 import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
-import { Routes, Route, useLocation } from "react-router-dom";
-import "../css/Main.css";
 
 // Pages
 import Homepage from "./pages/Homepage";
@@ -18,25 +18,55 @@ import CryptoNavbar from "./CryptoNavbar";
 import FavNavbar from "./FavNavbar";
 import LiveNavbar from "./LiveNavbar";
 import MyBetsPage from "./pages/MyBetsPage";
-import useMediaQuery from "../useMediaQuery";
 
+// Other imports
+import { Routes, Route, useLocation } from "react-router-dom";
+import useMediaQuery from "../useMediaQuery";
+import "../css/Main.css";
+
+// Contexts
 export const NavbarContext = React.createContext({});
 export const ContentRoutesContext = React.createContext({});
 export const HeaderContext = React.createContext({});
 
 const Main = () => {
+  // Shows/Hides bets container (desktop and above)
   const [showBetsContainer, setShowBetsContainer] = useState(false);
+  // Controls the collapse of navbar (desktop and above)
   const [collapseNavbar, setCollapseNavbar] = useState(false);
+  // Shows/Hides bets container (mobile)
   const [showBetsOnMobile, setShowBetsOnMobile] = useState(false);
+  // Shows/Hides the navbar (mobile)
   const [showNavbar, setShowNavbar] = useState(false);
+  // Sets the type of items on crypto page (active/expired)
   const [cryptoActiveOrExpired, setCryptoActiveOrExpired] = useState("active");
+  // When no bets are selected/taken
+  /**
+   * Initially these states are true, if user selects/takes bets then 
+   * these (or any one of them) are set to false 
+   */
   const [noSportsBets, setNoSportsBets] = useState(true);
   const [noCryptoBets, setNoCryptoBets] = useState(true);
+
+  // Changes the UI based on whether the user is logged in or not
+  /**
+   * Initially it is false, if user logs in then set this state to true
+   */
   const [connected, setConnected] = useState(false);
+
+  // Checks if screen is for small devices (mobile) or not
+  /**
+   * It makes changes to different UI parts and functionalities based on screen size
+   */
   const isMobile = useMediaQuery("(max-width: 500px)");
+
+  // Gets the url and query params
   const { search, pathname } = useLocation();
 
   useEffect(() => {
+    /**
+     * If navbar is opened in mobile, disable the scroll of page (overflow: hidden)
+     */
     if (isMobile && showNavbar) {
       document.body.style.overflow = "hidden";
     } else {
@@ -44,7 +74,7 @@ const Main = () => {
     }
   }, [showNavbar, isMobile]);
 
-  // Get query params
+  // Construct an object of query params
   const params = new URLSearchParams(search);
   let paramObj = {};
   for (var value of params.keys()) {
@@ -54,6 +84,7 @@ const Main = () => {
   return (
     <>
       <div className="main-wrapper">
+      {/* Navbars for different routes (desktop and above) */}
         {!isMobile && (
           <NavbarContext.Provider value={{ setCollapseNavbar }}>
             <Routes>
@@ -115,6 +146,7 @@ const Main = () => {
           </NavbarContext.Provider>
         )}
         <div className="section">
+        {/* Header sections for different routes (desktop and above) */}
           <HeaderContext.Provider
             value={{
               setNoCryptoBets,
@@ -159,6 +191,7 @@ const Main = () => {
             </Routes>
           </HeaderContext.Provider>
           <div className="content-wrapper">
+          {/* Navbars for different routes (mobile) */}
             <div
               className="navbar--mobile"
               style={{
@@ -255,7 +288,7 @@ const Main = () => {
               </NavbarContext.Provider>
             </div>
 
-            {/* ************* */}
+           {/* **************************************************** */}
 
             <div
               className="content"
@@ -264,6 +297,7 @@ const Main = () => {
                 paddingBottom: showNavbar ? "0" : "",
               }}
             >
+            {/* Renders bets container (mobile) */}
               {showBetsOnMobile ? (
                 <BetsContainer
                   isMobile={isMobile}
@@ -277,6 +311,8 @@ const Main = () => {
                   setNoCryptoBets={setNoCryptoBets}
                 />
               ) : (
+                <>
+                {/* Content sections for different routes */}
                 <ContentRoutesContext.Provider
                   value={{ showBetsContainer, isMobile, showBetsOnMobile }}
                 >
@@ -317,9 +353,13 @@ const Main = () => {
                     />
                   </Routes>
                 </ContentRoutesContext.Provider>
+                </>
               )}
             </div>
-            {/* ********** */}
+
+            {/* **************************************************** */}
+
+           {/* Renders bets container (desktop and above) */}
             {showBetsContainer && !isMobile && (
               <BetsContainer
                 isConnected={connected}
@@ -332,6 +372,8 @@ const Main = () => {
             )}
           </div>
         </div>
+
+        {/* Shows fixed-nav (mobile) */}
         {isMobile && !showBetsOnMobile && (
           <NavLinks
             isFixed={true}
@@ -343,7 +385,10 @@ const Main = () => {
           />
         )}
 
-        {/* Button on mobile for showing bets container */}
+        {/* Button on mobile for rendering bets container (mobile)*/}
+        {/**
+            Shows the button on some specific routes/pages
+         */}
         {isMobile &&
           !showBetsOnMobile &&
           (pathname === "/" ||
@@ -366,7 +411,7 @@ const Main = () => {
             </div>
           )}
 
-        {/* set the body background based on page url */}
+        {/* Sets the body background based on page url */}
         {((pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("sport") && !paramObj.hasOwnProperty("tour")) && (
           <>
             <img

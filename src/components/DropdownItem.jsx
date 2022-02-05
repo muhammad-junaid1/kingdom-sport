@@ -1,12 +1,20 @@
 import React, {useRef} from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
+
 import sampleData from "../sampleData";
 import {useLocation} from "react-router-dom";
 
+/** 
+ * 
+ * Renders the dropdown item in navbar
+ * It takes logo of dropdown item, text, etc
+ * 
+*/
 const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, active }) => {
   const dropDownsContainer = useRef();
   
+  // Construct an object of query params
   const {search} = useLocation();
   const toursParams = new URLSearchParams(search);
   let toursParamsObj = {};

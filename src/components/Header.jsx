@@ -1,23 +1,34 @@
 import React, {useContext} from "react";
 import SVGIcons from "./SvgIcons";
-import FullLogo from "../assets/full-logo.png";
-import HalfLogo from "../assets/half-logo.png";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
-import "../css/Header.css"; 
 import Balance from "./Balance";
-import {NavLink} from "react-router-dom";  
-import { HeaderContext } from "./Main";
 
+import {NavLink} from "react-router-dom";  
+import "../css/Header.css"; 
+import { HeaderContext } from "./Main";
+import FullLogo from "../assets/full-logo.png";
+import HalfLogo from "../assets/half-logo.png";
+
+
+/** 
+ * 
+ * Contains the header (upper) part of app
+ * It includes logo, collapse navbar button, account button, toggle button for bets container etc
+ * 
+*/
 const Header = ({
 removeCollapseToggle, isLeaderboard, isMyBets
 }) => {
 
   const {isMobile, showNavbar, setShowNavbar, showBetsContainer, setShowBetsContainer, collapseNavbar, setCollapseNavbar, isConnected, setShowBetsOnMobile, setConnected} = useContext(HeaderContext);
 
+  // Controls the button to toggle bets container
   const handleClick = () => {
     setShowBetsContainer(!showBetsContainer);
   };
+
+  // Controls the button to toggle navbar collapse
   const handleClick2 = () => {
     if(!removeCollapseToggle && !isLeaderboard && !isMyBets) {
       setCollapseNavbar(!collapseNavbar);

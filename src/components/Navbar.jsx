@@ -1,13 +1,14 @@
 import React, { useState, useEffect} from "react";
-import "../css/Navbar.css";
 import SVGIcons from "./SvgIcons";
 import NavbarItem from "./NavbarItem";
 import DropdownItem from "./DropdownItem";
+import SearchInput from "./SearchInput";
+
+import { useLocation, useParams } from "react-router-dom";
+import sampleData from "../sampleData";
+import "../css/Navbar.css";
 import FullLogo from "../assets/full-logo.png";
 import HalfLogo from "../assets/half-logo.png";
-import SearchInput from "./SearchInput";
-import sampleData from "../sampleData";
-import { useLocation, useParams } from "react-router-dom";
 
 const Navbar = ({
   collapse,
@@ -24,19 +25,31 @@ const Navbar = ({
   isFav
 }) => {
   const dropDowns = sampleData.dropDownsData;
+  // Toggle state for dropdown items
   const [toggled, setToggled] = useState(null);
+
+  // Controls checkbox for Crypto nav items
   const [checked, setChecked] = useState("all");
+
+  // Checkboxes for showing/hiding active/expired crypto items
   const [radioForActive, setRadioForActive] = useState(false);
   const [radioForExpired, setRadioForExpired] = useState(false);
+
+  // Capture the input of search input element
   const [input, setInput] = useState("");
+
+  // Get the url and query params
   const { search, pathname } = useLocation();
+
+  // 
   const { coin } = useParams();
 
-  // Search input
+  // Handle the search input
   const handleInput = (e) => {
         setInput(e.target.value);
 }
 
+  // Construct an object of query params
   const params = new URLSearchParams(search);
   let paramObj = {};
   for (var value of params.keys()) {

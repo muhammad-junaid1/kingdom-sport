@@ -2,6 +2,11 @@ import React from "react";
 import SVGIcons from "../../SvgIcons";
 import "../css/Totals.css";
 
+/**
+ * 
+ * This component renders the totals item in leaderboard page
+ * 
+ */
 const Totals = ({Icon, headline, numbersText, increase}) => {
   return (
     <>

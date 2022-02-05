@@ -1,6 +1,12 @@
 import React from 'react';
 import MatchWinner from './MatchWinner';
 
+/**
+ * 
+ * Used in bets container
+ * Shows the collection of match winner blocks/items
+ * 
+ */
 const MatchWinnersList = ({Icon, sport, winnersData}) => {
     return (
         <>

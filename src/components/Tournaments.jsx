@@ -57,6 +57,8 @@ const Tournaments = ({ allTours }) => {
   }
 
   useEffect(()=>{
+
+    // Reset on re-render
     setAllToursData(allTours);
     setAllSearchInput("");
     setFiltersToShow([1]);

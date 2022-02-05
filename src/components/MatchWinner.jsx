@@ -1,6 +1,11 @@
 import React from 'react';
 import SVGIcons from "./SvgIcons";
 
+/**
+ * 
+ * Sub component used in bets container for showing the winner of helded match
+ * 
+ */
 const MatchWinner = ({team1, team2, winner, activity, noDeleteIcon, footerRightAlign, loseBet, notBet, crypto}) => {
     if(!crypto) {
     return (

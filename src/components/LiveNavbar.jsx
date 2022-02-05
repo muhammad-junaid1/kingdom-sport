@@ -2,6 +2,12 @@ import React from 'react';
 import Navbar from "./Navbar";
 import sampleData from "../sampleData";
 
+/**
+ * 
+ * This component renders the navbar for live page
+ * containing only live data
+ * 
+ */
 const LiveNavbar = ({isMobile, forMobile, showNavbar}) => {
     return (
         <>

@@ -2,6 +2,12 @@ import React from 'react';
 import Navbar from "./Navbar";
 import sampleData from "../sampleData";
 
+/**
+ * 
+ * This component renders the navbar for favourites page
+ * containing only fav data
+ * 
+ */
 const FavNavbar = ({isMobile, forMobile, showNavbar, collapse}) => {
     return (
         <>

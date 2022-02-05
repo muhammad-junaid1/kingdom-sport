@@ -3,6 +3,13 @@ import MatchWinner from "./MatchWinner";
 import SVGIcons from "./SvgIcons";
 import sampleData from "../sampleData";
 
+/**
+ * 
+ * This component is rendered when *My bets* button is toggled on (in bets container)
+ * This also changes the content/styles based whether item/items are settled or not
+ * It also defines the UI, depending on if the bet is lost or won
+ * 
+ */
 const MyBets = ({
   id,
   date,
