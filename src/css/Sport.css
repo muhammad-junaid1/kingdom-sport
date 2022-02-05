@@ -118,18 +118,43 @@
 
 @media all and (max-width: 500px) {
 
-    .sport__header-tabs , .sport__header{
+    .sport__header-tabs{
         overflow-x: scroll;
+        margin-bottom: 10px;
     }
     .sport__header-tabs{
         display: block;
     }
-    .sport__header::-webkit-scrollbar, .sport__header-tabs::-webkit-scrollbar {
+
+    .sport__header-tabs::-webkit-scrollbar {
+        height: 2px;
+        border-radius: 15px;
+      }
+      
+      .sport__header-tabs::-webkit-scrollbar-track{
+        background: transparent;
+      }
+      
+      .sport__header-tabs::-webkit-scrollbar-thumb {
+        background: var(--violet6);
+      }
+      
+      .sport__header-tabs::-webkit-scrollbar-thumb:hover {
+        background: var(--violet6);
+      }
+
+    .sport__header {
+        padding: 1rem 0;
+    }
+    .sport__header::-webkit-scrollbar {
         display: none;
     }
     .sport__header button  {
         min-width: max-content;
         margin: 0 1rem;
+    }
+    .react-datepicker-wrapper{
+        margin-left: 10px;
     }
 
     .react-datepicker{
