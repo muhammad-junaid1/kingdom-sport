@@ -1,11 +1,12 @@
 import React,{useState, useEffect} from "react";
 import SVGIcons from "./SvgIcons";
 
-const ToursFilterOption = ({ filterDetails, isChecked, filters, setFilters }) => {
-    const [activeFilterOption, setActiveFilterOption] = useState(isChecked);
+const ToursFilterOption = ({ filterDetails, isChecked, filters, setFilters, setToggleOptions }) => {
+    const [activeFilterOption, setActiveFilterOption] = useState(false);
     const handleToggle = () => {
-        if(activeFilterOption) {
-            setFilters((filtersArr) => filtersArr.filter((f) => f !== filterDetails.filterId));
+      setToggleOptions(false);
+        if(isChecked) {
+            setFilters(filters.filter((f) => f !== filterDetails.filterId));
         } else {
             setFilters([filterDetails.filterId, ...filters]);
         }
@@ -20,17 +21,17 @@ const ToursFilterOption = ({ filterDetails, isChecked, filters, setFilters }) =>
           type="checkbox"
           name={filterDetails.filter}
           value={filterDetails.filter}
-          checked={activeFilterOption}
+          checked={isChecked}
         />
         <div
           className={`radio-icon${
-            activeFilterOption ? " filter-checkbox-active" : ""
+            isChecked ? " filter-checkbox-active" : ""
           }`}
         >
           <div
             className="filter-checkbox-active-inner"
             style={{
-              display: activeFilterOption ? "block" : "none",
+              display: isChecked ? "block" : "none",
             }}
           >
            <SVGIcons.TickSquare color="#743EE8"/>

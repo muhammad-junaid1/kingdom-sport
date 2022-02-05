@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TournamentsItem from "./TournamentsItem";
 import SearchInput from "./SearchInput";
 import SVGIcons from "./SvgIcons";
@@ -8,13 +8,13 @@ import ToursFilterOption from "./ToursFilterOption";
 import sampleData from "../sampleData";
 
 const Tournaments = ({ allTours }) => {
-  const [filters, setFilters] = useState([1]);
+  const [filtersToShow, setFiltersToShow] = useState([1]);
   const [toggleOptions, setToggleOptions] = useState(false);
   const [filterSearchVal, setFilterSearchVal] = useState("");
   const fetchFiltersData = sampleData.toursFilters.filter((filter) =>
-    filters.includes(filter.filterId)
+    filtersToShow.includes(filter.filterId)
   );
-  const [allToursFilters, setAllToursFilters] = useState([]);
+  const [allToursFilters, setAllToursFilters] = useState(sampleData.toursFilters);
   const handleToggle = () => {
     setToggleOptions(!toggleOptions);
   };
@@ -29,17 +29,17 @@ const Tournaments = ({ allTours }) => {
   }
 
   const handleInput = (e) => {
-      setFilterSearchVal(e.target.value);
       if(e.target.value === "") {
         setAllToursFilters(sampleData.toursFilters);
       } else {
-          setAllToursFilters(sampleData.toursFilters.filter((f) => f.filter.toLowerCase().indexOf(filterSearchVal.toLowerCase()) !== -1));
+          setAllToursFilters(sampleData.toursFilters.filter((f) => f.filter.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1));
       }
+      setFilterSearchVal(e.target.value);
   }
 
-  useEffect(() => {
-    setAllToursFilters(sampleData.toursFilters);
-  }, []);
+  // useEffect(() => {
+  //   setAllToursFilters(sampleData.toursFilters);
+  // }, []);
   return (
     <>
       <div className="tournaments">
@@ -50,7 +50,7 @@ const Tournaments = ({ allTours }) => {
                 <div className="select-wrapper" onClick={handleToggle}>
                   <div className="left">
                     <SVGIcons.Filter />
-                    {filters.length !== 0 ? (
+                    {filtersToShow.length !== 0 ? (
                       <p>
                         {fetchFiltersData
                           .slice(0, 2)
@@ -85,9 +85,10 @@ const Tournaments = ({ allTours }) => {
                           <>
                             <ToursFilterOption
                               filterDetails={f}
-                              filters={filters}
-                              setFilters={setFilters}
-                              isChecked={filters.includes(f.filterId)}
+                              filters={filtersToShow}
+                              setFilters={setFiltersToShow}
+                              isChecked={filtersToShow.includes(f.filterId)}
+                              setToggleOptions={setToggleOptions}
                             />
                             <hr />
                           </>
@@ -106,11 +107,11 @@ const Tournaments = ({ allTours }) => {
         </div>
         <div
           className="tournaments__body"
-          style={{ height: filters.length <= 1 ? "40rem" : "" }}
+          style={{ height: filtersToShow.length <= 1 ? "40rem" : "" }}
         >
-          {filters.length !== 0 ? (
+          {filtersToShow.length !== 0 ? (
             [
-              filters.map((currFilterId) => {
+              filtersToShow.map((currFilterId) => {
                 return (
                   <div className="tour-items">
                     <div className="tour-filter">
