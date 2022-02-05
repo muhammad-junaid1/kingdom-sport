@@ -274,7 +274,7 @@ const Main = () => {
                   value={{ showBetsContainer, isMobile, showBetsOnMobile}}
                 >
                   <Routes>
-                    <Route path="/" element={<Homepage />} />
+                    <Route path="/" element={<Homepage showBetsContainer={showBetsContainer}/>} />
                     <Route
                       path="/live"
                       element={<Live showBetsContainer={showBetsContainer} />}

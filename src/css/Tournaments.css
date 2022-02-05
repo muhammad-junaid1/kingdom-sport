@@ -4,6 +4,10 @@
   margin-bottom: 1.2rem;
 }
 
+.tournaments__body {
+  min-height: 30rem;
+}
+
 .filters__container {
   display: flex;
   align-items: center;

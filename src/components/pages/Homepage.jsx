@@ -7,8 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useLocation} from "react-router-dom";
 import Sport from "../Sport";
+import TourPage from "../TourPage";
 
-const Homepage = () => {
+const Homepage = ({showBetsContainer}) => {
     const {search} = useLocation();
     const [allParams, setAllParams] = useState({});
 
@@ -21,6 +22,13 @@ const Homepage = () => {
          setAllParams(paramObj);
      }, [search]);
   return (
+    <>
+    {/* For tours page */}
+    {allParams.tour && <TourPage showBetsContainer={showBetsContainer} tourId={allParams.tour} sportName={allParams.sport}/>}
+
+
+  {/* For specific sport */}
+    {!allParams.tour &&
     <div className="home">
       <div className="slider__wrapper">
         <Slider
@@ -81,6 +89,8 @@ const Homepage = () => {
       : <Sport sportName={allParams.sport} page="home"/>}
       </div>
     </div>
+    }
+    </>
   );
 };
 

@@ -112,6 +112,10 @@
     cursor: pointer;;
 }
 
+.sport__body {
+    min-height: 30rem;
+}
+
 @media all and (max-width: 500px) {
 
     .sport__header-tabs , .sport__header{

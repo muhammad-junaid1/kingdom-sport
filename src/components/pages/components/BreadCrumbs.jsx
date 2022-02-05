@@ -4,7 +4,7 @@ const styles = {
     breadCrumbs: {
         display: "flex",
         alignItems: "center",
-        fontSize: "1.2rem"
+        fontSize: "1.4rem"
     },
     span: {
         margin: "0 1.8rem"

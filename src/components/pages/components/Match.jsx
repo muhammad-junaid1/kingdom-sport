@@ -5,7 +5,7 @@ import SVGIcons from "../../SvgIcons";
 import MatchDetails from "./MatchDetails";
 import sampleData from "../../../sampleData";
 
-const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage, isTour}) => {
+const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage, isTour, withoutHeader}) => {
   const FavIcon = SVGIcons["Heart"];
   const [isFav, setIsFav] = useState(false);
 
@@ -19,6 +19,7 @@ const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage,
   return (
     <>
       <div className="match">
+      {!withoutHeader &&
         <div className="match__header">
           <p>
           {isTour &&
@@ -33,6 +34,7 @@ const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage,
           {isTour && <Button type="primary" color="grey" size="small">See more</Button>
 }
         </div>
+      }
         <div className="match__body">
           <table cellSpacing={0}>
             <thead>
@@ -44,7 +46,7 @@ const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage,
             </thead>
             <tbody>
               {data.map((d, index) => {
-                  return <MatchDetails isTour={isTour} data={d} isLive={isLive && true} highlightScores={isLive ? (index === 0 ? true : false) : false}/>
+                  return <MatchDetails withoutHeader={withoutHeader} isTour={isTour} data={d} isLive={isLive && true} highlightScores={isLive ? (index === 0 ? true : false) : false}/>
               })}
             </tbody>
           </table>

@@ -127,9 +127,7 @@ const Tournaments = ({ allTours }) => {
           </div>
         </div>
         <div
-          className="tournaments__body"
-          style={{ height: filtersToShow.length <= 1 ? "40rem" : "" }}
-        >
+          className="tournaments__body">
           {filtersToShow.length !== 0 ? (
             [
               filtersToShow.map((currFilterId) => {

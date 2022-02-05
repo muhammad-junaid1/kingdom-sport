@@ -18,7 +18,9 @@ const Sport = ({ sportName, page }) => {
   const prematchData = sampleData.preMatches.filter(
     (item) => item.text.toLowerCase() === sportName.toLowerCase()
   );
-  const allTours = sampleData.allTours.filter((item) => item.sport.toLowerCase() === sportName.toLowerCase());
+  const allTours = sampleData.allTours.filter(
+    (item) => item.sport.toLowerCase() === sportName.toLowerCase()
+  );
 
   const handleClick = (e, tab) => {
     setCurrTab(tab);
@@ -133,85 +135,115 @@ const Sport = ({ sportName, page }) => {
 
         <div className="sport__body-container">
           <div className="sport__body">
+            {/* If date is selected, then show the items related to that date, otherwise show all */}
             {currTab === "live" && [
-              liveData.map((item) => {
-                return (
+              [
+                startDate ? (
                   <>
-                    {page === "home"
-                      ? [
-                          item.tours.map((tour) => {
-                            return (
-                              <Match
-                                isLive={tour.isLive}
-                                data={tour.matchData}
-                                tourId={tour.id}
-                                tourName={tour.name}
-                                tourIcon={tour.icon}
-                                isTour={true}
-                              />
-                            );
-                          }),
-                        ]
-                      : [
-                          item.tours
-                            .filter((t) => t.isFav === true)
-                            .map((tour) => {
-                              return (
-                                <Match
-                                  isLive={tour.isLive}
-                                  data={tour.matchData}
-                                  tourId={tour.id}
-                                  tourName={tour.name}
-                                  tourIcon={tour.icon}
-                                  isTour={true}
-                                  isFavPage={true}
-                                />
-                              );
-                            }),
-                        ]}
+                    <h3>Live items with date ({new Date(startDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}) here..</h3>
                   </>
-                );
-              }),
+                ) : (
+                  [
+                    liveData.map((item) => {
+                      return (
+                        <>
+                          {page === "home"
+                            ? [
+                                item.tours.map((tour) => {
+                                  return (
+                                    <Match
+                                      isLive={tour.isLive}
+                                      data={tour.matchData}
+                                      tourId={tour.id}
+                                      tourName={tour.name}
+                                      tourIcon={tour.icon}
+                                      isTour={true}
+                                    />
+                                  );
+                                }),
+                              ]
+                            : [
+                                item.tours
+                                  .filter((t) => t.isFav === true)
+                                  .map((tour) => {
+                                    return (
+                                      <Match
+                                        isLive={tour.isLive}
+                                        data={tour.matchData}
+                                        tourId={tour.id}
+                                        tourName={tour.name}
+                                        tourIcon={tour.icon}
+                                        isTour={true}
+                                        isFavPage={true}
+                                      />
+                                    );
+                                  }),
+                              ]}
+                        </>
+                      );
+                    }),
+                  ]
+                ),
+              ],
             ]}
 
-            {currTab === "tours" && <Tournaments allTours={allTours}/>}
+            {currTab === "tours" && <Tournaments allTours={allTours} />}
+
             {currTab === "prematch" && [
-              prematchData.map((item) => {
-                return (
+                /* If date is selected, then show the items related to that date, otherwise show all */
+              [
+                startDate ? (
                   <>
-                    {page === "home"
-                      ? [
-                          item.tours.map((tour) => {
-                            return (
-                              <Match
-                                data={tour.matchData}
-                                tourId={tour.id}
-                                tourName={tour.name}
-                                tourIcon={tour.icon}
-                                isTour={true}
-                              />
-                            );
-                          }),
-                        ]
-                      : [
-                          item.tours
-                            .filter((t) => t.isFav === true)
-                            .map((tour) => {
-                              return (
-                                <Match
-                                  data={tour.matchData}
-                                  tourId={tour.id}
-                                  tourName={tour.name}
-                                  tourIcon={tour.icon}
-                                  isTour={true}
-                                  isFavPage={true}
-                                />
-                              );
-                            }),
-                        ]}
+                    <h3>Prematch items with date ({new Date(startDate).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}) here..</h3>
                   </>
-                );
-              }),
+                ) :
+                  [
+                    prematchData.map((item) => {
+                      return (
+                        <>
+                          {page === "home"
+                            ? [
+                                item.tours.map((tour) => {
+                                  return (
+                                    <Match
+                                      data={tour.matchData}
+                                      tourId={tour.id}
+                                      tourName={tour.name}
+                                      tourIcon={tour.icon}
+                                      isTour={true}
+                                    />
+                                  );
+                                }),
+                              ]
+                            : [
+                                item.tours
+                                  .filter((t) => t.isFav === true)
+                                  .map((tour) => {
+                                    return (
+                                      <Match
+                                        data={tour.matchData}
+                                        tourId={tour.id}
+                                        tourName={tour.name}
+                                        tourIcon={tour.icon}
+                                        isTour={true}
+                                        isFavPage={true}
+                                      />
+                                    );
+                                  }),
+                              ]}
+                        </>
+                      );
+                    }),
+                  ]
+              ],
             ]}
           </div>
         </div>
