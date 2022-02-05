@@ -45,3 +45,6 @@
 .match__body tbody tr:nth-child(even) {
     background: var(--grey6);
 }
+.match__body tbody tr:nth-child(odd) {
+    background: var(--page-bg);
+}

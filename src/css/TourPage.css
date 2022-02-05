@@ -28,7 +28,9 @@
 }
 
 .tour-item__headline {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .tour-page__item {
@@ -38,5 +40,17 @@
 @media all and (max-width: 500px) {
     .tour-page {
         width: 100% !important;
+    }
+    .tour-page__info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tour-page__info .left, .tour-page__info .right {
+        width: 100%;
+    }
+
+    .tour-page__info .right {
+        margin-top: 15px;
     }
 }

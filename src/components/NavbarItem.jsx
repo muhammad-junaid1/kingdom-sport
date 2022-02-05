@@ -318,15 +318,8 @@ const NavbarItem = ({
                 isDropDown ? " navbar__item--dropdown" : ""
               }${activeTour ? " active-navbar-item" : ""}`}
               onClick={
-                isDropDown && !collapse
-                  ? () => {
-                      onToggle();
-                      hideNavbarOnToggleSportItems();
-                    }
-                  : isDropDown
-                  ? onToggleAndCollapse
-                  : handleLiveItem
-              }
+                !collapse && (() => {hideNavbarOnToggleSportItems();})
+                }
             >
               {!collapse && (
                 <>

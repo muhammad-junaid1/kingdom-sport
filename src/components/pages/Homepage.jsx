@@ -9,7 +9,7 @@ import {useLocation} from "react-router-dom";
 import Sport from "../Sport";
 import TourPage from "../TourPage";
 
-const Homepage = ({showBetsContainer}) => {
+const Homepage = () => {
     const {search} = useLocation();
     const [allParams, setAllParams] = useState({});
 
@@ -24,7 +24,7 @@ const Homepage = ({showBetsContainer}) => {
   return (
     <>
     {/* For tours page */}
-    {allParams.tour && <TourPage showBetsContainer={showBetsContainer} tourId={allParams.tour} sportName={allParams.sport}/>}
+    {allParams.tour && <TourPage tourId={allParams.tour} sportName={allParams.sport}/>}
 
 
   {/* For specific sport */}

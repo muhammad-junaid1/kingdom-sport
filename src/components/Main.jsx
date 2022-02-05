@@ -33,8 +33,8 @@ const Main = () => {
   const [noSportsBets, setNoSportsBets] = useState(true);
   const [noCryptoBets, setNoCryptoBets] = useState(true);
   const [connected, setConnected] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 500px)')
-  const { pathname } = useLocation();
+  const isMobile = useMediaQuery("(max-width: 500px)");
+  const { search, pathname } = useLocation();
 
   useEffect(() => {
     if (isMobile && showNavbar) {
@@ -43,6 +43,13 @@ const Main = () => {
       document.body.style.overflow = "";
     }
   }, [showNavbar, isMobile]);
+
+  // Get query params
+  const params = new URLSearchParams(search);
+  let paramObj = {};
+  for (var value of params.keys()) {
+    paramObj[value] = params.get(value);
+  }
 
   return (
     <>
@@ -126,7 +133,7 @@ const Main = () => {
           >
             <Routes>
               <Route path="/" element={<Header />} />
-              <Route path="/favourites" element={<Header/>} />
+              <Route path="/favourites" element={<Header />} />
               <Route
                 path="/live"
                 element={<Header removeCollapseToggle={true} />}
@@ -271,10 +278,10 @@ const Main = () => {
                 />
               ) : (
                 <ContentRoutesContext.Provider
-                  value={{ showBetsContainer, isMobile, showBetsOnMobile}}
+                  value={{ showBetsContainer, isMobile, showBetsOnMobile }}
                 >
                   <Routes>
-                    <Route path="/" element={<Homepage showBetsContainer={showBetsContainer}/>} />
+                    <Route path="/" element={<Homepage />} />
                     <Route
                       path="/live"
                       element={<Live showBetsContainer={showBetsContainer} />}
@@ -358,6 +365,22 @@ const Main = () => {
               </div>
             </div>
           )}
+
+        {/* set the body background based on page url */}
+        {((pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("sport") && !paramObj.hasOwnProperty("tour")) && (
+          <>
+            <img
+              className="page-bg"
+              src={require(`../assets/page-backgrounds/football-page-bg.png`)}
+              alt=""
+            />
+            {/* Use this line to add bg images dynamically by getting sport name from url and then fetching the image with same name from assets */}
+            {/* <img className="page-bg" src={require(`../assets/page-backgrounds/${paramObj.sport}-page-bg.png`)} alt="" /> */}
+          </>
+        )}
+        {(pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("tour") && (
+         <img className="page-bg" src={require(`../assets/page-backgrounds/tour-page-bg.png`)} alt="" />
+        )}
       </div>
     </>
   );

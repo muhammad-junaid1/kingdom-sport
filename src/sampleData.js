@@ -706,8 +706,8 @@ const data = {
           matchData: [
             {
               team: {
-                left: { name: "Chulalongkorn University", icon: "logo", score: 2 },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+                left: { name: "Napoli", icon: "logo", score: 2 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
               ratios: [["1x", 1.91],
@@ -722,8 +722,8 @@ const data = {
             },
             {
               team: {
-                left: { name: "Chulalongkorn University", icon: "logo", score: 3 },
-                right: { name: "University Bangkok", icon: "logo1", score: 2 },
+                left: { name: "Napoli", icon: "logo", score: 3 },
+                right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
               ratios: [],
@@ -781,7 +781,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 1 },
         right: { name: "Leicester City", icon: "logo1", score: 4 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: {id: 1, icon: "logo", name: "Premier League" },
       time: [4, 83],
       ratios: [],
     },
@@ -790,7 +790,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 1, icon: "logo", name: "Premier League" },
       time: [4, 81],
       ratios: [
         ["1x", 1.91],
@@ -812,7 +812,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 1 },
         right: { name: "Leicester City", icon: "logo1", score: 4 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 1, icon: "logo", name: "Premier League" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],
@@ -832,7 +832,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 1,icon: "logo", name: "Premier League" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],
@@ -851,7 +851,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 2, icon: "logo-1", name: "Laliga" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],
@@ -870,7 +870,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 2, icon: "logo-1", name: "Laliga" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],
@@ -889,7 +889,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
+      tour: { id: 1, icon: "logo", name: "Premier League" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],

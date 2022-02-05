@@ -96,8 +96,8 @@
 }
 
 .navbar__dropdown-items .navbar__item {
-    padding: 12px 10px 12px 20px;
-    margin-bottom: 1px;
+    padding: 11px 10px 11px 20px;
+    margin: 1px 0;
 }
 
 .navbar__dropdown-items .navbar__item p {

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useLocation } from "react-router-dom";
 import Sport from "../Sport";
+import TourPage from "../TourPage";
 
 const Favourites = () => {
   const renderSlides = () =>
@@ -33,6 +34,11 @@ const Favourites = () => {
 
   return (
     <>
+    {/* For tours page */}
+    {allParams.tour && <TourPage tourId={allParams.tour} sportName={allParams.sport}/>}
+
+    {/* For specific sport */}
+    {!allParams.tour &&
       <div className="favourites">
         <div className="slider__wrapper">
           <Slider
@@ -90,6 +96,7 @@ const Favourites = () => {
         )}
       </div>
       </div>
+    }
     </>
   );
 };
