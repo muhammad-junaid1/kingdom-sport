@@ -16,9 +16,6 @@
     padding: 10px 20px 10px 5px;
 }
 
-.home, .favourites, .live-matches, .crypto, .leaderboard {
-    padding-bottom: 10.0rem;
-}
 
 .show-hide-bets-container {
     display: inline-block;
@@ -74,7 +71,7 @@
     
     .content {
         min-width: 100%;
-        padding: 10px 15px 15px 15px;
+        padding: 10px 15px 20rem 15px;
     }
 
     .live-matches {

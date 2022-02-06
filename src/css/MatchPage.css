@@ -102,8 +102,7 @@
 @media all and (max-width: 500px) {
     .match-page{
         width: 100% !important;
-        padding-bottom: 23rem;
-    }
+   }
     .match-page .accordion{
         width: 100% !important;
     }

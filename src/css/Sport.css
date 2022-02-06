@@ -112,7 +112,7 @@
 }
 
 .sport__body {
-    min-height: 30rem;
+    min-height: 35rem;
 }
 
 @media all and (max-width: 500px) {

@@ -44,7 +44,6 @@
 @media all and (max-width: 500px) {
     .tour-page {
         width: 100% !important;
-        padding-bottom: 130px;
     }
     .tour-page__info {
         flex-direction: column;

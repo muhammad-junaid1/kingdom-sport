@@ -156,9 +156,6 @@
 }
 
 @media all and (max-width: 500px) {
-    .home {
-        padding-bottom: 16rem;
-    }
     .slide__container {
         min-width: auto;
     }
