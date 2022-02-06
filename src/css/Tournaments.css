@@ -4,7 +4,7 @@
 }
 
 .tournaments__body {
-  min-height: 30rem;
+  min-height: 40rem;
 }
 
 .filters__container {
@@ -198,7 +198,7 @@
   }
 
   .filters__search, .filters__search .input-wrapper, .filters__search button, .filters__select{
-    width: 100%;
+    width: 100% !important;
   }
   .filters__search, .filters__search button{
     margin: 0 !important;

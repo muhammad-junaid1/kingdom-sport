@@ -65,7 +65,7 @@ removeCollapseToggle, isLeaderboard, isMyBets
            : <>
 
            <Balance id="0xe1B233535...5c00" numbers="676.00 BCR" avatarImg="avatar" setConnected={setConnected}/>
-           {!isMobile && <NavLink className="mybets-page-link" to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
+           {!isMobile && <NavLink onClick={() => setShowBetsContainer(false)} className="mybets-page-link" to="/my-bets"><Button type="secondary" color="green"><SVGIcons.Bets2 color="white"/> My bets</Button></NavLink>}</>
           }
   
             {!isMobile ? [

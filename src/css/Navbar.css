@@ -1,7 +1,7 @@
 
 /* Navbar */
 .navbar {
-    padding-right: 1.2rem;
+    padding-right: .8rem;
     margin-bottom: 2.0rem;
     color: white;
 }
@@ -99,6 +99,10 @@
 .navbar__dropdown-items .navbar__item p {
     color: #ffffffde;
     font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
 }
 
 

@@ -43,7 +43,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
               <NavbarItem
                 isDropDown={false}
                 dropDownIcon={item.icon}
-                text={`${item.text.length > 15 ? `${item.text.slice(0, 15)}..` : item.text}`}
+                text={item.text}
                 number={item.numbers}
                 tourId={item.id}
                 collapse={collapse}

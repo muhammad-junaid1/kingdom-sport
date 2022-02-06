@@ -118,7 +118,6 @@
 @media all and (max-width: 500px) {
 
     .sport__header-tabs{
-        /* overflow-x: scroll; */
         margin-bottom: 10px;
     }
     .sport__header-tabs{

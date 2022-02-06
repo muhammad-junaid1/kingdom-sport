@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import BreadCrumbs from "./pages/components/BreadCrumbs";
 import SVGIcons from "./SvgIcons";
+import Button from './Button';
 import {useLocation} from "react-router-dom";
+import sampleData from "../sampleData";
+import UpcomingMatchAccordion from "./UpcomingMatchAccordion";
 import "../css/MatchPage.css";
 
 /**
@@ -21,6 +24,11 @@ const MatchPage = ({showBetsContainer}) => {
     // Here, we'll store the match data after querying from db
     const [samplePreMatchData, setSamplePreMatchData] = useState();
     const [sampleLiveData, setSampleLiveData] = useState();
+
+    // Tab buttons
+    const tabBtns = ["All markets", "Winner", "Tool", "Handicap", "Correct score", "Yellow cards", "Fouls", "Corners", "Others"];
+    const [activeBtn, setActiveBtn] = useState("All markets");
+    const accordions = sampleData.accordions;
 
     const {search, pathname} = useLocation();
 
@@ -53,9 +61,28 @@ const MatchPage = ({showBetsContainer}) => {
             <div className="right">
                 Match Details
             </div>
-        </> : <h1>Prematch</h1>}
+        </> :
+        <div className="prematch-details">
+                Prematch
+        </div>
+        }
 
         </div>
+        </div>
+
+        <div className="match-page__body">
+        <div className="match-page__tabs-container">
+            <div className="match-page__tabs">
+                {tabBtns.map((btn) => {
+                    return <Button {...((activeBtn===btn) && {type: "primary"})} size="small" onClick={() => setActiveBtn(btn)}>{btn}</Button>
+                })}
+            </div>
+            </div>
+            <div className="match-page__accordions">
+                    {accordions.map((a, index) => {
+                        return <UpcomingMatchAccordion title={a.text} items={a.items} {...(index > 1 ? {halfWidth: true} : null)}/>
+                    })}
+            </div>
         </div>
             </div>
         </>

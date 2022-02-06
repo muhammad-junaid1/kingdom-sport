@@ -1,4 +1,8 @@
 
+.match-page {
+    padding-bottom: 60px;
+}
+
 .match-page__header{
     margin-top: 3rem;
 }
@@ -7,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 27rem;
 }
 
 .match-page__header-content .left, .match-page__header-content .right {
@@ -14,7 +19,7 @@
     background-position: center;
     width: 49%;
     border-radius: 10px;
-    height: 27rem;
+    height: 100%;
 }
 
 .match-page__header-content .left {
@@ -43,18 +48,81 @@
     align-items: center;
 } 
 
+.match-page__header-content .prematch-details {
+    background-image: url("../assets/match-page-prematch-bg.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.match-page__tabs{
+    margin: 2rem 0;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--grey6);
+    display: flex;
+    overflow-x: scroll;
+}
+
+.match-page__tabs::-webkit-scrollbar {
+    height: 1px;
+    border-radius: 15px;
+  }
+  
+  .match-page__tabs::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  .match-page__tabs::-webkit-scrollbar-thumb {
+    background: var(--violet6);
+  }
+  
+  .match-page__tabs::-webkit-scrollbar-thumb:hover {
+    background: var(--violet6);
+  }
+
+.match-page__tabs button {
+    border-radius: 3px;
+    margin-right: .8rem;
+    min-width: max-content;
+}
+
+.match-page__accordions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
 @media all and (max-width: 500px) {
     .match-page{
         width: 100% !important;
+        padding-bottom: 23rem;
     }
+    .match-page .accordion{
+        width: 100% !important;
+    }
+    .accordion:nth-child(1) .accordion__item, .accordion:nth-child(2) .accordion__item{
+        flex-direction: column;
+    }
+
+    .accordion:nth-child(1) .accordion__item p, .accordion:nth-child(2) .accordion__item p{
+        white-space: pre-wrap;
+        width: 100%;
+        text-align: center;
+        word-break: break-all;
+        margin-bottom: 5px;
+    }
+
     .match-page__header-content .left{
         display: none;
     }
     .match-page__header-content .right{
-        width: 100%;
-        position: absolute;
-        top:23%;
-        left: 0;
         width: 100%;
     }
 }

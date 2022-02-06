@@ -38,41 +38,31 @@ const data = {
       icon: "Soccer",
       text: "Football",
       number: 34,
-      dropdownItems: [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-      ],
+      dropdownItems: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
     {
       icon: "Basketball",
       text: "Basketball",
       number: 34,
-      dropdownItems: [
-        11, 12
-      ],
+      dropdownItems: [11, 12],
     },
     {
       icon: "MMA",
       text: "MMA",
       number: 34,
-      dropdownItems: [
-        13
-      ],
+      dropdownItems: [13],
     },
     {
       icon: "Tennis",
       text: "Tennis",
       number: 34,
-      dropdownItems: [
-        14, 15
-      ],
+      dropdownItems: [14, 15],
     },
     {
       icon: "Icehockey",
       text: "Icehockey",
       number: 34,
-      dropdownItems: [
-        16
-      ],
+      dropdownItems: [16],
     },
   ],
 
@@ -82,17 +72,13 @@ const data = {
       icon: "Soccer",
       text: "Football",
       number: 34,
-      dropdownItems: [
-        1
-      ],
+      dropdownItems: [1],
     },
-        {
+    {
       icon: "Tennis",
       text: "Tennis",
       number: 34,
-      dropdownItems: [
-        15
-      ],
+      dropdownItems: [15],
     },
   ],
   // Used in bets container
@@ -261,43 +247,43 @@ const data = {
   ],
 
   // All filters/countries for tours
-   toursFilters : [
-     {
+  toursFilters: [
+    {
       filterId: 1,
       filter: "international",
-      icon: "international"
-     },
-     {
+      icon: "international",
+    },
+    {
       filterId: 2,
       filter: "algeria",
-      icon: "algeria"
-     },
-     {
+      icon: "algeria",
+    },
+    {
       filterId: 3,
       filter: "australia",
-      icon: "australia"
-     },
-     {
+      icon: "australia",
+    },
+    {
       filterId: 4,
       filter: "belgium",
-      icon: "belgium"
-     },
-     {
+      icon: "belgium",
+    },
+    {
       filterId: 5,
       filter: "brazil",
-      icon: "australia"
-     },
-     {
+      icon: "australia",
+    },
+    {
       filterId: 6,
       filter: "hongkong",
-      icon: "algeria"
-     },
-     {
+      icon: "algeria",
+    },
+    {
       filterId: 7,
       filter: "italy",
-      icon: "belgium"
-     },
-   ],
+      icon: "belgium",
+    },
+  ],
 
   // All tournaments
   allTours: [
@@ -309,7 +295,7 @@ const data = {
       isFav: true,
       filterId: 1,
       filter: "international",
-      numbers: 18
+      numbers: 18,
     },
     {
       id: 2,
@@ -319,7 +305,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 23
+      numbers: 23,
     },
     {
       id: 3,
@@ -327,9 +313,9 @@ const data = {
       text: "UEFA Europa",
       icon: "logo",
       isFav: false,
-     filterId: 1,
-    filter: "International",
-      numbers: 1
+      filterId: 1,
+      filter: "International",
+      numbers: 1,
     },
     {
       id: 5,
@@ -339,7 +325,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 62
+      numbers: 62,
     },
     {
       id: 9,
@@ -350,7 +336,7 @@ const data = {
       international: false,
       filterId: 2,
       filter: "algeria",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 10,
@@ -361,7 +347,7 @@ const data = {
       international: false,
       filterId: 2,
       filter: "algeria",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 11,
@@ -371,7 +357,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 12,
@@ -381,7 +367,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 13,
@@ -391,7 +377,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 14,
@@ -401,7 +387,7 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 15,
@@ -411,7 +397,7 @@ const data = {
       isFav: true,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
     {
       id: 16,
@@ -421,11 +407,9 @@ const data = {
       isFav: false,
       filterId: 1,
       filter: "international",
-      numbers: 51
+      numbers: 51,
     },
-    
-  ]
-,
+  ],
   // Used for all favourite items on fav page
   favItemsData: [
     {
@@ -579,7 +563,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      },
+        },
         {
           id: 2,
           name: "Laliga",
@@ -613,7 +597,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      },
+        },
       ],
     },
     {
@@ -653,7 +637,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      },
+        },
         {
           id: 12,
           name: "World Basketball",
@@ -687,7 +671,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      },
+        },
       ],
     },
   ],
@@ -710,15 +694,16 @@ const data = {
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
-              ratios: [["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-            ],
-            moreRatios: 23
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 23,
             },
             {
               team: {
@@ -730,7 +715,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      }
+        },
       ],
     },
     {
@@ -745,23 +730,32 @@ const data = {
           matchData: [
             {
               team: {
-                left: { name: "Chulalongkorn University", icon: "logo", score: 2 },
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 2,
+                },
                 right: { name: "University Bangkok", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
-              ratios: [["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-              ["1x", 1.91],
-            ],
-            moreRatios: 23
+              ratios: [
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+                ["1x", 1.91],
+              ],
+              moreRatios: 23,
             },
             {
               team: {
-                left: { name: "Chulalongkorn University", icon: "logo", score: 3 },
+                left: {
+                  name: "Chulalongkorn University",
+                  icon: "logo",
+                  score: 3,
+                },
                 right: { name: "University Bangkok", icon: "logo1", score: 2 },
               },
               time: ["DEC 12", "09:00"],
@@ -769,7 +763,7 @@ const data = {
               moreRatios: 384,
             },
           ],
-      }
+        },
       ],
     },
   ],
@@ -781,7 +775,7 @@ const data = {
         left: { name: "Napoli", icon: "logo", score: 1 },
         right: { name: "Leicester City", icon: "logo1", score: 4 },
       },
-      tour: {id: 1, icon: "logo", name: "Premier League" },
+      tour: { id: 1, icon: "logo", name: "Premier League" },
       time: [4, 83],
       ratios: [],
     },
@@ -825,14 +819,13 @@ const data = {
         ["1x", 1.91],
       ],
       moreRatios: 384,
-
     },
     {
       team: {
         left: { name: "Napoli", icon: "logo", score: 3 },
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
-      tour: { id: 1,icon: "logo", name: "Premier League" },
+      tour: { id: 1, icon: "logo", name: "Premier League" },
       time: ["DEC 12", "09:00"],
       ratios: [
         ["1x", 1.91],
@@ -924,7 +917,6 @@ const data = {
         ["1x", 1.91],
       ],
       moreRatios: 384,
-
     },
     {
       team: {
@@ -1172,7 +1164,6 @@ const data = {
       result: "2,342,400.00 DBSC",
       resultPercent: "9437.29%",
     },
-    
   ],
   cryptoTable: [
     {
@@ -1181,23 +1172,25 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "BTC",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
     {
       coin: {
@@ -1205,23 +1198,25 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "BUSD",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
     {
       coin: {
@@ -1229,24 +1224,26 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "ETH",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
-      
+
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
     {
       coin: {
@@ -1254,24 +1251,26 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "BNB",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
-      
+
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
     {
       coin: {
@@ -1279,24 +1278,26 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "MATIC",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
-      
+
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
     {
       coin: {
@@ -1304,24 +1305,26 @@ const data = {
         price: "$100,000",
         date: "Sep 24",
         text: "REP",
-        details: function() { return `${this.text} touch ${this.price} by ${this.date}`}
+        details: function () {
+          return `${this.text} touch ${this.price} by ${this.date}`;
+        },
       },
       endTime: ["08:00 AM", "JUNE 24, 2021"],
       bet: {
         moon: {
           value: 1.91,
-          pool: "1,035.35"
-        }, 
+          pool: "1,035.35",
+        },
         rekt: {
           value: 1.91,
-          pool: "1,035.35"
-        }
+          pool: "1,035.35",
+        },
       },
-      
+
       prices: {
         locked: "$35,937.62",
-        closed: "$35,937.62"
-      }
+        closed: "$35,937.62",
+      },
     },
   ],
   yourBetsTable: [
@@ -1334,10 +1337,10 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
     {
       id: 36141,
       result: "lose",
@@ -1347,9 +1350,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "active",
@@ -1359,9 +1362,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "lose",
@@ -1371,9 +1374,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "win",
@@ -1383,10 +1386,10 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
     {
       id: 36141,
       result: "win",
@@ -1396,10 +1399,10 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
     {
       id: 36141,
       result: "lose",
@@ -1409,9 +1412,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "active",
@@ -1421,48 +1424,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
-      {
-        id: 36141,
-        result: "lose",
-        amount: ["100.00 DBSC", "247.00 DBSC"],
-        winloseAmount: "100.00 DBSC",
-        match: {
-          teamA: "Philadelphia 76ers",
-          teamB: "Utah Jazz",
-        },
-          coef: 2.47,
-          dateTime: ["08:00:04", "DEC 08, 2021"],
-        },
-    {
-      id: 36141,
-      result: "win",
-      amount: ["100.00 DBSC", "247.00 DBSC"],
-      winloseAmount: "100.00 DBSC",
-      match: {
-        teamA: "Philadelphia 76ers",
-        teamB: "Utah Jazz",
-      },
-      
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
-    {
-      id: 36141,
-      result: "win",
-      amount: ["100.00 DBSC", "247.00 DBSC"],
-      winloseAmount: "100.00 DBSC",
-      match: {
-        teamA: "Philadelphia 76ers",
-        teamB: "Utah Jazz",
-      },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "lose",
@@ -1472,9 +1436,48 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
       },
+
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
+    {
+      id: 36141,
+      result: "win",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
+      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "active",
@@ -1484,9 +1487,9 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-      },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "lose",
@@ -1496,21 +1499,21 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
+    {
+      id: 36141,
+      result: "lose",
+      amount: ["100.00 DBSC", "247.00 DBSC"],
+      winloseAmount: "100.00 DBSC",
+      match: {
+        teamA: "Philadelphia 76ers",
+        teamB: "Utah Jazz",
       },
-      {
-        id: 36141,
-        result: "lose",
-        amount: ["100.00 DBSC", "247.00 DBSC"],
-        winloseAmount: "100.00 DBSC",
-        match: {
-          teamA: "Philadelphia 76ers",
-          teamB: "Utah Jazz",
-        },
-          coef: 2.47,
-          dateTime: ["08:00:04", "DEC 08, 2021"],
-        },
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+    },
     {
       id: 36141,
       result: "win",
@@ -1520,11 +1523,141 @@ const data = {
         teamA: "Philadelphia 76ers",
         teamB: "Utah Jazz",
       },
-        coef: 2.47,
-        dateTime: ["08:00:04", "DEC 08, 2021"],
-        withdrawl: "Transferred to pool"
-      },
-  ]
+      coef: 2.47,
+      dateTime: ["08:00:04", "DEC 08, 2021"],
+      withdrawl: "Transferred to pool",
+    },
+  ],
+  accordions: [
+    {
+      text: "Match winner",
+      items: [
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "Draw",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+      ],
+    },
+    {
+      text: "Will score next (2 goal)",
+      items: [
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "Draw",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+      ],
+    },
+    {
+      text: "Handicap",
+      items: [
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+        {
+          text: "Queens Parker Range",
+          numbers: 1.91,
+        },
+        {
+          text: "AFC Bournemouth",
+          numbers: 1.91,
+        },
+      ],
+    },
+    {
+      text: "Total",
+      items: [
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+      ],
+    },
+    {
+      text: "Queens Park Rangers total",
+      items: [
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+      ],
+    },
+    {
+      text: "AFC Bournemouth total",
+      items: [
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+        { text: "Over 1.5", numbers: 1.91 },
+        { text: "Under 1.5", numbers: 1.91 },
+      ],
+    },
+    {
+      text: "Double change",
+      items: [],
+    },
+    {
+      text: "Total even/odd",
+      items: [],
+    },
+    {
+      text: "Correct score",
+      items: [],
+    },
+    {
+      text: "Match result and total",
+      items: [],
+    },
+  ],
 };
 
 export default data;
