@@ -434,7 +434,7 @@ const Main = () => {
           {showAlertFail && <Alert type="fail"/>}
           {showAlertNoSync && <Alert type="nosync" />}
 
-        {/* Sets the body background based on page url */}
+        {/* Sets the body background based on page url (for just example, this sets football bg for each sport) */}
         {((pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("sport") && !paramObj.hasOwnProperty("tour")) && (
           <>
             <img

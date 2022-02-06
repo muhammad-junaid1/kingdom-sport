@@ -87,7 +87,7 @@ const TourPage = ({ tourId, sportName, showBetsContainer }) => {
                 />
                 <h2>{details.text}</h2>
               </div>
-              <div className="right">
+              <div className="right" style={{marginRight: showBetsContainer ? "0" : "50px"}}>
                 <DatePicker
                   selected={startDate}
                   isClearable
