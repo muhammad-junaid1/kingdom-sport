@@ -1,10 +1,9 @@
-import React, {useRef} from "react";
+import React from "react";
 import NavbarItem from "./NavbarItem";
 import SVGIcons from "./SvgIcons";
 
 import sampleData from "../sampleData";
 import {useLocation} from "react-router-dom";
-import {CSSTransition} from 'react-transition-group';
 
 /** 
  * 
@@ -13,7 +12,6 @@ import {CSSTransition} from 'react-transition-group';
  * 
 */
 const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, active }) => {
-  const dropDownsContainer = useRef();
   
   // Construct an object of query params
   const {search} = useLocation();
@@ -37,9 +35,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
           onToggle={onToggle}
           active={active}
         />
-      <CSSTransition 
-      in={active && !collapse} timeout={200} classNames="display" unmountOnExit>
-        <div className="navbar__dropdown-items" ref={dropDownsContainer}>
+        <div className="navbar__dropdown-items" style={{height: (active && !collapse) ? "100%" : 0}}>
           {toursData.map((item, index) => {
             return (
               <NavbarItem
@@ -55,7 +51,6 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
             );
           })}
         </div>
-        </CSSTransition>
       </div>
     </>
   );

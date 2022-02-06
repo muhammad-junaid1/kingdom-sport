@@ -233,6 +233,24 @@ input[type="radio"] {
     display: flex;
 }
 
+.drop-enter {
+    height: 0;
+  }
+  
+  .drop-enter.drop-enter-active {
+    height: 100%;
+    transition: height 500ms ease-in;
+  }
+  
+  .drop-leave {
+    height: 100%;
+  }
+  
+  .drop-leave.drop-leave-active {
+    height: 0;
+    transition: height 300ms ease-in;
+  }
+
 @media all and (max-width: 500px) {
     .navbar__header{
         padding-top:0;
