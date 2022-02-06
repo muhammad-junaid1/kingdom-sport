@@ -1,0 +1,47 @@
+
+.alert-container {
+    padding: 10px;
+    border-radius: 5px;
+    min-width: max-content;
+    position: fixed;
+    z-index: 1000;
+}
+
+.alert-body  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: normal;
+}
+
+.alert-body svg {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.alert-body p {
+    margin: 0 .8rem;
+}
+
+.alert-container.alert--success {
+    background: var(--green2);
+    border: 1px solid var(--green6);
+    top: 100px;
+    right: 20px;
+}
+
+.alert-container.alert--fail {
+    background: var(--red2);
+    border: 1px solid var(--red6);
+    top: 150px;
+    right: 20px;
+}
+
+.alert-container.alert--nosync {
+    background: var(--violet2);
+    border: 1px solid var(--violet6);
+    top: 200px;
+    right: 20px;
+}

@@ -7,6 +7,7 @@ import NavLinks from "./NavLinks";
 import BetsContainer from "./BetsContainer";
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
+import Alert from "./Alert";
 
 // Pages
 import Homepage from "./pages/Homepage";
@@ -54,6 +55,11 @@ const Main = () => {
    */
   const [connected, setConnected] = useState(false);
 
+  // Alert boxes
+  const [showAlertSuccess, setShowAlertSuccess] = useState(true);
+  const [showAlertFail, setShowAlertFail] = useState(true);
+  const [showAlertNoSync, setShowAlertNoSync] = useState(true);
+
   // Checks if screen is for small devices (mobile) or not
   /**
    * It makes changes to different UI parts and functionalities based on screen size
@@ -71,6 +77,17 @@ const Main = () => {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+    }
+
+    // Just for example, when body is clicked, hide the alerts
+    const hideAlerts = () => {
+      setShowAlertSuccess(false);
+      setShowAlertFail(false);
+      setShowAlertNoSync(false);
+    }
+    document.body.addEventListener("click", hideAlerts);
+    if(!showAlertSuccess && !showAlertFail && !showAlertNoSync) {
+      document.body.removeEventListener("click", hideAlerts);
     }
   }, [showNavbar, isMobile]);
 
@@ -410,6 +427,11 @@ const Main = () => {
               </div>
             </div>
           )}
+
+          {/* Alert boxes*/}
+         {showAlertSuccess && <Alert type="success"/>}
+          {showAlertFail && <Alert type="fail"/>}
+          {showAlertNoSync && <Alert type="nosync" />}
 
         {/* Sets the body background based on page url */}
         {((pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("sport") && !paramObj.hasOwnProperty("tour")) && (
