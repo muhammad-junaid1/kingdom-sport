@@ -5,9 +5,11 @@ import DatePicker from "react-datepicker";
 import Button from "./Button";
 import SVGIcons from "./SvgIcons";
 import Match from "./pages/components/Match";
+import {Link, useLocation} from "react-router-dom";
+import MatchPage from "./MatchPage";
 import "../css/TourPage.css";
 
-const TourPage = ({ tourId, sportName }) => {
+const TourPage = ({ tourId, sportName, showBetsContainer }) => {
   const [startDate, setStartDate] = useState(null);
 
   // Fetch today, tomorrow and prematches data
@@ -45,6 +47,16 @@ const TourPage = ({ tourId, sportName }) => {
     </Button>
   ));
 
+  // Construct an object of url query params
+  const {search, pathname} = useLocation();
+  const urlParams = new URLSearchParams(search);
+  let urlParamsObj = {};
+  for (let value of urlParams.keys()) {
+    urlParamsObj[value] = urlParams.get(value);
+  }
+  const paramsString = Object.keys(urlParamsObj).map(key => `${key}=${urlParamsObj[key]}`).join('&');
+
+
   useEffect(() => {
     //   Add clear button
     if (startDate) {
@@ -54,9 +66,10 @@ const TourPage = ({ tourId, sportName }) => {
   }, [startDate]);
   return (
     <>
+    {urlParamsObj.hasOwnProperty("match") ?  <MatchPage showBetsContainer={showBetsContainer}/> :
       <div className="tour-page">
         <div className="tour-page__header">
-          <BreadCrumbs items={["Home", sport, details.text]} />
+          <BreadCrumbs items={[pathname==="/" ? "Home" : "Favourites", sport, details.text]} />
           <div className="tour-page__details">
             {/* Show logo for just one tour with id 1 (remove this condition, when all images are available) */}
             <div className="tour-page__logo ">
@@ -133,7 +146,8 @@ const TourPage = ({ tourId, sportName }) => {
             <>
             <div className="tour-page__item">
               <>
-                <p className="tour-item__headline">Today</p>
+              {/* We'll the get the  id of match and append in the url */}
+                 <p className="tour-item__headline"><Link to={`?${paramsString}&match=1`}>Today</Link></p>
                 <Match
                   withoutHeader={true}
                   data={todayMatch}
@@ -143,7 +157,8 @@ const TourPage = ({ tourId, sportName }) => {
             </div>
             <div className="tour-page__item">
               <>
-                <p className="tour-item__headline">Tomorrow</p>
+              {/* We'll the get the  id of match and append in the url */}
+              <p className="tour-item__headline"><Link to={`?${paramsString}&match=2`}>Tomorrow</Link></p>
                 <Match
                   withoutHeader={true}
                   data={tomorrowMatch}
@@ -153,7 +168,8 @@ const TourPage = ({ tourId, sportName }) => {
             </div>
             <div className="tour-page__item">
               <>
-                <p className="tour-item__headline">Prematch {preMatch[0].time[0]}</p>
+              {/* We'll the get the  id of match and append in the url */}
+                <p className="tour-item__headline"><Link to={`?${paramsString}&match=3`}>Prematch {preMatch[0].time[0]}</Link></p>
                 <Match
                   withoutHeader={true}
                   data={preMatch}
@@ -165,6 +181,7 @@ const TourPage = ({ tourId, sportName }) => {
           )}
         </div>
       </div>
+    }
     </>
   );
 };

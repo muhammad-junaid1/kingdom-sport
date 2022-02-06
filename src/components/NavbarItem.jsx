@@ -52,7 +52,11 @@ const NavbarItem = ({
   for (let value of paramsForDropdowns.keys()) {
     paramObjForDropdowns[value] = paramsForDropdowns.get(value);
   }
-  if(paramObjForDropdowns.hasOwnProperty("tour")) {
+  if(paramObjForDropdowns.hasOwnProperty("match")){
+    delete paramObjForDropdowns.match;
+    paramObjForDropdowns.sport = text.toLowerCase();
+  }
+    if(paramObjForDropdowns.hasOwnProperty("tour")) {
     delete paramObjForDropdowns.tour;
     paramObjForDropdowns.sport = text.toLowerCase();
   } else if(paramObjForDropdowns.sport === text.toLowerCase()) {
@@ -70,6 +74,9 @@ const NavbarItem = ({
   let paramObjForTours = {};
   for (let value of paramsForTours.keys()) {
     paramObjForTours[value] = paramsForTours.get(value);
+  }
+   if(paramObjForTours.hasOwnProperty("match")){
+    delete paramObjForTours.match;
   }
     paramObjForTours.tour = tourId;
     const paramStringForTours = Object.keys(paramObjForTours).map(key => `${key}=${paramObjForTours[key]}`).join('&');

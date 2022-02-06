@@ -312,6 +312,7 @@ const Main = () => {
               style={{
                 pointerEvents: showNavbar ? "none" : "",
                 paddingBottom: showNavbar ? "0" : "",
+                padding: showBetsOnMobile ? "0" : ""
               }}
             >
             {/* Renders bets container (mobile) */}
@@ -334,7 +335,7 @@ const Main = () => {
                   value={{ showBetsContainer, isMobile, showBetsOnMobile }}
                 >
                   <Routes>
-                    <Route path="/" element={<Homepage />} />
+                    <Route path="/" element={<Homepage showBetsContainer={showBetsContainer}/>} />
                     <Route
                       path="/live"
                       element={<Live showBetsContainer={showBetsContainer} />}
@@ -445,7 +446,7 @@ const Main = () => {
             {/* <img className="page-bg" src={require(`../assets/page-backgrounds/${paramObj.sport}-page-bg.png`)} alt="" /> */}
           </>
         )}
-        {(pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("tour") && (
+        {(pathname==="/" || pathname ==="/favourites") && paramObj.hasOwnProperty("tour") && !paramObj.hasOwnProperty("match") && (
          <img className="page-bg" src={require(`../assets/page-backgrounds/tour-page-bg.png`)} alt="" />
         )}
       </div>
