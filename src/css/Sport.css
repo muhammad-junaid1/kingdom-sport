@@ -118,7 +118,7 @@
 @media all and (max-width: 500px) {
 
     .sport__header-tabs{
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
         margin-bottom: 10px;
     }
     .sport__header-tabs{
@@ -126,20 +126,24 @@
         margin-bottom: 15px;
     }
 
-    .sport__header-tabs::-webkit-scrollbar {
-        height: 2px;
+    .sport__header {
+        overflow-x: scroll;
+    }
+
+    .sport__header::-webkit-scrollbar {
+        height: 1px;
         border-radius: 15px;
       }
       
-      .sport__header-tabs::-webkit-scrollbar-track{
+      .sport__header::-webkit-scrollbar-track{
         background: transparent;
       }
       
-      .sport__header-tabs::-webkit-scrollbar-thumb {
+      .sport__header::-webkit-scrollbar-thumb {
         background: var(--violet6);
       }
       
-      .sport__header-tabs::-webkit-scrollbar-thumb:hover {
+      .sport__header::-webkit-scrollbar-thumb:hover {
         background: var(--violet6);
       }
 
@@ -147,9 +151,7 @@
         padding: 1rem 0;
         margin-bottom: 0;
     }
-    .sport__header::-webkit-scrollbar {
-        display: none;
-    }
+
     .sport__header button  {
         min-width: max-content;
         margin: 0 1rem;

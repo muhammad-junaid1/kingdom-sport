@@ -54,4 +54,8 @@
     .tour-page__info .right {
         margin-top: 15px;
     }
+    .react-datepicker-wrapper{
+        margin-left: 0;
+    }
+
 }
