@@ -13,11 +13,11 @@
 }
 
 .filters__container .filters__select {
-  flex-basis: 36%;
+  width: 36%;
 }
 
 .filters__container .filters__search {
-  flex-basis: 64%;
+  width: 64%;
   margin-left: 1rem;
   display: flex;
   align-items: center;
@@ -90,11 +90,18 @@
     font-weight: 300;
     opacity: 92%;
     user-select: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .select-wrapper .left, .select-wrapper .right {
     display: flex;
     align-items: center;
+}
+
+.select-wrapper .left {
+  width: 90%;
 }
 
 .select-wrapper .left svg {

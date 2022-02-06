@@ -75,13 +75,10 @@ const Tournaments = ({ allTours }) => {
                     <SVGIcons.Filter />
                     {filtersToShow.length !== 0 ? (
                       <p>
-                        {fetchFiltersData
-                          .slice(0, 2)
-                          .map(
+                        {fetchFiltersData.map(
                             (f) => f.filter[0].toUpperCase() + f.filter.slice(1)
                           )
                           .join(", ")}
-                        {fetchFiltersData.length > 2 && ".."}
                       </p>
                     ) : (
                       <p style={{ color: "#ccc" }}>Select the Option</p>
