@@ -1,6 +1,4 @@
 
-@import url("./colors/grey");
-@import url("./colors/violet");
 
 .search-input {
     border: 1px solid var(--grey5);

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
-@import url("./css/colors/violet.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Oswald:wght@600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,14 +6,46 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
 :root {
-  --primary-btn: linear-gradient(90deg, #743EE8 0%, #BF5AF2 100%);
-  --secondary-btn: #3A256A;
+  --primary-btn: linear-gradient(90deg, #743ee8 0%, #bf5af2 100%);
+  --secondary-btn: #3a256a;
   --page-bg: #141415;
+
+  /* Violet */
+  --violet1: #1e182a;
+  --violet2: #271c3f;
+  --violet3: #3a256a;
+  --violet4: #4e2d93;
+  --violet5: #6135bd;
+  --violet6: #743ee8;
+
+  /* Grey */
+  --grey1: #8e8e93;
+  --grey2: #636366;
+  --grey3: #48484a;
+  --grey4: #3a3a3c;
+  --grey5: #2c2c2e;
+  --grey6: #1c1c1e;
+
+  /* Green */
+  --green1: #17271a;
+  --green2: #1a3b20;
+  --green3: #20622b;
+  --green4: #268935;
+  --green5: #2cb040;
+  --green6: #32d74b;
+  
+  /* Red */
+  --red1: #2b1919;
+  --red2: #431e1d;
+  --red3: #722824;
+  --red4: #a1312b;
+  --red5: #d03b32;
+  --red6: #ff453a;
 }
 
 body {
@@ -23,7 +54,7 @@ body {
   font-size: 1.6rem;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
@@ -50,7 +81,7 @@ a:hover {
 }
 
 .text-muted {
-  color: #3A3A3C;
+  color: #3a3a3c;
 }
 .fw-bold {
   font-weight: 600;
@@ -60,7 +91,7 @@ p {
   font-size: 1.4rem;
 }
 
-@media all and (max-width: 500px){
+@media all and (max-width: 500px) {
   html {
     font-size: 9px;
   }

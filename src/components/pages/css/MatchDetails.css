@@ -1,7 +1,4 @@
 
-@import "../../../css/colors/red";
-@import "../../../css/colors/grey";
-
 .match__body th:nth-child(1){
     text-align: left;
 }
