@@ -139,10 +139,10 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour, withoutHeader }) 
               </>
             )}
             {(data.ratios.length !== 0 && (showBetsContainer || isMobile)) &&
-              data.ratios.slice(0, 3).map((ratio) => {
+              data.ratios.slice(0, 3).map((ratio, index) => {
                 return (
                   <div className="ratio">
-                    <Button betButton={true}>
+                    <Button betButton={true} key={index}>
                       <p>{ratio[0]}</p>
                       <p>{ratio[1]}</p>
                     </Button>
@@ -150,10 +150,10 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour, withoutHeader }) 
                 );
               })}
             {(data.ratios.length !== 0 && (!showBetsContainer && !isMobile)) &&
-              data.ratios.slice(0, 7).map((ratio) => {
+              data.ratios.slice(0, 7).map((ratio, index) => {
                 return (
                   <div className="ratio">
-                    <Button betButton={true}>
+                    <Button betButton={true} key={index}>
                       <p>{ratio[0]}</p>
                       <p>{ratio[1]}</p>
                     </Button>

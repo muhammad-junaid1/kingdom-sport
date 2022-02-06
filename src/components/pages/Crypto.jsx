@@ -12,9 +12,9 @@ const Crypto = ({cryptoActiveOrExpired, showBetsContainer}) => {
     <>
       {coin &&
         sampleData.cryptoTable
-          .filter((item) => item.coin.text === coin.toUpperCase())
-          .map((item) => {
-            return <CoinSection {...item} />;
+          .filter((item) => item.coin.text.toLowerCase() === coin.toLowerCase())
+          .map((item, index) => {
+            return <CoinSection key={index} {...item} />;
           })}
      {!coin &&
       <div className="crypto">
@@ -38,8 +38,8 @@ const Crypto = ({cryptoActiveOrExpired, showBetsContainer}) => {
                 </tr>
               </thead>
               <tbody>
-                 {sampleData.cryptoTable.map((item) => {
-                    return <CryptoRow {...item} />;
+                 {sampleData.cryptoTable.map((item, index) => {
+                    return <CryptoRow {...item} key={index}/>;
                   })}
               </tbody>
             </table>

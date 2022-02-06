@@ -153,9 +153,10 @@ const Sport = ({ sportName, page }) => {
                         <>
                           {page === "home"
                             ? [
-                                item.tours.map((tour) => {
+                                item.tours.map((tour, index) => {
                                   return (
                                     <Match
+                                    key={index}
                                       isLive={tour.isLive}
                                       data={tour.matchData}
                                       tourId={tour.id}
@@ -169,9 +170,10 @@ const Sport = ({ sportName, page }) => {
                             : [
                                 item.tours
                                   .filter((t) => t.isFav === true)
-                                  .map((tour) => {
+                                  .map((tour, index) => {
                                     return (
                                       <Match
+                                      key={index}
                                         isLive={tour.isLive}
                                         data={tour.matchData}
                                         tourId={tour.id}
@@ -211,9 +213,10 @@ const Sport = ({ sportName, page }) => {
                         <>
                           {page === "home"
                             ? [
-                                item.tours.map((tour) => {
+                                item.tours.map((tour, index) => {
                                   return (
                                     <Match
+                                    key={index}
                                       data={tour.matchData}
                                       tourId={tour.id}
                                       tourName={tour.name}
@@ -226,9 +229,10 @@ const Sport = ({ sportName, page }) => {
                             : [
                                 item.tours
                                   .filter((t) => t.isFav === true)
-                                  .map((tour) => {
+                                  .map((tour, index) => {
                                     return (
                                       <Match
+                                      key={index}
                                         data={tour.matchData}
                                         tourId={tour.id}
                                         tourName={tour.name}

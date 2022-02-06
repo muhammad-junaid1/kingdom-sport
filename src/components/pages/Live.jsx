@@ -19,13 +19,13 @@ const Live = ({showBetsContainer}) => {
     return (
         <>
         <div className="live-matches">
-        {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item) => {
-           return <Match isLive={true} isFav={item.isFav} isTour={false} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
+        {Object.keys(allParams).length === 0 && sampleData.liveNavItems.map((item, index) => {
+           return <Match key={index} isLive={true} isFav={item.isFav} isTour={false} sport={item.text} data={item.matchData} Icon={SVGIcons[item.icon]} />
         })}
 
-            {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i) => {
+            {Object.keys(allParams).length !== 0 && Object.keys(allParams).map((i, index) => {
                 return sampleData.liveNavItems.filter((item) => item.text.toLowerCase() === i).map((i) =>{
-                    return <Match isLive={true} isFav={i.isFav} isTour={false} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
+                    return <Match key={index} isLive={true} isFav={i.isFav} isTour={false} sport={i.text} data={i.matchData} Icon={SVGIcons[i.icon]}/>
                 })
 
             })}

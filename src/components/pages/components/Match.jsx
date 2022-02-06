@@ -46,7 +46,7 @@ const Match = ({ sport, Icon, data, isLive,tourId, tourIcon, tourName,isFavPage,
             </thead>
             <tbody>
               {data.map((d, index) => {
-                  return <MatchDetails withoutHeader={withoutHeader} isTour={isTour} data={d} isLive={isLive && true} highlightScores={isLive ? (index === 0 ? true : false) : false}/>
+                  return <MatchDetails key={index} withoutHeader={withoutHeader} isTour={isTour} data={d} isLive={isLive && true} highlightScores={isLive ? (index === 0 ? true : false) : false}/>
               })}
             </tbody>
           </table>

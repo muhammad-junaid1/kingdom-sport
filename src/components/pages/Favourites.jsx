@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 import Sport from "../Sport";
 import TourPage from "../TourPage";
 
-const Favourites = () => {
+const Favourites = ({showBetsContainer}) => {
   const { search } = useLocation();
   const [allParams, setAllParams] = useState({});
 
@@ -26,7 +26,7 @@ const Favourites = () => {
   return (
     <>
     {/* For tours page */}
-    {allParams.tour && <TourPage tourId={allParams.tour} sportName={allParams.sport}/>}
+    {allParams.tour && <TourPage showBetsContainer={showBetsContainer} tourId={allParams.tour} sportName={allParams.sport}/>}
 
     {/* For specific sport */}
     {!allParams.tour &&
@@ -84,9 +84,10 @@ const Favourites = () => {
                       <Icon color="white" /> {item.text}
                     </p>
                   </div>
-                  {item.tours.map((tour) => {
+                  {item.tours.map((tour, index) => {
                     return (
                       <Match
+                      key={index}
                         isLive={tour.isLive}
                         data={tour.matchData}
                         tourId={tour.id}

@@ -642,16 +642,16 @@ const MedalStar = ({ color }) => {
 <path d="M23.0631 10.9635L24.1448 13.1268C24.2915 13.4201 24.6765 13.7135 25.0248 13.7685L26.9865 14.0985C28.2331 14.3001 28.5265 15.2168 27.6281 16.1152L26.1065 17.6368C25.8498 17.8935 25.7031 18.3885 25.7948 18.7552L26.2348 20.6435C26.5831 22.1285 25.7948 22.7151 24.4748 21.9268L22.6415 20.8451C22.3115 20.6435 21.7615 20.6435 21.4315 20.8451L19.5981 21.9268C18.2781 22.6968 17.4898 22.1285 17.8381 20.6435L18.2781 18.7552C18.3515 18.4068 18.2231 17.8935 17.9665 17.6368L16.4448 16.1152C15.5465 15.2168 15.8398 14.3185 17.0865 14.0985L19.0481 13.7685C19.3781 13.7135 19.7631 13.4201 19.9098 13.1268L20.9915 10.9635C21.5231 9.79016 22.4765 9.79016 23.0631 10.9635Z" fill="url(#paint2_linear_236_16949)"/>
 <defs>
 <linearGradient id="paint0_linear_236_16949" x1="21.9998" y1="3.6665" x2="21.9998" y2="29.3332" gradientUnits="userSpaceOnUse">
-<stop stop-color="#743EE8"/>
-<stop offset="1" stop-color="#BF5AF2"/>
+<stop stopColor="#743EE8"/>
+<stop offset="1" stopColor="#BF5AF2"/>
 </linearGradient>
 <linearGradient id="paint1_linear_236_16949" x1="22" y1="23.6499" x2="22" y2="40.0555" gradientUnits="userSpaceOnUse">
-<stop stop-color="#743EE8"/>
-<stop offset="1" stop-color="#BF5AF2"/>
+<stop stopColor="#743EE8"/>
+<stop offset="1" stopColor="#BF5AF2"/>
 </linearGradient>
 <linearGradient id="paint2_linear_236_16949" x1="22.0365" y1="10.0835" x2="22.0365" y2="22.2779" gradientUnits="userSpaceOnUse">
-<stop stop-color="#743EE8"/>
-<stop offset="1" stop-color="#BF5AF2"/>
+<stop stopColor="#743EE8"/>
+<stop offset="1" stopColor="#BF5AF2"/>
 </linearGradient>
 </defs>
 </svg>

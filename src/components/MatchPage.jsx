@@ -73,14 +73,14 @@ const MatchPage = ({showBetsContainer}) => {
         <div className="match-page__body">
         <div className="match-page__tabs-container">
             <div className="match-page__tabs">
-                {tabBtns.map((btn) => {
-                    return <Button {...((activeBtn===btn) && {type: "primary"})} size="small" onClick={() => setActiveBtn(btn)}>{btn}</Button>
+                {tabBtns.map((btn, index) => {
+                    return <Button key={index} {...((activeBtn===btn) && {type: "primary"})} size="small" onClick={() => setActiveBtn(btn)}>{btn}</Button>
                 })}
             </div>
             </div>
             <div className="match-page__accordions">
                     {accordions.map((a, index) => {
-                        return <UpcomingMatchAccordion title={a.text} items={a.items} {...(index > 1 ? {halfWidth: true} : null)}/>
+                        return <UpcomingMatchAccordion key={index} title={a.text} items={a.items} {...(index > 1 ? {halfWidth: true} : null)}/>
                     })}
             </div>
         </div>

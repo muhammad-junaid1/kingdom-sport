@@ -12,8 +12,8 @@ const MatchWinnersList = ({Icon, sport, winnersData}) => {
         <>
             <div className="winners-container">
             <p className="about-container">{<Icon/>} {sport}</p>
-                {winnersData.map((match) => {
-                    return <MatchWinner team1={match.team1} team2={match.team2} winner={match.winner} activity={match.activity} notBet={true}/>
+                {winnersData.map((match, index) => {
+                    return <MatchWinner key={index} team1={match.team1} team2={match.team2} winner={match.winner} activity={match.activity} notBet={true}/>
                 })}
             </div>
         </>

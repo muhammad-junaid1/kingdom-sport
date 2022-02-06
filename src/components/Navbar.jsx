@@ -170,6 +170,7 @@ const Navbar = ({
                 {cryptoData.map((item, index) => {
                   return (
                     <NavbarItem
+                    key={index}
                       isDropDown={false}
                       Icon={SVGIcons.CryptoIcons[item.icon]}
                       text={item.text}
@@ -246,6 +247,7 @@ const Navbar = ({
             <>
               {liveNavbarData.map((item, index) => (
                 <NavbarItem
+                key={index}
                   isDropDown={false}
                   Icon={SVGIcons[item.icon]}
                   text={item.text}

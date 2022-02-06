@@ -100,10 +100,11 @@ const Tournaments = ({ allTours }) => {
                       <SearchInput onInput={handleInput} value={filterSearchVal}/>
                     </div>
                     <div className="filters-options__body">
-                      {allToursFilters.map((f) => {
+                      {allToursFilters.map((f, index) => {
                         return (
                           <>
                             <ToursFilterOption
+                            key={index}
                               filterDetails={f}
                               filters={filtersToShow}
                               setFilters={setFiltersToShow}
@@ -151,6 +152,7 @@ const Tournaments = ({ allTours }) => {
                           .map((tour, index) => {
                             return (
                               <TournamentsItem
+                              key={index}
                                 tourLogo={tour.icon}
                                 index={index}
                                 tourText={tour.text}

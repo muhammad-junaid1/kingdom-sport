@@ -81,7 +81,7 @@ const LeaderBoard = () => {
                 </thead>
                 <tbody>
                   {sampleData.leaderBoard.map((item, index) => {
-                      return <Leader id={index + 1} {...item}/>
+                      return <Leader key={index} id={index + 1} {...item}/>
                   })}
                 </tbody>
             </table>

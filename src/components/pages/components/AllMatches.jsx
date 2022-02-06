@@ -68,6 +68,7 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
                 liveData.map((data, index) => {
                   return (
                     <MatchDetails
+                    key={index}
                       data={data}
                       isLive={true}
                       highlightScores={index === 0 ? true : false}
@@ -79,16 +80,16 @@ const AllMatches = ({ icon, sport, liveData, upcomingData, topBetsData }) => {
 
               {/* For upcoming items */}
               {currTab === "upcoming" && [
-                upcomingData.map((data) => {
-                  return <MatchDetails data={data} isTour={false}/>;
+                upcomingData.map((data, index) => {
+                  return <MatchDetails key={index} data={data} isTour={false}/>;
                   
                 }),
               ]}
 
               {/* For top bets */}
               {currTab === "topBets" && [
-                topBetsData.map((data) => {
-                  return <MatchDetails data={data} isTour={false} />;
+                topBetsData.map((data, index) => {
+                  return <MatchDetails key={index} data={data} isTour={false} />;
                 }),
               ]}
             </tbody>

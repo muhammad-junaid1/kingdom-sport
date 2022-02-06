@@ -4,6 +4,7 @@ import SVGIcons from "./SvgIcons";
 
 import sampleData from "../sampleData";
 import {useLocation} from "react-router-dom";
+import {CSSTransition} from 'react-transition-group';
 
 /** 
  * 
@@ -36,11 +37,13 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
           onToggle={onToggle}
           active={active}
         />
-        <div className="navbar__dropdown-items" ref={dropDownsContainer} style={{height: (active && !collapse) ? "100%" : 0}}
->
-          {toursData.map((item) => {
+      <CSSTransition 
+      in={active && !collapse} timeout={200} classNames="display" unmountOnExit>
+        <div className="navbar__dropdown-items" ref={dropDownsContainer}>
+          {toursData.map((item, index) => {
             return (
               <NavbarItem
+                key={index}
                 isDropDown={false}
                 dropDownIcon={item.icon}
                 text={item.text}
@@ -52,6 +55,7 @@ const DropdownItem = ({ icon, text, number, dropdownItems, collapse, onToggle, a
             );
           })}
         </div>
+        </CSSTransition>
       </div>
     </>
   );

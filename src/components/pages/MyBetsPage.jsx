@@ -148,8 +148,8 @@ const MyBetsPage = ({isMobile}) => {
                 </thead>
                 <tbody>
                  {
-                    sampleData.yourBetsTable.map((item) => {
-                      return <MyBetsRow {...item}/>
+                    sampleData.yourBetsTable.map((item, index) => {
+                      return <MyBetsRow {...item} key={index}/>
                   })
                 }
                 

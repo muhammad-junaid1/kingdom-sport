@@ -35,8 +35,8 @@ const MyBets = ({
         </div>
         {crypto ? (
           <>
-           {crypto.map((item) => {
-             return <MatchWinner crypto={{...item}}/>
+           {crypto.map((item, index) => {
+             return <MatchWinner key={index} crypto={{...item}}/>
            })}
            <hr style={{border: "1px solid #2C2C2E", height: 1}}/>
           </>
