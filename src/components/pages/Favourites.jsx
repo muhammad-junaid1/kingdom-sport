@@ -11,15 +11,6 @@ import Sport from "../Sport";
 import TourPage from "../TourPage";
 
 const Favourites = () => {
-  const renderSlides = () =>
-    [1, 2, 3, 4].map((num) => (
-      <div className={`slide${num}`}>
-        <div className="slide__container">
-          <h3>Slide Slide Slide Slide Slide Slide Slide{num}</h3>
-        </div>
-      </div>
-    ));
-
   const { search } = useLocation();
   const [allParams, setAllParams] = useState({});
 
@@ -59,7 +50,26 @@ const Favourites = () => {
               },
             ]}
           >
-            {renderSlides()}
+             <div className={`slide1`}>
+        <div className="slide__container">
+          {/* <h1>The data of slide 1 here..</h1> */}
+        </div>
+      </div>
+            <div className={`slide2`}>
+        <div className="slide__container">
+          {/* <h1>The data of slide 2 here..</h1> */}
+        </div>
+      </div>
+            <div className={`slide3`}>
+        <div className="slide__container">
+          {/* <h1>The data of slide 3 here..</h1> */}
+        </div>
+      </div>
+            <div className={`slide4`}>
+        <div className="slide__container">
+          {/* <h1>The data of slide 4 here..</h1> */}
+        </div>
+      </div>
           </Slider>
         </div>
         <div className="favourites__body">
