@@ -4,8 +4,8 @@
 }
 
 .match__body th {
-    font-weight: 500;
-    font-size: 1.1rem;
+font-weight: 500;
+font-size: 1.1rem;
 }
 
 .match__body th {
@@ -123,7 +123,7 @@
     display: none;
 }
 
-.match__body .scores-border-conainer{
+.match__body .scores-border-container{  
     position: absolute;
     bottom: 0;
     left: 0;
@@ -133,7 +133,7 @@
     border-radius: 2px;
 }
 
-.match__body .scores-border-conainer .scores-border {
+.match__body .scores-border-container .scores-border {
     background: var(--red6);
     width: 70%;
     position: absolute;

@@ -1,0 +1,106 @@
+.slide__container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 3.4rem;
+}
+
+.slide__container .slide__teams-scores {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.slide__container .slide__teams-scores img {
+    width: 46px;
+    height: 46px;
+}
+
+.slide__container .score-numbers{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-bottom:.8rem;
+    margin: 0 1rem;
+}
+
+.slide__container .scores-border-container{  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--red2);
+    border-radius: 2px;
+}
+
+.slide__container .scores-border-container .scores-border {
+    background: var(--red6);
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+.slide__bets{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.slide__bets button {
+    width: 25%;
+}
+
+.slide__date p{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.slide__live-label {
+    display: flex;
+    align-items: center;
+    color: var(--red6);
+    font-weight: 600;
+}
+
+.slide__date svg {
+    margin-right: 5px;
+}
+
+.slide__teams-info{
+    margin-bottom: 1rem;
+}
+
+.slide__teams-info h3 {
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin: 1.2rem 0;
+}
+
+.slide__teams-info h3 span {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.slide__bets button {
+    background: rgba(20, 20, 21, 0.5);
+}
+
+.slide__bets button:last-child{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.slide__bets button:last-child p:first-child{
+    color: white;
+}
+
+.slide__bets button:last-child p:last-child{
+    color: var(--grey2);
+}

@@ -65,17 +65,14 @@
 
 .slide__container {
     margin: 0 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     border-radius: 20px;
     height: 37rem;
-    min-width: 400px;
+    min-width: 380px;
 }
 
 .slick-slider {
-    height: 37rem;
+    height: 37.5rem;
 }
 
 .slick-list, .slick-track {
@@ -116,31 +113,6 @@
 .slick-arrow.slick-next {
     right: 25px !important;
     z-index: 50;
-}
-
-.slide1 .slide__container{
-    /* background: #00005D; */
-    background-image: url("../../../assets//slider-item-example.png");
-    background-size: cover;
-}
-
- .slide2 .slide__container{
-    /* background: #C70E2D; */
-    background-image: url("../../../assets//slider-item-example.png");
-    background-size: cover;
-
-}
- .slide3 .slide__container{
-    /* background: #00b96c; */
-    background-image: url("../../../assets//slider-item-example.png");
-    background-size: cover;
-
-}
-.slide4 .slide__container {
-    /* background: rgb(236, 37, 130); */
-    background-image: url("../../../assets//slider-item-example.png");
-    background-size: cover;
-
 }
 
 /* slide when not active/center*/

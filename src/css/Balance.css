@@ -78,6 +78,7 @@
 .account__body .btns button {
   width: 48%;
   padding: 8px;
+  margin-left: 0;
 }
 
 .account__footer {

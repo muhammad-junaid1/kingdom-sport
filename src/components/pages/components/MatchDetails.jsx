@@ -46,7 +46,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour, withoutHeader }) 
                     <p className="team-left-score">{data.team.left.score}</p>
                     <span style={{ margin: "0 8px" }}>:</span>
                     <p className="team-right-score">{data.team.right.score}</p>
-                    <div className="scores-border-conainer">
+                    <div className="scores-border-container">
                       <div className="scores-border"></div>
                     </div>
                   </>

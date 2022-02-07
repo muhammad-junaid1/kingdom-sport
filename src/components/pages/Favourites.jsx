@@ -7,6 +7,7 @@ import "./css/Favourites.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useLocation } from "react-router-dom";
+import SliderItem from "./components/SliderItem";
 import Sport from "../Sport";
 import TourPage from "../TourPage";
 
@@ -50,26 +51,148 @@ const Favourites = ({showBetsContainer}) => {
               },
             ]}
           >
-             <div className={`slide1`}>
-        <div className="slide__container">
-          {/* <h1>The data of slide 1 here..</h1> */}
-        </div>
-      </div>
-            <div className={`slide2`}>
-        <div className="slide__container">
-          {/* <h1>The data of slide 2 here..</h1> */}
-        </div>
-      </div>
-            <div className={`slide3`}>
-        <div className="slide__container">
-          {/* <h1>The data of slide 3 here..</h1> */}
-        </div>
-      </div>
-            <div className={`slide4`}>
-        <div className="slide__container">
-          {/* <h1>The data of slide 4 here..</h1> */}
-        </div>
-      </div>
+           
+           {/* All slides here */}
+                   <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"],],
+                  moreBets: 253,
+                }}
+                isLive={false}
+                date={"19:00 TODAY"}
+                tourLogo="tour2-full-logo"
+                bgColor="#911026"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+           <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"],],
+                  moreBets: 253,
+                }}
+                isLive={true}
+                tourLogo="tour1-full-logo"
+                bgColor="#00005D"
+                bgImg="slider-item-bg"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+           <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"],],
+                  moreBets: 253,
+                }}
+                isLive={true}
+                tourLogo="tour1-full-logo"
+                bgColor="#00005D"
+                bgImg="slider-item-bg"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+
+              <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"],],
+                  moreBets: 253,
+                }}
+                isLive={true}
+                tourLogo="tour1-full-logo"
+                bgColor="#00005D"
+                bgImg="slider-item-bg"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+              <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"]],
+                  moreBets: 253,
+                }}
+                isLive={true}
+                tourLogo="tour1-full-logo"
+                bgColor="#00005D"
+                bgImg="slider-item-bg"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+                <SliderItem
+                bets={{
+                  data: [["1x", "1.91"], ["1x", "1.91"],["1x", "1.91"]],
+                  moreBets: 253,
+                }}
+                isLive={true}
+                tourLogo="tour1-full-logo"
+                bgColor="#00005D"
+                bgImg="slider-item-bg"
+                winningTeam={"a"}
+                teams={{
+                  a: {
+                    text: "Napoli",
+                    percent: "70%",
+                    logo: "logo",
+                  },
+                  b: {
+                    text: "Leicester city",
+                    percent: "37.7%",
+                    logo: "logo1",
+                  },
+                }}
+              />
+     
           </Slider>
         </div>
         <div className="favourites__body">
