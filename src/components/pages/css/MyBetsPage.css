@@ -12,53 +12,29 @@
     right: 0;
     z-index: -10;
 }
-
 .mybets-page__header .user-wins {
+    display: flex;
     margin: 2rem 0 6.0rem 0;
+    justify-content: center;
 }
 
 .mybets-page__header .user-wins-holder {
     position: relative;
     z-index: 1;
-    height: 360px;
-    width: 33%;
     margin: 0 auto;
-}
-
-.mybets-page__header .user-wins-holder img {
-    position: absolute;
+    display: inline-block;
 }
 
 .user-wins-holder .user-wins--ribbon{
+    position: absolute;
     left: 50%;
     top: 80%;
-    width: 57%;
     z-index: 10;
     transform: translate(-50%, -80%);
 }
 
-.user-wins-holder .user-wins--dashed_border {
-    top: 50%;
-    width: 86%;
-    z-index: 5;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.user-wins-holder .user-wins--curve {
-    z-index: 10;
-    right: 0;
-    bottom: 0;
-}
-
-.user-wins-holder .user-wins--avatar_holder {
-    z-index: 3;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .user-wins-holder .user-wins--avatar {
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
