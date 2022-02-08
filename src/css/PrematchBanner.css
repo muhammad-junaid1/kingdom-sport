@@ -70,3 +70,15 @@
     margin: 0 6rem;
 }
 
+
+
+@media all and (max-width: 500px) {
+    .prematch-banner__teams .teams-separator {
+        width: 20%;
+        text-align: center;
+        margin: 0 3rem;
+    }
+    .prematch-banner {
+        padding: 2.5rem 2.5rem 3rem 2.5rem;
+    }
+}

@@ -67,12 +67,12 @@
     margin: 0 8px;
     padding: 10px;
     border-radius: 20px;
-    height: 37rem;
+    height: 37.5rem;
     min-width: 380px;
 }
 
 .slick-slider {
-    height: 37.5rem;
+    height: 38rem;
 }
 
 .slick-list, .slick-track {
