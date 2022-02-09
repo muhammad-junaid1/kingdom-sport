@@ -260,7 +260,7 @@
     border-radius: 3px;
 }
 
-.table-search-input {
+ .mybets-page .table-search-input {
     top: -5.5rem;
 }
 
@@ -322,15 +322,21 @@
        margin-bottom: 12px;
    }
 
-   .toggle-btns {
-       top: 10px;
+   .mybets-page .toggle-btns {
+       top: 3.6rem;
    }
+
+   
+   .mybets-page .gridjs-table{
+    margin-top: 6rem;
+}
+
    .gridjs-wrapper {
        padding-top: 20px;
    }
 
-   .table-search-input {
-       top: 15px;
+   .mybets-page .table-search-input {
+       top: 2rem;
    }
 
    .mybets-table-data[data-column-id="status"] {
