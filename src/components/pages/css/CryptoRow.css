@@ -78,7 +78,29 @@
   background-color: var(--grey5);
   border-radius: 5px;
   margin: 0 0.6rem;
+  outline: none;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
 }
+
+.crypto-bet:focus .crypto-bet__header p:first-child, .crypto-bet:focus .crypto-bet__header p:first-child svg{
+    color: white !important;
+}
+
+.crypto-bet:focus .crypto-bet__header p:last-child{
+  color: black !important;
+}
+
+.crypto-bet.moon:focus .crypto-bet__header{
+  background-color: var(--green6) !important;
+}
+.crypto-bet.rekt:focus .crypto-bet__header{
+  background-color: var(--red6) !important;
+}
+
+
 
 .crypto-bet .crypto-bet__header {
   padding: 10px;
@@ -157,6 +179,7 @@
   }
   .crypto__content .crypto-bets {
     justify-content: space-between;
+    width: 100% !important;
   }
   .crypto__content .crypto-bets .crypto-bet {
     width: 48% !important;

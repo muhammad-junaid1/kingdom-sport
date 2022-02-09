@@ -8,7 +8,7 @@ const CryptoBet = ({type, value, pool}) => {
     const Icon = SVGIcons[type.charAt(0).toUpperCase() + type.slice(1)];
     return (
         <>
-            <div className="crypto-bet" style={{width: showBetsContainer ? "100%" : "32%", margin: showBetsContainer ? "0 .4rem" : ""}}>
+            <button className={`crypto-bet ${type}`} style={{width: showBetsContainer ? "100%" : "32%", margin: showBetsContainer ? "0 .4rem" : ""}}>
                 <div className="crypto-bet__header">
                         <p style={{color: type==="moon" ? "#32D74B" : "#FF453A"}}><Icon/>{type.toUpperCase()}</p>
                         <p>{value}</p>
@@ -18,7 +18,7 @@ const CryptoBet = ({type, value, pool}) => {
                     <span>POOL</span>
                     <p>{pool}</p>
                 </div>
-            </div>
+            </button>
         </>
     );
 };
