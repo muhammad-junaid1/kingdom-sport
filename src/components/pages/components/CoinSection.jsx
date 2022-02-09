@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import BreadCrumbs from "./BreadCrumbs";
 import SVGIcons from "../../SvgIcons";
+import Button from "../../Button";
 import "../css/CoinSection.css";
 import CryptoBet from "./CryptoBet";
 import { ContentRoutesContext } from "../../Main";
@@ -8,6 +9,10 @@ import { ContentRoutesContext } from "../../Main";
 const CoinSection = ({ coin, endTime, bet, prices }) => {
   const Icon = SVGIcons.CryptoIcons[coin.icon];
   const { isMobile, showBetsContainer} = useContext(ContentRoutesContext);
+
+  // Graph section tabs
+  const [activeTab, setActiveTab ] = useState("All time");
+  const graphTabs = ["All time", "24h", "7d", "30d"];
   return (
     <>
       <div className="coin-section" style={{width: showBetsContainer ? "100%" : ""}}>
@@ -52,7 +57,13 @@ const CoinSection = ({ coin, endTime, bet, prices }) => {
             </div>
           </div>
           <div className="coin-content__graph">
-            <h1>Graph will be here :)</h1>
+          <div className="coin-graph__header">
+          <div className="coin-graph__tabs">
+              {graphTabs.map((tab) => {
+                return <Button onClick={() => setActiveTab(tab)} {...(activeTab===tab ? {type: "primary"} : null)}>{tab}</Button>
+              })}
+          </div>
+          </div>
           </div>
         </div>
       </div>

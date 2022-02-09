@@ -69,8 +69,20 @@
 }
 
 .coin-content__graph{
-    padding: 200px 0;
     text-align: center;
+    margin-top: 5rem;
+}
+
+.coin-graph__tabs{
+    display: flex;
+    padding: 6px;
+    border-radius: 8px;
+    background: var(--page-bg);
+    max-width: max-content;
+}
+
+.coin-graph__tabs button{
+    margin: 0 3px;
 }
 
 @media all and (max-width: 500px) {
