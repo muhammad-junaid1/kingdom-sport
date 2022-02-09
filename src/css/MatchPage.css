@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 27rem;
+    height: 28rem;
 }
 
 .match-page__header-content .left, .match-page__header-content .right {
@@ -33,7 +33,7 @@
     left: 10px;
 }
 
-.match-page__header-content svg {
+.match-page__header-content .left svg {
     position: absolute;
     top: 50%;
     left: 50%;

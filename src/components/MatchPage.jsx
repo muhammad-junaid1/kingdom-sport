@@ -5,8 +5,7 @@ import Button from "./Button";
 import { useLocation } from "react-router-dom";
 import sampleData from "../sampleData";
 import UpcomingMatchAccordion from "./UpcomingMatchAccordion";
-import PrematchBanner from "./PrematchBanner";
-import LiveMatchBanner from "./LiveMatchBanner";
+import MatchBanner from "./MatchBanner";
 import "../css/MatchPage.css";
 
 /**
@@ -85,12 +84,46 @@ const MatchPage = ({ showBetsContainer }) => {
                   />
                 </div>
                 <div className="right">
-                    <LiveMatchBanner/>
+                    <MatchBanner timeForLive="Half 2`83" isPreMatch={false} bets={{
+                    data: [
+                      ["1x", "1.91"],
+                      ["1x", "1.91"],
+                      ["1x", "1.91"],
+                    ],
+                    moreBets: 253,
+                  }}
+                  teams={{
+                  a: {
+                    text: "QUEENS PARK RANGERS",
+                    percent: "20%",
+                    logo: "logo",
+                    score: 3,
+                    stats: {
+                      h1: 0,
+                      yellow: 1,
+                      red: 0,
+                      flag: 0
+                    }
+                  },
+                  b: {
+                    text: "AFC BOURNEMOUTH",
+                    percent: "80%",
+                    logo: "logo1",
+                    score: 4,
+                    stats: {
+                      h1: 1,
+                      yellow: 0,
+                      red: 0,
+                      flag: 1
+                    }
+                  },
+                }}/>
                 </div>
               </>
             ) : (
               <div className="prematch-details">
-                <PrematchBanner
+                <MatchBanner
+                isPreMatch={true}
                   bets={{
                     data: [
                       ["1x", "1.91"],
@@ -107,7 +140,7 @@ const MatchPage = ({ showBetsContainer }) => {
                   },
                   b: {
                     text: "AFC BOURNEMOUTH",
-                    percent: "40%",
+                    percent: "30%",
                     logo: "logo1",
                   },
                 }}

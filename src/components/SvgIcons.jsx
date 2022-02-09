@@ -877,6 +877,16 @@ const PlayCircle = ({ color }) => {
     </>
   );
 };
+const Flag = ({ color }) => {
+  return (
+    <>
+<svg style={{ color: color ? color : "white" }} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5117 7.19249L9.8 6.48082C9.63083 6.33499 9.53167 6.11916 9.52583 5.87999C9.51417 5.61749 9.61917 5.35499 9.81167 5.16249L10.5117 4.46249C11.1183 3.85582 11.3458 3.27249 11.1533 2.81166C10.9667 2.35666 10.3892 2.10582 9.5375 2.10582H3.44167V1.60416C3.44167 1.36499 3.24333 1.16666 3.00417 1.16666C2.765 1.16666 2.56667 1.36499 2.56667 1.60416V12.3958C2.56667 12.635 2.765 12.8333 3.00417 12.8333C3.24333 12.8333 3.44167 12.635 3.44167 12.3958V9.54916H9.5375C10.3775 9.54916 10.9433 9.29249 11.1358 8.83166C11.3283 8.37082 11.1067 7.79332 10.5117 7.19249Z" fill="currentColor"/>
+</svg>
+
+    </>
+  );
+};
 
 
 
@@ -906,6 +916,7 @@ const icons = {
   Crypto,
   LeaderBoard,
   Bets2, CloseMenuCircle, Save2, SingleBet, Trash, Activity, CopyBetID, TickSquare, TickCircle, Heart, MedalStar, DollarSquare, Danger, IncreaseArrowUp, CryptoIcons: {BTC, BUSD, ETH, BNB, MATIC, REP},
+  Flag,
   Moon, Rekt, MoneyInPool,MoneyOnBets, MoneyOnWinnings, SaveSquare, Export,Filter, ToggleOffCircle, Calendar
 };
 export default icons;

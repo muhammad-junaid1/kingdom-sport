@@ -1,0 +1,156 @@
+.match-banner {
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+
+.match-banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-banner__content .date-time{
+    font-size: 1.2rem;
+}
+
+.match-banner__bets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.match-banner__bets button {
+    width: 25%;
+    background: var(--page-bg);
+}
+
+.match-banner__bets button:last-child {
+    background: var(--grey3);
+}
+
+.match-banner__teams {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.match-banner__content.for-livematch .match-banner__teams{
+    margin: 2rem 0 1rem 0;
+}
+
+.match-banner__teams p {
+    font-size: 1.2rem;
+    max-width: 12rem;
+    word-break: break-word;
+}
+
+.match-banner__teams .team-a, .match-banner__teams .team-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.match-banner__content.for-livematch .team-a, .match-banner__content.for-livematch .team-b {
+    margin-top: -3.2rem;
+}
+
+.match-banner .team-a img, .match-banner .team-b img {
+    width: 84%;
+    height: 84%;
+}
+
+.match-banner .team-a .team__info, .match-banner .team-b .team__info{
+    margin: 1.2rem 0;
+}
+
+.match-banner .team-a p:last-child, .match-banner .team-b p:last-child{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.match-banner__teams .teams-separator{
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 6rem;
+}
+
+.match-banner .score-numbers{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 8px;
+}
+
+.match-banner .scores-border-container{  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--red2);
+    border-radius: 2px;
+}
+
+.match-banner .scores-border-container .scores-border {
+    background: var(--red6);
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+
+.match__stats{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.match__stats .stats__teams {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 3px;
+}
+
+.match__stats .stats__teams img {
+    width: 16px;
+    margin-top: 5px;
+}
+
+.match__stats th {
+    text-align: center;
+}
+.match__stats th div {
+    margin: 0 auto;
+}
+
+
+.match__stats .stats__body td{
+    padding: 3px 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media all and (max-width: 500px) {
+    .match-banner__teams .teams-separator {
+        width: auto;
+        text-align: center;
+        margin: 0 3rem;
+    }
+
+    .match-banner__teams .teams-separator .score-numbers {
+        width: 30%;
+        margin: 0 auto !important;
+    }
+    .match-banner {
+        padding: 2.5rem 2.5rem 3rem 2.5rem;
+    }
+}
