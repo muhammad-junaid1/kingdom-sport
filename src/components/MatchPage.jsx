@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import sampleData from "../sampleData";
 import UpcomingMatchAccordion from "./UpcomingMatchAccordion";
 import PrematchBanner from "./PrematchBanner";
+import LiveMatchBanner from "./LiveMatchBanner";
 import "../css/MatchPage.css";
 
 /**
@@ -83,7 +84,9 @@ const MatchPage = ({ showBetsContainer }) => {
                     alt=""
                   />
                 </div>
-                <div className="right">Match Details</div>
+                <div className="right">
+                    <LiveMatchBanner/>
+                </div>
               </>
             ) : (
               <div className="prematch-details">

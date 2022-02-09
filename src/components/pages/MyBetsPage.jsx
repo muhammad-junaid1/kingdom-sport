@@ -20,7 +20,7 @@ const MyBetsPage = ({ isMobile }) => {
   const [avatarSrc, setAvatarSrc] = useState("avatar-full");
 
   // Ribbon & Medal src change depending on this number
-  const [wins, setWins] = useState(1000);
+  const [wins, setWins] = useState(1);
 
   useEffect(() => {
     new Grid({

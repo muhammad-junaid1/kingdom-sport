@@ -78,7 +78,7 @@ const MatchDetails = ({ data, isLive, highlightScores, isTour, withoutHeader }) 
           <div className={`time__content${isLive ? " live" : ""}`}>
             {isLive ? (
               <>
-                <p>Quarter {data.time[0]}</p>
+                <p>{data.time[0]}</p>
                 <p>`{data.time[1]}</p>
               </>
             ) : (

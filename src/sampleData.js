@@ -116,7 +116,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 2 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 83],
+          time: ["Half 2", "83"],
           ratios: [],
         },
         {
@@ -125,7 +125,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 2 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 81],
+          time: ["Half 2", "83"],
           ratios: [
             ["1x", 1.91],
             ["1x", 1.91],
@@ -151,7 +151,7 @@ const data = {
             right: { name: "University Bangkok", icon: "logo1", score: 30 },
           },
           tour: { icon: "logo-1", name: "CHAMPIONSHIP OF THAILAND WOMEN" },
-          time: [4, 83],
+          time: ["Half 2", "83"],
           ratios: [],
         },
         {
@@ -160,7 +160,7 @@ const data = {
             right: { name: "University Bangkok", icon: "logo1", score: 30 },
           },
           tour: { icon: "logo-1", name: "CHAMPIONSHIP OF THAILAND WOMEN" },
-          time: [4, 83],
+          time: ["Half 2", "83"],
           ratios: [
             ["1x", 1.91],
             ["1x", 1.91],
@@ -186,7 +186,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 4 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 83],
+          time: ["Half 2", "83"],
           ratios: [],
         },
         {
@@ -195,7 +195,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 2 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 81],
+          time:"Quarter 4`83",
           ratios: [
             ["1x", 1.91],
             ["1x", 1.91],
@@ -221,7 +221,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 4 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 83],
+          time: ["Half 2", "83"],
           ratios: [],
         },
         {
@@ -230,7 +230,7 @@ const data = {
             right: { name: "Leicester City", icon: "logo1", score: 2 },
           },
           tour: { icon: "logo", name: "UEFA EUORUPA LEAGUE" },
-          time: [4, 81],
+          time: ["Half 2", "83"],
           ratios: [
             ["1x", 1.91],
             ["1x", 1.91],
@@ -427,7 +427,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 2 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 83],
+              time: ["Half 2", "83"],
               ratios: [],
             },
             {
@@ -435,7 +435,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 3 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 81],
+              time: ["Half 2", "83"],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -542,7 +542,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 2 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 83],
+              time: ["Half 2", "83"],
               ratios: [],
             },
             {
@@ -550,7 +550,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 3 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 81],
+              time: ["Half 2", "83"],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -576,7 +576,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 2 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 83],
+              time: ["Half 2", "83"],
               ratios: [],
             },
             {
@@ -584,7 +584,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 3 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 81],
+              time: ["Half 2", "83"],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -616,7 +616,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 2 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 83],
+              time: ["Half 2", "83"],
               ratios: [],
             },
             {
@@ -624,7 +624,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 3 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 81],
+              time:"Quarter 4`83",
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -650,7 +650,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 2 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 83],
+              time:"Quarter 4`83",
               ratios: [],
             },
             {
@@ -658,7 +658,7 @@ const data = {
                 left: { name: "Napoli", icon: "logo", score: 3 },
                 right: { name: "Leicester City", icon: "logo1", score: 2 },
               },
-              time: [4, 81],
+              time: ["Half 2", "83"],
               ratios: [
                 ["1x", 1.91],
                 ["1x", 1.91],
@@ -776,7 +776,7 @@ const data = {
         right: { name: "Leicester City", icon: "logo1", score: 4 },
       },
       tour: { id: 1, icon: "logo", name: "Premier League" },
-      time: [4, 83],
+      time: ["Half 2", "83"],
       ratios: [],
     },
     {
@@ -785,7 +785,7 @@ const data = {
         right: { name: "Leicester City", icon: "logo1", score: 2 },
       },
       tour: { id: 1, icon: "logo", name: "Premier League" },
-      time: [4, 81],
+      time: ["Half 2", "83"],
       ratios: [
         ["1x", 1.91],
         ["1x", 1.91],
