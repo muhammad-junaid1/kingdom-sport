@@ -89,6 +89,11 @@
     margin-top: 6rem;
 }
 
+.coin-graph__body canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 @media all and (max-width: 500px) {
     .coin-section {
         width: 100% !important;
