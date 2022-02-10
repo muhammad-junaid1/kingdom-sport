@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import BreadCrumbs from "./BreadCrumbs";
 import SVGIcons from "../../SvgIcons";
 import Button from "../../Button";
@@ -59,10 +59,13 @@ const CoinSection = ({ coin, endTime, bet, prices }) => {
           <div className="coin-content__graph">
           <div className="coin-graph__header">
           <div className="coin-graph__tabs">
-              {graphTabs.map((tab) => {
-                return <Button onClick={() => setActiveTab(tab)} {...(activeTab===tab ? {type: "primary"} : null)}>{tab}</Button>
+              {graphTabs.map((tab, index) => {
+                return <Button key={index} onClick={() => setActiveTab(tab)} {...(activeTab===tab ? {type: "primary"} : null)}>{tab}</Button>
               })}
           </div>
+          </div>
+          <div className="coin-graph__body">
+              <h1>Graph here..</h1>
           </div>
           </div>
         </div>

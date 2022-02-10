@@ -85,6 +85,10 @@
     margin: 0 3px;
 }
 
+.coin-graph__body {
+    margin-top: 6rem;
+}
+
 @media all and (max-width: 500px) {
     .coin-section {
         width: 100% !important;

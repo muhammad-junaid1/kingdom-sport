@@ -25,7 +25,7 @@ const BreadCrumbs = ({ items }) => {
           return (
             <>
               <li
-                style={{ color: items.length - 1 === index ? "#743EE8" : "" , ...styles.li}}
+                key={index} style={{ color: items.length - 1 === index ? "#743EE8" : "" , ...styles.li}}
               >
                 {item}
               </li>{" "}
