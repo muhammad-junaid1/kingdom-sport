@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import BreadCrumbs from "./BreadCrumbs";
 import SVGIcons from "../../SvgIcons";
 import Button from "../../Button";
@@ -13,10 +13,21 @@ import { Line } from "react-chartjs-2";
 const CoinSection = ({ coin, endTime, bet, prices }) => {
   const Icon = SVGIcons.CryptoIcons[coin.icon];
   const { isMobile, showBetsContainer } = useContext(ContentRoutesContext);
+  const [gradient, setGradient] = useState("");
 
   // Graph section tabs
   const [activeTab, setActiveTab] = useState("All time");
   const graphTabs = ["All time", "24h", "7d", "30d"];
+
+  useEffect(() => {
+    let ctx = document
+      .querySelector(".coin-graph__body canvas")
+      .getContext("2d");
+    let gradientColor = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientColor.addColorStop(0, "rgba(50, 215, 75, 0.5)");
+    gradientColor.addColorStop(1, "rgba(50, 215, 75, 0)");
+    setGradient(gradientColor);
+  }, []);
   return (
     <>
       <div
@@ -87,17 +98,31 @@ const CoinSection = ({ coin, endTime, bet, prices }) => {
             </div>
             <div className="coin-graph__body">
               <Line
-              type="line"
-                options={
-                  {
-                    plugins: {
-                      tooltip: false,
-                      legend: {
-                        display: false
-                      }
+                type="line"
+                options={{
+                  plugins: {
+                    tooltip: false,
+                    legend: {
+                      display: false,
                     },
-                  }
-                }
+                  },
+                  scales: {
+                    y: {
+                      ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function (value, index, ticks) {
+                          return value.toFixed(1) +"k";
+                        },
+                        color: "white",
+                      },
+                    },
+                    x:{
+                      ticks: {
+                        color:"white"
+                      }
+                    }
+                  },
+                }}
                 data={{
                   labels: [
                     2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022,
@@ -105,10 +130,11 @@ const CoinSection = ({ coin, endTime, bet, prices }) => {
                   datasets: [
                     {
                       fill: true,
-                      backgroundColor: "#23582c",
+                      backgroundColor: gradient,
                       borderColor: "#32D74B",
+                      pointRadius: 0,
                       borderWidth: 3,
-                      data: [0, 0, 5, 0, 30, 25, 10, 70, 0],
+                      data: [0, 10, 5, 0, 30, 25, 10, 70, 20],
                     },
                   ],
                 }}
